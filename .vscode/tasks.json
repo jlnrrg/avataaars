@@ -1,0 +1,131 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "flutter easy_localization",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"easy_localization:generate",
+				"-S",
+				"assets/translations",
+				"-f",
+				"keys"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		},
+		{
+			"label": "flutter build",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"build",
+				"--delete-conflicting-outputs"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		},
+		{
+			"label": "flutter watch",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"watch",
+				"--delete-conflicting-outputs"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		},
+		{
+			"label": "flutter test",
+			"command": "flutter",
+			"args": [
+				"test"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		},
+		{
+			"label": "flutter pub get",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"get"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		},
+		{
+			"label": "flutter package lint",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"import_sorter:main",
+				"-e"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"panel": "shared",
+				"focus": true,
+				"group": "groupServerStuff"
+			}
+		}
+	]
+}
