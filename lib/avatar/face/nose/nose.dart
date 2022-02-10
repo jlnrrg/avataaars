@@ -1,5 +1,5 @@
 class Nose {
-  static const default0 = '''
+  static const String default0 = '''
 <g
         id="Nose/Default"
         transform="translate(28.000000, 40.000000)"

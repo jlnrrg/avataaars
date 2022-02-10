@@ -1,12 +1,6 @@
 part of 'mouth.dart';
 
-String _sad() {
-  final _path1 = UniqueKey().hashCode.toString();
-  final _path2 = UniqueKey().hashCode.toString();
-  final _mask1 = UniqueKey().hashCode.toString();
-  final _filter1 = UniqueKey().hashCode.toString();
-
-  const String data = '''
+String _sad = '''
 <g
         id="Mouth/Sad"
         transform="translate(2.000000, 52.000000)"
@@ -19,5 +13,3 @@ String _sad() {
         />
       </g>
 ''';
-  return data;
-}

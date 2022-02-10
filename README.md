@@ -5,5 +5,5 @@ Flutter classes for avataaars
 xmlnsXlink -> xmlns:xlink
 xlinkHref -> xlink:href
 strokeWidth -> stroke-width
-fuleRule -> fill-rule
+fillRule -> fill-rule
 fillOpacity -> fill-opacity

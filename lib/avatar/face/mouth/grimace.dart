@@ -3,8 +3,7 @@ part of "mouth.dart";
 String _grimace() {
   final _path1 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
-
-  final String data = """
+  return """
  <g id="Mouth/Grimace" transform="translate(2.000000, 52.000000)">
         <defs>
           <rect id="$_path1" x="24" y="9" width="60" height="22" rx="11" />
@@ -21,7 +20,7 @@ String _grimace() {
           rx="13"
         />
         <mask id="$_mask1" fill="white">
-          <use xlinkHref="${"#" + _path1}" />
+          <use xlink:href="${"#" + _path1}" />
         </mask>
         <use
           id="Mouth"
@@ -38,6 +37,4 @@ String _grimace() {
         />
       </g>
 """;
-
-  return data;
 }

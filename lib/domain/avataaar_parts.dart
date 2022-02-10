@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../avatar/clothes/clothes.dart';
-import '../avatar/eyebrow/eyebrow.dart';
-import '../avatar/eyes/eyes.dart';
+import '../avatar/clothes/graphics/graphics.dart';
+import '../avatar/face/eyebrow/eyebrow.dart';
+import '../avatar/face/eyes/eyes.dart';
 import '../avatar/face/mouth/mouth.dart';
 import '../avatar/face/nose/nose.dart';
 import '../avatar/skin.dart';
+import '../avatar/top/accessories/accessories.dart';
+import '../avatar/top/facialHair/facialHair.dart';
 import '../avatar/top/hair/hair.dart';
 import '../helper/color_extension.dart';
 import '../helper/serializable_helper.dart';
@@ -53,24 +56,20 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
     AvataaarEyes.winkWacky(),
   ];
 
-  @override
-  String toSvgString() => Eyes.default0;
-
-  // @override
-  // String toSvgString() => when(
-  //       closed: () => Eyes.closed,
-  //       cry: () => Eyes.cry,
-  //       default0: () => Eyes.default0,
-  //       dizzy: () => Eyes.dizzy,
-  //       eyeRoll: () => Eyes.eyeRoll,
-  //       happy: () => Eyes.happy,
-  //       hearts: () => Eyes.hearts,
-  //       side: () => Eyes.side,
-  //       surprised: () => Eyes.surprised,
-  //       wink: () => Eyes.wink,
-  //       winkWacky: () => Eyes.winkWacky,
-  //       squint: () => Eyes.squint,
-  //     );
+  String toSvgString() => when(
+        closed: () => Eyes.close,
+        cry: () => Eyes.cry,
+        default0: () => Eyes.default0,
+        dizzy: () => Eyes.dizzy,
+        eyeRoll: () => Eyes.eyeRoll,
+        happy: () => Eyes.happy,
+        hearts: () => Eyes.hearts,
+        side: () => Eyes.side,
+        squint: () => Eyes.squint,
+        surprised: () => Eyes.surprised,
+        wink: () => Eyes.wink,
+        winkWacky: () => Eyes.winkWacky,
+      );
 }
 
 @freezed
@@ -98,29 +97,26 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
     AvataaarAccessories.wayfarers(),
   ];
 
-  @override
-  String toSvgString() => '';
   // @override
-  // String toSvgString() => when(
-  //       blank: () => Accessories.blank,
-  //       kurt: () => Accessories.kurt,
-  //       prescription01: () => Accessories.prescription01,
-  //       prescription02: () => Accessories.prescription02,
-  //       round: () => Accessories.round,
-  //       sunglasses: () => Accessories.sunglasses,
-  //       wayfarers: () => Accessories.wayfarers,
-  //     );
+  String toSvgString() => when(
+        blank: () => Accessories.blank,
+        kurt: () => Accessories.kurt(),
+        prescription01: () => Accessories.prescription01(),
+        prescription02: () => Accessories.prescription02(),
+        round: () => Accessories.round(),
+        sunglasses: () => Accessories.sunglasses(),
+        wayfarers: () => Accessories.wayfarers(),
+      );
 }
 
 @freezed
 class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
-  const factory AvataaarClothes.blazerShirt(@ColorSerialiser() Color color) =
-      _BlazerShirt;
-  const factory AvataaarClothes.blazerSweater(@ColorSerialiser() Color color) =
-      _BlazerSweater;
-  const factory AvataaarClothes.colarSweater(@ColorSerialiser() Color color) =
+  const factory AvataaarClothes.blazerShirt() = _BlazerShirt;
+  const factory AvataaarClothes.blazerSweater() = _BlazerSweater;
+  const factory AvataaarClothes.collarSweater(@ColorSerialiser() Color color) =
       _ColarSweater;
-  const factory AvataaarClothes.graphicShirt(@ColorSerialiser() Color color) =
+  const factory AvataaarClothes.graphicShirt(@ColorSerialiser() Color color,
+          {@Default(AvataaarGraphics.skull()) AvataaarGraphics graphic}) =
       _GraphicShirt;
   const factory AvataaarClothes.hoodie(@ColorSerialiser() Color color) =
       _Hoodie;
@@ -138,45 +134,52 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
   factory AvataaarClothes.fromJson(Map<String, dynamic> json) =>
       _$AvataaarClothesFromJson(json);
 
-  @override
-  String toSvgString() => Clothes.blazerShirt;
-  // @override
-  // String toSvgString() => when(
-  //       blazerShirt: (color) => Clothes.blazerShirt(color),
-  //       blazerSweater: (color) => Clothes.blazerSweater(color),
-  //       colarSweater: (color) => Clothes.colarSweater(color),
-  //       graphicShirt: (color) => Clothes.graphicShirt(color),
-  //       hoodie: (color) => Clothes.hoodie(color),
-  //       overall: (color) => Clothes.overall(color),
-  //       shirtCrewNeck: (color) => Clothes.shirtCrewNeck(color),
-  //       shirtScoopNeck: (color) => Clothes.shirtScoopNeck(color),
-  //       shirtVNeck: (color) => Clothes.shirtVNeck(color),
-  //     );
+  String toSvgString() => when(
+        blazerShirt: () => Clothes.blazerShirt,
+        blazerSweater: () => Clothes.blazerSweater,
+        collarSweater: (color) => Clothes.collarSweater(color),
+        graphicShirt: (color, graphic) =>
+            Clothes.graphicShirt(color, graphic.toSVGFunction()),
+        hoodie: (color) => Clothes.hoodie(color),
+        overall: (color) => Clothes.overall(color),
+        shirtCrewNeck: (color) => Clothes.shirtCrewNeck(color),
+        shirtScoopNeck: (color) => Clothes.shirtScoopNeck(color),
+        shirtVNeck: (color) => Clothes.shirtVNeck(color),
+      );
 }
 
 @freezed
 class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
   const factory AvataaarGraphics.bat() = _Bat;
+  const factory AvataaarGraphics.bear() = _Bear;
+  const factory AvataaarGraphics.cumbia() = _Cumbia;
+  const factory AvataaarGraphics.deer() = _Deer;
+  const factory AvataaarGraphics.diamond() = _Diamond;
+  const factory AvataaarGraphics.hola() = _Hola;
+  const factory AvataaarGraphics.pizza() = _Pizza;
+  const factory AvataaarGraphics.resist() = _Resist;
+  const factory AvataaarGraphics.selena() = _Selena;
+  const factory AvataaarGraphics.skull() = _Skull;
+  const factory AvataaarGraphics.skullOutline() = _SkullOutline;
 
   const AvataaarGraphics._();
 
   factory AvataaarGraphics.fromJson(Map<String, dynamic> json) =>
       _$AvataaarGraphicsFromJson(json);
 
-  @override
-  String toSvgString() => '';
-  // @override
-  // String toSvgString() => when(
-  //       blazerShirt: (color) => Clothes.blazerShirt(color),
-  //       blazerSweater: (color) => Clothes.blazerSweater(color),
-  //       colarSweater: (color) => Clothes.colarSweater(color),
-  //       graphicShirt: (color) => Clothes.graphicShirt(color),
-  //       hoodie: (color) => Clothes.hoodie(color),
-  //       overall: (color) => Clothes.overall(color),
-  //       shirtCrewNeck: (color) => Clothes.shirtCrewNeck(color),
-  //       shirtScoopNeck: (color) => Clothes.shirtScoopNeck(color),
-  //       shirtVNeck: (color) => Clothes.shirtVNeck(color),
-  //     );
+  String Function(String) toSVGFunction() => when(
+        bat: () => Graphics.bat,
+        bear: () => Graphics.bear,
+        cumbia: () => Graphics.cumbia,
+        deer: () => Graphics.deer,
+        diamond: () => Graphics.diamond,
+        hola: () => Graphics.hola,
+        pizza: () => Graphics.pizza,
+        resist: () => Graphics.resist,
+        selena: () => Graphics.selena,
+        skull: () => Graphics.skull,
+        skullOutline: () => Graphics.skullOutline,
+      );
 }
 
 @freezed
@@ -200,24 +203,21 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
   factory AvataaarEyebrow.fromJson(Map<String, dynamic> json) =>
       _$AvataaarEyebrowFromJson(json);
 
-  @override
-  String toSvgString() => Eyebrow.default0;
-  // @override
-  // String toSvgString() => when(
-  //       angry: () => Eyebrow.angry,
-  //       angryNatural: () => Eyebrow.angryNatural,
-  //       default0: () => Eyebrow.default0,
-  //       defaultNatural: () => Eyebrow.defaultNatural,
-  //       flatNatural: () => Eyebrow.flatNatural,
-  //       frownNatural: () => Eyebrow.frownNatural,
-  //       raisedExcited: () => Eyebrow.raisedExcited,
-  //       raisedExcitedNatural: () => Eyebrow.raisedExcitedNatural,
-  //       sadConcerned: () => Eyebrow.sadConcerned,
-  //       sadConcernedNatural: () => Eyebrow.sadConcernedNatural,
-  //       unibrowNatural: () => Eyebrow.unibrowNatural,
-  //       upDown: () => Eyebrow.upDown,
-  //       upDownNatural: () => Eyebrow.upDownNatural,
-  //     );
+  String toSvgString() => when(
+        angry: () => Eyebrow.angry,
+        angryNatural: () => Eyebrow.angryNatural,
+        default0: () => Eyebrow.default0,
+        defaultNatural: () => Eyebrow.defaultNatural,
+        flatNatural: () => Eyebrow.flatNatural,
+        frownNatural: () => Eyebrow.frownNatural,
+        raisedExcited: () => Eyebrow.raisedExcited,
+        raisedExcitedNatural: () => Eyebrow.raisedExcitedNatural,
+        sadConcerned: () => Eyebrow.sadConcerned,
+        sadConcernedNatural: () => Eyebrow.sadConcernedNatural,
+        unibrowNatural: () => Eyebrow.unibrowNatural,
+        upDown: () => Eyebrow.upDown,
+        upDownNatural: () => Eyebrow.upDownNatural,
+      );
 }
 
 @freezed
@@ -239,17 +239,14 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
   factory AvataaarFacialHair.fromJson(Map<String, dynamic> json) =>
       _$AvataaarFacialHairFromJson(json);
 
-  @override
-  String toSvgString() => '';
-  // @override
-  // String toSvgString() => when(
-  //       blank: () => FacialHair.blank,
-  //       beardMedium: (color) => FacialHair.beardMedium(color),
-  //       beardLight: (color) => FacialHair.beardLight(color),
-  //       beardMajestic: (color) => FacialHair.beardMajestic(color),
-  //       moustacheFancy: (color) => FacialHair.moustacheFancy(color),
-  //       moustacheMagnum: (color) => FacialHair.moustacheMagnum(color),
-  //     );
+  String toSvgString() => when(
+        blank: () => FacialHair.blank,
+        beardMedium: (color) => FacialHair.beardMedium(color),
+        beardLight: (color) => FacialHair.beardLight(color),
+        beardMajestic: (color) => FacialHair.beardMajestic(color),
+        moustacheFancy: (color) => FacialHair.moustacheFancy(color),
+        moustacheMagnum: (color) => FacialHair.moustacheMagnum(color),
+      );
 }
 
 @freezed
@@ -257,12 +254,16 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   const factory AvataaarHair.noHair() = _NoHair;
   const factory AvataaarHair.eyepatch() = _Eyepatch;
   const factory AvataaarHair.hat() = _Hat;
-  const factory AvataaarHair.hijab() = _Hijab;
-  const factory AvataaarHair.turban() = _Turban;
-  const factory AvataaarHair.winterHat1() = _WinterHat1;
-  const factory AvataaarHair.winterHat2() = _WinterHat2;
-  const factory AvataaarHair.winterHat3() = _WinterHat3;
-  const factory AvataaarHair.winterHat4() = _WinterHat4;
+  const factory AvataaarHair.hijab(@ColorSerialiser() Color color) = _Hijab;
+  const factory AvataaarHair.turban(@ColorSerialiser() Color color) = _Turban;
+  const factory AvataaarHair.winterHat1(@ColorSerialiser() Color color) =
+      _WinterHat1;
+  const factory AvataaarHair.winterHat2(@ColorSerialiser() Color color) =
+      _WinterHat2;
+  const factory AvataaarHair.winterHat3(@ColorSerialiser() Color color) =
+      _WinterHat3;
+  const factory AvataaarHair.winterHat4(@ColorSerialiser() Color color) =
+      _WinterHat4;
   const factory AvataaarHair.longHairBigHair(@ColorSerialiser() Color color) =
       _LongHairBigHair;
   const factory AvataaarHair.longHairBob(@ColorSerialiser() Color color) =
@@ -320,47 +321,44 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   factory AvataaarHair.fromJson(Map<String, dynamic> json) =>
       _$AvataaarHairFromJson(json);
 
-  @override
-  String toSvgString() => Hair.longHairStraight('');
-  // @override
-  // String toSvgString() => when(
-  //       noHair: () => Hair.noHair,
-  //       eyepatch: () => Hair.eyepatch,
-  //       hat: () => Hair.hat,
-  //       hijab: () => Hair.hijab,
-  //       turban: () => Hair.turban,
-  //       winterHat1: () => Hair.winterHat1,
-  //       winterHat2: () => Hair.winterHat2,
-  //       winterHat3: () => Hair.winterHat3,
-  //       winterHat4: () => Hair.winterHat4,
-  //       longHairBigHair: (color) => Hair.longHairBigHair(color),
-  //       longHairBob: (color) => Hair.longHairBob(color),
-  //       longHairBun: (color) => Hair.longHairBun(color),
-  //       longHairCurly: (color) => Hair.longHairCurly(color),
-  //       longHairCurvy: (color) => Hair.longHairCurvy(color),
-  //       longHairDreads: (color) => Hair.longHairDreads(color),
-  //       longHairFrida: () => Hair.longHairFrida,
-  //       longHairFro: (color) => Hair.longHairFro(color),
-  //       longHairFroBand: (color) => Hair.longHairFroBand(color),
-  //       longHairNotTooLong: (color) => Hair.longHairNotTooLong(color),
-  //       longHairShavedSides: (color) => Hair.longHairShavedSides(color),
-  //       longHairMiaWallace: (color) => Hair.longHairMiaWallace(color),
-  //       longHairStraight: (color) => Hair.longHairStraight(color),
-  //       longHairStraight2: (color) => Hair.longHairStraight2(color),
-  //       longHairStraightStrand: (color) => Hair.longHairStraightStrand(color),
-  //       shortHairDreads01: (color) => Hair.shortHairDreads01(color),
-  //       shortHairDreads02: (color) => Hair.shortHairDreads02(color),
-  //       shortHairFrizzle: (color) => Hair.shortHairFrizzle(color),
-  //       shortHairShaggyMullet: (color) => Hair.shortHairShaggyMullet(color),
-  //       shortHairShortCurly: (color) => Hair.shortHairShortCurly(color),
-  //       shortHairShortFlat: (color) => Hair.shortHairShortFlat(color),
-  //       shortHairShortRound: (color) => Hair.shortHairShortRound(color),
-  //       shortHairShortWaved: (color) => Hair.shortHairShortWaved(color),
-  //       shortHairSides: (color) => Hair.shortHairSides(color),
-  //       shortHairTheCaesar: (color) => Hair.shortHairTheCaesar(color),
-  //       shortHairTheCaesarSidePart: (color) =>
-  //           Hair.shortHairTheCaesarSidePart(color),
-  //     );
+  String toSvgString() => when(
+        noHair: () => Hair.noHair(),
+        eyepatch: () => Hair.eyepatch(),
+        hat: () => Hair.hat(),
+        hijab: (color) => Hair.hijab(color),
+        turban: (color) => Hair.turban(color),
+        winterHat1: (color) => Hair.winterHat1(color),
+        winterHat2: (color) => Hair.winterHat2(color),
+        winterHat3: (color) => Hair.winterHat3(color),
+        winterHat4: (color) => Hair.winterHat4(color),
+        longHairBigHair: (color) => Hair.longHairBigHair(color),
+        longHairBob: (color) => Hair.longHairBob(color),
+        longHairBun: (color) => Hair.longHairBun(color),
+        longHairCurly: (color) => Hair.longHairCurly(color),
+        longHairCurvy: (color) => Hair.longHairCurvy(color),
+        longHairDreads: (color) => Hair.longHairDreads(color),
+        longHairFrida: () => Hair.longHairFrida(),
+        longHairFro: (color) => Hair.longHairFro(color),
+        longHairFroBand: (color) => Hair.longHairFroBand(color),
+        longHairNotTooLong: (color) => Hair.longHairNotTooLong(color),
+        longHairShavedSides: (color) => Hair.longHairShavedSides(color),
+        longHairMiaWallace: (color) => Hair.longHairMiaWallace(color),
+        longHairStraight: (color) => Hair.longHairStraight(color),
+        longHairStraight2: (color) => Hair.longHairStraight2(color),
+        longHairStraightStrand: (color) => Hair.longHairStraightStrand(color),
+        shortHairDreads01: (color) => Hair.shortHairDreads01(color),
+        shortHairDreads02: (color) => Hair.shortHairDreads02(color),
+        shortHairFrizzle: (color) => Hair.shortHairFrizzle(color),
+        shortHairShaggyMullet: (color) => Hair.shortHairShaggyMullet(color),
+        shortHairShortCurly: (color) => Hair.shortHairShortCurly(color),
+        shortHairShortFlat: (color) => Hair.shortHairShortFlat(color),
+        shortHairShortRound: (color) => Hair.shortHairShortRound(color),
+        shortHairShortWaved: (color) => Hair.shortHairShortWaved(color),
+        shortHairSides: (color) => Hair.shortHairSides(color),
+        shortHairTheCaesar: (color) => Hair.shortHairTheCaesar(color),
+        shortHairTheCaesarSidePart: (color) =>
+            Hair.shortHairTheCaesarSidePart(color),
+      );
 }
 
 @freezed
@@ -370,8 +368,8 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
   const factory AvataaarMouth.disbelief() = _Disbelief;
   const factory AvataaarMouth.eating() = _Eating;
   const factory AvataaarMouth.grimace() = _Grimace;
-  const factory AvataaarMouth.screamOpen() = _ScreamOpen;
   const factory AvataaarMouth.sad() = _Sad;
+  const factory AvataaarMouth.screamOpen() = _ScreamOpen;
   const factory AvataaarMouth.serious() = _Serious;
   const factory AvataaarMouth.smile() = _Smile;
   const factory AvataaarMouth.tongue() = _Tongue;
@@ -383,24 +381,20 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
   factory AvataaarMouth.fromJson(Map<String, dynamic> json) =>
       _$AvataaarMouthFromJson(json);
 
-  @override
-  String toSvgString() => Mouth.vomit;
-
-  // @override
-  // String toSvgString() => when(
-  //       concerned: () => Mouth.concerned,
-  //       default0: () => Mouth.default0,
-  //       disbelief: () => Mouth.disbelief,
-  //       eating: () => Mouth.eating,
-  //       grimace: () => Mouth.grimace,
-  //       screamOpen: () => Mouth.screamOpen,
-  //       sad: () => Mouth.sad,
-  //       serious: () => Mouth.serious,
-  //       smile: () => Mouth.smile,
-  //       tongue: () => Mouth.tongue,
-  //       twinkle: () => Mouth.twinkle,
-  //       vomit: () => Mouth.vomit,
-  //     );
+  String toSvgString() => when(
+        concerned: () => Mouth.concerned,
+        default0: () => Mouth.default0,
+        disbelief: () => Mouth.disbelief,
+        eating: () => Mouth.eating,
+        grimace: () => Mouth.grimace,
+        sad: () => Mouth.sad,
+        screamOpen: () => Mouth.screamOpen,
+        serious: () => Mouth.serious,
+        smile: () => Mouth.smile,
+        tongue: () => Mouth.tongue,
+        twinkle: () => Mouth.twinkle,
+        vomit: () => Mouth.vomit,
+      );
 }
 
 @freezed

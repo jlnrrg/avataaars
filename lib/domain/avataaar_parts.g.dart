@@ -172,25 +172,21 @@ Map<String, dynamic> _$$_WayfarersToJson(_$_Wayfarers instance) =>
 
 _$_BlazerShirt _$$_BlazerShirtFromJson(Map<String, dynamic> json) =>
     _$_BlazerShirt(
-      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BlazerShirtToJson(_$_BlazerShirt instance) =>
     <String, dynamic>{
-      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_BlazerSweater _$$_BlazerSweaterFromJson(Map<String, dynamic> json) =>
     _$_BlazerSweater(
-      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BlazerSweaterToJson(_$_BlazerSweater instance) =>
     <String, dynamic>{
-      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
@@ -209,12 +205,16 @@ Map<String, dynamic> _$$_ColarSweaterToJson(_$_ColarSweater instance) =>
 _$_GraphicShirt _$$_GraphicShirtFromJson(Map<String, dynamic> json) =>
     _$_GraphicShirt(
       const ColorSerialiser().fromJson(json['color'] as int),
+      graphic: json['graphic'] == null
+          ? const AvataaarGraphics.skull()
+          : AvataaarGraphics.fromJson(json['graphic'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_GraphicShirtToJson(_$_GraphicShirt instance) =>
     <String, dynamic>{
       'color': const ColorSerialiser().toJson(instance.color),
+      'graphic': instance.graphic,
       'runtimeType': instance.$type,
     };
 
@@ -275,9 +275,96 @@ Map<String, dynamic> _$$_ShirtVNeckToJson(_$_ShirtVNeck instance) =>
       'runtimeType': instance.$type,
     };
 
-_$_Bat _$$_BatFromJson(Map<String, dynamic> json) => const _$_Bat();
+_$_Bat _$$_BatFromJson(Map<String, dynamic> json) => _$_Bat(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$_BatToJson(_$_Bat instance) => <String, dynamic>{};
+Map<String, dynamic> _$$_BatToJson(_$_Bat instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Bear _$$_BearFromJson(Map<String, dynamic> json) => _$_Bear(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_BearToJson(_$_Bear instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Cumbia _$$_CumbiaFromJson(Map<String, dynamic> json) => _$_Cumbia(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_CumbiaToJson(_$_Cumbia instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Deer _$$_DeerFromJson(Map<String, dynamic> json) => _$_Deer(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_DeerToJson(_$_Deer instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Diamond _$$_DiamondFromJson(Map<String, dynamic> json) => _$_Diamond(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_DiamondToJson(_$_Diamond instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Hola _$$_HolaFromJson(Map<String, dynamic> json) => _$_Hola(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_HolaToJson(_$_Hola instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Pizza _$$_PizzaFromJson(Map<String, dynamic> json) => _$_Pizza(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_PizzaToJson(_$_Pizza instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Resist _$$_ResistFromJson(Map<String, dynamic> json) => _$_Resist(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_ResistToJson(_$_Resist instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Selena _$$_SelenaFromJson(Map<String, dynamic> json) => _$_Selena(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_SelenaToJson(_$_Selena instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_Skull _$$_SkullFromJson(Map<String, dynamic> json) => _$_Skull(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_SkullToJson(_$_Skull instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$_SkullOutline _$$_SkullOutlineFromJson(Map<String, dynamic> json) =>
+    _$_SkullOutline(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_SkullOutlineToJson(_$_SkullOutline instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
 _$_Angry _$$_AngryFromJson(Map<String, dynamic> json) => _$_Angry(
       $type: json['runtimeType'] as String?,
@@ -505,58 +592,70 @@ Map<String, dynamic> _$$_HatToJson(_$_Hat instance) => <String, dynamic>{
     };
 
 _$_Hijab _$$_HijabFromJson(Map<String, dynamic> json) => _$_Hijab(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_HijabToJson(_$_Hijab instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Turban _$$_TurbanFromJson(Map<String, dynamic> json) => _$_Turban(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_TurbanToJson(_$_Turban instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_WinterHat1 _$$_WinterHat1FromJson(Map<String, dynamic> json) =>
     _$_WinterHat1(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat1ToJson(_$_WinterHat1 instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_WinterHat2 _$$_WinterHat2FromJson(Map<String, dynamic> json) =>
     _$_WinterHat2(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat2ToJson(_$_WinterHat2 instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_WinterHat3 _$$_WinterHat3FromJson(Map<String, dynamic> json) =>
     _$_WinterHat3(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat3ToJson(_$_WinterHat3 instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_WinterHat4 _$$_WinterHat4FromJson(Map<String, dynamic> json) =>
     _$_WinterHat4(
+      const ColorSerialiser().fromJson(json['color'] as int),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat4ToJson(_$_WinterHat4 instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
@@ -940,6 +1039,14 @@ Map<String, dynamic> _$$_GrimaceToJson(_$_Grimace instance) =>
       'runtimeType': instance.$type,
     };
 
+_$_Sad _$$_SadFromJson(Map<String, dynamic> json) => _$_Sad(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$_SadToJson(_$_Sad instance) => <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
 _$_ScreamOpen _$$_ScreamOpenFromJson(Map<String, dynamic> json) =>
     _$_ScreamOpen(
       $type: json['runtimeType'] as String?,
@@ -947,14 +1054,6 @@ _$_ScreamOpen _$$_ScreamOpenFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ScreamOpenToJson(_$_ScreamOpen instance) =>
     <String, dynamic>{
-      'runtimeType': instance.$type,
-    };
-
-_$_Sad _$$_SadFromJson(Map<String, dynamic> json) => _$_Sad(
-      $type: json['runtimeType'] as String?,
-    );
-
-Map<String, dynamic> _$$_SadToJson(_$_Sad instance) => <String, dynamic>{
       'runtimeType': instance.$type,
     };
 
@@ -1001,7 +1100,7 @@ Map<String, dynamic> _$$_VomitToJson(_$_Vomit instance) => <String, dynamic>{
     };
 
 _$_NoseDefault0 _$$_NoseDefault0FromJson(Map<String, dynamic> json) =>
-    const _$_NoseDefault0();
+    _$_NoseDefault0();
 
 Map<String, dynamic> _$$_NoseDefault0ToJson(_$_NoseDefault0 instance) =>
     <String, dynamic>{};

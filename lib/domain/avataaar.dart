@@ -10,8 +10,8 @@ part 'avataaar.g.dart';
 class Avataaar with _$Avataaar, AvataaarParts {
   const factory Avataaar({
     AvataaarHair? hair,
-    AvataaarAccessories? accessory,
-    AvataaarFacialHair? facialHair,
+    @Default(AvataaarAccessories.blank()) AvataaarAccessories accessory,
+    @Default(AvataaarFacialHair.blank()) AvataaarFacialHair facialHair,
     AvataaarClothes? clothe,
     AvataaarGraphics? graphics,
     AvataaarEyes? eyes,
@@ -34,6 +34,12 @@ class Avataaar with _$Avataaar, AvataaarParts {
   ${eyes?.toSvgString() ?? ''}
   ${eyebrow?.toSvgString() ?? ''}
   </g>
+''';
+
+  String buildTop() => '''
+    ${hair?.toSvgString() ?? ''}
+    ${facialHair.toSvgString()}
+    ${accessory.toSvgString()}
 ''';
 
   String toPiece([int width = 264, int height = 280]) => '''
@@ -138,6 +144,7 @@ class Avataaar with _$Avataaar, AvataaarParts {
                 </g>
                 ${clothe?.toSvgString() ?? ''}
                 ${buildFace()}
+                ${buildTop()}
               </g>
             </g>
           </g>

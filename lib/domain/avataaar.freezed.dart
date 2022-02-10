@@ -24,8 +24,8 @@ class _$AvataaarTearOff {
 
   _Avataaar call(
       {AvataaarHair? hair,
-      AvataaarAccessories? accessory,
-      AvataaarFacialHair? facialHair,
+      AvataaarAccessories accessory = const AvataaarAccessories.blank(),
+      AvataaarFacialHair facialHair = const AvataaarFacialHair.blank(),
       AvataaarClothes? clothe,
       AvataaarGraphics? graphics,
       AvataaarEyes? eyes,
@@ -60,8 +60,8 @@ const $Avataaar = _$AvataaarTearOff();
 /// @nodoc
 mixin _$Avataaar {
   AvataaarHair? get hair => throw _privateConstructorUsedError;
-  AvataaarAccessories? get accessory => throw _privateConstructorUsedError;
-  AvataaarFacialHair? get facialHair => throw _privateConstructorUsedError;
+  AvataaarAccessories get accessory => throw _privateConstructorUsedError;
+  AvataaarFacialHair get facialHair => throw _privateConstructorUsedError;
   AvataaarClothes? get clothe => throw _privateConstructorUsedError;
   AvataaarGraphics? get graphics => throw _privateConstructorUsedError;
   AvataaarEyes? get eyes => throw _privateConstructorUsedError;
@@ -83,8 +83,8 @@ abstract class $AvataaarCopyWith<$Res> {
       _$AvataaarCopyWithImpl<$Res>;
   $Res call(
       {AvataaarHair? hair,
-      AvataaarAccessories? accessory,
-      AvataaarFacialHair? facialHair,
+      AvataaarAccessories accessory,
+      AvataaarFacialHair facialHair,
       AvataaarClothes? clothe,
       AvataaarGraphics? graphics,
       AvataaarEyes? eyes,
@@ -95,8 +95,8 @@ abstract class $AvataaarCopyWith<$Res> {
       AvataaarStyle style});
 
   $AvataaarHairCopyWith<$Res>? get hair;
-  $AvataaarAccessoriesCopyWith<$Res>? get accessory;
-  $AvataaarFacialHairCopyWith<$Res>? get facialHair;
+  $AvataaarAccessoriesCopyWith<$Res> get accessory;
+  $AvataaarFacialHairCopyWith<$Res> get facialHair;
   $AvataaarClothesCopyWith<$Res>? get clothe;
   $AvataaarGraphicsCopyWith<$Res>? get graphics;
   $AvataaarEyesCopyWith<$Res>? get eyes;
@@ -137,11 +137,11 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
       accessory: accessory == freezed
           ? _value.accessory
           : accessory // ignore: cast_nullable_to_non_nullable
-              as AvataaarAccessories?,
+              as AvataaarAccessories,
       facialHair: facialHair == freezed
           ? _value.facialHair
           : facialHair // ignore: cast_nullable_to_non_nullable
-              as AvataaarFacialHair?,
+              as AvataaarFacialHair,
       clothe: clothe == freezed
           ? _value.clothe
           : clothe // ignore: cast_nullable_to_non_nullable
@@ -189,23 +189,15 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
   }
 
   @override
-  $AvataaarAccessoriesCopyWith<$Res>? get accessory {
-    if (_value.accessory == null) {
-      return null;
-    }
-
-    return $AvataaarAccessoriesCopyWith<$Res>(_value.accessory!, (value) {
+  $AvataaarAccessoriesCopyWith<$Res> get accessory {
+    return $AvataaarAccessoriesCopyWith<$Res>(_value.accessory, (value) {
       return _then(_value.copyWith(accessory: value));
     });
   }
 
   @override
-  $AvataaarFacialHairCopyWith<$Res>? get facialHair {
-    if (_value.facialHair == null) {
-      return null;
-    }
-
-    return $AvataaarFacialHairCopyWith<$Res>(_value.facialHair!, (value) {
+  $AvataaarFacialHairCopyWith<$Res> get facialHair {
+    return $AvataaarFacialHairCopyWith<$Res>(_value.facialHair, (value) {
       return _then(_value.copyWith(facialHair: value));
     });
   }
@@ -298,8 +290,8 @@ abstract class _$AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
   @override
   $Res call(
       {AvataaarHair? hair,
-      AvataaarAccessories? accessory,
-      AvataaarFacialHair? facialHair,
+      AvataaarAccessories accessory,
+      AvataaarFacialHair facialHair,
       AvataaarClothes? clothe,
       AvataaarGraphics? graphics,
       AvataaarEyes? eyes,
@@ -312,9 +304,9 @@ abstract class _$AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
   @override
   $AvataaarHairCopyWith<$Res>? get hair;
   @override
-  $AvataaarAccessoriesCopyWith<$Res>? get accessory;
+  $AvataaarAccessoriesCopyWith<$Res> get accessory;
   @override
-  $AvataaarFacialHairCopyWith<$Res>? get facialHair;
+  $AvataaarFacialHairCopyWith<$Res> get facialHair;
   @override
   $AvataaarClothesCopyWith<$Res>? get clothe;
   @override
@@ -364,11 +356,11 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
       accessory: accessory == freezed
           ? _value.accessory
           : accessory // ignore: cast_nullable_to_non_nullable
-              as AvataaarAccessories?,
+              as AvataaarAccessories,
       facialHair: facialHair == freezed
           ? _value.facialHair
           : facialHair // ignore: cast_nullable_to_non_nullable
-              as AvataaarFacialHair?,
+              as AvataaarFacialHair,
       clothe: clothe == freezed
           ? _value.clothe
           : clothe // ignore: cast_nullable_to_non_nullable
@@ -410,8 +402,8 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
 class _$_Avataaar extends _Avataaar {
   const _$_Avataaar(
       {this.hair,
-      this.accessory,
-      this.facialHair,
+      this.accessory = const AvataaarAccessories.blank(),
+      this.facialHair = const AvataaarFacialHair.blank(),
       this.clothe,
       this.graphics,
       this.eyes,
@@ -427,10 +419,12 @@ class _$_Avataaar extends _Avataaar {
 
   @override
   final AvataaarHair? hair;
+  @JsonKey()
   @override
-  final AvataaarAccessories? accessory;
+  final AvataaarAccessories accessory;
+  @JsonKey()
   @override
-  final AvataaarFacialHair? facialHair;
+  final AvataaarFacialHair facialHair;
   @override
   final AvataaarClothes? clothe;
   @override
@@ -503,8 +497,8 @@ class _$_Avataaar extends _Avataaar {
 abstract class _Avataaar extends Avataaar {
   const factory _Avataaar(
       {AvataaarHair? hair,
-      AvataaarAccessories? accessory,
-      AvataaarFacialHair? facialHair,
+      AvataaarAccessories accessory,
+      AvataaarFacialHair facialHair,
       AvataaarClothes? clothe,
       AvataaarGraphics? graphics,
       AvataaarEyes? eyes,
@@ -520,9 +514,9 @@ abstract class _Avataaar extends Avataaar {
   @override
   AvataaarHair? get hair;
   @override
-  AvataaarAccessories? get accessory;
+  AvataaarAccessories get accessory;
   @override
-  AvataaarFacialHair? get facialHair;
+  AvataaarFacialHair get facialHair;
   @override
   AvataaarClothes? get clothe;
   @override

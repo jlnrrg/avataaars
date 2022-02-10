@@ -3,9 +3,7 @@ part of 'clothes.dart';
 String _blazzerShirt() {
   final _path1 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
-
-  @override
-  final String data = """
+  return """
 <g
         id="Clothing/Blazer-+-Shirt"
         transform="translate(0.000000, 170.000000)">
@@ -66,6 +64,4 @@ String _blazzerShirt() {
         </g>
       </g>
 """;
-
-  return data;
 }

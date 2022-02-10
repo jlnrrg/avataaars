@@ -11,11 +11,11 @@ _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
           ? null
           : AvataaarHair.fromJson(json['hair'] as Map<String, dynamic>),
       accessory: json['accessory'] == null
-          ? null
+          ? const AvataaarAccessories.blank()
           : AvataaarAccessories.fromJson(
               json['accessory'] as Map<String, dynamic>),
       facialHair: json['facialHair'] == null
-          ? null
+          ? const AvataaarFacialHair.blank()
           : AvataaarFacialHair.fromJson(
               json['facialHair'] as Map<String, dynamic>),
       clothe: json['clothe'] == null

@@ -30,15 +30,16 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const avatar = Avataaar(
-        hair: AvataaarHair.eyepatch(),
-        accessory: AvataaarAccessories.kurt(),
-        facialHair: AvataaarFacialHair.beardLight(Colors.black),
-        clothe: AvataaarClothes.blazerShirt(Colors.purple),
-        eyes: AvataaarEyes.cry(),
-        eyebrow: AvataaarEyebrow.angry(),
-        mouth: AvataaarMouth.concerned(),
-        skin: AvataaarSkin.light(),
-        style: AvataaarStyle.circle(Colors.transparent));
+      hair: AvataaarHair.longHairBob(Colors.black),
+      accessory: AvataaarAccessories.blank(),
+      facialHair: AvataaarFacialHair.blank(),
+      clothe: AvataaarClothes.graphicShirt(Colors.pink),
+      eyes: AvataaarEyes.happy(),
+      eyebrow: AvataaarEyebrow.angry(),
+      mouth: AvataaarMouth.smile(),
+      skin: AvataaarSkin.brown(),
+      style: AvataaarStyle.circle(Colors.transparent),
+    );
 
     final v = avatar.toSvg();
 

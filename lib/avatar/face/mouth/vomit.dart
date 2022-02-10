@@ -5,8 +5,7 @@ String _vomit() {
   final _path2 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
   final _filter1 = UniqueKey().hashCode.toString();
-
-  final String data = '''
+  return '''
 <g id="Mouth/Vomit" transform="translate(2.000000, 52.000000)">
         <defs>
           <path
@@ -81,6 +80,4 @@ String _vomit() {
         </g>
       </g>
 ''';
-
-  return data;
 }
