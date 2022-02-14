@@ -172,28 +172,38 @@ Map<String, dynamic> _$$_WayfarersToJson(_$_Wayfarers instance) =>
 
 _$_BlazerShirt _$$_BlazerShirtFromJson(Map<String, dynamic> json) =>
     _$_BlazerShirt(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.black
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BlazerShirtToJson(_$_BlazerShirt instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_BlazerSweater _$$_BlazerSweaterFromJson(Map<String, dynamic> json) =>
     _$_BlazerSweater(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.black
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BlazerSweaterToJson(_$_BlazerSweater instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_ColarSweater _$$_ColarSweaterFromJson(Map<String, dynamic> json) =>
     _$_ColarSweater(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ColarSweaterToJson(_$_ColarSweater instance) =>
@@ -204,11 +214,13 @@ Map<String, dynamic> _$$_ColarSweaterToJson(_$_ColarSweater instance) =>
 
 _$_GraphicShirt _$$_GraphicShirtFromJson(Map<String, dynamic> json) =>
     _$_GraphicShirt(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      graphic: json['graphic'] == null
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['graphic'] == null
           ? const AvataaarGraphics.skull()
           : AvataaarGraphics.fromJson(json['graphic'] as Map<String, dynamic>),
-      $type: json['runtimeType'] as String?,
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_GraphicShirtToJson(_$_GraphicShirt instance) =>
@@ -219,8 +231,10 @@ Map<String, dynamic> _$$_GraphicShirtToJson(_$_GraphicShirt instance) =>
     };
 
 _$_Hoodie _$$_HoodieFromJson(Map<String, dynamic> json) => _$_Hoodie(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_HoodieToJson(_$_Hoodie instance) => <String, dynamic>{
@@ -229,8 +243,10 @@ Map<String, dynamic> _$$_HoodieToJson(_$_Hoodie instance) => <String, dynamic>{
     };
 
 _$_Overall _$$_OverallFromJson(Map<String, dynamic> json) => _$_Overall(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_OverallToJson(_$_Overall instance) =>
@@ -241,8 +257,10 @@ Map<String, dynamic> _$$_OverallToJson(_$_Overall instance) =>
 
 _$_ShirtCrewNeck _$$_ShirtCrewNeckFromJson(Map<String, dynamic> json) =>
     _$_ShirtCrewNeck(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShirtCrewNeckToJson(_$_ShirtCrewNeck instance) =>
@@ -253,8 +271,10 @@ Map<String, dynamic> _$$_ShirtCrewNeckToJson(_$_ShirtCrewNeck instance) =>
 
 _$_ShirtScoopNeck _$$_ShirtScoopNeckFromJson(Map<String, dynamic> json) =>
     _$_ShirtScoopNeck(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShirtScoopNeckToJson(_$_ShirtScoopNeck instance) =>
@@ -265,8 +285,10 @@ Map<String, dynamic> _$$_ShirtScoopNeckToJson(_$_ShirtScoopNeck instance) =>
 
 _$_ShirtVNeck _$$_ShirtVNeckFromJson(Map<String, dynamic> json) =>
     _$_ShirtVNeck(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarClothes._defaultColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShirtVNeckToJson(_$_ShirtVNeck instance) =>
@@ -498,18 +520,24 @@ Map<String, dynamic> _$$_UpDownNaturalToJson(_$_UpDownNatural instance) =>
 
 _$_FacialHairBlank _$$_FacialHairBlankFromJson(Map<String, dynamic> json) =>
     _$_FacialHairBlank(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_FacialHairBlankToJson(_$_FacialHairBlank instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_BeardMedium _$$_BeardMediumFromJson(Map<String, dynamic> json) =>
     _$_BeardMedium(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BeardMediumToJson(_$_BeardMedium instance) =>
@@ -520,8 +548,10 @@ Map<String, dynamic> _$$_BeardMediumToJson(_$_BeardMedium instance) =>
 
 _$_BeardLight _$$_BeardLightFromJson(Map<String, dynamic> json) =>
     _$_BeardLight(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BeardLightToJson(_$_BeardLight instance) =>
@@ -532,8 +562,10 @@ Map<String, dynamic> _$$_BeardLightToJson(_$_BeardLight instance) =>
 
 _$_BeardMajestic _$$_BeardMajesticFromJson(Map<String, dynamic> json) =>
     _$_BeardMajestic(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BeardMajesticToJson(_$_BeardMajestic instance) =>
@@ -544,8 +576,10 @@ Map<String, dynamic> _$$_BeardMajesticToJson(_$_BeardMajestic instance) =>
 
 _$_MoustacheFancy _$$_MoustacheFancyFromJson(Map<String, dynamic> json) =>
     _$_MoustacheFancy(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_MoustacheFancyToJson(_$_MoustacheFancy instance) =>
@@ -556,8 +590,10 @@ Map<String, dynamic> _$$_MoustacheFancyToJson(_$_MoustacheFancy instance) =>
 
 _$_MoustacheMagnum _$$_MoustacheMagnumFromJson(Map<String, dynamic> json) =>
     _$_MoustacheMagnum(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarFacialHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_MoustacheMagnumToJson(_$_MoustacheMagnum instance) =>
@@ -567,33 +603,47 @@ Map<String, dynamic> _$$_MoustacheMagnumToJson(_$_MoustacheMagnum instance) =>
     };
 
 _$_NoHair _$$_NoHairFromJson(Map<String, dynamic> json) => _$_NoHair(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.transparent
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_NoHairToJson(_$_NoHair instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Eyepatch _$$_EyepatchFromJson(Map<String, dynamic> json) => _$_Eyepatch(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.transparent
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_EyepatchToJson(_$_Eyepatch instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Hat _$$_HatFromJson(Map<String, dynamic> json) => _$_Hat(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.transparent
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_HatToJson(_$_Hat instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Hijab _$$_HijabFromJson(Map<String, dynamic> json) => _$_Hijab(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorBlue03
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_HijabToJson(_$_Hijab instance) => <String, dynamic>{
@@ -602,8 +652,10 @@ Map<String, dynamic> _$$_HijabToJson(_$_Hijab instance) => <String, dynamic>{
     };
 
 _$_Turban _$$_TurbanFromJson(Map<String, dynamic> json) => _$_Turban(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorBlue03
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_TurbanToJson(_$_Turban instance) => <String, dynamic>{
@@ -613,8 +665,10 @@ Map<String, dynamic> _$$_TurbanToJson(_$_Turban instance) => <String, dynamic>{
 
 _$_WinterHat1 _$$_WinterHat1FromJson(Map<String, dynamic> json) =>
     _$_WinterHat1(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorRed
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat1ToJson(_$_WinterHat1 instance) =>
@@ -625,8 +679,10 @@ Map<String, dynamic> _$$_WinterHat1ToJson(_$_WinterHat1 instance) =>
 
 _$_WinterHat2 _$$_WinterHat2FromJson(Map<String, dynamic> json) =>
     _$_WinterHat2(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorBlue01
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat2ToJson(_$_WinterHat2 instance) =>
@@ -637,8 +693,10 @@ Map<String, dynamic> _$$_WinterHat2ToJson(_$_WinterHat2 instance) =>
 
 _$_WinterHat3 _$$_WinterHat3FromJson(Map<String, dynamic> json) =>
     _$_WinterHat3(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorRed
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat3ToJson(_$_WinterHat3 instance) =>
@@ -649,8 +707,10 @@ Map<String, dynamic> _$$_WinterHat3ToJson(_$_WinterHat3 instance) =>
 
 _$_WinterHat4 _$$_WinterHat4FromJson(Map<String, dynamic> json) =>
     _$_WinterHat4(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHatColorRed
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WinterHat4ToJson(_$_WinterHat4 instance) =>
@@ -661,8 +721,10 @@ Map<String, dynamic> _$$_WinterHat4ToJson(_$_WinterHat4 instance) =>
 
 _$_LongHairBigHair _$$_LongHairBigHairFromJson(Map<String, dynamic> json) =>
     _$_LongHairBigHair(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairBigHairToJson(_$_LongHairBigHair instance) =>
@@ -673,8 +735,10 @@ Map<String, dynamic> _$$_LongHairBigHairToJson(_$_LongHairBigHair instance) =>
 
 _$_LongHarBob _$$_LongHarBobFromJson(Map<String, dynamic> json) =>
     _$_LongHarBob(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHarBobToJson(_$_LongHarBob instance) =>
@@ -685,8 +749,10 @@ Map<String, dynamic> _$$_LongHarBobToJson(_$_LongHarBob instance) =>
 
 _$_LongHairBun _$$_LongHairBunFromJson(Map<String, dynamic> json) =>
     _$_LongHairBun(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairBunToJson(_$_LongHairBun instance) =>
@@ -697,8 +763,10 @@ Map<String, dynamic> _$$_LongHairBunToJson(_$_LongHairBun instance) =>
 
 _$_LongHairCurly _$$_LongHairCurlyFromJson(Map<String, dynamic> json) =>
     _$_LongHairCurly(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairCurlyToJson(_$_LongHairCurly instance) =>
@@ -709,8 +777,10 @@ Map<String, dynamic> _$$_LongHairCurlyToJson(_$_LongHairCurly instance) =>
 
 _$_LongHairCurvy _$$_LongHairCurvyFromJson(Map<String, dynamic> json) =>
     _$_LongHairCurvy(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairCurvyToJson(_$_LongHairCurvy instance) =>
@@ -721,8 +791,10 @@ Map<String, dynamic> _$$_LongHairCurvyToJson(_$_LongHairCurvy instance) =>
 
 _$_LongHairDreads _$$_LongHairDreadsFromJson(Map<String, dynamic> json) =>
     _$_LongHairDreads(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairDreadsToJson(_$_LongHairDreads instance) =>
@@ -733,18 +805,24 @@ Map<String, dynamic> _$$_LongHairDreadsToJson(_$_LongHairDreads instance) =>
 
 _$_LongHairFrida _$$_LongHairFridaFromJson(Map<String, dynamic> json) =>
     _$_LongHairFrida(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.transparent
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairFridaToJson(_$_LongHairFrida instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_LongHairFro _$$_LongHairFroFromJson(Map<String, dynamic> json) =>
     _$_LongHairFro(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairFroToJson(_$_LongHairFro instance) =>
@@ -755,8 +833,10 @@ Map<String, dynamic> _$$_LongHairFroToJson(_$_LongHairFro instance) =>
 
 _$_LongHairFroBand _$$_LongHairFroBandFromJson(Map<String, dynamic> json) =>
     _$_LongHairFroBand(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairFroBandToJson(_$_LongHairFroBand instance) =>
@@ -768,8 +848,10 @@ Map<String, dynamic> _$$_LongHairFroBandToJson(_$_LongHairFroBand instance) =>
 _$_LongHairNotTooLong _$$_LongHairNotTooLongFromJson(
         Map<String, dynamic> json) =>
     _$_LongHairNotTooLong(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairNotTooLongToJson(
@@ -782,8 +864,10 @@ Map<String, dynamic> _$$_LongHairNotTooLongToJson(
 _$_LongHairShavedSides _$$_LongHairShavedSidesFromJson(
         Map<String, dynamic> json) =>
     _$_LongHairShavedSides(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairShavedSidesToJson(
@@ -796,8 +880,10 @@ Map<String, dynamic> _$$_LongHairShavedSidesToJson(
 _$_LongHairMiaWallace _$$_LongHairMiaWallaceFromJson(
         Map<String, dynamic> json) =>
     _$_LongHairMiaWallace(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairMiaWallaceToJson(
@@ -809,8 +895,10 @@ Map<String, dynamic> _$$_LongHairMiaWallaceToJson(
 
 _$_LongHairStraight _$$_LongHairStraightFromJson(Map<String, dynamic> json) =>
     _$_LongHairStraight(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairStraightToJson(_$_LongHairStraight instance) =>
@@ -821,8 +909,10 @@ Map<String, dynamic> _$$_LongHairStraightToJson(_$_LongHairStraight instance) =>
 
 _$_LongHairStraight2 _$$_LongHairStraight2FromJson(Map<String, dynamic> json) =>
     _$_LongHairStraight2(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairStraight2ToJson(
@@ -835,8 +925,10 @@ Map<String, dynamic> _$$_LongHairStraight2ToJson(
 _$_LongHairStraightStrand _$$_LongHairStraightStrandFromJson(
         Map<String, dynamic> json) =>
     _$_LongHairStraightStrand(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_LongHairStraightStrandToJson(
@@ -848,8 +940,10 @@ Map<String, dynamic> _$$_LongHairStraightStrandToJson(
 
 _$_ShortHairDreads01 _$$_ShortHairDreads01FromJson(Map<String, dynamic> json) =>
     _$_ShortHairDreads01(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairDreads01ToJson(
@@ -861,8 +955,10 @@ Map<String, dynamic> _$$_ShortHairDreads01ToJson(
 
 _$_ShortHairDreads02 _$$_ShortHairDreads02FromJson(Map<String, dynamic> json) =>
     _$_ShortHairDreads02(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairDreads02ToJson(
@@ -874,8 +970,10 @@ Map<String, dynamic> _$$_ShortHairDreads02ToJson(
 
 _$_ShortHairFrizzle _$$_ShortHairFrizzleFromJson(Map<String, dynamic> json) =>
     _$_ShortHairFrizzle(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairFrizzleToJson(_$_ShortHairFrizzle instance) =>
@@ -887,8 +985,10 @@ Map<String, dynamic> _$$_ShortHairFrizzleToJson(_$_ShortHairFrizzle instance) =>
 _$_ShortHairShaggyMullet _$$_ShortHairShaggyMulletFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairShaggyMullet(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairShaggyMulletToJson(
@@ -901,8 +1001,10 @@ Map<String, dynamic> _$$_ShortHairShaggyMulletToJson(
 _$_ShortHairShortCurly _$$_ShortHairShortCurlyFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairShortCurly(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairShortCurlyToJson(
@@ -915,8 +1017,10 @@ Map<String, dynamic> _$$_ShortHairShortCurlyToJson(
 _$_ShortHairShortFlat _$$_ShortHairShortFlatFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairShortFlat(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairShortFlatToJson(
@@ -929,8 +1033,10 @@ Map<String, dynamic> _$$_ShortHairShortFlatToJson(
 _$_ShortHairShortRound _$$_ShortHairShortRoundFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairShortRound(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairShortRoundToJson(
@@ -943,8 +1049,10 @@ Map<String, dynamic> _$$_ShortHairShortRoundToJson(
 _$_ShortHairShortWaved _$$_ShortHairShortWavedFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairShortWaved(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairShortWavedToJson(
@@ -956,8 +1064,10 @@ Map<String, dynamic> _$$_ShortHairShortWavedToJson(
 
 _$_ShortHairSides _$$_ShortHairSidesFromJson(Map<String, dynamic> json) =>
     _$_ShortHairSides(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairSidesToJson(_$_ShortHairSides instance) =>
@@ -969,8 +1079,10 @@ Map<String, dynamic> _$$_ShortHairSidesToJson(_$_ShortHairSides instance) =>
 _$_ShortHairTheCaesar _$$_ShortHairTheCaesarFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairTheCaesar(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairTheCaesarToJson(
@@ -983,8 +1095,10 @@ Map<String, dynamic> _$$_ShortHairTheCaesarToJson(
 _$_ShortHairTheCaesarSidePart _$$_ShortHairTheCaesarSidePartFromJson(
         Map<String, dynamic> json) =>
     _$_ShortHairTheCaesarSidePart(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? AvataaarHair.defaultHairColor
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_ShortHairTheCaesarSidePartToJson(
@@ -1100,71 +1214,101 @@ Map<String, dynamic> _$$_VomitToJson(_$_Vomit instance) => <String, dynamic>{
     };
 
 _$_NoseDefault0 _$$_NoseDefault0FromJson(Map<String, dynamic> json) =>
-    _$_NoseDefault0();
+    const _$_NoseDefault0();
 
 Map<String, dynamic> _$$_NoseDefault0ToJson(_$_NoseDefault0 instance) =>
     <String, dynamic>{};
 
 _$_Tanned _$$_TannedFromJson(Map<String, dynamic> json) => _$_Tanned(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00FD9841)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_TannedToJson(_$_Tanned instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Yellow _$$_YellowFromJson(Map<String, dynamic> json) => _$_Yellow(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00F8D25C)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_YellowToJson(_$_Yellow instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Pale _$$_PaleFromJson(Map<String, dynamic> json) => _$_Pale(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00FFDBB4)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_PaleToJson(_$_Pale instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_White _$$_WhiteFromJson(Map<String, dynamic> json) => _$_White(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00EDB98A)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_WhiteToJson(_$_White instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Brown _$$_BrownFromJson(Map<String, dynamic> json) => _$_Brown(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00D08B5B)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BrownToJson(_$_Brown instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_DarkBrown _$$_DarkBrownFromJson(Map<String, dynamic> json) => _$_DarkBrown(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00AE5D29)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_DarkBrownToJson(_$_DarkBrown instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Black _$$_BlackFromJson(Map<String, dynamic> json) => _$_Black(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x00614335)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_BlackToJson(_$_Black instance) => <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Custom _$$_CustomFromJson(Map<String, dynamic> json) => _$_Custom(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.grey
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_CustomToJson(_$_Custom instance) => <String, dynamic>{
@@ -1174,17 +1318,23 @@ Map<String, dynamic> _$$_CustomToJson(_$_Custom instance) => <String, dynamic>{
 
 _$_Transparent _$$_TransparentFromJson(Map<String, dynamic> json) =>
     _$_Transparent(
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? Colors.transparent
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_TransparentToJson(_$_Transparent instance) =>
     <String, dynamic>{
+      'color': const ColorSerialiser().toJson(instance.color),
       'runtimeType': instance.$type,
     };
 
 _$_Circle _$$_CircleFromJson(Map<String, dynamic> json) => _$_Circle(
-      const ColorSerialiser().fromJson(json['color'] as int),
-      $type: json['runtimeType'] as String?,
+      json['color'] == null
+          ? const Color(0x0065C9FF)
+          : const ColorSerialiser().fromJson(json['color'] as int),
+      json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$_CircleToJson(_$_Circle instance) => <String, dynamic>{

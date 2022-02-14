@@ -8,7 +8,7 @@ part of 'avataaar.dart';
 
 _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
       hair: json['hair'] == null
-          ? null
+          ? const AvataaarHair.longHairStraight()
           : AvataaarHair.fromJson(json['hair'] as Map<String, dynamic>),
       accessory: json['accessory'] == null
           ? const AvataaarAccessories.blank()
@@ -19,22 +19,22 @@ _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
           : AvataaarFacialHair.fromJson(
               json['facialHair'] as Map<String, dynamic>),
       clothe: json['clothe'] == null
-          ? null
+          ? const AvataaarClothes.blazerShirt()
           : AvataaarClothes.fromJson(json['clothe'] as Map<String, dynamic>),
       graphics: json['graphics'] == null
-          ? null
+          ? const AvataaarGraphics.skull()
           : AvataaarGraphics.fromJson(json['graphics'] as Map<String, dynamic>),
       eyes: json['eyes'] == null
-          ? null
+          ? const AvataaarEyes.default0()
           : AvataaarEyes.fromJson(json['eyes'] as Map<String, dynamic>),
       eyebrow: json['eyebrow'] == null
-          ? null
+          ? const AvataaarEyebrow.default0()
           : AvataaarEyebrow.fromJson(json['eyebrow'] as Map<String, dynamic>),
       mouth: json['mouth'] == null
-          ? null
+          ? const AvataaarMouth.default0()
           : AvataaarMouth.fromJson(json['mouth'] as Map<String, dynamic>),
       skin: json['skin'] == null
-          ? null
+          ? const AvataaarSkin.light()
           : AvataaarSkin.fromJson(json['skin'] as Map<String, dynamic>),
       nose: json['nose'] == null
           ? const AvataaarNose.default0()

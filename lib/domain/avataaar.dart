@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'avataaar_parts.dart';
@@ -7,20 +7,32 @@ part 'avataaar.freezed.dart';
 part 'avataaar.g.dart';
 
 @freezed
-class Avataaar with _$Avataaar, AvataaarParts {
+class Avataaar with _$Avataaar {
   const factory Avataaar({
-    AvataaarHair? hair,
+    @Default(AvataaarHair.longHairStraight()) AvataaarHair hair,
     @Default(AvataaarAccessories.blank()) AvataaarAccessories accessory,
     @Default(AvataaarFacialHair.blank()) AvataaarFacialHair facialHair,
-    AvataaarClothes? clothe,
-    AvataaarGraphics? graphics,
-    AvataaarEyes? eyes,
-    AvataaarEyebrow? eyebrow,
-    AvataaarMouth? mouth,
-    AvataaarSkin? skin,
+    @Default(AvataaarClothes.blazerShirt()) AvataaarClothes clothe,
+    @Default(AvataaarGraphics.skull()) AvataaarGraphics graphics,
+    @Default(AvataaarEyes.default0()) AvataaarEyes eyes,
+    @Default(AvataaarEyebrow.default0()) AvataaarEyebrow eyebrow,
+    @Default(AvataaarMouth.default0()) AvataaarMouth mouth,
+    @Default(AvataaarSkin.light()) AvataaarSkin skin,
     @Default(AvataaarNose.default0()) AvataaarNose nose,
-    @Default(AvataaarStyle.transparent()) AvataaarStyle style,
+    @Default(AvataaarStyle.circle()) AvataaarStyle style,
   }) = _Avataaar;
+
+  factory Avataaar.random() => Avataaar(
+        hair: AvataaarHair.random(),
+        accessory: AvataaarAccessories.random(),
+        facialHair: AvataaarFacialHair.random(),
+        clothe: AvataaarClothes.random(),
+        graphics: AvataaarGraphics.random(),
+        eyebrow: AvataaarEyebrow.random(),
+        eyes: AvataaarEyes.random(),
+        mouth: AvataaarMouth.random(),
+        skin: AvataaarSkin.random(),
+      );
 
   const Avataaar._();
 
@@ -29,15 +41,15 @@ class Avataaar with _$Avataaar, AvataaarParts {
 
   String buildFace() => '''
   <g id="Face" transform="translate(76.000000, 82.000000)" fill="#000000">
-  ${mouth?.toSvgString() ?? ''}
+  ${mouth.toSvgString()}
   ${nose.toSvgString()}
-  ${eyes?.toSvgString() ?? ''}
-  ${eyebrow?.toSvgString() ?? ''}
+  ${eyes.toSvgString()}
+  ${eyebrow.toSvgString()}
   </g>
 ''';
 
   String buildTop() => '''
-    ${hair?.toSvgString() ?? ''}
+    ${hair.toSvgString()}
     ${facialHair.toSvgString()}
     ${accessory.toSvgString()}
 ''';
@@ -50,7 +62,7 @@ class Avataaar with _$Avataaar, AvataaarParts {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
-        ${mouth?.toSvgString() ?? ''}
+        ${mouth.toSvgString()}
       </svg>
 ''';
 
@@ -127,22 +139,22 @@ class Avataaar with _$Avataaar, AvataaarParts {
                 id="Avataaar"
                 stroke-width="1"
                 fill-rule="evenodd"
-                mask="url(#$_mask2)">
+                ${circle ? 'mask = "url(#$_mask2)"' : ''}>
                 <g id="Body" transform="translate(32.000000, 36.000000)">
                   <mask id="$_mask3" fill="white">
                     <use xlink:href="${'#' + _path3}" />
                   </mask>
                   <use fill="#D0C6AC" xlink:href="${'#' + _path3}" />
-                  ${skin?.toSvgString(_mask3) ?? ''}
+                  ${skin.toSvgString(_mask3)}
                   <path
                     d="M156,79 L156,102 C156,132.927946 130.927946,158 100,158 C69.072054,158 44,132.927946 44,102 L44,79 L44,94 C44,124.927946 69.072054,150 100,150 C130.927946,150 156,124.927946 156,94 L156,79 Z"
                     id="Neck-Shadow"
-                    fill-opacity="0.100000001"
+                    opacity="0.100000001"
                     fill="#000000"
                     mask="url(#$_mask3)"
                   />
                 </g>
-                ${clothe?.toSvgString() ?? ''}
+                ${clothe.toSvgString()}
                 ${buildFace()}
                 ${buildTop()}
               </g>

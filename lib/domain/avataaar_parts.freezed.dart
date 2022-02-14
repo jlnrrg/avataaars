@@ -3600,53 +3600,65 @@ AvataaarClothes _$AvataaarClothesFromJson(Map<String, dynamic> json) {
 class _$AvataaarClothesTearOff {
   const _$AvataaarClothesTearOff();
 
-  _BlazerShirt blazerShirt() {
-    return const _BlazerShirt();
+  _BlazerShirt blazerShirt([@ColorSerialiser() Color color = Colors.black]) {
+    return _BlazerShirt(
+      color,
+    );
   }
 
-  _BlazerSweater blazerSweater() {
-    return const _BlazerSweater();
+  _BlazerSweater blazerSweater(
+      [@ColorSerialiser() Color color = Colors.black]) {
+    return _BlazerSweater(
+      color,
+    );
   }
 
-  _ColarSweater collarSweater(@ColorSerialiser() Color color) {
+  _ColarSweater collarSweater(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _ColarSweater(
       color,
     );
   }
 
-  _GraphicShirt graphicShirt(@ColorSerialiser() Color color,
-      {AvataaarGraphics graphic = const AvataaarGraphics.skull()}) {
+  _GraphicShirt graphicShirt(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor,
+      AvataaarGraphics graphic = const AvataaarGraphics.skull()]) {
     return _GraphicShirt(
       color,
-      graphic: graphic,
+      graphic,
     );
   }
 
-  _Hoodie hoodie(@ColorSerialiser() Color color) {
+  _Hoodie hoodie(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _Hoodie(
       color,
     );
   }
 
-  _Overall overall(@ColorSerialiser() Color color) {
+  _Overall overall(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _Overall(
       color,
     );
   }
 
-  _ShirtCrewNeck shirtCrewNeck(@ColorSerialiser() Color color) {
+  _ShirtCrewNeck shirtCrewNeck(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _ShirtCrewNeck(
       color,
     );
   }
 
-  _ShirtScoopNeck shirtScoopNeck(@ColorSerialiser() Color color) {
+  _ShirtScoopNeck shirtScoopNeck(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _ShirtScoopNeck(
       color,
     );
   }
 
-  _ShirtVNeck shirtVNeck(@ColorSerialiser() Color color) {
+  _ShirtVNeck shirtVNeck(
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return _ShirtVNeck(
       color,
     );
@@ -3662,10 +3674,13 @@ const $AvataaarClothes = _$AvataaarClothesTearOff();
 
 /// @nodoc
 mixin _$AvataaarClothes {
+  @ColorSerialiser()
+  Color get color => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -3679,8 +3694,8 @@ mixin _$AvataaarClothes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -3693,8 +3708,8 @@ mixin _$AvataaarClothes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -3747,6 +3762,9 @@ mixin _$AvataaarClothes {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AvataaarClothesCopyWith<AvataaarClothes> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3754,6 +3772,7 @@ abstract class $AvataaarClothesCopyWith<$Res> {
   factory $AvataaarClothesCopyWith(
           AvataaarClothes value, $Res Function(AvataaarClothes) then) =
       _$AvataaarClothesCopyWithImpl<$Res>;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -3764,13 +3783,28 @@ class _$AvataaarClothesCopyWithImpl<$Res>
   final AvataaarClothes _value;
   // ignore: unused_field
   final $Res Function(AvataaarClothes) _then;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$BlazerShirtCopyWith<$Res> {
+abstract class _$BlazerShirtCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$BlazerShirtCopyWith(
           _BlazerShirt value, $Res Function(_BlazerShirt) then) =
       __$BlazerShirtCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -3783,40 +3817,66 @@ class __$BlazerShirtCopyWithImpl<$Res>
 
   @override
   _BlazerShirt get _value => super._value as _BlazerShirt;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_BlazerShirt(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_BlazerShirt extends _BlazerShirt {
-  const _$_BlazerShirt({String? $type})
+  const _$_BlazerShirt(
+      [@ColorSerialiser() this.color = Colors.black, String? $type])
       : $type = $type ?? 'blazerShirt',
         super._();
 
   factory _$_BlazerShirt.fromJson(Map<String, dynamic> json) =>
       _$$_BlazerShirtFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarClothes.blazerShirt()';
+    return 'AvataaarClothes.blazerShirt(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _BlazerShirt);
+        (other.runtimeType == runtimeType &&
+            other is _BlazerShirt &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$BlazerShirtCopyWith<_BlazerShirt> get copyWith =>
+      __$BlazerShirtCopyWithImpl<_BlazerShirt>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -3827,14 +3887,14 @@ class _$_BlazerShirt extends _BlazerShirt {
     required TResult Function(@ColorSerialiser() Color color) shirtScoopNeck,
     required TResult Function(@ColorSerialiser() Color color) shirtVNeck,
   }) {
-    return blazerShirt();
+    return blazerShirt(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -3844,14 +3904,14 @@ class _$_BlazerShirt extends _BlazerShirt {
     TResult Function(@ColorSerialiser() Color color)? shirtScoopNeck,
     TResult Function(@ColorSerialiser() Color color)? shirtVNeck,
   }) {
-    return blazerShirt?.call();
+    return blazerShirt?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -3863,7 +3923,7 @@ class _$_BlazerShirt extends _BlazerShirt {
     required TResult orElse(),
   }) {
     if (blazerShirt != null) {
-      return blazerShirt();
+      return blazerShirt(color);
     }
     return orElse();
   }
@@ -3927,18 +3987,29 @@ class _$_BlazerShirt extends _BlazerShirt {
 }
 
 abstract class _BlazerShirt extends AvataaarClothes {
-  const factory _BlazerShirt() = _$_BlazerShirt;
+  const factory _BlazerShirt([@ColorSerialiser() Color color]) = _$_BlazerShirt;
   const _BlazerShirt._() : super._();
 
   factory _BlazerShirt.fromJson(Map<String, dynamic> json) =
       _$_BlazerShirt.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$BlazerShirtCopyWith<_BlazerShirt> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BlazerSweaterCopyWith<$Res> {
+abstract class _$BlazerSweaterCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$BlazerSweaterCopyWith(
           _BlazerSweater value, $Res Function(_BlazerSweater) then) =
       __$BlazerSweaterCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -3951,40 +4022,66 @@ class __$BlazerSweaterCopyWithImpl<$Res>
 
   @override
   _BlazerSweater get _value => super._value as _BlazerSweater;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_BlazerSweater(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_BlazerSweater extends _BlazerSweater {
-  const _$_BlazerSweater({String? $type})
+  const _$_BlazerSweater(
+      [@ColorSerialiser() this.color = Colors.black, String? $type])
       : $type = $type ?? 'blazerSweater',
         super._();
 
   factory _$_BlazerSweater.fromJson(Map<String, dynamic> json) =>
       _$$_BlazerSweaterFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarClothes.blazerSweater()';
+    return 'AvataaarClothes.blazerSweater(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _BlazerSweater);
+        (other.runtimeType == runtimeType &&
+            other is _BlazerSweater &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$BlazerSweaterCopyWith<_BlazerSweater> get copyWith =>
+      __$BlazerSweaterCopyWithImpl<_BlazerSweater>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -3995,14 +4092,14 @@ class _$_BlazerSweater extends _BlazerSweater {
     required TResult Function(@ColorSerialiser() Color color) shirtScoopNeck,
     required TResult Function(@ColorSerialiser() Color color) shirtVNeck,
   }) {
-    return blazerSweater();
+    return blazerSweater(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4012,14 +4109,14 @@ class _$_BlazerSweater extends _BlazerSweater {
     TResult Function(@ColorSerialiser() Color color)? shirtScoopNeck,
     TResult Function(@ColorSerialiser() Color color)? shirtVNeck,
   }) {
-    return blazerSweater?.call();
+    return blazerSweater?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4031,7 +4128,7 @@ class _$_BlazerSweater extends _BlazerSweater {
     required TResult orElse(),
   }) {
     if (blazerSweater != null) {
-      return blazerSweater();
+      return blazerSweater(color);
     }
     return orElse();
   }
@@ -4095,18 +4192,29 @@ class _$_BlazerSweater extends _BlazerSweater {
 }
 
 abstract class _BlazerSweater extends AvataaarClothes {
-  const factory _BlazerSweater() = _$_BlazerSweater;
+  const factory _BlazerSweater([@ColorSerialiser() Color color]) =
+      _$_BlazerSweater;
   const _BlazerSweater._() : super._();
 
   factory _BlazerSweater.fromJson(Map<String, dynamic> json) =
       _$_BlazerSweater.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$BlazerSweaterCopyWith<_BlazerSweater> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ColarSweaterCopyWith<$Res> {
+abstract class _$ColarSweaterCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$ColarSweaterCopyWith(
           _ColarSweater value, $Res Function(_ColarSweater) then) =
       __$ColarSweaterCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -4137,13 +4245,16 @@ class __$ColarSweaterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ColarSweater extends _ColarSweater {
-  const _$_ColarSweater(@ColorSerialiser() this.color, {String? $type})
+  const _$_ColarSweater(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'collarSweater',
         super._();
 
   factory _$_ColarSweater.fromJson(Map<String, dynamic> json) =>
       _$$_ColarSweaterFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -4176,8 +4287,8 @@ class _$_ColarSweater extends _ColarSweater {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -4194,8 +4305,8 @@ class _$_ColarSweater extends _ColarSweater {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4211,8 +4322,8 @@ class _$_ColarSweater extends _ColarSweater {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4288,24 +4399,29 @@ class _$_ColarSweater extends _ColarSweater {
 }
 
 abstract class _ColarSweater extends AvataaarClothes {
-  const factory _ColarSweater(@ColorSerialiser() Color color) = _$_ColarSweater;
+  const factory _ColarSweater([@ColorSerialiser() Color color]) =
+      _$_ColarSweater;
   const _ColarSweater._() : super._();
 
   factory _ColarSweater.fromJson(Map<String, dynamic> json) =
       _$_ColarSweater.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ColarSweaterCopyWith<_ColarSweater> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$GraphicShirtCopyWith<$Res> {
+abstract class _$GraphicShirtCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$GraphicShirtCopyWith(
           _GraphicShirt value, $Res Function(_GraphicShirt) then) =
       __$GraphicShirtCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color, AvataaarGraphics graphic});
 
   $AvataaarGraphicsCopyWith<$Res> get graphic;
@@ -4332,7 +4448,7 @@ class __$GraphicShirtCopyWithImpl<$Res>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color,
-      graphic: graphic == freezed
+      graphic == freezed
           ? _value.graphic
           : graphic // ignore: cast_nullable_to_non_nullable
               as AvataaarGraphics,
@@ -4350,14 +4466,17 @@ class __$GraphicShirtCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GraphicShirt extends _GraphicShirt {
-  const _$_GraphicShirt(@ColorSerialiser() this.color,
-      {this.graphic = const AvataaarGraphics.skull(), String? $type})
+  const _$_GraphicShirt(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      this.graphic = const AvataaarGraphics.skull(),
+      String? $type])
       : $type = $type ?? 'graphicShirt',
         super._();
 
   factory _$_GraphicShirt.fromJson(Map<String, dynamic> json) =>
       _$$_GraphicShirtFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -4396,8 +4515,8 @@ class _$_GraphicShirt extends _GraphicShirt {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -4414,8 +4533,8 @@ class _$_GraphicShirt extends _GraphicShirt {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4431,8 +4550,8 @@ class _$_GraphicShirt extends _GraphicShirt {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4508,25 +4627,30 @@ class _$_GraphicShirt extends _GraphicShirt {
 }
 
 abstract class _GraphicShirt extends AvataaarClothes {
-  const factory _GraphicShirt(@ColorSerialiser() Color color,
-      {AvataaarGraphics graphic}) = _$_GraphicShirt;
+  const factory _GraphicShirt(
+      [@ColorSerialiser() Color color,
+      AvataaarGraphics graphic]) = _$_GraphicShirt;
   const _GraphicShirt._() : super._();
 
   factory _GraphicShirt.fromJson(Map<String, dynamic> json) =
       _$_GraphicShirt.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
   AvataaarGraphics get graphic;
+  @override
   @JsonKey(ignore: true)
   _$GraphicShirtCopyWith<_GraphicShirt> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$HoodieCopyWith<$Res> {
+abstract class _$HoodieCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$HoodieCopyWith(_Hoodie value, $Res Function(_Hoodie) then) =
       __$HoodieCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -4555,13 +4679,16 @@ class __$HoodieCopyWithImpl<$Res> extends _$AvataaarClothesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Hoodie extends _Hoodie {
-  const _$_Hoodie(@ColorSerialiser() this.color, {String? $type})
+  const _$_Hoodie(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'hoodie',
         super._();
 
   factory _$_Hoodie.fromJson(Map<String, dynamic> json) =>
       _$$_HoodieFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -4594,8 +4721,8 @@ class _$_Hoodie extends _Hoodie {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -4612,8 +4739,8 @@ class _$_Hoodie extends _Hoodie {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4629,8 +4756,8 @@ class _$_Hoodie extends _Hoodie {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4706,21 +4833,25 @@ class _$_Hoodie extends _Hoodie {
 }
 
 abstract class _Hoodie extends AvataaarClothes {
-  const factory _Hoodie(@ColorSerialiser() Color color) = _$_Hoodie;
+  const factory _Hoodie([@ColorSerialiser() Color color]) = _$_Hoodie;
   const _Hoodie._() : super._();
 
   factory _Hoodie.fromJson(Map<String, dynamic> json) = _$_Hoodie.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$HoodieCopyWith<_Hoodie> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$OverallCopyWith<$Res> {
+abstract class _$OverallCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$OverallCopyWith(_Overall value, $Res Function(_Overall) then) =
       __$OverallCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -4749,13 +4880,16 @@ class __$OverallCopyWithImpl<$Res> extends _$AvataaarClothesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Overall extends _Overall {
-  const _$_Overall(@ColorSerialiser() this.color, {String? $type})
+  const _$_Overall(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'overall',
         super._();
 
   factory _$_Overall.fromJson(Map<String, dynamic> json) =>
       _$$_OverallFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -4788,8 +4922,8 @@ class _$_Overall extends _Overall {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -4806,8 +4940,8 @@ class _$_Overall extends _Overall {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4823,8 +4957,8 @@ class _$_Overall extends _Overall {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -4900,23 +5034,27 @@ class _$_Overall extends _Overall {
 }
 
 abstract class _Overall extends AvataaarClothes {
-  const factory _Overall(@ColorSerialiser() Color color) = _$_Overall;
+  const factory _Overall([@ColorSerialiser() Color color]) = _$_Overall;
   const _Overall._() : super._();
 
   factory _Overall.fromJson(Map<String, dynamic> json) = _$_Overall.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$OverallCopyWith<_Overall> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShirtCrewNeckCopyWith<$Res> {
+abstract class _$ShirtCrewNeckCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$ShirtCrewNeckCopyWith(
           _ShirtCrewNeck value, $Res Function(_ShirtCrewNeck) then) =
       __$ShirtCrewNeckCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -4947,13 +5085,16 @@ class __$ShirtCrewNeckCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShirtCrewNeck extends _ShirtCrewNeck {
-  const _$_ShirtCrewNeck(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShirtCrewNeck(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'shirtCrewNeck',
         super._();
 
   factory _$_ShirtCrewNeck.fromJson(Map<String, dynamic> json) =>
       _$$_ShirtCrewNeckFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -4986,8 +5127,8 @@ class _$_ShirtCrewNeck extends _ShirtCrewNeck {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -5004,8 +5145,8 @@ class _$_ShirtCrewNeck extends _ShirtCrewNeck {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5021,8 +5162,8 @@ class _$_ShirtCrewNeck extends _ShirtCrewNeck {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5098,25 +5239,29 @@ class _$_ShirtCrewNeck extends _ShirtCrewNeck {
 }
 
 abstract class _ShirtCrewNeck extends AvataaarClothes {
-  const factory _ShirtCrewNeck(@ColorSerialiser() Color color) =
+  const factory _ShirtCrewNeck([@ColorSerialiser() Color color]) =
       _$_ShirtCrewNeck;
   const _ShirtCrewNeck._() : super._();
 
   factory _ShirtCrewNeck.fromJson(Map<String, dynamic> json) =
       _$_ShirtCrewNeck.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShirtCrewNeckCopyWith<_ShirtCrewNeck> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShirtScoopNeckCopyWith<$Res> {
+abstract class _$ShirtScoopNeckCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$ShirtScoopNeckCopyWith(
           _ShirtScoopNeck value, $Res Function(_ShirtScoopNeck) then) =
       __$ShirtScoopNeckCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -5147,13 +5292,16 @@ class __$ShirtScoopNeckCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShirtScoopNeck extends _ShirtScoopNeck {
-  const _$_ShirtScoopNeck(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShirtScoopNeck(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'shirtScoopNeck',
         super._();
 
   factory _$_ShirtScoopNeck.fromJson(Map<String, dynamic> json) =>
       _$$_ShirtScoopNeckFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -5186,8 +5334,8 @@ class _$_ShirtScoopNeck extends _ShirtScoopNeck {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -5204,8 +5352,8 @@ class _$_ShirtScoopNeck extends _ShirtScoopNeck {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5221,8 +5369,8 @@ class _$_ShirtScoopNeck extends _ShirtScoopNeck {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5298,25 +5446,29 @@ class _$_ShirtScoopNeck extends _ShirtScoopNeck {
 }
 
 abstract class _ShirtScoopNeck extends AvataaarClothes {
-  const factory _ShirtScoopNeck(@ColorSerialiser() Color color) =
+  const factory _ShirtScoopNeck([@ColorSerialiser() Color color]) =
       _$_ShirtScoopNeck;
   const _ShirtScoopNeck._() : super._();
 
   factory _ShirtScoopNeck.fromJson(Map<String, dynamic> json) =
       _$_ShirtScoopNeck.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShirtScoopNeckCopyWith<_ShirtScoopNeck> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShirtVNeckCopyWith<$Res> {
+abstract class _$ShirtVNeckCopyWith<$Res>
+    implements $AvataaarClothesCopyWith<$Res> {
   factory _$ShirtVNeckCopyWith(
           _ShirtVNeck value, $Res Function(_ShirtVNeck) then) =
       __$ShirtVNeckCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -5347,13 +5499,16 @@ class __$ShirtVNeckCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShirtVNeck extends _ShirtVNeck {
-  const _$_ShirtVNeck(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShirtVNeck(
+      [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
+      String? $type])
       : $type = $type ?? 'shirtVNeck',
         super._();
 
   factory _$_ShirtVNeck.fromJson(Map<String, dynamic> json) =>
       _$$_ShirtVNeckFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -5386,8 +5541,8 @@ class _$_ShirtVNeck extends _ShirtVNeck {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blazerShirt,
-    required TResult Function() blazerSweater,
+    required TResult Function(@ColorSerialiser() Color color) blazerShirt,
+    required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
     required TResult Function(
             @ColorSerialiser() Color color, AvataaarGraphics graphic)
@@ -5404,8 +5559,8 @@ class _$_ShirtVNeck extends _ShirtVNeck {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5421,8 +5576,8 @@ class _$_ShirtVNeck extends _ShirtVNeck {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blazerShirt,
-    TResult Function()? blazerSweater,
+    TResult Function(@ColorSerialiser() Color color)? blazerShirt,
+    TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
     TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
         graphicShirt,
@@ -5498,14 +5653,16 @@ class _$_ShirtVNeck extends _ShirtVNeck {
 }
 
 abstract class _ShirtVNeck extends AvataaarClothes {
-  const factory _ShirtVNeck(@ColorSerialiser() Color color) = _$_ShirtVNeck;
+  const factory _ShirtVNeck([@ColorSerialiser() Color color]) = _$_ShirtVNeck;
   const _ShirtVNeck._() : super._();
 
   factory _ShirtVNeck.fromJson(Map<String, dynamic> json) =
       _$_ShirtVNeck.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShirtVNeckCopyWith<_ShirtVNeck> get copyWith =>
       throw _privateConstructorUsedError;
@@ -10290,35 +10447,43 @@ AvataaarFacialHair _$AvataaarFacialHairFromJson(Map<String, dynamic> json) {
 class _$AvataaarFacialHairTearOff {
   const _$AvataaarFacialHairTearOff();
 
-  _FacialHairBlank blank() {
-    return const _FacialHairBlank();
+  _FacialHairBlank blank(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
+    return _FacialHairBlank(
+      color,
+    );
   }
 
-  _BeardMedium beardMedium(@ColorSerialiser() Color color) {
+  _BeardMedium beardMedium(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
     return _BeardMedium(
       color,
     );
   }
 
-  _BeardLight beardLight(@ColorSerialiser() Color color) {
+  _BeardLight beardLight(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
     return _BeardLight(
       color,
     );
   }
 
-  _BeardMajestic beardMajestic(@ColorSerialiser() Color color) {
+  _BeardMajestic beardMajestic(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
     return _BeardMajestic(
       color,
     );
   }
 
-  _MoustacheFancy moustacheFancy(@ColorSerialiser() Color color) {
+  _MoustacheFancy moustacheFancy(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
     return _MoustacheFancy(
       color,
     );
   }
 
-  _MoustacheMagnum moustacheMagnum(@ColorSerialiser() Color color) {
+  _MoustacheMagnum moustacheMagnum(
+      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
     return _MoustacheMagnum(
       color,
     );
@@ -10334,9 +10499,12 @@ const $AvataaarFacialHair = _$AvataaarFacialHairTearOff();
 
 /// @nodoc
 mixin _$AvataaarFacialHair {
+  @ColorSerialiser()
+  Color get color => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -10346,7 +10514,7 @@ mixin _$AvataaarFacialHair {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10356,7 +10524,7 @@ mixin _$AvataaarFacialHair {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10397,6 +10565,9 @@ mixin _$AvataaarFacialHair {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AvataaarFacialHairCopyWith<AvataaarFacialHair> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -10404,6 +10575,7 @@ abstract class $AvataaarFacialHairCopyWith<$Res> {
   factory $AvataaarFacialHairCopyWith(
           AvataaarFacialHair value, $Res Function(AvataaarFacialHair) then) =
       _$AvataaarFacialHairCopyWithImpl<$Res>;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -10414,13 +10586,28 @@ class _$AvataaarFacialHairCopyWithImpl<$Res>
   final AvataaarFacialHair _value;
   // ignore: unused_field
   final $Res Function(AvataaarFacialHair) _then;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$FacialHairBlankCopyWith<$Res> {
+abstract class _$FacialHairBlankCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$FacialHairBlankCopyWith(
           _FacialHairBlank value, $Res Function(_FacialHairBlank) then) =
       __$FacialHairBlankCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -10433,65 +10620,92 @@ class __$FacialHairBlankCopyWithImpl<$Res>
 
   @override
   _FacialHairBlank get _value => super._value as _FacialHairBlank;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_FacialHairBlank(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_FacialHairBlank extends _FacialHairBlank {
-  const _$_FacialHairBlank({String? $type})
+  const _$_FacialHairBlank(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'blank',
         super._();
 
   factory _$_FacialHairBlank.fromJson(Map<String, dynamic> json) =>
       _$$_FacialHairBlankFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarFacialHair.blank()';
+    return 'AvataaarFacialHair.blank(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _FacialHairBlank);
+        (other.runtimeType == runtimeType &&
+            other is _FacialHairBlank &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$FacialHairBlankCopyWith<_FacialHairBlank> get copyWith =>
+      __$FacialHairBlankCopyWithImpl<_FacialHairBlank>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
     required TResult Function(@ColorSerialiser() Color color) moustacheFancy,
     required TResult Function(@ColorSerialiser() Color color) moustacheMagnum,
   }) {
-    return blank();
+    return blank(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
     TResult Function(@ColorSerialiser() Color color)? moustacheFancy,
     TResult Function(@ColorSerialiser() Color color)? moustacheMagnum,
   }) {
-    return blank?.call();
+    return blank?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10500,7 +10714,7 @@ class _$_FacialHairBlank extends _FacialHairBlank {
     required TResult orElse(),
   }) {
     if (blank != null) {
-      return blank();
+      return blank(color);
     }
     return orElse();
   }
@@ -10555,18 +10769,29 @@ class _$_FacialHairBlank extends _FacialHairBlank {
 }
 
 abstract class _FacialHairBlank extends AvataaarFacialHair {
-  const factory _FacialHairBlank() = _$_FacialHairBlank;
+  const factory _FacialHairBlank([@ColorSerialiser() Color color]) =
+      _$_FacialHairBlank;
   const _FacialHairBlank._() : super._();
 
   factory _FacialHairBlank.fromJson(Map<String, dynamic> json) =
       _$_FacialHairBlank.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$FacialHairBlankCopyWith<_FacialHairBlank> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BeardMediumCopyWith<$Res> {
+abstract class _$BeardMediumCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$BeardMediumCopyWith(
           _BeardMedium value, $Res Function(_BeardMedium) then) =
       __$BeardMediumCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -10597,13 +10822,16 @@ class __$BeardMediumCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BeardMedium extends _BeardMedium {
-  const _$_BeardMedium(@ColorSerialiser() this.color, {String? $type})
+  const _$_BeardMedium(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'beardMedium',
         super._();
 
   factory _$_BeardMedium.fromJson(Map<String, dynamic> json) =>
       _$$_BeardMediumFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -10636,7 +10864,7 @@ class _$_BeardMedium extends _BeardMedium {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -10649,7 +10877,7 @@ class _$_BeardMedium extends _BeardMedium {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10662,7 +10890,7 @@ class _$_BeardMedium extends _BeardMedium {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10726,24 +10954,28 @@ class _$_BeardMedium extends _BeardMedium {
 }
 
 abstract class _BeardMedium extends AvataaarFacialHair {
-  const factory _BeardMedium(@ColorSerialiser() Color color) = _$_BeardMedium;
+  const factory _BeardMedium([@ColorSerialiser() Color color]) = _$_BeardMedium;
   const _BeardMedium._() : super._();
 
   factory _BeardMedium.fromJson(Map<String, dynamic> json) =
       _$_BeardMedium.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$BeardMediumCopyWith<_BeardMedium> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BeardLightCopyWith<$Res> {
+abstract class _$BeardLightCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$BeardLightCopyWith(
           _BeardLight value, $Res Function(_BeardLight) then) =
       __$BeardLightCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -10774,13 +11006,16 @@ class __$BeardLightCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BeardLight extends _BeardLight {
-  const _$_BeardLight(@ColorSerialiser() this.color, {String? $type})
+  const _$_BeardLight(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'beardLight',
         super._();
 
   factory _$_BeardLight.fromJson(Map<String, dynamic> json) =>
       _$$_BeardLightFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -10813,7 +11048,7 @@ class _$_BeardLight extends _BeardLight {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -10826,7 +11061,7 @@ class _$_BeardLight extends _BeardLight {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10839,7 +11074,7 @@ class _$_BeardLight extends _BeardLight {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -10903,24 +11138,28 @@ class _$_BeardLight extends _BeardLight {
 }
 
 abstract class _BeardLight extends AvataaarFacialHair {
-  const factory _BeardLight(@ColorSerialiser() Color color) = _$_BeardLight;
+  const factory _BeardLight([@ColorSerialiser() Color color]) = _$_BeardLight;
   const _BeardLight._() : super._();
 
   factory _BeardLight.fromJson(Map<String, dynamic> json) =
       _$_BeardLight.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$BeardLightCopyWith<_BeardLight> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BeardMajesticCopyWith<$Res> {
+abstract class _$BeardMajesticCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$BeardMajesticCopyWith(
           _BeardMajestic value, $Res Function(_BeardMajestic) then) =
       __$BeardMajesticCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -10951,13 +11190,16 @@ class __$BeardMajesticCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BeardMajestic extends _BeardMajestic {
-  const _$_BeardMajestic(@ColorSerialiser() this.color, {String? $type})
+  const _$_BeardMajestic(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'beardMajestic',
         super._();
 
   factory _$_BeardMajestic.fromJson(Map<String, dynamic> json) =>
       _$$_BeardMajesticFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -10990,7 +11232,7 @@ class _$_BeardMajestic extends _BeardMajestic {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -11003,7 +11245,7 @@ class _$_BeardMajestic extends _BeardMajestic {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11016,7 +11258,7 @@ class _$_BeardMajestic extends _BeardMajestic {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11080,25 +11322,29 @@ class _$_BeardMajestic extends _BeardMajestic {
 }
 
 abstract class _BeardMajestic extends AvataaarFacialHair {
-  const factory _BeardMajestic(@ColorSerialiser() Color color) =
+  const factory _BeardMajestic([@ColorSerialiser() Color color]) =
       _$_BeardMajestic;
   const _BeardMajestic._() : super._();
 
   factory _BeardMajestic.fromJson(Map<String, dynamic> json) =
       _$_BeardMajestic.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$BeardMajesticCopyWith<_BeardMajestic> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$MoustacheFancyCopyWith<$Res> {
+abstract class _$MoustacheFancyCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$MoustacheFancyCopyWith(
           _MoustacheFancy value, $Res Function(_MoustacheFancy) then) =
       __$MoustacheFancyCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -11129,13 +11375,16 @@ class __$MoustacheFancyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MoustacheFancy extends _MoustacheFancy {
-  const _$_MoustacheFancy(@ColorSerialiser() this.color, {String? $type})
+  const _$_MoustacheFancy(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'moustacheFancy',
         super._();
 
   factory _$_MoustacheFancy.fromJson(Map<String, dynamic> json) =>
       _$$_MoustacheFancyFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -11168,7 +11417,7 @@ class _$_MoustacheFancy extends _MoustacheFancy {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -11181,7 +11430,7 @@ class _$_MoustacheFancy extends _MoustacheFancy {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11194,7 +11443,7 @@ class _$_MoustacheFancy extends _MoustacheFancy {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11258,25 +11507,29 @@ class _$_MoustacheFancy extends _MoustacheFancy {
 }
 
 abstract class _MoustacheFancy extends AvataaarFacialHair {
-  const factory _MoustacheFancy(@ColorSerialiser() Color color) =
+  const factory _MoustacheFancy([@ColorSerialiser() Color color]) =
       _$_MoustacheFancy;
   const _MoustacheFancy._() : super._();
 
   factory _MoustacheFancy.fromJson(Map<String, dynamic> json) =
       _$_MoustacheFancy.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$MoustacheFancyCopyWith<_MoustacheFancy> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$MoustacheMagnumCopyWith<$Res> {
+abstract class _$MoustacheMagnumCopyWith<$Res>
+    implements $AvataaarFacialHairCopyWith<$Res> {
   factory _$MoustacheMagnumCopyWith(
           _MoustacheMagnum value, $Res Function(_MoustacheMagnum) then) =
       __$MoustacheMagnumCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -11307,13 +11560,16 @@ class __$MoustacheMagnumCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MoustacheMagnum extends _MoustacheMagnum {
-  const _$_MoustacheMagnum(@ColorSerialiser() this.color, {String? $type})
+  const _$_MoustacheMagnum(
+      [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'moustacheMagnum',
         super._();
 
   factory _$_MoustacheMagnum.fromJson(Map<String, dynamic> json) =>
       _$$_MoustacheMagnumFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -11346,7 +11602,7 @@ class _$_MoustacheMagnum extends _MoustacheMagnum {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() blank,
+    required TResult Function(@ColorSerialiser() Color color) blank,
     required TResult Function(@ColorSerialiser() Color color) beardMedium,
     required TResult Function(@ColorSerialiser() Color color) beardLight,
     required TResult Function(@ColorSerialiser() Color color) beardMajestic,
@@ -11359,7 +11615,7 @@ class _$_MoustacheMagnum extends _MoustacheMagnum {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11372,7 +11628,7 @@ class _$_MoustacheMagnum extends _MoustacheMagnum {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? blank,
+    TResult Function(@ColorSerialiser() Color color)? blank,
     TResult Function(@ColorSerialiser() Color color)? beardMedium,
     TResult Function(@ColorSerialiser() Color color)? beardLight,
     TResult Function(@ColorSerialiser() Color color)? beardMajestic,
@@ -11436,15 +11692,17 @@ class _$_MoustacheMagnum extends _MoustacheMagnum {
 }
 
 abstract class _MoustacheMagnum extends AvataaarFacialHair {
-  const factory _MoustacheMagnum(@ColorSerialiser() Color color) =
+  const factory _MoustacheMagnum([@ColorSerialiser() Color color]) =
       _$_MoustacheMagnum;
   const _MoustacheMagnum._() : super._();
 
   factory _MoustacheMagnum.fromJson(Map<String, dynamic> json) =
       _$_MoustacheMagnum.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$MoustacheMagnumCopyWith<_MoustacheMagnum> get copyWith =>
       throw _privateConstructorUsedError;
@@ -11533,205 +11791,243 @@ AvataaarHair _$AvataaarHairFromJson(Map<String, dynamic> json) {
 class _$AvataaarHairTearOff {
   const _$AvataaarHairTearOff();
 
-  _NoHair noHair() {
-    return const _NoHair();
+  _NoHair noHair([@ColorSerialiser() Color color = Colors.transparent]) {
+    return _NoHair(
+      color,
+    );
   }
 
-  _Eyepatch eyepatch() {
-    return const _Eyepatch();
+  _Eyepatch eyepatch([@ColorSerialiser() Color color = Colors.transparent]) {
+    return _Eyepatch(
+      color,
+    );
   }
 
-  _Hat hat() {
-    return const _Hat();
+  _Hat hat([@ColorSerialiser() Color color = Colors.transparent]) {
+    return _Hat(
+      color,
+    );
   }
 
-  _Hijab hijab(@ColorSerialiser() Color color) {
+  _Hijab hijab(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue03]) {
     return _Hijab(
       color,
     );
   }
 
-  _Turban turban(@ColorSerialiser() Color color) {
+  _Turban turban(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue03]) {
     return _Turban(
       color,
     );
   }
 
-  _WinterHat1 winterHat1(@ColorSerialiser() Color color) {
+  _WinterHat1 winterHat1(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
     return _WinterHat1(
       color,
     );
   }
 
-  _WinterHat2 winterHat2(@ColorSerialiser() Color color) {
+  _WinterHat2 winterHat2(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue01]) {
     return _WinterHat2(
       color,
     );
   }
 
-  _WinterHat3 winterHat3(@ColorSerialiser() Color color) {
+  _WinterHat3 winterHat3(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
     return _WinterHat3(
       color,
     );
   }
 
-  _WinterHat4 winterHat4(@ColorSerialiser() Color color) {
+  _WinterHat4 winterHat4(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
     return _WinterHat4(
       color,
     );
   }
 
-  _LongHairBigHair longHairBigHair(@ColorSerialiser() Color color) {
+  _LongHairBigHair longHairBigHair(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairBigHair(
       color,
     );
   }
 
-  _LongHarBob longHairBob(@ColorSerialiser() Color color) {
+  _LongHarBob longHairBob(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHarBob(
       color,
     );
   }
 
-  _LongHairBun longHairBun(@ColorSerialiser() Color color) {
+  _LongHairBun longHairBun(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairBun(
       color,
     );
   }
 
-  _LongHairCurly longHairCurly(@ColorSerialiser() Color color) {
+  _LongHairCurly longHairCurly(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairCurly(
       color,
     );
   }
 
-  _LongHairCurvy longHairCurvy(@ColorSerialiser() Color color) {
+  _LongHairCurvy longHairCurvy(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairCurvy(
       color,
     );
   }
 
-  _LongHairDreads longHairDreads(@ColorSerialiser() Color color) {
+  _LongHairDreads longHairDreads(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairDreads(
       color,
     );
   }
 
-  _LongHairFrida longHairFrida() {
-    return const _LongHairFrida();
+  _LongHairFrida longHairFrida(
+      [@ColorSerialiser() Color color = Colors.transparent]) {
+    return _LongHairFrida(
+      color,
+    );
   }
 
-  _LongHairFro longHairFro(@ColorSerialiser() Color color) {
+  _LongHairFro longHairFro(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairFro(
       color,
     );
   }
 
-  _LongHairFroBand longHairFroBand(@ColorSerialiser() Color color) {
+  _LongHairFroBand longHairFroBand(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairFroBand(
       color,
     );
   }
 
-  _LongHairNotTooLong longHairNotTooLong(@ColorSerialiser() Color color) {
+  _LongHairNotTooLong longHairNotTooLong(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairNotTooLong(
       color,
     );
   }
 
-  _LongHairShavedSides longHairShavedSides(@ColorSerialiser() Color color) {
+  _LongHairShavedSides longHairShavedSides(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairShavedSides(
       color,
     );
   }
 
-  _LongHairMiaWallace longHairMiaWallace(@ColorSerialiser() Color color) {
+  _LongHairMiaWallace longHairMiaWallace(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairMiaWallace(
       color,
     );
   }
 
-  _LongHairStraight longHairStraight(@ColorSerialiser() Color color) {
+  _LongHairStraight longHairStraight(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairStraight(
       color,
     );
   }
 
-  _LongHairStraight2 longHairStraight2(@ColorSerialiser() Color color) {
+  _LongHairStraight2 longHairStraight2(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairStraight2(
       color,
     );
   }
 
   _LongHairStraightStrand longHairStraightStrand(
-      @ColorSerialiser() Color color) {
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _LongHairStraightStrand(
       color,
     );
   }
 
-  _ShortHairDreads01 shortHairDreads01(@ColorSerialiser() Color color) {
+  _ShortHairDreads01 shortHairDreads01(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairDreads01(
       color,
     );
   }
 
-  _ShortHairDreads02 shortHairDreads02(@ColorSerialiser() Color color) {
+  _ShortHairDreads02 shortHairDreads02(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairDreads02(
       color,
     );
   }
 
-  _ShortHairFrizzle shortHairFrizzle(@ColorSerialiser() Color color) {
+  _ShortHairFrizzle shortHairFrizzle(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairFrizzle(
       color,
     );
   }
 
-  _ShortHairShaggyMullet shortHairShaggyMullet(@ColorSerialiser() Color color) {
+  _ShortHairShaggyMullet shortHairShaggyMullet(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairShaggyMullet(
       color,
     );
   }
 
-  _ShortHairShortCurly shortHairShortCurly(@ColorSerialiser() Color color) {
+  _ShortHairShortCurly shortHairShortCurly(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairShortCurly(
       color,
     );
   }
 
-  _ShortHairShortFlat shortHairShortFlat(@ColorSerialiser() Color color) {
+  _ShortHairShortFlat shortHairShortFlat(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairShortFlat(
       color,
     );
   }
 
-  _ShortHairShortRound shortHairShortRound(@ColorSerialiser() Color color) {
+  _ShortHairShortRound shortHairShortRound(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairShortRound(
       color,
     );
   }
 
-  _ShortHairShortWaved shortHairShortWaved(@ColorSerialiser() Color color) {
+  _ShortHairShortWaved shortHairShortWaved(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairShortWaved(
       color,
     );
   }
 
-  _ShortHairSides shortHairSides(@ColorSerialiser() Color color) {
+  _ShortHairSides shortHairSides(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairSides(
       color,
     );
   }
 
-  _ShortHairTheCaesar shortHairTheCaesar(@ColorSerialiser() Color color) {
+  _ShortHairTheCaesar shortHairTheCaesar(
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairTheCaesar(
       color,
     );
   }
 
   _ShortHairTheCaesarSidePart shortHairTheCaesarSidePart(
-      @ColorSerialiser() Color color) {
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
     return _ShortHairTheCaesarSidePart(
       color,
     );
@@ -11747,11 +12043,14 @@ const $AvataaarHair = _$AvataaarHairTearOff();
 
 /// @nodoc
 mixin _$AvataaarHair {
+  @ColorSerialiser()
+  Color get color => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -11764,7 +12063,7 @@ mixin _$AvataaarHair {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -11799,9 +12098,9 @@ mixin _$AvataaarHair {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -11814,7 +12113,7 @@ mixin _$AvataaarHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -11839,9 +12138,9 @@ mixin _$AvataaarHair {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -11854,7 +12153,7 @@ mixin _$AvataaarHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12002,6 +12301,9 @@ mixin _$AvataaarHair {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AvataaarHairCopyWith<AvataaarHair> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -12009,6 +12311,7 @@ abstract class $AvataaarHairCopyWith<$Res> {
   factory $AvataaarHairCopyWith(
           AvataaarHair value, $Res Function(AvataaarHair) then) =
       _$AvataaarHairCopyWithImpl<$Res>;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -12018,12 +12321,26 @@ class _$AvataaarHairCopyWithImpl<$Res> implements $AvataaarHairCopyWith<$Res> {
   final AvataaarHair _value;
   // ignore: unused_field
   final $Res Function(AvataaarHair) _then;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$NoHairCopyWith<$Res> {
+abstract class _$NoHairCopyWith<$Res> implements $AvataaarHairCopyWith<$Res> {
   factory _$NoHairCopyWith(_NoHair value, $Res Function(_NoHair) then) =
       __$NoHairCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -12034,41 +12351,67 @@ class __$NoHairCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 
   @override
   _NoHair get _value => super._value as _NoHair;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_NoHair(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_NoHair extends _NoHair {
-  const _$_NoHair({String? $type})
+  const _$_NoHair(
+      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
       : $type = $type ?? 'noHair',
         super._();
 
   factory _$_NoHair.fromJson(Map<String, dynamic> json) =>
       _$$_NoHairFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarHair.noHair()';
+    return 'AvataaarHair.noHair(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NoHair);
+        (other.runtimeType == runtimeType &&
+            other is _NoHair &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$NoHairCopyWith<_NoHair> get copyWith =>
+      __$NoHairCopyWithImpl<_NoHair>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -12081,7 +12424,7 @@ class _$_NoHair extends _NoHair {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -12113,15 +12456,15 @@ class _$_NoHair extends _NoHair {
     required TResult Function(@ColorSerialiser() Color color)
         shortHairTheCaesarSidePart,
   }) {
-    return noHair();
+    return noHair(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12134,7 +12477,7 @@ class _$_NoHair extends _NoHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12156,15 +12499,15 @@ class _$_NoHair extends _NoHair {
     TResult Function(@ColorSerialiser() Color color)?
         shortHairTheCaesarSidePart,
   }) {
-    return noHair?.call();
+    return noHair?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12177,7 +12520,7 @@ class _$_NoHair extends _NoHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12201,7 +12544,7 @@ class _$_NoHair extends _NoHair {
     required TResult orElse(),
   }) {
     if (noHair != null) {
-      return noHair();
+      return noHair(color);
     }
     return orElse();
   }
@@ -12348,16 +12691,25 @@ class _$_NoHair extends _NoHair {
 }
 
 abstract class _NoHair extends AvataaarHair {
-  const factory _NoHair() = _$_NoHair;
+  const factory _NoHair([@ColorSerialiser() Color color]) = _$_NoHair;
   const _NoHair._() : super._();
 
   factory _NoHair.fromJson(Map<String, dynamic> json) = _$_NoHair.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$NoHairCopyWith<_NoHair> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$EyepatchCopyWith<$Res> {
+abstract class _$EyepatchCopyWith<$Res> implements $AvataaarHairCopyWith<$Res> {
   factory _$EyepatchCopyWith(_Eyepatch value, $Res Function(_Eyepatch) then) =
       __$EyepatchCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -12368,41 +12720,67 @@ class __$EyepatchCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 
   @override
   _Eyepatch get _value => super._value as _Eyepatch;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Eyepatch(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Eyepatch extends _Eyepatch {
-  const _$_Eyepatch({String? $type})
+  const _$_Eyepatch(
+      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
       : $type = $type ?? 'eyepatch',
         super._();
 
   factory _$_Eyepatch.fromJson(Map<String, dynamic> json) =>
       _$$_EyepatchFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarHair.eyepatch()';
+    return 'AvataaarHair.eyepatch(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Eyepatch);
+        (other.runtimeType == runtimeType &&
+            other is _Eyepatch &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$EyepatchCopyWith<_Eyepatch> get copyWith =>
+      __$EyepatchCopyWithImpl<_Eyepatch>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -12415,7 +12793,7 @@ class _$_Eyepatch extends _Eyepatch {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -12447,15 +12825,15 @@ class _$_Eyepatch extends _Eyepatch {
     required TResult Function(@ColorSerialiser() Color color)
         shortHairTheCaesarSidePart,
   }) {
-    return eyepatch();
+    return eyepatch(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12468,7 +12846,7 @@ class _$_Eyepatch extends _Eyepatch {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12490,15 +12868,15 @@ class _$_Eyepatch extends _Eyepatch {
     TResult Function(@ColorSerialiser() Color color)?
         shortHairTheCaesarSidePart,
   }) {
-    return eyepatch?.call();
+    return eyepatch?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12511,7 +12889,7 @@ class _$_Eyepatch extends _Eyepatch {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12535,7 +12913,7 @@ class _$_Eyepatch extends _Eyepatch {
     required TResult orElse(),
   }) {
     if (eyepatch != null) {
-      return eyepatch();
+      return eyepatch(color);
     }
     return orElse();
   }
@@ -12682,16 +13060,26 @@ class _$_Eyepatch extends _Eyepatch {
 }
 
 abstract class _Eyepatch extends AvataaarHair {
-  const factory _Eyepatch() = _$_Eyepatch;
+  const factory _Eyepatch([@ColorSerialiser() Color color]) = _$_Eyepatch;
   const _Eyepatch._() : super._();
 
   factory _Eyepatch.fromJson(Map<String, dynamic> json) = _$_Eyepatch.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$EyepatchCopyWith<_Eyepatch> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$HatCopyWith<$Res> {
+abstract class _$HatCopyWith<$Res> implements $AvataaarHairCopyWith<$Res> {
   factory _$HatCopyWith(_Hat value, $Res Function(_Hat) then) =
       __$HatCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -12702,40 +13090,66 @@ class __$HatCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 
   @override
   _Hat get _value => super._value as _Hat;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Hat(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Hat extends _Hat {
-  const _$_Hat({String? $type})
+  const _$_Hat(
+      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
       : $type = $type ?? 'hat',
         super._();
 
   factory _$_Hat.fromJson(Map<String, dynamic> json) => _$$_HatFromJson(json);
+
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarHair.hat()';
+    return 'AvataaarHair.hat(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Hat);
+        (other.runtimeType == runtimeType &&
+            other is _Hat &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$HatCopyWith<_Hat> get copyWith =>
+      __$HatCopyWithImpl<_Hat>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -12748,7 +13162,7 @@ class _$_Hat extends _Hat {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -12780,15 +13194,15 @@ class _$_Hat extends _Hat {
     required TResult Function(@ColorSerialiser() Color color)
         shortHairTheCaesarSidePart,
   }) {
-    return hat();
+    return hat(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12801,7 +13215,7 @@ class _$_Hat extends _Hat {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12823,15 +13237,15 @@ class _$_Hat extends _Hat {
     TResult Function(@ColorSerialiser() Color color)?
         shortHairTheCaesarSidePart,
   }) {
-    return hat?.call();
+    return hat?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -12844,7 +13258,7 @@ class _$_Hat extends _Hat {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -12868,7 +13282,7 @@ class _$_Hat extends _Hat {
     required TResult orElse(),
   }) {
     if (hat != null) {
-      return hat();
+      return hat(color);
     }
     return orElse();
   }
@@ -13015,16 +13429,24 @@ class _$_Hat extends _Hat {
 }
 
 abstract class _Hat extends AvataaarHair {
-  const factory _Hat() = _$_Hat;
+  const factory _Hat([@ColorSerialiser() Color color]) = _$_Hat;
   const _Hat._() : super._();
 
   factory _Hat.fromJson(Map<String, dynamic> json) = _$_Hat.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$HatCopyWith<_Hat> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$HijabCopyWith<$Res> {
+abstract class _$HijabCopyWith<$Res> implements $AvataaarHairCopyWith<$Res> {
   factory _$HijabCopyWith(_Hijab value, $Res Function(_Hijab) then) =
       __$HijabCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -13053,13 +13475,16 @@ class __$HijabCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Hijab extends _Hijab {
-  const _$_Hijab(@ColorSerialiser() this.color, {String? $type})
+  const _$_Hijab(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue03,
+      String? $type])
       : $type = $type ?? 'hijab',
         super._();
 
   factory _$_Hijab.fromJson(Map<String, dynamic> json) =>
       _$$_HijabFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -13092,9 +13517,9 @@ class _$_Hijab extends _Hijab {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -13107,7 +13532,7 @@ class _$_Hijab extends _Hijab {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -13145,9 +13570,9 @@ class _$_Hijab extends _Hijab {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13160,7 +13585,7 @@ class _$_Hijab extends _Hijab {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -13188,9 +13613,9 @@ class _$_Hijab extends _Hijab {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13203,7 +13628,7 @@ class _$_Hijab extends _Hijab {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -13374,21 +13799,24 @@ class _$_Hijab extends _Hijab {
 }
 
 abstract class _Hijab extends AvataaarHair {
-  const factory _Hijab(@ColorSerialiser() Color color) = _$_Hijab;
+  const factory _Hijab([@ColorSerialiser() Color color]) = _$_Hijab;
   const _Hijab._() : super._();
 
   factory _Hijab.fromJson(Map<String, dynamic> json) = _$_Hijab.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$HijabCopyWith<_Hijab> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$TurbanCopyWith<$Res> {
+abstract class _$TurbanCopyWith<$Res> implements $AvataaarHairCopyWith<$Res> {
   factory _$TurbanCopyWith(_Turban value, $Res Function(_Turban) then) =
       __$TurbanCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -13417,13 +13845,16 @@ class __$TurbanCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Turban extends _Turban {
-  const _$_Turban(@ColorSerialiser() this.color, {String? $type})
+  const _$_Turban(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue03,
+      String? $type])
       : $type = $type ?? 'turban',
         super._();
 
   factory _$_Turban.fromJson(Map<String, dynamic> json) =>
       _$$_TurbanFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -13456,9 +13887,9 @@ class _$_Turban extends _Turban {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -13471,7 +13902,7 @@ class _$_Turban extends _Turban {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -13509,9 +13940,9 @@ class _$_Turban extends _Turban {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13524,7 +13955,7 @@ class _$_Turban extends _Turban {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -13552,9 +13983,9 @@ class _$_Turban extends _Turban {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13567,7 +13998,7 @@ class _$_Turban extends _Turban {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -13738,22 +14169,26 @@ class _$_Turban extends _Turban {
 }
 
 abstract class _Turban extends AvataaarHair {
-  const factory _Turban(@ColorSerialiser() Color color) = _$_Turban;
+  const factory _Turban([@ColorSerialiser() Color color]) = _$_Turban;
   const _Turban._() : super._();
 
   factory _Turban.fromJson(Map<String, dynamic> json) = _$_Turban.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$TurbanCopyWith<_Turban> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$WinterHat1CopyWith<$Res> {
+abstract class _$WinterHat1CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$WinterHat1CopyWith(
           _WinterHat1 value, $Res Function(_WinterHat1) then) =
       __$WinterHat1CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -13783,13 +14218,16 @@ class __$WinterHat1CopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WinterHat1 extends _WinterHat1 {
-  const _$_WinterHat1(@ColorSerialiser() this.color, {String? $type})
+  const _$_WinterHat1(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
+      String? $type])
       : $type = $type ?? 'winterHat1',
         super._();
 
   factory _$_WinterHat1.fromJson(Map<String, dynamic> json) =>
       _$$_WinterHat1FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -13822,9 +14260,9 @@ class _$_WinterHat1 extends _WinterHat1 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -13837,7 +14275,7 @@ class _$_WinterHat1 extends _WinterHat1 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -13875,9 +14313,9 @@ class _$_WinterHat1 extends _WinterHat1 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13890,7 +14328,7 @@ class _$_WinterHat1 extends _WinterHat1 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -13918,9 +14356,9 @@ class _$_WinterHat1 extends _WinterHat1 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -13933,7 +14371,7 @@ class _$_WinterHat1 extends _WinterHat1 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -14104,24 +14542,28 @@ class _$_WinterHat1 extends _WinterHat1 {
 }
 
 abstract class _WinterHat1 extends AvataaarHair {
-  const factory _WinterHat1(@ColorSerialiser() Color color) = _$_WinterHat1;
+  const factory _WinterHat1([@ColorSerialiser() Color color]) = _$_WinterHat1;
   const _WinterHat1._() : super._();
 
   factory _WinterHat1.fromJson(Map<String, dynamic> json) =
       _$_WinterHat1.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$WinterHat1CopyWith<_WinterHat1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$WinterHat2CopyWith<$Res> {
+abstract class _$WinterHat2CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$WinterHat2CopyWith(
           _WinterHat2 value, $Res Function(_WinterHat2) then) =
       __$WinterHat2CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -14151,13 +14593,16 @@ class __$WinterHat2CopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WinterHat2 extends _WinterHat2 {
-  const _$_WinterHat2(@ColorSerialiser() this.color, {String? $type})
+  const _$_WinterHat2(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue01,
+      String? $type])
       : $type = $type ?? 'winterHat2',
         super._();
 
   factory _$_WinterHat2.fromJson(Map<String, dynamic> json) =>
       _$$_WinterHat2FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -14190,9 +14635,9 @@ class _$_WinterHat2 extends _WinterHat2 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -14205,7 +14650,7 @@ class _$_WinterHat2 extends _WinterHat2 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -14243,9 +14688,9 @@ class _$_WinterHat2 extends _WinterHat2 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -14258,7 +14703,7 @@ class _$_WinterHat2 extends _WinterHat2 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -14286,9 +14731,9 @@ class _$_WinterHat2 extends _WinterHat2 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -14301,7 +14746,7 @@ class _$_WinterHat2 extends _WinterHat2 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -14472,24 +14917,28 @@ class _$_WinterHat2 extends _WinterHat2 {
 }
 
 abstract class _WinterHat2 extends AvataaarHair {
-  const factory _WinterHat2(@ColorSerialiser() Color color) = _$_WinterHat2;
+  const factory _WinterHat2([@ColorSerialiser() Color color]) = _$_WinterHat2;
   const _WinterHat2._() : super._();
 
   factory _WinterHat2.fromJson(Map<String, dynamic> json) =
       _$_WinterHat2.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$WinterHat2CopyWith<_WinterHat2> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$WinterHat3CopyWith<$Res> {
+abstract class _$WinterHat3CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$WinterHat3CopyWith(
           _WinterHat3 value, $Res Function(_WinterHat3) then) =
       __$WinterHat3CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -14519,13 +14968,16 @@ class __$WinterHat3CopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WinterHat3 extends _WinterHat3 {
-  const _$_WinterHat3(@ColorSerialiser() this.color, {String? $type})
+  const _$_WinterHat3(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
+      String? $type])
       : $type = $type ?? 'winterHat3',
         super._();
 
   factory _$_WinterHat3.fromJson(Map<String, dynamic> json) =>
       _$$_WinterHat3FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -14558,9 +15010,9 @@ class _$_WinterHat3 extends _WinterHat3 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -14573,7 +15025,7 @@ class _$_WinterHat3 extends _WinterHat3 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -14611,9 +15063,9 @@ class _$_WinterHat3 extends _WinterHat3 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -14626,7 +15078,7 @@ class _$_WinterHat3 extends _WinterHat3 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -14654,9 +15106,9 @@ class _$_WinterHat3 extends _WinterHat3 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -14669,7 +15121,7 @@ class _$_WinterHat3 extends _WinterHat3 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -14840,24 +15292,28 @@ class _$_WinterHat3 extends _WinterHat3 {
 }
 
 abstract class _WinterHat3 extends AvataaarHair {
-  const factory _WinterHat3(@ColorSerialiser() Color color) = _$_WinterHat3;
+  const factory _WinterHat3([@ColorSerialiser() Color color]) = _$_WinterHat3;
   const _WinterHat3._() : super._();
 
   factory _WinterHat3.fromJson(Map<String, dynamic> json) =
       _$_WinterHat3.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$WinterHat3CopyWith<_WinterHat3> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$WinterHat4CopyWith<$Res> {
+abstract class _$WinterHat4CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$WinterHat4CopyWith(
           _WinterHat4 value, $Res Function(_WinterHat4) then) =
       __$WinterHat4CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -14887,13 +15343,16 @@ class __$WinterHat4CopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WinterHat4 extends _WinterHat4 {
-  const _$_WinterHat4(@ColorSerialiser() this.color, {String? $type})
+  const _$_WinterHat4(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
+      String? $type])
       : $type = $type ?? 'winterHat4',
         super._();
 
   factory _$_WinterHat4.fromJson(Map<String, dynamic> json) =>
       _$$_WinterHat4FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -14926,9 +15385,9 @@ class _$_WinterHat4 extends _WinterHat4 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -14941,7 +15400,7 @@ class _$_WinterHat4 extends _WinterHat4 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -14979,9 +15438,9 @@ class _$_WinterHat4 extends _WinterHat4 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -14994,7 +15453,7 @@ class _$_WinterHat4 extends _WinterHat4 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15022,9 +15481,9 @@ class _$_WinterHat4 extends _WinterHat4 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -15037,7 +15496,7 @@ class _$_WinterHat4 extends _WinterHat4 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15208,24 +15667,28 @@ class _$_WinterHat4 extends _WinterHat4 {
 }
 
 abstract class _WinterHat4 extends AvataaarHair {
-  const factory _WinterHat4(@ColorSerialiser() Color color) = _$_WinterHat4;
+  const factory _WinterHat4([@ColorSerialiser() Color color]) = _$_WinterHat4;
   const _WinterHat4._() : super._();
 
   factory _WinterHat4.fromJson(Map<String, dynamic> json) =
       _$_WinterHat4.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$WinterHat4CopyWith<_WinterHat4> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairBigHairCopyWith<$Res> {
+abstract class _$LongHairBigHairCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairBigHairCopyWith(
           _LongHairBigHair value, $Res Function(_LongHairBigHair) then) =
       __$LongHairBigHairCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -15256,13 +15719,16 @@ class __$LongHairBigHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairBigHair extends _LongHairBigHair {
-  const _$_LongHairBigHair(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairBigHair(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairBigHair',
         super._();
 
   factory _$_LongHairBigHair.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairBigHairFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -15295,9 +15761,9 @@ class _$_LongHairBigHair extends _LongHairBigHair {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -15310,7 +15776,7 @@ class _$_LongHairBigHair extends _LongHairBigHair {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -15348,9 +15814,9 @@ class _$_LongHairBigHair extends _LongHairBigHair {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -15363,7 +15829,7 @@ class _$_LongHairBigHair extends _LongHairBigHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15391,9 +15857,9 @@ class _$_LongHairBigHair extends _LongHairBigHair {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -15406,7 +15872,7 @@ class _$_LongHairBigHair extends _LongHairBigHair {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15577,25 +16043,29 @@ class _$_LongHairBigHair extends _LongHairBigHair {
 }
 
 abstract class _LongHairBigHair extends AvataaarHair {
-  const factory _LongHairBigHair(@ColorSerialiser() Color color) =
+  const factory _LongHairBigHair([@ColorSerialiser() Color color]) =
       _$_LongHairBigHair;
   const _LongHairBigHair._() : super._();
 
   factory _LongHairBigHair.fromJson(Map<String, dynamic> json) =
       _$_LongHairBigHair.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairBigHairCopyWith<_LongHairBigHair> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHarBobCopyWith<$Res> {
+abstract class _$LongHarBobCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHarBobCopyWith(
           _LongHarBob value, $Res Function(_LongHarBob) then) =
       __$LongHarBobCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -15625,13 +16095,16 @@ class __$LongHarBobCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHarBob extends _LongHarBob {
-  const _$_LongHarBob(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHarBob(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairBob',
         super._();
 
   factory _$_LongHarBob.fromJson(Map<String, dynamic> json) =>
       _$$_LongHarBobFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -15664,9 +16137,9 @@ class _$_LongHarBob extends _LongHarBob {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -15679,7 +16152,7 @@ class _$_LongHarBob extends _LongHarBob {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -15717,9 +16190,9 @@ class _$_LongHarBob extends _LongHarBob {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -15732,7 +16205,7 @@ class _$_LongHarBob extends _LongHarBob {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15760,9 +16233,9 @@ class _$_LongHarBob extends _LongHarBob {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -15775,7 +16248,7 @@ class _$_LongHarBob extends _LongHarBob {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -15946,24 +16419,28 @@ class _$_LongHarBob extends _LongHarBob {
 }
 
 abstract class _LongHarBob extends AvataaarHair {
-  const factory _LongHarBob(@ColorSerialiser() Color color) = _$_LongHarBob;
+  const factory _LongHarBob([@ColorSerialiser() Color color]) = _$_LongHarBob;
   const _LongHarBob._() : super._();
 
   factory _LongHarBob.fromJson(Map<String, dynamic> json) =
       _$_LongHarBob.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHarBobCopyWith<_LongHarBob> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairBunCopyWith<$Res> {
+abstract class _$LongHairBunCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairBunCopyWith(
           _LongHairBun value, $Res Function(_LongHairBun) then) =
       __$LongHairBunCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -15993,13 +16470,16 @@ class __$LongHairBunCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairBun extends _LongHairBun {
-  const _$_LongHairBun(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairBun(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairBun',
         super._();
 
   factory _$_LongHairBun.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairBunFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -16032,9 +16512,9 @@ class _$_LongHairBun extends _LongHairBun {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -16047,7 +16527,7 @@ class _$_LongHairBun extends _LongHairBun {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -16085,9 +16565,9 @@ class _$_LongHairBun extends _LongHairBun {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16100,7 +16580,7 @@ class _$_LongHairBun extends _LongHairBun {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -16128,9 +16608,9 @@ class _$_LongHairBun extends _LongHairBun {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16143,7 +16623,7 @@ class _$_LongHairBun extends _LongHairBun {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -16314,24 +16794,28 @@ class _$_LongHairBun extends _LongHairBun {
 }
 
 abstract class _LongHairBun extends AvataaarHair {
-  const factory _LongHairBun(@ColorSerialiser() Color color) = _$_LongHairBun;
+  const factory _LongHairBun([@ColorSerialiser() Color color]) = _$_LongHairBun;
   const _LongHairBun._() : super._();
 
   factory _LongHairBun.fromJson(Map<String, dynamic> json) =
       _$_LongHairBun.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairBunCopyWith<_LongHairBun> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairCurlyCopyWith<$Res> {
+abstract class _$LongHairCurlyCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairCurlyCopyWith(
           _LongHairCurly value, $Res Function(_LongHairCurly) then) =
       __$LongHairCurlyCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -16362,13 +16846,16 @@ class __$LongHairCurlyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairCurly extends _LongHairCurly {
-  const _$_LongHairCurly(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairCurly(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairCurly',
         super._();
 
   factory _$_LongHairCurly.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairCurlyFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -16401,9 +16888,9 @@ class _$_LongHairCurly extends _LongHairCurly {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -16416,7 +16903,7 @@ class _$_LongHairCurly extends _LongHairCurly {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -16454,9 +16941,9 @@ class _$_LongHairCurly extends _LongHairCurly {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16469,7 +16956,7 @@ class _$_LongHairCurly extends _LongHairCurly {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -16497,9 +16984,9 @@ class _$_LongHairCurly extends _LongHairCurly {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16512,7 +16999,7 @@ class _$_LongHairCurly extends _LongHairCurly {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -16683,25 +17170,29 @@ class _$_LongHairCurly extends _LongHairCurly {
 }
 
 abstract class _LongHairCurly extends AvataaarHair {
-  const factory _LongHairCurly(@ColorSerialiser() Color color) =
+  const factory _LongHairCurly([@ColorSerialiser() Color color]) =
       _$_LongHairCurly;
   const _LongHairCurly._() : super._();
 
   factory _LongHairCurly.fromJson(Map<String, dynamic> json) =
       _$_LongHairCurly.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairCurlyCopyWith<_LongHairCurly> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairCurvyCopyWith<$Res> {
+abstract class _$LongHairCurvyCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairCurvyCopyWith(
           _LongHairCurvy value, $Res Function(_LongHairCurvy) then) =
       __$LongHairCurvyCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -16732,13 +17223,16 @@ class __$LongHairCurvyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairCurvy extends _LongHairCurvy {
-  const _$_LongHairCurvy(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairCurvy(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairCurvy',
         super._();
 
   factory _$_LongHairCurvy.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairCurvyFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -16771,9 +17265,9 @@ class _$_LongHairCurvy extends _LongHairCurvy {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -16786,7 +17280,7 @@ class _$_LongHairCurvy extends _LongHairCurvy {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -16824,9 +17318,9 @@ class _$_LongHairCurvy extends _LongHairCurvy {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16839,7 +17333,7 @@ class _$_LongHairCurvy extends _LongHairCurvy {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -16867,9 +17361,9 @@ class _$_LongHairCurvy extends _LongHairCurvy {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -16882,7 +17376,7 @@ class _$_LongHairCurvy extends _LongHairCurvy {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17053,25 +17547,29 @@ class _$_LongHairCurvy extends _LongHairCurvy {
 }
 
 abstract class _LongHairCurvy extends AvataaarHair {
-  const factory _LongHairCurvy(@ColorSerialiser() Color color) =
+  const factory _LongHairCurvy([@ColorSerialiser() Color color]) =
       _$_LongHairCurvy;
   const _LongHairCurvy._() : super._();
 
   factory _LongHairCurvy.fromJson(Map<String, dynamic> json) =
       _$_LongHairCurvy.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairCurvyCopyWith<_LongHairCurvy> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairDreadsCopyWith<$Res> {
+abstract class _$LongHairDreadsCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairDreadsCopyWith(
           _LongHairDreads value, $Res Function(_LongHairDreads) then) =
       __$LongHairDreadsCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -17102,13 +17600,16 @@ class __$LongHairDreadsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairDreads extends _LongHairDreads {
-  const _$_LongHairDreads(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairDreads(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairDreads',
         super._();
 
   factory _$_LongHairDreads.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairDreadsFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -17141,9 +17642,9 @@ class _$_LongHairDreads extends _LongHairDreads {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -17156,7 +17657,7 @@ class _$_LongHairDreads extends _LongHairDreads {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -17194,9 +17695,9 @@ class _$_LongHairDreads extends _LongHairDreads {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17209,7 +17710,7 @@ class _$_LongHairDreads extends _LongHairDreads {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17237,9 +17738,9 @@ class _$_LongHairDreads extends _LongHairDreads {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17252,7 +17753,7 @@ class _$_LongHairDreads extends _LongHairDreads {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17423,25 +17924,30 @@ class _$_LongHairDreads extends _LongHairDreads {
 }
 
 abstract class _LongHairDreads extends AvataaarHair {
-  const factory _LongHairDreads(@ColorSerialiser() Color color) =
+  const factory _LongHairDreads([@ColorSerialiser() Color color]) =
       _$_LongHairDreads;
   const _LongHairDreads._() : super._();
 
   factory _LongHairDreads.fromJson(Map<String, dynamic> json) =
       _$_LongHairDreads.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairDreadsCopyWith<_LongHairDreads> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairFridaCopyWith<$Res> {
+abstract class _$LongHairFridaCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairFridaCopyWith(
           _LongHairFrida value, $Res Function(_LongHairFrida) then) =
       __$LongHairFridaCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -17454,41 +17960,67 @@ class __$LongHairFridaCopyWithImpl<$Res>
 
   @override
   _LongHairFrida get _value => super._value as _LongHairFrida;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_LongHairFrida(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairFrida extends _LongHairFrida {
-  const _$_LongHairFrida({String? $type})
+  const _$_LongHairFrida(
+      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
       : $type = $type ?? 'longHairFrida',
         super._();
 
   factory _$_LongHairFrida.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairFridaFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarHair.longHairFrida()';
+    return 'AvataaarHair.longHairFrida(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _LongHairFrida);
+        (other.runtimeType == runtimeType &&
+            other is _LongHairFrida &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LongHairFridaCopyWith<_LongHairFrida> get copyWith =>
+      __$LongHairFridaCopyWithImpl<_LongHairFrida>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -17501,7 +18033,7 @@ class _$_LongHairFrida extends _LongHairFrida {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -17533,15 +18065,15 @@ class _$_LongHairFrida extends _LongHairFrida {
     required TResult Function(@ColorSerialiser() Color color)
         shortHairTheCaesarSidePart,
   }) {
-    return longHairFrida();
+    return longHairFrida(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17554,7 +18086,7 @@ class _$_LongHairFrida extends _LongHairFrida {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17576,15 +18108,15 @@ class _$_LongHairFrida extends _LongHairFrida {
     TResult Function(@ColorSerialiser() Color color)?
         shortHairTheCaesarSidePart,
   }) {
-    return longHairFrida?.call();
+    return longHairFrida?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17597,7 +18129,7 @@ class _$_LongHairFrida extends _LongHairFrida {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17621,7 +18153,7 @@ class _$_LongHairFrida extends _LongHairFrida {
     required TResult orElse(),
   }) {
     if (longHairFrida != null) {
-      return longHairFrida();
+      return longHairFrida(color);
     }
     return orElse();
   }
@@ -17768,18 +18300,29 @@ class _$_LongHairFrida extends _LongHairFrida {
 }
 
 abstract class _LongHairFrida extends AvataaarHair {
-  const factory _LongHairFrida() = _$_LongHairFrida;
+  const factory _LongHairFrida([@ColorSerialiser() Color color]) =
+      _$_LongHairFrida;
   const _LongHairFrida._() : super._();
 
   factory _LongHairFrida.fromJson(Map<String, dynamic> json) =
       _$_LongHairFrida.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$LongHairFridaCopyWith<_LongHairFrida> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairFroCopyWith<$Res> {
+abstract class _$LongHairFroCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairFroCopyWith(
           _LongHairFro value, $Res Function(_LongHairFro) then) =
       __$LongHairFroCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -17809,13 +18352,16 @@ class __$LongHairFroCopyWithImpl<$Res> extends _$AvataaarHairCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairFro extends _LongHairFro {
-  const _$_LongHairFro(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairFro(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairFro',
         super._();
 
   factory _$_LongHairFro.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairFroFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -17848,9 +18394,9 @@ class _$_LongHairFro extends _LongHairFro {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -17863,7 +18409,7 @@ class _$_LongHairFro extends _LongHairFro {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -17901,9 +18447,9 @@ class _$_LongHairFro extends _LongHairFro {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17916,7 +18462,7 @@ class _$_LongHairFro extends _LongHairFro {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -17944,9 +18490,9 @@ class _$_LongHairFro extends _LongHairFro {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -17959,7 +18505,7 @@ class _$_LongHairFro extends _LongHairFro {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -18130,24 +18676,28 @@ class _$_LongHairFro extends _LongHairFro {
 }
 
 abstract class _LongHairFro extends AvataaarHair {
-  const factory _LongHairFro(@ColorSerialiser() Color color) = _$_LongHairFro;
+  const factory _LongHairFro([@ColorSerialiser() Color color]) = _$_LongHairFro;
   const _LongHairFro._() : super._();
 
   factory _LongHairFro.fromJson(Map<String, dynamic> json) =
       _$_LongHairFro.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairFroCopyWith<_LongHairFro> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairFroBandCopyWith<$Res> {
+abstract class _$LongHairFroBandCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairFroBandCopyWith(
           _LongHairFroBand value, $Res Function(_LongHairFroBand) then) =
       __$LongHairFroBandCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -18178,13 +18728,16 @@ class __$LongHairFroBandCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairFroBand extends _LongHairFroBand {
-  const _$_LongHairFroBand(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairFroBand(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairFroBand',
         super._();
 
   factory _$_LongHairFroBand.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairFroBandFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -18217,9 +18770,9 @@ class _$_LongHairFroBand extends _LongHairFroBand {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -18232,7 +18785,7 @@ class _$_LongHairFroBand extends _LongHairFroBand {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -18270,9 +18823,9 @@ class _$_LongHairFroBand extends _LongHairFroBand {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -18285,7 +18838,7 @@ class _$_LongHairFroBand extends _LongHairFroBand {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -18313,9 +18866,9 @@ class _$_LongHairFroBand extends _LongHairFroBand {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -18328,7 +18881,7 @@ class _$_LongHairFroBand extends _LongHairFroBand {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -18499,25 +19052,29 @@ class _$_LongHairFroBand extends _LongHairFroBand {
 }
 
 abstract class _LongHairFroBand extends AvataaarHair {
-  const factory _LongHairFroBand(@ColorSerialiser() Color color) =
+  const factory _LongHairFroBand([@ColorSerialiser() Color color]) =
       _$_LongHairFroBand;
   const _LongHairFroBand._() : super._();
 
   factory _LongHairFroBand.fromJson(Map<String, dynamic> json) =
       _$_LongHairFroBand.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairFroBandCopyWith<_LongHairFroBand> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairNotTooLongCopyWith<$Res> {
+abstract class _$LongHairNotTooLongCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairNotTooLongCopyWith(
           _LongHairNotTooLong value, $Res Function(_LongHairNotTooLong) then) =
       __$LongHairNotTooLongCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -18548,13 +19105,16 @@ class __$LongHairNotTooLongCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairNotTooLong extends _LongHairNotTooLong {
-  const _$_LongHairNotTooLong(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairNotTooLong(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairNotTooLong',
         super._();
 
   factory _$_LongHairNotTooLong.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairNotTooLongFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -18587,9 +19147,9 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -18602,7 +19162,7 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -18640,9 +19200,9 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -18655,7 +19215,7 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -18683,9 +19243,9 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -18698,7 +19258,7 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -18869,25 +19429,29 @@ class _$_LongHairNotTooLong extends _LongHairNotTooLong {
 }
 
 abstract class _LongHairNotTooLong extends AvataaarHair {
-  const factory _LongHairNotTooLong(@ColorSerialiser() Color color) =
+  const factory _LongHairNotTooLong([@ColorSerialiser() Color color]) =
       _$_LongHairNotTooLong;
   const _LongHairNotTooLong._() : super._();
 
   factory _LongHairNotTooLong.fromJson(Map<String, dynamic> json) =
       _$_LongHairNotTooLong.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairNotTooLongCopyWith<_LongHairNotTooLong> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairShavedSidesCopyWith<$Res> {
+abstract class _$LongHairShavedSidesCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairShavedSidesCopyWith(_LongHairShavedSides value,
           $Res Function(_LongHairShavedSides) then) =
       __$LongHairShavedSidesCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -18918,13 +19482,16 @@ class __$LongHairShavedSidesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairShavedSides extends _LongHairShavedSides {
-  const _$_LongHairShavedSides(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairShavedSides(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairShavedSides',
         super._();
 
   factory _$_LongHairShavedSides.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairShavedSidesFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -18958,9 +19525,9 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -18973,7 +19540,7 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -19011,9 +19578,9 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19026,7 +19593,7 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19054,9 +19621,9 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19069,7 +19636,7 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19240,25 +19807,29 @@ class _$_LongHairShavedSides extends _LongHairShavedSides {
 }
 
 abstract class _LongHairShavedSides extends AvataaarHair {
-  const factory _LongHairShavedSides(@ColorSerialiser() Color color) =
+  const factory _LongHairShavedSides([@ColorSerialiser() Color color]) =
       _$_LongHairShavedSides;
   const _LongHairShavedSides._() : super._();
 
   factory _LongHairShavedSides.fromJson(Map<String, dynamic> json) =
       _$_LongHairShavedSides.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairShavedSidesCopyWith<_LongHairShavedSides> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairMiaWallaceCopyWith<$Res> {
+abstract class _$LongHairMiaWallaceCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairMiaWallaceCopyWith(
           _LongHairMiaWallace value, $Res Function(_LongHairMiaWallace) then) =
       __$LongHairMiaWallaceCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -19289,13 +19860,16 @@ class __$LongHairMiaWallaceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairMiaWallace extends _LongHairMiaWallace {
-  const _$_LongHairMiaWallace(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairMiaWallace(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairMiaWallace',
         super._();
 
   factory _$_LongHairMiaWallace.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairMiaWallaceFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -19328,9 +19902,9 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -19343,7 +19917,7 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -19381,9 +19955,9 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19396,7 +19970,7 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19424,9 +19998,9 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19439,7 +20013,7 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19610,25 +20184,29 @@ class _$_LongHairMiaWallace extends _LongHairMiaWallace {
 }
 
 abstract class _LongHairMiaWallace extends AvataaarHair {
-  const factory _LongHairMiaWallace(@ColorSerialiser() Color color) =
+  const factory _LongHairMiaWallace([@ColorSerialiser() Color color]) =
       _$_LongHairMiaWallace;
   const _LongHairMiaWallace._() : super._();
 
   factory _LongHairMiaWallace.fromJson(Map<String, dynamic> json) =
       _$_LongHairMiaWallace.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairMiaWallaceCopyWith<_LongHairMiaWallace> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairStraightCopyWith<$Res> {
+abstract class _$LongHairStraightCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairStraightCopyWith(
           _LongHairStraight value, $Res Function(_LongHairStraight) then) =
       __$LongHairStraightCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -19659,13 +20237,16 @@ class __$LongHairStraightCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairStraight extends _LongHairStraight {
-  const _$_LongHairStraight(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairStraight(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairStraight',
         super._();
 
   factory _$_LongHairStraight.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairStraightFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -19698,9 +20279,9 @@ class _$_LongHairStraight extends _LongHairStraight {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -19713,7 +20294,7 @@ class _$_LongHairStraight extends _LongHairStraight {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -19751,9 +20332,9 @@ class _$_LongHairStraight extends _LongHairStraight {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19766,7 +20347,7 @@ class _$_LongHairStraight extends _LongHairStraight {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19794,9 +20375,9 @@ class _$_LongHairStraight extends _LongHairStraight {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -19809,7 +20390,7 @@ class _$_LongHairStraight extends _LongHairStraight {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -19980,25 +20561,29 @@ class _$_LongHairStraight extends _LongHairStraight {
 }
 
 abstract class _LongHairStraight extends AvataaarHair {
-  const factory _LongHairStraight(@ColorSerialiser() Color color) =
+  const factory _LongHairStraight([@ColorSerialiser() Color color]) =
       _$_LongHairStraight;
   const _LongHairStraight._() : super._();
 
   factory _LongHairStraight.fromJson(Map<String, dynamic> json) =
       _$_LongHairStraight.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairStraightCopyWith<_LongHairStraight> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairStraight2CopyWith<$Res> {
+abstract class _$LongHairStraight2CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairStraight2CopyWith(
           _LongHairStraight2 value, $Res Function(_LongHairStraight2) then) =
       __$LongHairStraight2CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -20029,13 +20614,16 @@ class __$LongHairStraight2CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairStraight2 extends _LongHairStraight2 {
-  const _$_LongHairStraight2(@ColorSerialiser() this.color, {String? $type})
+  const _$_LongHairStraight2(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairStraight2',
         super._();
 
   factory _$_LongHairStraight2.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairStraight2FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -20068,9 +20656,9 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -20083,7 +20671,7 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -20121,9 +20709,9 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20136,7 +20724,7 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -20164,9 +20752,9 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20179,7 +20767,7 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -20350,25 +20938,29 @@ class _$_LongHairStraight2 extends _LongHairStraight2 {
 }
 
 abstract class _LongHairStraight2 extends AvataaarHair {
-  const factory _LongHairStraight2(@ColorSerialiser() Color color) =
+  const factory _LongHairStraight2([@ColorSerialiser() Color color]) =
       _$_LongHairStraight2;
   const _LongHairStraight2._() : super._();
 
   factory _LongHairStraight2.fromJson(Map<String, dynamic> json) =
       _$_LongHairStraight2.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairStraight2CopyWith<_LongHairStraight2> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LongHairStraightStrandCopyWith<$Res> {
+abstract class _$LongHairStraightStrandCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$LongHairStraightStrandCopyWith(_LongHairStraightStrand value,
           $Res Function(_LongHairStraightStrand) then) =
       __$LongHairStraightStrandCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -20399,14 +20991,16 @@ class __$LongHairStraightStrandCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LongHairStraightStrand extends _LongHairStraightStrand {
-  const _$_LongHairStraightStrand(@ColorSerialiser() this.color,
-      {String? $type})
+  const _$_LongHairStraightStrand(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'longHairStraightStrand',
         super._();
 
   factory _$_LongHairStraightStrand.fromJson(Map<String, dynamic> json) =>
       _$$_LongHairStraightStrandFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -20440,9 +21034,9 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -20455,7 +21049,7 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -20493,9 +21087,9 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20508,7 +21102,7 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -20536,9 +21130,9 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20551,7 +21145,7 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -20722,25 +21316,29 @@ class _$_LongHairStraightStrand extends _LongHairStraightStrand {
 }
 
 abstract class _LongHairStraightStrand extends AvataaarHair {
-  const factory _LongHairStraightStrand(@ColorSerialiser() Color color) =
+  const factory _LongHairStraightStrand([@ColorSerialiser() Color color]) =
       _$_LongHairStraightStrand;
   const _LongHairStraightStrand._() : super._();
 
   factory _LongHairStraightStrand.fromJson(Map<String, dynamic> json) =
       _$_LongHairStraightStrand.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$LongHairStraightStrandCopyWith<_LongHairStraightStrand> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairDreads01CopyWith<$Res> {
+abstract class _$ShortHairDreads01CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairDreads01CopyWith(
           _ShortHairDreads01 value, $Res Function(_ShortHairDreads01) then) =
       __$ShortHairDreads01CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -20771,13 +21369,16 @@ class __$ShortHairDreads01CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairDreads01 extends _ShortHairDreads01 {
-  const _$_ShortHairDreads01(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairDreads01(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairDreads01',
         super._();
 
   factory _$_ShortHairDreads01.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairDreads01FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -20810,9 +21411,9 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -20825,7 +21426,7 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -20863,9 +21464,9 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20878,7 +21479,7 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -20906,9 +21507,9 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -20921,7 +21522,7 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -21092,25 +21693,29 @@ class _$_ShortHairDreads01 extends _ShortHairDreads01 {
 }
 
 abstract class _ShortHairDreads01 extends AvataaarHair {
-  const factory _ShortHairDreads01(@ColorSerialiser() Color color) =
+  const factory _ShortHairDreads01([@ColorSerialiser() Color color]) =
       _$_ShortHairDreads01;
   const _ShortHairDreads01._() : super._();
 
   factory _ShortHairDreads01.fromJson(Map<String, dynamic> json) =
       _$_ShortHairDreads01.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairDreads01CopyWith<_ShortHairDreads01> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairDreads02CopyWith<$Res> {
+abstract class _$ShortHairDreads02CopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairDreads02CopyWith(
           _ShortHairDreads02 value, $Res Function(_ShortHairDreads02) then) =
       __$ShortHairDreads02CopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -21141,13 +21746,16 @@ class __$ShortHairDreads02CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairDreads02 extends _ShortHairDreads02 {
-  const _$_ShortHairDreads02(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairDreads02(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairDreads02',
         super._();
 
   factory _$_ShortHairDreads02.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairDreads02FromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -21180,9 +21788,9 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -21195,7 +21803,7 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -21233,9 +21841,9 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -21248,7 +21856,7 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -21276,9 +21884,9 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -21291,7 +21899,7 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -21462,25 +22070,29 @@ class _$_ShortHairDreads02 extends _ShortHairDreads02 {
 }
 
 abstract class _ShortHairDreads02 extends AvataaarHair {
-  const factory _ShortHairDreads02(@ColorSerialiser() Color color) =
+  const factory _ShortHairDreads02([@ColorSerialiser() Color color]) =
       _$_ShortHairDreads02;
   const _ShortHairDreads02._() : super._();
 
   factory _ShortHairDreads02.fromJson(Map<String, dynamic> json) =
       _$_ShortHairDreads02.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairDreads02CopyWith<_ShortHairDreads02> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairFrizzleCopyWith<$Res> {
+abstract class _$ShortHairFrizzleCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairFrizzleCopyWith(
           _ShortHairFrizzle value, $Res Function(_ShortHairFrizzle) then) =
       __$ShortHairFrizzleCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -21511,13 +22123,16 @@ class __$ShortHairFrizzleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairFrizzle extends _ShortHairFrizzle {
-  const _$_ShortHairFrizzle(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairFrizzle(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairFrizzle',
         super._();
 
   factory _$_ShortHairFrizzle.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairFrizzleFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -21550,9 +22165,9 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -21565,7 +22180,7 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -21603,9 +22218,9 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -21618,7 +22233,7 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -21646,9 +22261,9 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -21661,7 +22276,7 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -21832,25 +22447,29 @@ class _$_ShortHairFrizzle extends _ShortHairFrizzle {
 }
 
 abstract class _ShortHairFrizzle extends AvataaarHair {
-  const factory _ShortHairFrizzle(@ColorSerialiser() Color color) =
+  const factory _ShortHairFrizzle([@ColorSerialiser() Color color]) =
       _$_ShortHairFrizzle;
   const _ShortHairFrizzle._() : super._();
 
   factory _ShortHairFrizzle.fromJson(Map<String, dynamic> json) =
       _$_ShortHairFrizzle.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairFrizzleCopyWith<_ShortHairFrizzle> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairShaggyMulletCopyWith<$Res> {
+abstract class _$ShortHairShaggyMulletCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairShaggyMulletCopyWith(_ShortHairShaggyMullet value,
           $Res Function(_ShortHairShaggyMullet) then) =
       __$ShortHairShaggyMulletCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -21881,13 +22500,16 @@ class __$ShortHairShaggyMulletCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
-  const _$_ShortHairShaggyMullet(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairShaggyMullet(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairShaggyMullet',
         super._();
 
   factory _$_ShortHairShaggyMullet.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairShaggyMulletFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -21921,9 +22543,9 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -21936,7 +22558,7 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -21974,9 +22596,9 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -21989,7 +22611,7 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22017,9 +22639,9 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -22032,7 +22654,7 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22203,25 +22825,29 @@ class _$_ShortHairShaggyMullet extends _ShortHairShaggyMullet {
 }
 
 abstract class _ShortHairShaggyMullet extends AvataaarHair {
-  const factory _ShortHairShaggyMullet(@ColorSerialiser() Color color) =
+  const factory _ShortHairShaggyMullet([@ColorSerialiser() Color color]) =
       _$_ShortHairShaggyMullet;
   const _ShortHairShaggyMullet._() : super._();
 
   factory _ShortHairShaggyMullet.fromJson(Map<String, dynamic> json) =
       _$_ShortHairShaggyMullet.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairShaggyMulletCopyWith<_ShortHairShaggyMullet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairShortCurlyCopyWith<$Res> {
+abstract class _$ShortHairShortCurlyCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairShortCurlyCopyWith(_ShortHairShortCurly value,
           $Res Function(_ShortHairShortCurly) then) =
       __$ShortHairShortCurlyCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -22252,13 +22878,16 @@ class __$ShortHairShortCurlyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairShortCurly extends _ShortHairShortCurly {
-  const _$_ShortHairShortCurly(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairShortCurly(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairShortCurly',
         super._();
 
   factory _$_ShortHairShortCurly.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairShortCurlyFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -22292,9 +22921,9 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -22307,7 +22936,7 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -22345,9 +22974,9 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -22360,7 +22989,7 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22388,9 +23017,9 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -22403,7 +23032,7 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22574,25 +23203,29 @@ class _$_ShortHairShortCurly extends _ShortHairShortCurly {
 }
 
 abstract class _ShortHairShortCurly extends AvataaarHair {
-  const factory _ShortHairShortCurly(@ColorSerialiser() Color color) =
+  const factory _ShortHairShortCurly([@ColorSerialiser() Color color]) =
       _$_ShortHairShortCurly;
   const _ShortHairShortCurly._() : super._();
 
   factory _ShortHairShortCurly.fromJson(Map<String, dynamic> json) =
       _$_ShortHairShortCurly.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairShortCurlyCopyWith<_ShortHairShortCurly> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairShortFlatCopyWith<$Res> {
+abstract class _$ShortHairShortFlatCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairShortFlatCopyWith(
           _ShortHairShortFlat value, $Res Function(_ShortHairShortFlat) then) =
       __$ShortHairShortFlatCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -22623,13 +23256,16 @@ class __$ShortHairShortFlatCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairShortFlat extends _ShortHairShortFlat {
-  const _$_ShortHairShortFlat(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairShortFlat(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairShortFlat',
         super._();
 
   factory _$_ShortHairShortFlat.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairShortFlatFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -22662,9 +23298,9 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -22677,7 +23313,7 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -22715,9 +23351,9 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -22730,7 +23366,7 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22758,9 +23394,9 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -22773,7 +23409,7 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -22944,25 +23580,29 @@ class _$_ShortHairShortFlat extends _ShortHairShortFlat {
 }
 
 abstract class _ShortHairShortFlat extends AvataaarHair {
-  const factory _ShortHairShortFlat(@ColorSerialiser() Color color) =
+  const factory _ShortHairShortFlat([@ColorSerialiser() Color color]) =
       _$_ShortHairShortFlat;
   const _ShortHairShortFlat._() : super._();
 
   factory _ShortHairShortFlat.fromJson(Map<String, dynamic> json) =
       _$_ShortHairShortFlat.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairShortFlatCopyWith<_ShortHairShortFlat> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairShortRoundCopyWith<$Res> {
+abstract class _$ShortHairShortRoundCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairShortRoundCopyWith(_ShortHairShortRound value,
           $Res Function(_ShortHairShortRound) then) =
       __$ShortHairShortRoundCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -22993,13 +23633,16 @@ class __$ShortHairShortRoundCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairShortRound extends _ShortHairShortRound {
-  const _$_ShortHairShortRound(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairShortRound(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairShortRound',
         super._();
 
   factory _$_ShortHairShortRound.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairShortRoundFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -23033,9 +23676,9 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -23048,7 +23691,7 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -23086,9 +23729,9 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23101,7 +23744,7 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -23129,9 +23772,9 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23144,7 +23787,7 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -23315,25 +23958,29 @@ class _$_ShortHairShortRound extends _ShortHairShortRound {
 }
 
 abstract class _ShortHairShortRound extends AvataaarHair {
-  const factory _ShortHairShortRound(@ColorSerialiser() Color color) =
+  const factory _ShortHairShortRound([@ColorSerialiser() Color color]) =
       _$_ShortHairShortRound;
   const _ShortHairShortRound._() : super._();
 
   factory _ShortHairShortRound.fromJson(Map<String, dynamic> json) =
       _$_ShortHairShortRound.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairShortRoundCopyWith<_ShortHairShortRound> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairShortWavedCopyWith<$Res> {
+abstract class _$ShortHairShortWavedCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairShortWavedCopyWith(_ShortHairShortWaved value,
           $Res Function(_ShortHairShortWaved) then) =
       __$ShortHairShortWavedCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -23364,13 +24011,16 @@ class __$ShortHairShortWavedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairShortWaved extends _ShortHairShortWaved {
-  const _$_ShortHairShortWaved(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairShortWaved(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairShortWaved',
         super._();
 
   factory _$_ShortHairShortWaved.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairShortWavedFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -23404,9 +24054,9 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -23419,7 +24069,7 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -23457,9 +24107,9 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23472,7 +24122,7 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -23500,9 +24150,9 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23515,7 +24165,7 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -23686,25 +24336,29 @@ class _$_ShortHairShortWaved extends _ShortHairShortWaved {
 }
 
 abstract class _ShortHairShortWaved extends AvataaarHair {
-  const factory _ShortHairShortWaved(@ColorSerialiser() Color color) =
+  const factory _ShortHairShortWaved([@ColorSerialiser() Color color]) =
       _$_ShortHairShortWaved;
   const _ShortHairShortWaved._() : super._();
 
   factory _ShortHairShortWaved.fromJson(Map<String, dynamic> json) =
       _$_ShortHairShortWaved.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairShortWavedCopyWith<_ShortHairShortWaved> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairSidesCopyWith<$Res> {
+abstract class _$ShortHairSidesCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairSidesCopyWith(
           _ShortHairSides value, $Res Function(_ShortHairSides) then) =
       __$ShortHairSidesCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -23735,13 +24389,16 @@ class __$ShortHairSidesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairSides extends _ShortHairSides {
-  const _$_ShortHairSides(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairSides(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairSides',
         super._();
 
   factory _$_ShortHairSides.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairSidesFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -23774,9 +24431,9 @@ class _$_ShortHairSides extends _ShortHairSides {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -23789,7 +24446,7 @@ class _$_ShortHairSides extends _ShortHairSides {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -23827,9 +24484,9 @@ class _$_ShortHairSides extends _ShortHairSides {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23842,7 +24499,7 @@ class _$_ShortHairSides extends _ShortHairSides {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -23870,9 +24527,9 @@ class _$_ShortHairSides extends _ShortHairSides {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -23885,7 +24542,7 @@ class _$_ShortHairSides extends _ShortHairSides {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -24056,25 +24713,29 @@ class _$_ShortHairSides extends _ShortHairSides {
 }
 
 abstract class _ShortHairSides extends AvataaarHair {
-  const factory _ShortHairSides(@ColorSerialiser() Color color) =
+  const factory _ShortHairSides([@ColorSerialiser() Color color]) =
       _$_ShortHairSides;
   const _ShortHairSides._() : super._();
 
   factory _ShortHairSides.fromJson(Map<String, dynamic> json) =
       _$_ShortHairSides.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairSidesCopyWith<_ShortHairSides> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairTheCaesarCopyWith<$Res> {
+abstract class _$ShortHairTheCaesarCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairTheCaesarCopyWith(
           _ShortHairTheCaesar value, $Res Function(_ShortHairTheCaesar) then) =
       __$ShortHairTheCaesarCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -24105,13 +24766,16 @@ class __$ShortHairTheCaesarCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
-  const _$_ShortHairTheCaesar(@ColorSerialiser() this.color, {String? $type})
+  const _$_ShortHairTheCaesar(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairTheCaesar',
         super._();
 
   factory _$_ShortHairTheCaesar.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairTheCaesarFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -24144,9 +24808,9 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -24159,7 +24823,7 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -24197,9 +24861,9 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -24212,7 +24876,7 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -24240,9 +24904,9 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -24255,7 +24919,7 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -24426,26 +25090,30 @@ class _$_ShortHairTheCaesar extends _ShortHairTheCaesar {
 }
 
 abstract class _ShortHairTheCaesar extends AvataaarHair {
-  const factory _ShortHairTheCaesar(@ColorSerialiser() Color color) =
+  const factory _ShortHairTheCaesar([@ColorSerialiser() Color color]) =
       _$_ShortHairTheCaesar;
   const _ShortHairTheCaesar._() : super._();
 
   factory _ShortHairTheCaesar.fromJson(Map<String, dynamic> json) =
       _$_ShortHairTheCaesar.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairTheCaesarCopyWith<_ShortHairTheCaesar> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShortHairTheCaesarSidePartCopyWith<$Res> {
+abstract class _$ShortHairTheCaesarSidePartCopyWith<$Res>
+    implements $AvataaarHairCopyWith<$Res> {
   factory _$ShortHairTheCaesarSidePartCopyWith(
           _ShortHairTheCaesarSidePart value,
           $Res Function(_ShortHairTheCaesarSidePart) then) =
       __$ShortHairTheCaesarSidePartCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -24477,14 +25145,16 @@ class __$ShortHairTheCaesarSidePartCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
-  const _$_ShortHairTheCaesarSidePart(@ColorSerialiser() this.color,
-      {String? $type})
+  const _$_ShortHairTheCaesarSidePart(
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
+      String? $type])
       : $type = $type ?? 'shortHairTheCaesarSidePart',
         super._();
 
   factory _$_ShortHairTheCaesarSidePart.fromJson(Map<String, dynamic> json) =>
       _$$_ShortHairTheCaesarSidePartFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -24518,9 +25188,9 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noHair,
-    required TResult Function() eyepatch,
-    required TResult Function() hat,
+    required TResult Function(@ColorSerialiser() Color color) noHair,
+    required TResult Function(@ColorSerialiser() Color color) eyepatch,
+    required TResult Function(@ColorSerialiser() Color color) hat,
     required TResult Function(@ColorSerialiser() Color color) hijab,
     required TResult Function(@ColorSerialiser() Color color) turban,
     required TResult Function(@ColorSerialiser() Color color) winterHat1,
@@ -24533,7 +25203,7 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
     required TResult Function(@ColorSerialiser() Color color) longHairCurly,
     required TResult Function(@ColorSerialiser() Color color) longHairCurvy,
     required TResult Function(@ColorSerialiser() Color color) longHairDreads,
-    required TResult Function() longHairFrida,
+    required TResult Function(@ColorSerialiser() Color color) longHairFrida,
     required TResult Function(@ColorSerialiser() Color color) longHairFro,
     required TResult Function(@ColorSerialiser() Color color) longHairFroBand,
     required TResult Function(@ColorSerialiser() Color color)
@@ -24571,9 +25241,9 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -24586,7 +25256,7 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -24614,9 +25284,9 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noHair,
-    TResult Function()? eyepatch,
-    TResult Function()? hat,
+    TResult Function(@ColorSerialiser() Color color)? noHair,
+    TResult Function(@ColorSerialiser() Color color)? eyepatch,
+    TResult Function(@ColorSerialiser() Color color)? hat,
     TResult Function(@ColorSerialiser() Color color)? hijab,
     TResult Function(@ColorSerialiser() Color color)? turban,
     TResult Function(@ColorSerialiser() Color color)? winterHat1,
@@ -24629,7 +25299,7 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
     TResult Function(@ColorSerialiser() Color color)? longHairCurly,
     TResult Function(@ColorSerialiser() Color color)? longHairCurvy,
     TResult Function(@ColorSerialiser() Color color)? longHairDreads,
-    TResult Function()? longHairFrida,
+    TResult Function(@ColorSerialiser() Color color)? longHairFrida,
     TResult Function(@ColorSerialiser() Color color)? longHairFro,
     TResult Function(@ColorSerialiser() Color color)? longHairFroBand,
     TResult Function(@ColorSerialiser() Color color)? longHairNotTooLong,
@@ -24800,15 +25470,17 @@ class _$_ShortHairTheCaesarSidePart extends _ShortHairTheCaesarSidePart {
 }
 
 abstract class _ShortHairTheCaesarSidePart extends AvataaarHair {
-  const factory _ShortHairTheCaesarSidePart(@ColorSerialiser() Color color) =
+  const factory _ShortHairTheCaesarSidePart([@ColorSerialiser() Color color]) =
       _$_ShortHairTheCaesarSidePart;
   const _ShortHairTheCaesarSidePart._() : super._();
 
   factory _ShortHairTheCaesarSidePart.fromJson(Map<String, dynamic> json) =
       _$_ShortHairTheCaesarSidePart.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$ShortHairTheCaesarSidePartCopyWith<_ShortHairTheCaesarSidePart>
       get copyWith => throw _privateConstructorUsedError;
@@ -27385,35 +28057,50 @@ AvataaarSkin _$AvataaarSkinFromJson(Map<String, dynamic> json) {
 class _$AvataaarSkinTearOff {
   const _$AvataaarSkinTearOff();
 
-  _Tanned tanned() {
-    return const _Tanned();
+  _Tanned tanned([@ColorSerialiser() Color color = const Color(0x00FD9841)]) {
+    return _Tanned(
+      color,
+    );
   }
 
-  _Yellow yellow() {
-    return const _Yellow();
+  _Yellow yellow([@ColorSerialiser() Color color = const Color(0x00F8D25C)]) {
+    return _Yellow(
+      color,
+    );
   }
 
-  _Pale pale() {
-    return const _Pale();
+  _Pale pale([@ColorSerialiser() Color color = const Color(0x00FFDBB4)]) {
+    return _Pale(
+      color,
+    );
   }
 
-  _White light() {
-    return const _White();
+  _White light([@ColorSerialiser() Color color = const Color(0x00EDB98A)]) {
+    return _White(
+      color,
+    );
   }
 
-  _Brown brown() {
-    return const _Brown();
+  _Brown brown([@ColorSerialiser() Color color = const Color(0x00D08B5B)]) {
+    return _Brown(
+      color,
+    );
   }
 
-  _DarkBrown darkBrown() {
-    return const _DarkBrown();
+  _DarkBrown darkBrown(
+      [@ColorSerialiser() Color color = const Color(0x00AE5D29)]) {
+    return _DarkBrown(
+      color,
+    );
   }
 
-  _Black black() {
-    return const _Black();
+  _Black black([@ColorSerialiser() Color color = const Color(0x00614335)]) {
+    return _Black(
+      color,
+    );
   }
 
-  _Custom custom(@ColorSerialiser() Color color) {
+  _Custom custom([@ColorSerialiser() Color color = Colors.grey]) {
     return _Custom(
       color,
     );
@@ -27429,39 +28116,42 @@ const $AvataaarSkin = _$AvataaarSkinTearOff();
 
 /// @nodoc
 mixin _$AvataaarSkin {
+  @ColorSerialiser()
+  Color get color => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) =>
@@ -27504,6 +28194,9 @@ mixin _$AvataaarSkin {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AvataaarSkinCopyWith<AvataaarSkin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -27511,6 +28204,7 @@ abstract class $AvataaarSkinCopyWith<$Res> {
   factory $AvataaarSkinCopyWith(
           AvataaarSkin value, $Res Function(AvataaarSkin) then) =
       _$AvataaarSkinCopyWithImpl<$Res>;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -27520,12 +28214,26 @@ class _$AvataaarSkinCopyWithImpl<$Res> implements $AvataaarSkinCopyWith<$Res> {
   final AvataaarSkin _value;
   // ignore: unused_field
   final $Res Function(AvataaarSkin) _then;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$TannedCopyWith<$Res> {
+abstract class _$TannedCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$TannedCopyWith(_Tanned value, $Res Function(_Tanned) then) =
       __$TannedCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -27536,80 +28244,106 @@ class __$TannedCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _Tanned get _value => super._value as _Tanned;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Tanned(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Tanned extends _Tanned {
-  const _$_Tanned({String? $type})
+  const _$_Tanned(
+      [@ColorSerialiser() this.color = const Color(0x00FD9841), String? $type])
       : $type = $type ?? 'tanned',
         super._();
 
   factory _$_Tanned.fromJson(Map<String, dynamic> json) =>
       _$$_TannedFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.tanned()';
+    return 'AvataaarSkin.tanned(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Tanned);
+        (other.runtimeType == runtimeType &&
+            other is _Tanned &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$TannedCopyWith<_Tanned> get copyWith =>
+      __$TannedCopyWithImpl<_Tanned>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return tanned();
+    return tanned(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return tanned?.call();
+    return tanned?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (tanned != null) {
-      return tanned();
+      return tanned(color);
     }
     return orElse();
   }
@@ -27670,16 +28404,25 @@ class _$_Tanned extends _Tanned {
 }
 
 abstract class _Tanned extends AvataaarSkin {
-  const factory _Tanned() = _$_Tanned;
+  const factory _Tanned([@ColorSerialiser() Color color]) = _$_Tanned;
   const _Tanned._() : super._();
 
   factory _Tanned.fromJson(Map<String, dynamic> json) = _$_Tanned.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$TannedCopyWith<_Tanned> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$YellowCopyWith<$Res> {
+abstract class _$YellowCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$YellowCopyWith(_Yellow value, $Res Function(_Yellow) then) =
       __$YellowCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -27690,80 +28433,106 @@ class __$YellowCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _Yellow get _value => super._value as _Yellow;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Yellow(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Yellow extends _Yellow {
-  const _$_Yellow({String? $type})
+  const _$_Yellow(
+      [@ColorSerialiser() this.color = const Color(0x00F8D25C), String? $type])
       : $type = $type ?? 'yellow',
         super._();
 
   factory _$_Yellow.fromJson(Map<String, dynamic> json) =>
       _$$_YellowFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.yellow()';
+    return 'AvataaarSkin.yellow(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Yellow);
+        (other.runtimeType == runtimeType &&
+            other is _Yellow &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$YellowCopyWith<_Yellow> get copyWith =>
+      __$YellowCopyWithImpl<_Yellow>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return yellow();
+    return yellow(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return yellow?.call();
+    return yellow?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (yellow != null) {
-      return yellow();
+      return yellow(color);
     }
     return orElse();
   }
@@ -27824,16 +28593,25 @@ class _$_Yellow extends _Yellow {
 }
 
 abstract class _Yellow extends AvataaarSkin {
-  const factory _Yellow() = _$_Yellow;
+  const factory _Yellow([@ColorSerialiser() Color color]) = _$_Yellow;
   const _Yellow._() : super._();
 
   factory _Yellow.fromJson(Map<String, dynamic> json) = _$_Yellow.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$YellowCopyWith<_Yellow> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$PaleCopyWith<$Res> {
+abstract class _$PaleCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$PaleCopyWith(_Pale value, $Res Function(_Pale) then) =
       __$PaleCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -27844,79 +28622,105 @@ class __$PaleCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _Pale get _value => super._value as _Pale;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Pale(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Pale extends _Pale {
-  const _$_Pale({String? $type})
+  const _$_Pale(
+      [@ColorSerialiser() this.color = const Color(0x00FFDBB4), String? $type])
       : $type = $type ?? 'pale',
         super._();
 
   factory _$_Pale.fromJson(Map<String, dynamic> json) => _$$_PaleFromJson(json);
+
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.pale()';
+    return 'AvataaarSkin.pale(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Pale);
+        (other.runtimeType == runtimeType &&
+            other is _Pale &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$PaleCopyWith<_Pale> get copyWith =>
+      __$PaleCopyWithImpl<_Pale>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return pale();
+    return pale(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return pale?.call();
+    return pale?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (pale != null) {
-      return pale();
+      return pale(color);
     }
     return orElse();
   }
@@ -27977,16 +28781,25 @@ class _$_Pale extends _Pale {
 }
 
 abstract class _Pale extends AvataaarSkin {
-  const factory _Pale() = _$_Pale;
+  const factory _Pale([@ColorSerialiser() Color color]) = _$_Pale;
   const _Pale._() : super._();
 
   factory _Pale.fromJson(Map<String, dynamic> json) = _$_Pale.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$PaleCopyWith<_Pale> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$WhiteCopyWith<$Res> {
+abstract class _$WhiteCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$WhiteCopyWith(_White value, $Res Function(_White) then) =
       __$WhiteCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -27997,80 +28810,106 @@ class __$WhiteCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _White get _value => super._value as _White;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_White(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_White extends _White {
-  const _$_White({String? $type})
+  const _$_White(
+      [@ColorSerialiser() this.color = const Color(0x00EDB98A), String? $type])
       : $type = $type ?? 'light',
         super._();
 
   factory _$_White.fromJson(Map<String, dynamic> json) =>
       _$$_WhiteFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.light()';
+    return 'AvataaarSkin.light(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _White);
+        (other.runtimeType == runtimeType &&
+            other is _White &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$WhiteCopyWith<_White> get copyWith =>
+      __$WhiteCopyWithImpl<_White>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return light();
+    return light(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return light?.call();
+    return light?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (light != null) {
-      return light();
+      return light(color);
     }
     return orElse();
   }
@@ -28131,16 +28970,25 @@ class _$_White extends _White {
 }
 
 abstract class _White extends AvataaarSkin {
-  const factory _White() = _$_White;
+  const factory _White([@ColorSerialiser() Color color]) = _$_White;
   const _White._() : super._();
 
   factory _White.fromJson(Map<String, dynamic> json) = _$_White.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$WhiteCopyWith<_White> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BrownCopyWith<$Res> {
+abstract class _$BrownCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$BrownCopyWith(_Brown value, $Res Function(_Brown) then) =
       __$BrownCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -28151,80 +28999,106 @@ class __$BrownCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _Brown get _value => super._value as _Brown;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Brown(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Brown extends _Brown {
-  const _$_Brown({String? $type})
+  const _$_Brown(
+      [@ColorSerialiser() this.color = const Color(0x00D08B5B), String? $type])
       : $type = $type ?? 'brown',
         super._();
 
   factory _$_Brown.fromJson(Map<String, dynamic> json) =>
       _$$_BrownFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.brown()';
+    return 'AvataaarSkin.brown(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Brown);
+        (other.runtimeType == runtimeType &&
+            other is _Brown &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$BrownCopyWith<_Brown> get copyWith =>
+      __$BrownCopyWithImpl<_Brown>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return brown();
+    return brown(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return brown?.call();
+    return brown?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (brown != null) {
-      return brown();
+      return brown(color);
     }
     return orElse();
   }
@@ -28285,17 +29159,27 @@ class _$_Brown extends _Brown {
 }
 
 abstract class _Brown extends AvataaarSkin {
-  const factory _Brown() = _$_Brown;
+  const factory _Brown([@ColorSerialiser() Color color]) = _$_Brown;
   const _Brown._() : super._();
 
   factory _Brown.fromJson(Map<String, dynamic> json) = _$_Brown.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$BrownCopyWith<_Brown> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DarkBrownCopyWith<$Res> {
+abstract class _$DarkBrownCopyWith<$Res>
+    implements $AvataaarSkinCopyWith<$Res> {
   factory _$DarkBrownCopyWith(
           _DarkBrown value, $Res Function(_DarkBrown) then) =
       __$DarkBrownCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -28306,80 +29190,106 @@ class __$DarkBrownCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _DarkBrown get _value => super._value as _DarkBrown;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_DarkBrown(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_DarkBrown extends _DarkBrown {
-  const _$_DarkBrown({String? $type})
+  const _$_DarkBrown(
+      [@ColorSerialiser() this.color = const Color(0x00AE5D29), String? $type])
       : $type = $type ?? 'darkBrown',
         super._();
 
   factory _$_DarkBrown.fromJson(Map<String, dynamic> json) =>
       _$$_DarkBrownFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.darkBrown()';
+    return 'AvataaarSkin.darkBrown(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _DarkBrown);
+        (other.runtimeType == runtimeType &&
+            other is _DarkBrown &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DarkBrownCopyWith<_DarkBrown> get copyWith =>
+      __$DarkBrownCopyWithImpl<_DarkBrown>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return darkBrown();
+    return darkBrown(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return darkBrown?.call();
+    return darkBrown?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (darkBrown != null) {
-      return darkBrown();
+      return darkBrown(color);
     }
     return orElse();
   }
@@ -28440,17 +29350,27 @@ class _$_DarkBrown extends _DarkBrown {
 }
 
 abstract class _DarkBrown extends AvataaarSkin {
-  const factory _DarkBrown() = _$_DarkBrown;
+  const factory _DarkBrown([@ColorSerialiser() Color color]) = _$_DarkBrown;
   const _DarkBrown._() : super._();
 
   factory _DarkBrown.fromJson(Map<String, dynamic> json) =
       _$_DarkBrown.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$DarkBrownCopyWith<_DarkBrown> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BlackCopyWith<$Res> {
+abstract class _$BlackCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$BlackCopyWith(_Black value, $Res Function(_Black) then) =
       __$BlackCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -28461,80 +29381,106 @@ class __$BlackCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 
   @override
   _Black get _value => super._value as _Black;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Black(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Black extends _Black {
-  const _$_Black({String? $type})
+  const _$_Black(
+      [@ColorSerialiser() this.color = const Color(0x00614335), String? $type])
       : $type = $type ?? 'black',
         super._();
 
   factory _$_Black.fromJson(Map<String, dynamic> json) =>
       _$$_BlackFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarSkin.black()';
+    return 'AvataaarSkin.black(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Black);
+        (other.runtimeType == runtimeType &&
+            other is _Black &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$BlackCopyWith<_Black> get copyWith =>
+      __$BlackCopyWithImpl<_Black>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
-    return black();
+    return black(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
-    return black?.call();
+    return black?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
     if (black != null) {
-      return black();
+      return black(color);
     }
     return orElse();
   }
@@ -28595,16 +29541,24 @@ class _$_Black extends _Black {
 }
 
 abstract class _Black extends AvataaarSkin {
-  const factory _Black() = _$_Black;
+  const factory _Black([@ColorSerialiser() Color color]) = _$_Black;
   const _Black._() : super._();
 
   factory _Black.fromJson(Map<String, dynamic> json) = _$_Black.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$BlackCopyWith<_Black> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$CustomCopyWith<$Res> {
+abstract class _$CustomCopyWith<$Res> implements $AvataaarSkinCopyWith<$Res> {
   factory _$CustomCopyWith(_Custom value, $Res Function(_Custom) then) =
       __$CustomCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -28633,13 +29587,14 @@ class __$CustomCopyWithImpl<$Res> extends _$AvataaarSkinCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Custom extends _Custom {
-  const _$_Custom(@ColorSerialiser() this.color, {String? $type})
+  const _$_Custom([@ColorSerialiser() this.color = Colors.grey, String? $type])
       : $type = $type ?? 'custom',
         super._();
 
   factory _$_Custom.fromJson(Map<String, dynamic> json) =>
       _$$_CustomFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -28672,13 +29627,13 @@ class _$_Custom extends _Custom {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() tanned,
-    required TResult Function() yellow,
-    required TResult Function() pale,
-    required TResult Function() light,
-    required TResult Function() brown,
-    required TResult Function() darkBrown,
-    required TResult Function() black,
+    required TResult Function(@ColorSerialiser() Color color) tanned,
+    required TResult Function(@ColorSerialiser() Color color) yellow,
+    required TResult Function(@ColorSerialiser() Color color) pale,
+    required TResult Function(@ColorSerialiser() Color color) light,
+    required TResult Function(@ColorSerialiser() Color color) brown,
+    required TResult Function(@ColorSerialiser() Color color) darkBrown,
+    required TResult Function(@ColorSerialiser() Color color) black,
     required TResult Function(@ColorSerialiser() Color color) custom,
   }) {
     return custom(color);
@@ -28687,13 +29642,13 @@ class _$_Custom extends _Custom {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
   }) {
     return custom?.call(color);
@@ -28702,13 +29657,13 @@ class _$_Custom extends _Custom {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? tanned,
-    TResult Function()? yellow,
-    TResult Function()? pale,
-    TResult Function()? light,
-    TResult Function()? brown,
-    TResult Function()? darkBrown,
-    TResult Function()? black,
+    TResult Function(@ColorSerialiser() Color color)? tanned,
+    TResult Function(@ColorSerialiser() Color color)? yellow,
+    TResult Function(@ColorSerialiser() Color color)? pale,
+    TResult Function(@ColorSerialiser() Color color)? light,
+    TResult Function(@ColorSerialiser() Color color)? brown,
+    TResult Function(@ColorSerialiser() Color color)? darkBrown,
+    TResult Function(@ColorSerialiser() Color color)? black,
     TResult Function(@ColorSerialiser() Color color)? custom,
     required TResult orElse(),
   }) {
@@ -28774,13 +29729,15 @@ class _$_Custom extends _Custom {
 }
 
 abstract class _Custom extends AvataaarSkin {
-  const factory _Custom(@ColorSerialiser() Color color) = _$_Custom;
+  const factory _Custom([@ColorSerialiser() Color color]) = _$_Custom;
   const _Custom._() : super._();
 
   factory _Custom.fromJson(Map<String, dynamic> json) = _$_Custom.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$CustomCopyWith<_Custom> get copyWith => throw _privateConstructorUsedError;
 }
@@ -28802,11 +29759,14 @@ AvataaarStyle _$AvataaarStyleFromJson(Map<String, dynamic> json) {
 class _$AvataaarStyleTearOff {
   const _$AvataaarStyleTearOff();
 
-  _Transparent transparent() {
-    return const _Transparent();
+  _Transparent transparent(
+      [@ColorSerialiser() Color color = Colors.transparent]) {
+    return _Transparent(
+      color,
+    );
   }
 
-  _Circle circle(@ColorSerialiser() Color color) {
+  _Circle circle([@ColorSerialiser() Color color = const Color(0x0065C9FF)]) {
     return _Circle(
       color,
     );
@@ -28822,21 +29782,24 @@ const $AvataaarStyle = _$AvataaarStyleTearOff();
 
 /// @nodoc
 mixin _$AvataaarStyle {
+  @ColorSerialiser()
+  Color get color => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() transparent,
+    required TResult Function(@ColorSerialiser() Color color) transparent,
     required TResult Function(@ColorSerialiser() Color color) circle,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
     required TResult orElse(),
   }) =>
@@ -28861,6 +29824,9 @@ mixin _$AvataaarStyle {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AvataaarStyleCopyWith<AvataaarStyle> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -28868,6 +29834,7 @@ abstract class $AvataaarStyleCopyWith<$Res> {
   factory $AvataaarStyleCopyWith(
           AvataaarStyle value, $Res Function(AvataaarStyle) then) =
       _$AvataaarStyleCopyWithImpl<$Res>;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -28878,13 +29845,28 @@ class _$AvataaarStyleCopyWithImpl<$Res>
   final AvataaarStyle _value;
   // ignore: unused_field
   final $Res Function(AvataaarStyle) _then;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_value.copyWith(
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$TransparentCopyWith<$Res> {
+abstract class _$TransparentCopyWith<$Res>
+    implements $AvataaarStyleCopyWith<$Res> {
   factory _$TransparentCopyWith(
           _Transparent value, $Res Function(_Transparent) then) =
       __$TransparentCopyWithImpl<$Res>;
+  @override
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -28896,62 +29878,88 @@ class __$TransparentCopyWithImpl<$Res> extends _$AvataaarStyleCopyWithImpl<$Res>
 
   @override
   _Transparent get _value => super._value as _Transparent;
+
+  @override
+  $Res call({
+    Object? color = freezed,
+  }) {
+    return _then(_Transparent(
+      color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_Transparent extends _Transparent {
-  const _$_Transparent({String? $type})
+  const _$_Transparent(
+      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
       : $type = $type ?? 'transparent',
         super._();
 
   factory _$_Transparent.fromJson(Map<String, dynamic> json) =>
       _$$_TransparentFromJson(json);
 
+  @JsonKey()
+  @override
+  @ColorSerialiser()
+  final Color color;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarStyle.transparent()';
+    return 'AvataaarStyle.transparent(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Transparent);
+        (other.runtimeType == runtimeType &&
+            other is _Transparent &&
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
+
+  @JsonKey(ignore: true)
+  @override
+  _$TransparentCopyWith<_Transparent> get copyWith =>
+      __$TransparentCopyWithImpl<_Transparent>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() transparent,
+    required TResult Function(@ColorSerialiser() Color color) transparent,
     required TResult Function(@ColorSerialiser() Color color) circle,
   }) {
-    return transparent();
+    return transparent(color);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
   }) {
-    return transparent?.call();
+    return transparent?.call(color);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
     required TResult orElse(),
   }) {
     if (transparent != null) {
-      return transparent();
+      return transparent(color);
     }
     return orElse();
   }
@@ -28994,17 +30002,26 @@ class _$_Transparent extends _Transparent {
 }
 
 abstract class _Transparent extends AvataaarStyle {
-  const factory _Transparent() = _$_Transparent;
+  const factory _Transparent([@ColorSerialiser() Color color]) = _$_Transparent;
   const _Transparent._() : super._();
 
   factory _Transparent.fromJson(Map<String, dynamic> json) =
       _$_Transparent.fromJson;
+
+  @override
+  @ColorSerialiser()
+  Color get color;
+  @override
+  @JsonKey(ignore: true)
+  _$TransparentCopyWith<_Transparent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$CircleCopyWith<$Res> {
+abstract class _$CircleCopyWith<$Res> implements $AvataaarStyleCopyWith<$Res> {
   factory _$CircleCopyWith(_Circle value, $Res Function(_Circle) then) =
       __$CircleCopyWithImpl<$Res>;
+  @override
   $Res call({@ColorSerialiser() Color color});
 }
 
@@ -29033,13 +30050,15 @@ class __$CircleCopyWithImpl<$Res> extends _$AvataaarStyleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Circle extends _Circle {
-  const _$_Circle(@ColorSerialiser() this.color, {String? $type})
+  const _$_Circle(
+      [@ColorSerialiser() this.color = const Color(0x0065C9FF), String? $type])
       : $type = $type ?? 'circle',
         super._();
 
   factory _$_Circle.fromJson(Map<String, dynamic> json) =>
       _$$_CircleFromJson(json);
 
+  @JsonKey()
   @override
   @ColorSerialiser()
   final Color color;
@@ -29072,7 +30091,7 @@ class _$_Circle extends _Circle {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() transparent,
+    required TResult Function(@ColorSerialiser() Color color) transparent,
     required TResult Function(@ColorSerialiser() Color color) circle,
   }) {
     return circle(color);
@@ -29081,7 +30100,7 @@ class _$_Circle extends _Circle {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
   }) {
     return circle?.call(color);
@@ -29090,7 +30109,7 @@ class _$_Circle extends _Circle {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? transparent,
+    TResult Function(@ColorSerialiser() Color color)? transparent,
     TResult Function(@ColorSerialiser() Color color)? circle,
     required TResult orElse(),
   }) {
@@ -29138,13 +30157,15 @@ class _$_Circle extends _Circle {
 }
 
 abstract class _Circle extends AvataaarStyle {
-  const factory _Circle(@ColorSerialiser() Color color) = _$_Circle;
+  const factory _Circle([@ColorSerialiser() Color color]) = _$_Circle;
   const _Circle._() : super._();
 
   factory _Circle.fromJson(Map<String, dynamic> json) = _$_Circle.fromJson;
 
+  @override
   @ColorSerialiser()
   Color get color;
+  @override
   @JsonKey(ignore: true)
   _$CircleCopyWith<_Circle> get copyWith => throw _privateConstructorUsedError;
 }

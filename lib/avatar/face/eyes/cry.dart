@@ -4,7 +4,7 @@ const _cry = """
  <g id='Eyes/Cry-😢' transform='translate(0.000000, 8.000000)'>
         <circle
           id='Eye'
-          fill-opacity='0.599999964'
+          opacity='0.599999964'
           fill='#000000'
           fill-rule='evenodd'
           cx='30'
@@ -19,7 +19,7 @@ const _cry = """
         />
         <circle
           id='Eye'
-          fill-opacity='0.599999964'
+          opacity='0.599999964'
           fill='#000000'
           fill-rule='evenodd'
           cx='82'

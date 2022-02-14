@@ -69,8 +69,6 @@ String _winterHat1(Color color) {
             />
             <use fill="#F4F4F4" fill-rule="evenodd" xlink:href="${'#' + _path2}" />
           </g>
-          <FacialHair />
-          {this.props.children}
         </g>
       </g>
 """;

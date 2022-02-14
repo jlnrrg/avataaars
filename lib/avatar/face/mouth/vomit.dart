@@ -5,6 +5,7 @@ String _vomit() {
   final _path2 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
   final _filter1 = UniqueKey().hashCode.toString();
+
   return '''
 <g id="Mouth/Vomit" transform="translate(2.000000, 52.000000)">
         <defs>
@@ -52,7 +53,7 @@ String _vomit() {
         </mask>
         <use
           id="Mouth"
-          fill-opacity="0.699999988"
+          opacity="0.699999988"
           fill="#000000"
           fill-rule="evenodd"
           transform="translate(54.000000, 21.499998) scale(1, -1) translate(-54.000000, -21.499998) "
@@ -70,10 +71,10 @@ String _vomit() {
           rx="5"
         />
         <g id="Vomit-Stuff">
-          <use fill="#88C553" fill-rule="evenodd" xlink:href="${"#" + _path2}" />
+          <use fill="green" fill-rule="evenodd" xlink:href="${"#" + _path2}" />
           <use
-            fill="black"
-            fill-opacity="1"
+            fill="green"
+            opacity="1"
             filter="url(#$_filter1)"
             xlink:href="${"#" + _path2}"
           />

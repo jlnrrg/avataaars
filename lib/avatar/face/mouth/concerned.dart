@@ -20,7 +20,7 @@ String _concerned() {
         </mask>
         <use
           id="Mouth"
-          fill-opacity="0.699999988"
+          opacity="0.699999988"
           fill="#000000"
           fill-rule="evenodd"
           transform="translate(54.003637, 22.500000) scale(1, -1) translate(-54.003637, -22.500000) "

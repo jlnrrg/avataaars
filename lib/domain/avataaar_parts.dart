@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -11,14 +13,16 @@ import '../avatar/skin.dart';
 import '../avatar/top/accessories/accessories.dart';
 import '../avatar/top/facialHair/facialHair.dart';
 import '../avatar/top/hair/hair.dart';
-import '../helper/color_extension.dart';
 import '../helper/serializable_helper.dart';
+import 'localization_strings.dart';
 
 part 'avataaar_parts.freezed.dart';
 part 'avataaar_parts.g.dart';
 
 abstract class AvataaarParts {
   // String toSvgString([String id = '']);
+  String toLabel([String languageCode = 'en']);
+  int toInt();
 }
 
 @freezed
@@ -55,6 +59,38 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
     AvataaarEyes.wink(),
     AvataaarEyes.winkWacky(),
   ];
+
+  /// creates random [AvataaarEyes]
+  factory AvataaarEyes.random() =>
+      AvataaarEyes.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarEyes.all.length));
+
+  /// creates [AvataaarEyes] based on the index found in [AvataaarEyes.all]
+  factory AvataaarEyes.fromInt(int index) => AvataaarEyes.all.elementAt(index);
+
+  /// returns the index of [AvataaarEyes.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarEyes.all.indexOf(this);
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      closed: () => const LocalizationStrings.eyesClosed(),
+      cry: () => const LocalizationStrings.eyesCry(),
+      default0: () => const LocalizationStrings.eyesDefault(),
+      dizzy: () => const LocalizationStrings.eyesDizzy(),
+      eyeRoll: () => const LocalizationStrings.eyesEyeRoll(),
+      happy: () => const LocalizationStrings.eyesHappy(),
+      hearts: () => const LocalizationStrings.eyesHearts(),
+      side: () => const LocalizationStrings.eyesSide(),
+      surprised: () => const LocalizationStrings.eyesSurprised(),
+      wink: () => const LocalizationStrings.eyesWink(),
+      winkWacky: () => const LocalizationStrings.eyesWinkWacky(),
+      squint: () => const LocalizationStrings.eyesSquint(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 
   String toSvgString() => when(
         closed: () => Eyes.close,
@@ -97,6 +133,19 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
     AvataaarAccessories.wayfarers(),
   ];
 
+  /// creates random [AvataaarAccessories]
+  factory AvataaarAccessories.random() =>
+      AvataaarAccessories.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarAccessories.all.length));
+
+  /// creates [AvataaarAccessories] based on the index found in [AvataaarAccessories.all]
+  factory AvataaarAccessories.fromInt(int index) =>
+      AvataaarAccessories.all.elementAt(index);
+
+  /// returns the index of [AvataaarAccessories.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarAccessories.all.indexOf(this);
+
   // @override
   String toSvgString() => when(
         blank: () => Accessories.blank,
@@ -107,36 +156,95 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
         sunglasses: () => Accessories.sunglasses(),
         wayfarers: () => Accessories.wayfarers(),
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      blank: () => const LocalizationStrings.blank(),
+      kurt: () => const LocalizationStrings.kurt(),
+      prescription01: () => const LocalizationStrings.prescription01(),
+      prescription02: () => const LocalizationStrings.prescription02(),
+      round: () => const LocalizationStrings.roundGlasses(),
+      sunglasses: () => const LocalizationStrings.sunglasses(),
+      wayfarers: () => const LocalizationStrings.wayfarers(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
 class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
-  const factory AvataaarClothes.blazerShirt() = _BlazerShirt;
-  const factory AvataaarClothes.blazerSweater() = _BlazerSweater;
-  const factory AvataaarClothes.collarSweater(@ColorSerialiser() Color color) =
-      _ColarSweater;
-  const factory AvataaarClothes.graphicShirt(@ColorSerialiser() Color color,
-          {@Default(AvataaarGraphics.skull()) AvataaarGraphics graphic}) =
-      _GraphicShirt;
-  const factory AvataaarClothes.hoodie(@ColorSerialiser() Color color) =
-      _Hoodie;
-  const factory AvataaarClothes.overall(@ColorSerialiser() Color color) =
-      _Overall;
-  const factory AvataaarClothes.shirtCrewNeck(@ColorSerialiser() Color color) =
-      _ShirtCrewNeck;
-  const factory AvataaarClothes.shirtScoopNeck(@ColorSerialiser() Color color) =
-      _ShirtScoopNeck;
-  const factory AvataaarClothes.shirtVNeck(@ColorSerialiser() Color color) =
-      _ShirtVNeck;
+  const factory AvataaarClothes.blazerShirt(
+      [@Default(Colors.black) @ColorSerialiser() Color color]) = _BlazerShirt;
+  const factory AvataaarClothes.blazerSweater(
+      [@Default(Colors.black) @ColorSerialiser() Color color]) = _BlazerSweater;
+  const factory AvataaarClothes.collarSweater(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _ColarSweater;
+  const factory AvataaarClothes.graphicShirt(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color,
+      @Default(AvataaarGraphics.skull())
+          AvataaarGraphics graphic]) = _GraphicShirt;
+  const factory AvataaarClothes.hoodie(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _Hoodie;
+  const factory AvataaarClothes.overall(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _Overall;
+  const factory AvataaarClothes.shirtCrewNeck(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _ShirtCrewNeck;
+  const factory AvataaarClothes.shirtScoopNeck(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _ShirtScoopNeck;
+  const factory AvataaarClothes.shirtVNeck(
+      [@Default(AvataaarClothes._defaultColor)
+      @ColorSerialiser()
+          Color color]) = _ShirtVNeck;
 
   const AvataaarClothes._();
+
+  static const _defaultColor = Color(0x0025557c);
 
   factory AvataaarClothes.fromJson(Map<String, dynamic> json) =>
       _$AvataaarClothesFromJson(json);
 
+  static const all = [
+    AvataaarClothes.blazerShirt(),
+    AvataaarClothes.blazerSweater(),
+    AvataaarClothes.collarSweater(),
+    AvataaarClothes.graphicShirt(),
+    AvataaarClothes.hoodie(),
+    AvataaarClothes.overall(),
+    AvataaarClothes.shirtCrewNeck(),
+    AvataaarClothes.shirtScoopNeck(),
+    AvataaarClothes.shirtVNeck(),
+  ];
+
+  /// creates random [AvataaarClothes]
+  factory AvataaarClothes.random() =>
+      AvataaarClothes.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarClothes.all.length));
+
+  /// creates [AvataaarClothes] based on the index found in [AvataaarClothes.all]
+  factory AvataaarClothes.fromInt(int index) =>
+      AvataaarClothes.all.elementAt(index);
+
+  /// returns the index of [AvataaarClothes.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarClothes.all.indexOf(this);
+
   String toSvgString() => when(
-        blazerShirt: () => Clothes.blazerShirt,
-        blazerSweater: () => Clothes.blazerSweater,
+        blazerShirt: (_) => Clothes.blazerShirt,
+        blazerSweater: (_) => Clothes.blazerSweater,
         collarSweater: (color) => Clothes.collarSweater(color),
         graphicShirt: (color, graphic) =>
             Clothes.graphicShirt(color, graphic.toSVGFunction()),
@@ -146,6 +254,23 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
         shirtScoopNeck: (color) => Clothes.shirtScoopNeck(color),
         shirtVNeck: (color) => Clothes.shirtVNeck(color),
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      blazerShirt: (_) => const LocalizationStrings.blazerShirt(),
+      blazerSweater: (_) => const LocalizationStrings.blazerSweater(),
+      collarSweater: (_) => const LocalizationStrings.collarSweater(),
+      graphicShirt: (_, __) => const LocalizationStrings.graphicShirt(),
+      hoodie: (_) => const LocalizationStrings.hoodie(),
+      overall: (_) => const LocalizationStrings.overall(),
+      shirtCrewNeck: (_) => const LocalizationStrings.shirtCrewNeck(),
+      shirtScoopNeck: (_) => const LocalizationStrings.shirtScoopNeck(),
+      shirtVNeck: (_) => const LocalizationStrings.shirtVNeck(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
@@ -167,6 +292,33 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
   factory AvataaarGraphics.fromJson(Map<String, dynamic> json) =>
       _$AvataaarGraphicsFromJson(json);
 
+  static const all = [
+    AvataaarGraphics.bat(),
+    AvataaarGraphics.bear(),
+    AvataaarGraphics.cumbia(),
+    AvataaarGraphics.deer(),
+    AvataaarGraphics.diamond(),
+    AvataaarGraphics.hola(),
+    AvataaarGraphics.pizza(),
+    AvataaarGraphics.resist(),
+    AvataaarGraphics.selena(),
+    AvataaarGraphics.skull(),
+    AvataaarGraphics.skullOutline(),
+  ];
+
+  /// creates random [AvataaarGraphics]
+  factory AvataaarGraphics.random() =>
+      AvataaarGraphics.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarGraphics.all.length));
+
+  /// creates [AvataaarGraphics] based on the index found in [AvataaarGraphics.all]
+  factory AvataaarGraphics.fromInt(int index) =>
+      AvataaarGraphics.all.elementAt(index);
+
+  /// returns the index of [AvataaarGraphics.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarGraphics.all.indexOf(this);
+
   String Function(String) toSVGFunction() => when(
         bat: () => Graphics.bat,
         bear: () => Graphics.bear,
@@ -180,6 +332,25 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
         skull: () => Graphics.skull,
         skullOutline: () => Graphics.skullOutline,
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      bat: () => const LocalizationStrings.bat(),
+      bear: () => const LocalizationStrings.bear(),
+      cumbia: () => const LocalizationStrings.cumbia(),
+      deer: () => const LocalizationStrings.deer(),
+      diamond: () => const LocalizationStrings.diamond(),
+      hola: () => const LocalizationStrings.hola(),
+      pizza: () => const LocalizationStrings.pizza(),
+      resist: () => const LocalizationStrings.resist(),
+      selena: () => const LocalizationStrings.selena(),
+      skull: () => const LocalizationStrings.skull(),
+      skullOutline: () => const LocalizationStrings.skullOutline(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
@@ -203,6 +374,35 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
   factory AvataaarEyebrow.fromJson(Map<String, dynamic> json) =>
       _$AvataaarEyebrowFromJson(json);
 
+  static const all = [
+    AvataaarEyebrow.angry(),
+    AvataaarEyebrow.angryNatural(),
+    AvataaarEyebrow.default0(),
+    AvataaarEyebrow.defaultNatural(),
+    AvataaarEyebrow.flatNatural(),
+    AvataaarEyebrow.frownNatural(),
+    AvataaarEyebrow.raisedExcited(),
+    AvataaarEyebrow.raisedExcitedNatural(),
+    AvataaarEyebrow.sadConcerned(),
+    AvataaarEyebrow.sadConcernedNatural(),
+    AvataaarEyebrow.unibrowNatural(),
+    AvataaarEyebrow.upDown(),
+    AvataaarEyebrow.upDownNatural(),
+  ];
+
+  /// creates random [AvataaarEyebrow]
+  factory AvataaarEyebrow.random() =>
+      AvataaarEyebrow.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarEyebrow.all.length));
+
+  /// creates [AvataaarEyebrow] based on the index found in [AvataaarEyebrow.all]
+  factory AvataaarEyebrow.fromInt(int index) =>
+      AvataaarEyebrow.all.elementAt(index);
+
+  /// returns the index of [AvataaarEyebrow.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarEyebrow.all.indexOf(this);
+
   String toSvgString() => when(
         angry: () => Eyebrow.angry,
         angryNatural: () => Eyebrow.angryNatural,
@@ -218,113 +418,398 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
         upDown: () => Eyebrow.upDown,
         upDownNatural: () => Eyebrow.upDownNatural,
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      angry: () => const LocalizationStrings.angry(),
+      angryNatural: () => const LocalizationStrings.angryNatural(),
+      default0: () => const LocalizationStrings.default0(),
+      defaultNatural: () => const LocalizationStrings.defaultNatural(),
+      flatNatural: () => const LocalizationStrings.flatNatural(),
+      frownNatural: () => const LocalizationStrings.frownNatural(),
+      raisedExcited: () => const LocalizationStrings.raisedExcited(),
+      raisedExcitedNatural: () =>
+          const LocalizationStrings.raisedExcitedNatural(),
+      sadConcerned: () => const LocalizationStrings.sadConcerned(),
+      sadConcernedNatural: () =>
+          const LocalizationStrings.sadConcernedNatural(),
+      unibrowNatural: () => const LocalizationStrings.unibrowNatural(),
+      upDown: () => const LocalizationStrings.upDown(),
+      upDownNatural: () => const LocalizationStrings.upDownNatural(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
 class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
-  const factory AvataaarFacialHair.blank() = _FacialHairBlank;
-  const factory AvataaarFacialHair.beardMedium(@ColorSerialiser() Color color) =
-      _BeardMedium;
-  const factory AvataaarFacialHair.beardLight(@ColorSerialiser() Color color) =
-      _BeardLight;
+  const factory AvataaarFacialHair.blank(
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _FacialHairBlank;
+  const factory AvataaarFacialHair.beardMedium(
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _BeardMedium;
+  const factory AvataaarFacialHair.beardLight(
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _BeardLight;
   const factory AvataaarFacialHair.beardMajestic(
-      @ColorSerialiser() Color color) = _BeardMajestic;
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _BeardMajestic;
   const factory AvataaarFacialHair.moustacheFancy(
-      @ColorSerialiser() Color color) = _MoustacheFancy;
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _MoustacheFancy;
   const factory AvataaarFacialHair.moustacheMagnum(
-      @ColorSerialiser() Color color) = _MoustacheMagnum;
+      [@Default(AvataaarFacialHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _MoustacheMagnum;
 
   const AvataaarFacialHair._();
+
+  static const Color defaultHairColor = Color(0x004A312C);
 
   factory AvataaarFacialHair.fromJson(Map<String, dynamic> json) =>
       _$AvataaarFacialHairFromJson(json);
 
+  static const all = [
+    AvataaarFacialHair.blank(),
+    AvataaarFacialHair.beardMedium(),
+    AvataaarFacialHair.beardLight(),
+    AvataaarFacialHair.beardMajestic(),
+    AvataaarFacialHair.moustacheFancy(),
+    AvataaarFacialHair.moustacheMagnum(),
+  ];
+
+  /// creates random [AvataaarFacialHair]
+  factory AvataaarFacialHair.random() =>
+      AvataaarFacialHair.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarFacialHair.all.length));
+
+  /// creates [AvataaarFacialHair] based on the index found in [AvataaarFacialHair.all]
+  factory AvataaarFacialHair.fromInt(int index) =>
+      AvataaarFacialHair.all.elementAt(index);
+
+  /// returns the index of [AvataaarFacialHair.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarFacialHair.all.indexOf(this);
+
   String toSvgString() => when(
-        blank: () => FacialHair.blank,
+        blank: (_) => FacialHair.blank,
         beardMedium: (color) => FacialHair.beardMedium(color),
         beardLight: (color) => FacialHair.beardLight(color),
         beardMajestic: (color) => FacialHair.beardMajestic(color),
         moustacheFancy: (color) => FacialHair.moustacheFancy(color),
         moustacheMagnum: (color) => FacialHair.moustacheMagnum(color),
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      blank: (_) => const LocalizationStrings.blank(),
+      beardMedium: (_) => const LocalizationStrings.beardMedium(),
+      beardLight: (_) => const LocalizationStrings.beardLight(),
+      beardMajestic: (_) => const LocalizationStrings.beardMajestic(),
+      moustacheFancy: (_) => const LocalizationStrings.moustacheFancy(),
+      moustacheMagnum: (_) => const LocalizationStrings.moustacheMagnum(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
 class AvataaarHair with _$AvataaarHair, AvataaarParts {
-  const factory AvataaarHair.noHair() = _NoHair;
-  const factory AvataaarHair.eyepatch() = _Eyepatch;
-  const factory AvataaarHair.hat() = _Hat;
-  const factory AvataaarHair.hijab(@ColorSerialiser() Color color) = _Hijab;
-  const factory AvataaarHair.turban(@ColorSerialiser() Color color) = _Turban;
-  const factory AvataaarHair.winterHat1(@ColorSerialiser() Color color) =
-      _WinterHat1;
-  const factory AvataaarHair.winterHat2(@ColorSerialiser() Color color) =
-      _WinterHat2;
-  const factory AvataaarHair.winterHat3(@ColorSerialiser() Color color) =
-      _WinterHat3;
-  const factory AvataaarHair.winterHat4(@ColorSerialiser() Color color) =
-      _WinterHat4;
-  const factory AvataaarHair.longHairBigHair(@ColorSerialiser() Color color) =
-      _LongHairBigHair;
-  const factory AvataaarHair.longHairBob(@ColorSerialiser() Color color) =
-      _LongHarBob;
-  const factory AvataaarHair.longHairBun(@ColorSerialiser() Color color) =
-      _LongHairBun;
-  const factory AvataaarHair.longHairCurly(@ColorSerialiser() Color color) =
-      _LongHairCurly;
-  const factory AvataaarHair.longHairCurvy(@ColorSerialiser() Color color) =
-      _LongHairCurvy;
-  const factory AvataaarHair.longHairDreads(@ColorSerialiser() Color color) =
-      _LongHairDreads;
-  const factory AvataaarHair.longHairFrida() = _LongHairFrida;
-  const factory AvataaarHair.longHairFro(@ColorSerialiser() Color color) =
-      _LongHairFro;
-  const factory AvataaarHair.longHairFroBand(@ColorSerialiser() Color color) =
-      _LongHairFroBand;
+  const factory AvataaarHair.noHair(
+      [@Default(Colors.transparent) @ColorSerialiser() Color color]) = _NoHair;
+
+  const factory AvataaarHair.eyepatch(
+          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
+      _Eyepatch;
+
+  const factory AvataaarHair.hat(
+      [@Default(Colors.transparent) @ColorSerialiser() Color color]) = _Hat;
+
+  const factory AvataaarHair.hijab(
+      [@Default(AvataaarHair.defaultHatColorBlue03)
+      @ColorSerialiser()
+          Color color]) = _Hijab;
+
+  const factory AvataaarHair.turban(
+      [@Default(AvataaarHair.defaultHatColorBlue03)
+      @ColorSerialiser()
+          Color color]) = _Turban;
+
+  const factory AvataaarHair.winterHat1(
+      [@Default(AvataaarHair.defaultHatColorRed)
+      @ColorSerialiser()
+          Color color]) = _WinterHat1;
+
+  const factory AvataaarHair.winterHat2(
+      [@Default(AvataaarHair.defaultHatColorBlue01)
+      @ColorSerialiser()
+          Color color]) = _WinterHat2;
+
+  const factory AvataaarHair.winterHat3(
+      [@Default(AvataaarHair.defaultHatColorRed)
+      @ColorSerialiser()
+          Color color]) = _WinterHat3;
+
+  const factory AvataaarHair.winterHat4(
+      [@Default(AvataaarHair.defaultHatColorRed)
+      @ColorSerialiser()
+          Color color]) = _WinterHat4;
+
+  const factory AvataaarHair.longHairBigHair(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairBigHair;
+
+  const factory AvataaarHair.longHairBob(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHarBob;
+
+  const factory AvataaarHair.longHairBun(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairBun;
+
+  const factory AvataaarHair.longHairCurly(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairCurly;
+
+  const factory AvataaarHair.longHairCurvy(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairCurvy;
+
+  const factory AvataaarHair.longHairDreads(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairDreads;
+
+  const factory AvataaarHair.longHairFrida(
+          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
+      _LongHairFrida;
+
+  const factory AvataaarHair.longHairFro(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairFro;
+
+  const factory AvataaarHair.longHairFroBand(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairFroBand;
+
   const factory AvataaarHair.longHairNotTooLong(
-      @ColorSerialiser() Color color) = _LongHairNotTooLong;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairNotTooLong;
+
   const factory AvataaarHair.longHairShavedSides(
-      @ColorSerialiser() Color color) = _LongHairShavedSides;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairShavedSides;
+
   const factory AvataaarHair.longHairMiaWallace(
-      @ColorSerialiser() Color color) = _LongHairMiaWallace;
-  const factory AvataaarHair.longHairStraight(@ColorSerialiser() Color color) =
-      _LongHairStraight;
-  const factory AvataaarHair.longHairStraight2(@ColorSerialiser() Color color) =
-      _LongHairStraight2;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairMiaWallace;
+
+  const factory AvataaarHair.longHairStraight(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairStraight;
+
+  const factory AvataaarHair.longHairStraight2(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairStraight2;
+
   const factory AvataaarHair.longHairStraightStrand(
-      @ColorSerialiser() Color color) = _LongHairStraightStrand;
-  const factory AvataaarHair.shortHairDreads01(@ColorSerialiser() Color color) =
-      _ShortHairDreads01;
-  const factory AvataaarHair.shortHairDreads02(@ColorSerialiser() Color color) =
-      _ShortHairDreads02;
-  const factory AvataaarHair.shortHairFrizzle(@ColorSerialiser() Color color) =
-      _ShortHairFrizzle;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _LongHairStraightStrand;
+
+  const factory AvataaarHair.shortHairDreads01(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairDreads01;
+
+  const factory AvataaarHair.shortHairDreads02(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairDreads02;
+
+  const factory AvataaarHair.shortHairFrizzle(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairFrizzle;
+
   const factory AvataaarHair.shortHairShaggyMullet(
-      @ColorSerialiser() Color color) = _ShortHairShaggyMullet;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairShaggyMullet;
+
   const factory AvataaarHair.shortHairShortCurly(
-      @ColorSerialiser() Color color) = _ShortHairShortCurly;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairShortCurly;
+
   const factory AvataaarHair.shortHairShortFlat(
-      @ColorSerialiser() Color color) = _ShortHairShortFlat;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairShortFlat;
+
   const factory AvataaarHair.shortHairShortRound(
-      @ColorSerialiser() Color color) = _ShortHairShortRound;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairShortRound;
+
   const factory AvataaarHair.shortHairShortWaved(
-      @ColorSerialiser() Color color) = _ShortHairShortWaved;
-  const factory AvataaarHair.shortHairSides(@ColorSerialiser() Color color) =
-      _ShortHairSides;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairShortWaved;
+
+  const factory AvataaarHair.shortHairSides(
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairSides;
+
   const factory AvataaarHair.shortHairTheCaesar(
-      @ColorSerialiser() Color color) = _ShortHairTheCaesar;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairTheCaesar;
+
   const factory AvataaarHair.shortHairTheCaesarSidePart(
-      @ColorSerialiser() Color color) = _ShortHairTheCaesarSidePart;
+      [@Default(AvataaarHair.defaultHairColor)
+      @ColorSerialiser()
+          Color color]) = _ShortHairTheCaesarSidePart;
 
   const AvataaarHair._();
 
   factory AvataaarHair.fromJson(Map<String, dynamic> json) =>
       _$AvataaarHairFromJson(json);
 
+  static const Color defaultHatColorRed = Color(0x00FF5C5C);
+  static const Color defaultHatColorBlue01 = Color(0x0065C9FF);
+  static const Color defaultHatColorBlue03 = Color(0x0025557c);
+  static const Color defaultHairColor = Color(0x004A312C);
+
+  static const List<AvataaarHair> all = [
+    AvataaarHair.noHair(),
+    AvataaarHair.eyepatch(),
+    AvataaarHair.hat(),
+    AvataaarHair.hijab(),
+    AvataaarHair.turban(),
+    AvataaarHair.winterHat1(),
+    AvataaarHair.winterHat2(),
+    AvataaarHair.winterHat3(),
+    AvataaarHair.winterHat4(),
+    AvataaarHair.longHairBigHair(),
+    AvataaarHair.longHairBob(),
+    AvataaarHair.longHairBun(),
+    AvataaarHair.longHairCurly(),
+    AvataaarHair.longHairCurvy(),
+    AvataaarHair.longHairDreads(),
+    AvataaarHair.longHairFrida(),
+    AvataaarHair.longHairFro(),
+    AvataaarHair.longHairFroBand(),
+    AvataaarHair.longHairNotTooLong(),
+    AvataaarHair.longHairShavedSides(),
+    AvataaarHair.longHairMiaWallace(),
+    AvataaarHair.longHairStraight(),
+    AvataaarHair.longHairStraight2(),
+    AvataaarHair.longHairStraightStrand(),
+    AvataaarHair.shortHairDreads01(),
+    AvataaarHair.shortHairDreads02(),
+    AvataaarHair.shortHairFrizzle(),
+    AvataaarHair.shortHairShaggyMullet(),
+    AvataaarHair.shortHairShortCurly(),
+    AvataaarHair.shortHairShortFlat(),
+    AvataaarHair.shortHairShortRound(),
+    AvataaarHair.shortHairShortWaved(),
+    AvataaarHair.shortHairSides(),
+    AvataaarHair.shortHairTheCaesar(),
+    AvataaarHair.shortHairTheCaesarSidePart(),
+  ];
+
+  /// creates random [AvataaarHair]
+  factory AvataaarHair.random() =>
+      AvataaarHair.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarHair.all.length));
+
+  /// creates [AvataaarHair] based on the index found in [AvataaarHair.all]
+  factory AvataaarHair.fromInt(int index) => AvataaarHair.all.elementAt(index);
+
+  /// returns the index of [AvataaarHair.all], or -1 if no entry is found
+  @override
+  int toInt() =>
+      all.map((e) => e.copyWith(color: color)).toList().indexOf(this);
+
+  /// returns the label in the respective language based on the [languageCode]
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      noHair: (_) => const LocalizationStrings.noHair(),
+      eyepatch: (_) => const LocalizationStrings.eyepatch(),
+      hat: (_) => const LocalizationStrings.hat(),
+      hijab: (_) => const LocalizationStrings.hijab(),
+      turban: (_) => const LocalizationStrings.turban(),
+      winterHat1: (_) => const LocalizationStrings.winterHat1(),
+      winterHat2: (_) => const LocalizationStrings.winterHat2(),
+      winterHat3: (_) => const LocalizationStrings.winterHat3(),
+      winterHat4: (_) => const LocalizationStrings.winterHat4(),
+      longHairBigHair: (_) => const LocalizationStrings.longHairBigHair(),
+      longHairBob: (_) => const LocalizationStrings.longHairBob(),
+      longHairBun: (_) => const LocalizationStrings.longHairBun(),
+      longHairCurly: (_) => const LocalizationStrings.longHairCurly(),
+      longHairCurvy: (_) => const LocalizationStrings.longHairCurvy(),
+      longHairDreads: (_) => const LocalizationStrings.longHairDreads(),
+      longHairFrida: (_) => const LocalizationStrings.longHairFrida(),
+      longHairFro: (_) => const LocalizationStrings.longHairFro(),
+      longHairFroBand: (_) => const LocalizationStrings.longHairFroBand(),
+      longHairNotTooLong: (_) => const LocalizationStrings.longHairNotTooLong(),
+      longHairShavedSides: (_) =>
+          const LocalizationStrings.longHairShavedSides(),
+      longHairMiaWallace: (_) => const LocalizationStrings.longHairMiaWallace(),
+      longHairStraight: (_) => const LocalizationStrings.longHairStraight(),
+      longHairStraight2: (_) => const LocalizationStrings.longHairStraight2(),
+      longHairStraightStrand: (_) =>
+          const LocalizationStrings.longHairStraightStrand(),
+      shortHairDreads01: (_) => const LocalizationStrings.shortHairDreads01(),
+      shortHairDreads02: (_) => const LocalizationStrings.shortHairDreads02(),
+      shortHairFrizzle: (_) => const LocalizationStrings.shortHairFrizzle(),
+      shortHairShaggyMullet: (_) =>
+          const LocalizationStrings.shortHairShaggyMullet(),
+      shortHairShortCurly: (_) =>
+          const LocalizationStrings.shortHairShortCurly(),
+      shortHairShortFlat: (_) => const LocalizationStrings.shortHairShortFlat(),
+      shortHairShortRound: (_) =>
+          const LocalizationStrings.shortHairShortRound(),
+      shortHairShortWaved: (_) =>
+          const LocalizationStrings.shortHairShortWaved(),
+      shortHairSides: (_) => const LocalizationStrings.shortHairSides(),
+      shortHairTheCaesar: (_) => const LocalizationStrings.shortHairTheCaesar(),
+      shortHairTheCaesarSidePart: (_) =>
+          const LocalizationStrings.shortHairTheCaesarSidePart(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
+
   String toSvgString() => when(
-        noHair: () => Hair.noHair(),
-        eyepatch: () => Hair.eyepatch(),
-        hat: () => Hair.hat(),
+        noHair: (_) => Hair.noHair(),
+        eyepatch: (_) => Hair.eyepatch(),
+        hat: (_) => Hair.hat(),
         hijab: (color) => Hair.hijab(color),
         turban: (color) => Hair.turban(color),
         winterHat1: (color) => Hair.winterHat1(color),
@@ -337,7 +822,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
         longHairCurly: (color) => Hair.longHairCurly(color),
         longHairCurvy: (color) => Hair.longHairCurvy(color),
         longHairDreads: (color) => Hair.longHairDreads(color),
-        longHairFrida: () => Hair.longHairFrida(),
+        longHairFrida: (_) => Hair.longHairFrida(),
         longHairFro: (color) => Hair.longHairFro(color),
         longHairFroBand: (color) => Hair.longHairFroBand(color),
         longHairNotTooLong: (color) => Hair.longHairNotTooLong(color),
@@ -381,6 +866,34 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
   factory AvataaarMouth.fromJson(Map<String, dynamic> json) =>
       _$AvataaarMouthFromJson(json);
 
+  static const all = [
+    AvataaarMouth.concerned(),
+    AvataaarMouth.default0(),
+    AvataaarMouth.disbelief(),
+    AvataaarMouth.eating(),
+    AvataaarMouth.grimace(),
+    AvataaarMouth.sad(),
+    AvataaarMouth.screamOpen(),
+    AvataaarMouth.serious(),
+    AvataaarMouth.smile(),
+    AvataaarMouth.tongue(),
+    AvataaarMouth.twinkle(),
+    AvataaarMouth.vomit(),
+  ];
+
+  /// creates random [AvataaarMouth]
+  factory AvataaarMouth.random() =>
+      AvataaarMouth.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarMouth.all.length));
+
+  /// creates [AvataaarMouth] based on the index found in [AvataaarMouth.all]
+  factory AvataaarMouth.fromInt(int index) =>
+      AvataaarMouth.all.elementAt(index);
+
+  /// returns the index of [AvataaarMouth.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarMouth.all.indexOf(this);
+
   String toSvgString() => when(
         concerned: () => Mouth.concerned,
         default0: () => Mouth.default0,
@@ -395,6 +908,26 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
         twinkle: () => Mouth.twinkle,
         vomit: () => Mouth.vomit,
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      concerned: () => const LocalizationStrings.concerned(),
+      default0: () => const LocalizationStrings.default0(),
+      disbelief: () => const LocalizationStrings.disbelief(),
+      eating: () => const LocalizationStrings.eating(),
+      grimace: () => const LocalizationStrings.grimace(),
+      sad: () => const LocalizationStrings.sad(),
+      screamOpen: () => const LocalizationStrings.screamOpen(),
+      serious: () => const LocalizationStrings.serious(),
+      smile: () => const LocalizationStrings.smile(),
+      tongue: () => const LocalizationStrings.tongue(),
+      twinkle: () => const LocalizationStrings.twinkle(),
+      vomit: () => const LocalizationStrings.vomit(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
@@ -408,50 +941,141 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
 
   @override
   String toSvgString() => when(default0: () => Nose.default0);
+
+  @override
+  int toInt() => 0;
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      default0: () => const LocalizationStrings.default0(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
 class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
-  const factory AvataaarSkin.tanned() = _Tanned;
-  const factory AvataaarSkin.yellow() = _Yellow;
-  const factory AvataaarSkin.pale() = _Pale;
-  const factory AvataaarSkin.light() = _White;
-  const factory AvataaarSkin.brown() = _Brown;
-  const factory AvataaarSkin.darkBrown() = _DarkBrown;
-  const factory AvataaarSkin.black() = _Black;
-  const factory AvataaarSkin.custom(@ColorSerialiser() Color color) = _Custom;
+  const factory AvataaarSkin.tanned(
+      [@Default(Color(0x00FD9841)) @ColorSerialiser() Color color]) = _Tanned;
+  const factory AvataaarSkin.yellow(
+      [@Default(Color(0x00F8D25C)) @ColorSerialiser() Color color]) = _Yellow;
+  const factory AvataaarSkin.pale(
+      [@Default(Color(0x00FFDBB4)) @ColorSerialiser() Color color]) = _Pale;
+  const factory AvataaarSkin.light(
+      [@Default(Color(0x00EDB98A)) @ColorSerialiser() Color color]) = _White;
+  const factory AvataaarSkin.brown(
+      [@Default(Color(0x00D08B5B)) @ColorSerialiser() Color color]) = _Brown;
+  const factory AvataaarSkin.darkBrown(
+          [@Default(Color(0x00AE5D29)) @ColorSerialiser() Color color]) =
+      _DarkBrown;
+  const factory AvataaarSkin.black(
+      [@Default(Color(0x00614335)) @ColorSerialiser() Color color]) = _Black;
+  const factory AvataaarSkin.custom(
+      [@Default(Colors.grey) @ColorSerialiser() Color color]) = _Custom;
 
   const AvataaarSkin._();
+
+  static const all = [
+    AvataaarSkin.tanned(),
+    AvataaarSkin.yellow(),
+    AvataaarSkin.pale(),
+    AvataaarSkin.light(),
+    AvataaarSkin.brown(),
+    AvataaarSkin.darkBrown(),
+    AvataaarSkin.black(),
+    AvataaarSkin.custom(),
+  ];
+
+  /// creates random [AvataaarSkin]
+  factory AvataaarSkin.random() =>
+      AvataaarSkin.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarSkin.all.length));
+
+  /// creates [AvataaarSkin] based on the index found in [AvataaarSkin.all]
+  factory AvataaarSkin.fromInt(int index) => AvataaarSkin.all.elementAt(index);
+
+  /// returns the index of [AvataaarSkin.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarSkin.all.indexOf(this);
 
   factory AvataaarSkin.fromJson(Map<String, dynamic> json) =>
       _$AvataaarSkinFromJson(json);
 
   @override
   String toSvgString(String maskID) => when(
-        tanned: () => makeSkin(maskID, HexColor.fromHex('#FD9841')),
-        yellow: () => makeSkin(maskID, HexColor.fromHex('#F8D25C')),
-        pale: () => makeSkin(maskID, HexColor.fromHex('#FFDBB4')),
-        light: () => makeSkin(maskID, HexColor.fromHex('#EDB98A')),
-        brown: () => makeSkin(maskID, HexColor.fromHex('#D08B5B')),
-        darkBrown: () => makeSkin(maskID, HexColor.fromHex('#AE5D29')),
-        black: () => makeSkin(maskID, HexColor.fromHex('#614335')),
-        custom: (color) => makeSkin(maskID, HexColor.fromHex('#FD9841')),
+        tanned: (color) => makeSkin(maskID, color),
+        yellow: (color) => makeSkin(maskID, color),
+        pale: (color) => makeSkin(maskID, color),
+        light: (color) => makeSkin(maskID, color),
+        brown: (color) => makeSkin(maskID, color),
+        darkBrown: (color) => makeSkin(maskID, color),
+        black: (color) => makeSkin(maskID, color),
+        custom: (color) => makeSkin(maskID, color),
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      tanned: (_) => const LocalizationStrings.tanned(),
+      yellow: (_) => const LocalizationStrings.yellow(),
+      pale: (_) => const LocalizationStrings.pale(),
+      light: (_) => const LocalizationStrings.light(),
+      brown: (_) => const LocalizationStrings.brown(),
+      darkBrown: (_) => const LocalizationStrings.darkBrown(),
+      black: (_) => const LocalizationStrings.black(),
+      custom: (_) => const LocalizationStrings.custom(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }
 
 @freezed
 class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
-  const factory AvataaarStyle.transparent() = _Transparent;
-  const factory AvataaarStyle.circle(@ColorSerialiser() Color color) = _Circle;
+  const factory AvataaarStyle.transparent(
+          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
+      _Transparent;
+  const factory AvataaarStyle.circle(
+      [@Default(Color(0x0065C9FF)) @ColorSerialiser() Color color]) = _Circle;
 
   const AvataaarStyle._();
 
   factory AvataaarStyle.fromJson(Map<String, dynamic> json) =>
       _$AvataaarStyleFromJson(json);
 
+  static const all = [
+    AvataaarStyle.transparent(),
+    AvataaarStyle.transparent(),
+  ];
+
+  /// creates random [AvataaarStyle]
+  factory AvataaarStyle.random() =>
+      AvataaarStyle.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+          .nextInt(AvataaarStyle.all.length));
+
+  /// creates [AvataaarStyle] based on the index found in [AvataaarStyle.all]
+  factory AvataaarStyle.fromInt(int index) =>
+      AvataaarStyle.all.elementAt(index);
+
+  /// returns the index of [AvataaarStyle.all], or -1 if no entry is found
+  @override
+  int toInt() => AvataaarStyle.all.indexOf(this);
+
   @override
   String toSvgString() => when(
-        transparent: () => 'Transparent',
+        transparent: (_) => 'Transparent',
         circle: (color) => 'Circle',
       );
+
+  @override
+  String toLabel([String languageCode = 'en']) {
+    final localization = when(
+      transparent: (_) => const LocalizationStrings.transparent(),
+      circle: (_) => const LocalizationStrings.circle(),
+    );
+
+    return LocalizationStrings.applyLanguageCode(localization, languageCode);
+  }
 }

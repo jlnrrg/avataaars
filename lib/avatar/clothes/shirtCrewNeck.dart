@@ -30,7 +30,7 @@ String _shirtCrewNeck(Color color) {
           stroke-width='1'
           fill-rule='evenodd'
           mask="url(#$_mask1)"
-          fill-opacity='0.16'
+          opacity='0.16'
           fill='#000000'>
           <g transform='translate(92.000000, 4.000000)' id='Hola-👋🏼'>
             <ellipse

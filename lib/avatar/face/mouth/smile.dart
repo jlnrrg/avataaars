@@ -17,7 +17,7 @@ String _smile() {
         </mask>
         <use
           id='Mouth'
-          fill-opacity='0.699999988'
+          opacity='0.699999988'
           fill='#000000'
           fill-rule='evenodd'
           xlink:href="${'#' + _path1}"

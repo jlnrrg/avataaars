@@ -4,7 +4,7 @@ const _hearts = """
  <g
         id='Eyes/Hearts-😍'
         transform='translate(0.000000, 8.000000)'
-        fill-opacity='0.8'
+        opacity='0.8'
         fill-rule='nonzero'
         fill='#FF5353'>
         <path

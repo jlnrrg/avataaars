@@ -10,7 +10,7 @@ String _grimace() {
         </defs>
         <rect
           id="Mouth"
-          fill-opacity="0.599999964"
+          opacity="0.599999964"
           fill="#000000"
           fill-rule="evenodd"
           x="22"

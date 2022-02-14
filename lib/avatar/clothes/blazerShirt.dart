@@ -27,7 +27,7 @@ String _blazzerShirt() {
             id="Shadowy"
             opacity="0.599999964"
             mask="url(#$_mask1)"
-            fill-opacity="0.16"
+            opacity="0.16"
             fill="#000000">
             <g transform="translate(60.000000, -25.000000)" id="Hola-👋🏼">
               <ellipse

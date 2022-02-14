@@ -23,15 +23,15 @@ class _$AvataaarTearOff {
   const _$AvataaarTearOff();
 
   _Avataaar call(
-      {AvataaarHair? hair,
+      {AvataaarHair hair = const AvataaarHair.longHairStraight(),
       AvataaarAccessories accessory = const AvataaarAccessories.blank(),
       AvataaarFacialHair facialHair = const AvataaarFacialHair.blank(),
-      AvataaarClothes? clothe,
-      AvataaarGraphics? graphics,
-      AvataaarEyes? eyes,
-      AvataaarEyebrow? eyebrow,
-      AvataaarMouth? mouth,
-      AvataaarSkin? skin,
+      AvataaarClothes clothe = const AvataaarClothes.blazerShirt(),
+      AvataaarGraphics graphics = const AvataaarGraphics.skull(),
+      AvataaarEyes eyes = const AvataaarEyes.default0(),
+      AvataaarEyebrow eyebrow = const AvataaarEyebrow.default0(),
+      AvataaarMouth mouth = const AvataaarMouth.default0(),
+      AvataaarSkin skin = const AvataaarSkin.light(),
       AvataaarNose nose = const AvataaarNose.default0(),
       AvataaarStyle style = const AvataaarStyle.transparent()}) {
     return _Avataaar(
@@ -59,15 +59,15 @@ const $Avataaar = _$AvataaarTearOff();
 
 /// @nodoc
 mixin _$Avataaar {
-  AvataaarHair? get hair => throw _privateConstructorUsedError;
+  AvataaarHair get hair => throw _privateConstructorUsedError;
   AvataaarAccessories get accessory => throw _privateConstructorUsedError;
   AvataaarFacialHair get facialHair => throw _privateConstructorUsedError;
-  AvataaarClothes? get clothe => throw _privateConstructorUsedError;
-  AvataaarGraphics? get graphics => throw _privateConstructorUsedError;
-  AvataaarEyes? get eyes => throw _privateConstructorUsedError;
-  AvataaarEyebrow? get eyebrow => throw _privateConstructorUsedError;
-  AvataaarMouth? get mouth => throw _privateConstructorUsedError;
-  AvataaarSkin? get skin => throw _privateConstructorUsedError;
+  AvataaarClothes get clothe => throw _privateConstructorUsedError;
+  AvataaarGraphics get graphics => throw _privateConstructorUsedError;
+  AvataaarEyes get eyes => throw _privateConstructorUsedError;
+  AvataaarEyebrow get eyebrow => throw _privateConstructorUsedError;
+  AvataaarMouth get mouth => throw _privateConstructorUsedError;
+  AvataaarSkin get skin => throw _privateConstructorUsedError;
   AvataaarNose get nose => throw _privateConstructorUsedError;
   AvataaarStyle get style => throw _privateConstructorUsedError;
 
@@ -82,27 +82,27 @@ abstract class $AvataaarCopyWith<$Res> {
   factory $AvataaarCopyWith(Avataaar value, $Res Function(Avataaar) then) =
       _$AvataaarCopyWithImpl<$Res>;
   $Res call(
-      {AvataaarHair? hair,
+      {AvataaarHair hair,
       AvataaarAccessories accessory,
       AvataaarFacialHair facialHair,
-      AvataaarClothes? clothe,
-      AvataaarGraphics? graphics,
-      AvataaarEyes? eyes,
-      AvataaarEyebrow? eyebrow,
-      AvataaarMouth? mouth,
-      AvataaarSkin? skin,
+      AvataaarClothes clothe,
+      AvataaarGraphics graphics,
+      AvataaarEyes eyes,
+      AvataaarEyebrow eyebrow,
+      AvataaarMouth mouth,
+      AvataaarSkin skin,
       AvataaarNose nose,
       AvataaarStyle style});
 
-  $AvataaarHairCopyWith<$Res>? get hair;
+  $AvataaarHairCopyWith<$Res> get hair;
   $AvataaarAccessoriesCopyWith<$Res> get accessory;
   $AvataaarFacialHairCopyWith<$Res> get facialHair;
-  $AvataaarClothesCopyWith<$Res>? get clothe;
-  $AvataaarGraphicsCopyWith<$Res>? get graphics;
-  $AvataaarEyesCopyWith<$Res>? get eyes;
-  $AvataaarEyebrowCopyWith<$Res>? get eyebrow;
-  $AvataaarMouthCopyWith<$Res>? get mouth;
-  $AvataaarSkinCopyWith<$Res>? get skin;
+  $AvataaarClothesCopyWith<$Res> get clothe;
+  $AvataaarGraphicsCopyWith<$Res> get graphics;
+  $AvataaarEyesCopyWith<$Res> get eyes;
+  $AvataaarEyebrowCopyWith<$Res> get eyebrow;
+  $AvataaarMouthCopyWith<$Res> get mouth;
+  $AvataaarSkinCopyWith<$Res> get skin;
   $AvataaarNoseCopyWith<$Res> get nose;
   $AvataaarStyleCopyWith<$Res> get style;
 }
@@ -133,7 +133,7 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
       hair: hair == freezed
           ? _value.hair
           : hair // ignore: cast_nullable_to_non_nullable
-              as AvataaarHair?,
+              as AvataaarHair,
       accessory: accessory == freezed
           ? _value.accessory
           : accessory // ignore: cast_nullable_to_non_nullable
@@ -145,27 +145,27 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
       clothe: clothe == freezed
           ? _value.clothe
           : clothe // ignore: cast_nullable_to_non_nullable
-              as AvataaarClothes?,
+              as AvataaarClothes,
       graphics: graphics == freezed
           ? _value.graphics
           : graphics // ignore: cast_nullable_to_non_nullable
-              as AvataaarGraphics?,
+              as AvataaarGraphics,
       eyes: eyes == freezed
           ? _value.eyes
           : eyes // ignore: cast_nullable_to_non_nullable
-              as AvataaarEyes?,
+              as AvataaarEyes,
       eyebrow: eyebrow == freezed
           ? _value.eyebrow
           : eyebrow // ignore: cast_nullable_to_non_nullable
-              as AvataaarEyebrow?,
+              as AvataaarEyebrow,
       mouth: mouth == freezed
           ? _value.mouth
           : mouth // ignore: cast_nullable_to_non_nullable
-              as AvataaarMouth?,
+              as AvataaarMouth,
       skin: skin == freezed
           ? _value.skin
           : skin // ignore: cast_nullable_to_non_nullable
-              as AvataaarSkin?,
+              as AvataaarSkin,
       nose: nose == freezed
           ? _value.nose
           : nose // ignore: cast_nullable_to_non_nullable
@@ -178,12 +178,8 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
   }
 
   @override
-  $AvataaarHairCopyWith<$Res>? get hair {
-    if (_value.hair == null) {
-      return null;
-    }
-
-    return $AvataaarHairCopyWith<$Res>(_value.hair!, (value) {
+  $AvataaarHairCopyWith<$Res> get hair {
+    return $AvataaarHairCopyWith<$Res>(_value.hair, (value) {
       return _then(_value.copyWith(hair: value));
     });
   }
@@ -203,67 +199,43 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
   }
 
   @override
-  $AvataaarClothesCopyWith<$Res>? get clothe {
-    if (_value.clothe == null) {
-      return null;
-    }
-
-    return $AvataaarClothesCopyWith<$Res>(_value.clothe!, (value) {
+  $AvataaarClothesCopyWith<$Res> get clothe {
+    return $AvataaarClothesCopyWith<$Res>(_value.clothe, (value) {
       return _then(_value.copyWith(clothe: value));
     });
   }
 
   @override
-  $AvataaarGraphicsCopyWith<$Res>? get graphics {
-    if (_value.graphics == null) {
-      return null;
-    }
-
-    return $AvataaarGraphicsCopyWith<$Res>(_value.graphics!, (value) {
+  $AvataaarGraphicsCopyWith<$Res> get graphics {
+    return $AvataaarGraphicsCopyWith<$Res>(_value.graphics, (value) {
       return _then(_value.copyWith(graphics: value));
     });
   }
 
   @override
-  $AvataaarEyesCopyWith<$Res>? get eyes {
-    if (_value.eyes == null) {
-      return null;
-    }
-
-    return $AvataaarEyesCopyWith<$Res>(_value.eyes!, (value) {
+  $AvataaarEyesCopyWith<$Res> get eyes {
+    return $AvataaarEyesCopyWith<$Res>(_value.eyes, (value) {
       return _then(_value.copyWith(eyes: value));
     });
   }
 
   @override
-  $AvataaarEyebrowCopyWith<$Res>? get eyebrow {
-    if (_value.eyebrow == null) {
-      return null;
-    }
-
-    return $AvataaarEyebrowCopyWith<$Res>(_value.eyebrow!, (value) {
+  $AvataaarEyebrowCopyWith<$Res> get eyebrow {
+    return $AvataaarEyebrowCopyWith<$Res>(_value.eyebrow, (value) {
       return _then(_value.copyWith(eyebrow: value));
     });
   }
 
   @override
-  $AvataaarMouthCopyWith<$Res>? get mouth {
-    if (_value.mouth == null) {
-      return null;
-    }
-
-    return $AvataaarMouthCopyWith<$Res>(_value.mouth!, (value) {
+  $AvataaarMouthCopyWith<$Res> get mouth {
+    return $AvataaarMouthCopyWith<$Res>(_value.mouth, (value) {
       return _then(_value.copyWith(mouth: value));
     });
   }
 
   @override
-  $AvataaarSkinCopyWith<$Res>? get skin {
-    if (_value.skin == null) {
-      return null;
-    }
-
-    return $AvataaarSkinCopyWith<$Res>(_value.skin!, (value) {
+  $AvataaarSkinCopyWith<$Res> get skin {
+    return $AvataaarSkinCopyWith<$Res>(_value.skin, (value) {
       return _then(_value.copyWith(skin: value));
     });
   }
@@ -289,36 +261,36 @@ abstract class _$AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
       __$AvataaarCopyWithImpl<$Res>;
   @override
   $Res call(
-      {AvataaarHair? hair,
+      {AvataaarHair hair,
       AvataaarAccessories accessory,
       AvataaarFacialHair facialHair,
-      AvataaarClothes? clothe,
-      AvataaarGraphics? graphics,
-      AvataaarEyes? eyes,
-      AvataaarEyebrow? eyebrow,
-      AvataaarMouth? mouth,
-      AvataaarSkin? skin,
+      AvataaarClothes clothe,
+      AvataaarGraphics graphics,
+      AvataaarEyes eyes,
+      AvataaarEyebrow eyebrow,
+      AvataaarMouth mouth,
+      AvataaarSkin skin,
       AvataaarNose nose,
       AvataaarStyle style});
 
   @override
-  $AvataaarHairCopyWith<$Res>? get hair;
+  $AvataaarHairCopyWith<$Res> get hair;
   @override
   $AvataaarAccessoriesCopyWith<$Res> get accessory;
   @override
   $AvataaarFacialHairCopyWith<$Res> get facialHair;
   @override
-  $AvataaarClothesCopyWith<$Res>? get clothe;
+  $AvataaarClothesCopyWith<$Res> get clothe;
   @override
-  $AvataaarGraphicsCopyWith<$Res>? get graphics;
+  $AvataaarGraphicsCopyWith<$Res> get graphics;
   @override
-  $AvataaarEyesCopyWith<$Res>? get eyes;
+  $AvataaarEyesCopyWith<$Res> get eyes;
   @override
-  $AvataaarEyebrowCopyWith<$Res>? get eyebrow;
+  $AvataaarEyebrowCopyWith<$Res> get eyebrow;
   @override
-  $AvataaarMouthCopyWith<$Res>? get mouth;
+  $AvataaarMouthCopyWith<$Res> get mouth;
   @override
-  $AvataaarSkinCopyWith<$Res>? get skin;
+  $AvataaarSkinCopyWith<$Res> get skin;
   @override
   $AvataaarNoseCopyWith<$Res> get nose;
   @override
@@ -352,7 +324,7 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
       hair: hair == freezed
           ? _value.hair
           : hair // ignore: cast_nullable_to_non_nullable
-              as AvataaarHair?,
+              as AvataaarHair,
       accessory: accessory == freezed
           ? _value.accessory
           : accessory // ignore: cast_nullable_to_non_nullable
@@ -364,27 +336,27 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
       clothe: clothe == freezed
           ? _value.clothe
           : clothe // ignore: cast_nullable_to_non_nullable
-              as AvataaarClothes?,
+              as AvataaarClothes,
       graphics: graphics == freezed
           ? _value.graphics
           : graphics // ignore: cast_nullable_to_non_nullable
-              as AvataaarGraphics?,
+              as AvataaarGraphics,
       eyes: eyes == freezed
           ? _value.eyes
           : eyes // ignore: cast_nullable_to_non_nullable
-              as AvataaarEyes?,
+              as AvataaarEyes,
       eyebrow: eyebrow == freezed
           ? _value.eyebrow
           : eyebrow // ignore: cast_nullable_to_non_nullable
-              as AvataaarEyebrow?,
+              as AvataaarEyebrow,
       mouth: mouth == freezed
           ? _value.mouth
           : mouth // ignore: cast_nullable_to_non_nullable
-              as AvataaarMouth?,
+              as AvataaarMouth,
       skin: skin == freezed
           ? _value.skin
           : skin // ignore: cast_nullable_to_non_nullable
-              as AvataaarSkin?,
+              as AvataaarSkin,
       nose: nose == freezed
           ? _value.nose
           : nose // ignore: cast_nullable_to_non_nullable
@@ -401,15 +373,15 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Avataaar extends _Avataaar {
   const _$_Avataaar(
-      {this.hair,
+      {this.hair = const AvataaarHair.longHairStraight(),
       this.accessory = const AvataaarAccessories.blank(),
       this.facialHair = const AvataaarFacialHair.blank(),
-      this.clothe,
-      this.graphics,
-      this.eyes,
-      this.eyebrow,
-      this.mouth,
-      this.skin,
+      this.clothe = const AvataaarClothes.blazerShirt(),
+      this.graphics = const AvataaarGraphics.skull(),
+      this.eyes = const AvataaarEyes.default0(),
+      this.eyebrow = const AvataaarEyebrow.default0(),
+      this.mouth = const AvataaarMouth.default0(),
+      this.skin = const AvataaarSkin.light(),
       this.nose = const AvataaarNose.default0(),
       this.style = const AvataaarStyle.transparent()})
       : super._();
@@ -417,26 +389,33 @@ class _$_Avataaar extends _Avataaar {
   factory _$_Avataaar.fromJson(Map<String, dynamic> json) =>
       _$$_AvataaarFromJson(json);
 
+  @JsonKey()
   @override
-  final AvataaarHair? hair;
+  final AvataaarHair hair;
   @JsonKey()
   @override
   final AvataaarAccessories accessory;
   @JsonKey()
   @override
   final AvataaarFacialHair facialHair;
+  @JsonKey()
   @override
-  final AvataaarClothes? clothe;
+  final AvataaarClothes clothe;
+  @JsonKey()
   @override
-  final AvataaarGraphics? graphics;
+  final AvataaarGraphics graphics;
+  @JsonKey()
   @override
-  final AvataaarEyes? eyes;
+  final AvataaarEyes eyes;
+  @JsonKey()
   @override
-  final AvataaarEyebrow? eyebrow;
+  final AvataaarEyebrow eyebrow;
+  @JsonKey()
   @override
-  final AvataaarMouth? mouth;
+  final AvataaarMouth mouth;
+  @JsonKey()
   @override
-  final AvataaarSkin? skin;
+  final AvataaarSkin skin;
   @JsonKey()
   @override
   final AvataaarNose nose;
@@ -496,15 +475,15 @@ class _$_Avataaar extends _Avataaar {
 
 abstract class _Avataaar extends Avataaar {
   const factory _Avataaar(
-      {AvataaarHair? hair,
+      {AvataaarHair hair,
       AvataaarAccessories accessory,
       AvataaarFacialHair facialHair,
-      AvataaarClothes? clothe,
-      AvataaarGraphics? graphics,
-      AvataaarEyes? eyes,
-      AvataaarEyebrow? eyebrow,
-      AvataaarMouth? mouth,
-      AvataaarSkin? skin,
+      AvataaarClothes clothe,
+      AvataaarGraphics graphics,
+      AvataaarEyes eyes,
+      AvataaarEyebrow eyebrow,
+      AvataaarMouth mouth,
+      AvataaarSkin skin,
       AvataaarNose nose,
       AvataaarStyle style}) = _$_Avataaar;
   const _Avataaar._() : super._();
@@ -512,23 +491,23 @@ abstract class _Avataaar extends Avataaar {
   factory _Avataaar.fromJson(Map<String, dynamic> json) = _$_Avataaar.fromJson;
 
   @override
-  AvataaarHair? get hair;
+  AvataaarHair get hair;
   @override
   AvataaarAccessories get accessory;
   @override
   AvataaarFacialHair get facialHair;
   @override
-  AvataaarClothes? get clothe;
+  AvataaarClothes get clothe;
   @override
-  AvataaarGraphics? get graphics;
+  AvataaarGraphics get graphics;
   @override
-  AvataaarEyes? get eyes;
+  AvataaarEyes get eyes;
   @override
-  AvataaarEyebrow? get eyebrow;
+  AvataaarEyebrow get eyebrow;
   @override
-  AvataaarMouth? get mouth;
+  AvataaarMouth get mouth;
   @override
-  AvataaarSkin? get skin;
+  AvataaarSkin get skin;
   @override
   AvataaarNose get nose;
   @override

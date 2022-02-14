@@ -6,7 +6,7 @@ const _surprised = """
         <circle id='Eye-Ball' fill='#FFFFFF' cx='82' cy='22' r='14' />
         <circle
           id='Eye'
-          fill-opacity='0.699999988'
+          opacity='0.699999988'
           fill='#000000'
           cx='30'
           cy='22'
@@ -14,7 +14,7 @@ const _surprised = """
         />
         <circle
           id='Eye'
-          fill-opacity='0.699999988'
+          opacity='0.699999988'
           fill='#000000'
           cx='82'
           cy='22'

@@ -24,7 +24,7 @@ String _squint() {
           </mask>
           <use id='The-white-stuff' fill='#FFFFFF' xlink:href="${'#' + _path1}" />
           <circle
-            fill-opacity='0.699999988'
+            opacity='0.699999988'
             fill='#000000'
             mask="url(#$_mask1)"
             cx='14'
@@ -38,7 +38,7 @@ String _squint() {
           </mask>
           <use id='Eyeball-Mask' fill='#FFFFFF' xlink:href="${'#' + _path2}" />
           <circle
-            fill-opacity='0.699999988'
+            opacity='0.699999988'
             fill='#000000'
             mask="url(#$_mask2)"
             cx='14'
