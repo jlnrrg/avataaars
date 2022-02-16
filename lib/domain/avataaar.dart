@@ -12,7 +12,7 @@ class Avataaar with _$Avataaar {
     @Default(AvataaarHair.longHairStraight()) AvataaarHair hair,
     @Default(AvataaarAccessories.blank()) AvataaarAccessories accessory,
     @Default(AvataaarFacialHair.blank()) AvataaarFacialHair facialHair,
-    @Default(AvataaarClothes.blazerShirt()) AvataaarClothes clothe,
+    @Default(AvataaarClothes.blazerShirt()) AvataaarClothes clothes,
     @Default(AvataaarGraphics.skull()) AvataaarGraphics graphics,
     @Default(AvataaarEyes.default0()) AvataaarEyes eyes,
     @Default(AvataaarEyebrow.default0()) AvataaarEyebrow eyebrow,
@@ -26,7 +26,7 @@ class Avataaar with _$Avataaar {
         hair: AvataaarHair.random(),
         accessory: AvataaarAccessories.random(),
         facialHair: AvataaarFacialHair.random(),
-        clothe: AvataaarClothes.random(),
+        clothes: AvataaarClothes.random(),
         graphics: AvataaarGraphics.random(),
         eyebrow: AvataaarEyebrow.random(),
         eyes: AvataaarEyes.random(),
@@ -126,7 +126,7 @@ class Avataaar with _$Avataaar {
                     mask="url(#$_mask3)"
                   />
                 </g>
-                ${clothe.toSvgString()}
+                ${clothes.toSvgString()}
                 ${buildFace()}
                 ${buildTop()}
               </g>

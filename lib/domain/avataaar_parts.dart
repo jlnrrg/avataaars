@@ -73,6 +73,11 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
   @override
   int toInt() => AvataaarEyes.all.indexOf(this);
 
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.eyes(), languageCode);
+
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -157,6 +162,11 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
         sunglasses: () => Accessories.sunglasses(),
         wayfarers: () => Accessories.wayfarers(),
       );
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.accessory(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {
@@ -256,6 +266,11 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
         shirtVNeck: (color) => Clothes.shirtVNeck(color),
       );
 
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.clothes(), languageCode);
+
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -333,6 +348,11 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
         skull: () => Graphics.skull,
         skullOutline: () => Graphics.skullOutline,
       );
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.graphics(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {
@@ -419,6 +439,11 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
         upDown: () => Eyebrow.upDown,
         upDownNatural: () => Eyebrow.upDownNatural,
       );
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.eyebrow(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {
@@ -508,6 +533,11 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
         moustacheFancy: (color) => FacialHair.moustacheFancy(color),
         moustacheMagnum: (color) => FacialHair.moustacheMagnum(color),
       );
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.facialHair(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {
@@ -756,6 +786,11 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   int toInt() =>
       all.map((e) => e.copyWith(color: color)).toList().indexOf(this);
 
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.hair(), languageCode);
+
   /// returns the label in the respective language based on the [languageCode]
   @override
   String toLabel([String languageCode = 'en']) {
@@ -910,6 +945,11 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
         vomit: () => Mouth.vomit,
       );
 
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.mouth(), languageCode);
+
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -945,6 +985,11 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
 
   @override
   int toInt() => 0;
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.nose(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {
@@ -1016,6 +1061,11 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
         custom: (color) => makeSkin(maskID, color),
       );
 
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.skin(), languageCode);
+
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -1068,6 +1118,11 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
         transparent: (_) => 'Transparent',
         circle: (color) => Style.circle(path1, path2, mask2, color),
       );
+
+  /// returns the header string based on the [languageCode]
+  static String toHeader([String languageCode = 'en']) =>
+      LocalizationStrings.applyLanguageCode(
+          const LocalizationStrings.style(), languageCode);
 
   @override
   String toLabel([String languageCode = 'en']) {

@@ -18,9 +18,9 @@ _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
           ? const AvataaarFacialHair.blank()
           : AvataaarFacialHair.fromJson(
               json['facialHair'] as Map<String, dynamic>),
-      clothe: json['clothe'] == null
+      clothes: json['clothes'] == null
           ? const AvataaarClothes.blazerShirt()
-          : AvataaarClothes.fromJson(json['clothe'] as Map<String, dynamic>),
+          : AvataaarClothes.fromJson(json['clothes'] as Map<String, dynamic>),
       graphics: json['graphics'] == null
           ? const AvataaarGraphics.skull()
           : AvataaarGraphics.fromJson(json['graphics'] as Map<String, dynamic>),
@@ -49,7 +49,7 @@ Map<String, dynamic> _$$_AvataaarToJson(_$_Avataaar instance) =>
       'hair': instance.hair,
       'accessory': instance.accessory,
       'facialHair': instance.facialHair,
-      'clothe': instance.clothe,
+      'clothes': instance.clothes,
       'graphics': instance.graphics,
       'eyes': instance.eyes,
       'eyebrow': instance.eyebrow,

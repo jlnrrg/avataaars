@@ -136,6 +136,18 @@ class LocalizationStrings with _$LocalizationStrings {
   const factory LocalizationStrings.circle() = _Circle;
   const factory LocalizationStrings.transparent() = _Transparent;
 
+  const factory LocalizationStrings.hair() = _Hair;
+  const factory LocalizationStrings.accessory() = _Accessory;
+  const factory LocalizationStrings.facialHair() = _FacialHair;
+  const factory LocalizationStrings.clothes() = _Clothes;
+  const factory LocalizationStrings.graphics() = _Graphics;
+  const factory LocalizationStrings.eyes() = _Eyes;
+  const factory LocalizationStrings.eyebrow() = _Eyebrow;
+  const factory LocalizationStrings.mouth() = _Mouth;
+  const factory LocalizationStrings.skin() = _Skin;
+  const factory LocalizationStrings.nose() = _Nose;
+  const factory LocalizationStrings.style() = _Style;
+
   const LocalizationStrings._();
 
   String toEnglish() => when(
@@ -252,6 +264,17 @@ class LocalizationStrings with _$LocalizationStrings {
         shirtCrewNeck: () => 'Crewneck Shirt',
         shirtScoopNeck: () => 'Scoopneck Shirt',
         shirtVNeck: () => 'Vneck Shirt',
+        facialHair: () => 'Facial Hair',
+        accessory: () => 'Accessory',
+        hair: () => 'Hair',
+        clothes: () => 'Clothes',
+        graphics: () => 'Graphics',
+        eyes: () => 'Eyes',
+        eyebrow: () => 'Eyebrow',
+        mouth: () => 'Mouth',
+        skin: () => 'Skin',
+        nose: () => 'Nose',
+        style: () => 'Style',
       );
 
   String toGerman() => 'TODO';
