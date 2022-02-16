@@ -23,7 +23,7 @@ part 'avataaar_parts.g.dart';
 abstract class AvataaarParts {
   // String toSvgString([String id = '']);
   String toLabel([String languageCode = 'en']);
-  int toInt();
+  int toIndex();
 }
 
 @freezed
@@ -63,15 +63,30 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
 
   /// creates random [AvataaarEyes]
   factory AvataaarEyes.random() =>
-      AvataaarEyes.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarEyes.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarEyes.all.length));
 
+  // creates the next [AvataaarEyes] from [AvataaarEyes.all]
+  AvataaarEyes next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarEyes.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarEyes] from [AvataaarEyes.all]
+  AvataaarEyes previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarEyes.fromIndex(nextI);
+  }
+
   /// creates [AvataaarEyes] based on the index found in [AvataaarEyes.all]
-  factory AvataaarEyes.fromInt(int index) => AvataaarEyes.all.elementAt(index);
+  factory AvataaarEyes.fromIndex(int index) =>
+      AvataaarEyes.all.elementAt(index);
 
   /// returns the index of [AvataaarEyes.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarEyes.all.indexOf(this);
+  int toIndex() => AvataaarEyes.all.indexOf(this);
 
   /// returns the header string based on the [languageCode]
   static String toHeader([String languageCode = 'en']) =>
@@ -140,17 +155,31 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
   ];
 
   /// creates random [AvataaarAccessories]
-  factory AvataaarAccessories.random() =>
-      AvataaarAccessories.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+  factory AvataaarAccessories.random() => AvataaarAccessories.fromIndex(
+      Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarAccessories.all.length));
 
   /// creates [AvataaarAccessories] based on the index found in [AvataaarAccessories.all]
-  factory AvataaarAccessories.fromInt(int index) =>
+  factory AvataaarAccessories.fromIndex(int index) =>
       AvataaarAccessories.all.elementAt(index);
+
+  // creates the next [AvataaarAccessories] from [AvataaarAccessories.all]
+  AvataaarAccessories next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarAccessories.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarAccessories] from [AvataaarAccessories.all]
+  AvataaarAccessories previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarAccessories.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarAccessories.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarAccessories.all.indexOf(this);
+  int toIndex() => AvataaarAccessories.all.indexOf(this);
 
   // @override
   String toSvgString() => when(
@@ -242,16 +271,30 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
 
   /// creates random [AvataaarClothes]
   factory AvataaarClothes.random() =>
-      AvataaarClothes.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarClothes.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarClothes.all.length));
 
   /// creates [AvataaarClothes] based on the index found in [AvataaarClothes.all]
-  factory AvataaarClothes.fromInt(int index) =>
+  factory AvataaarClothes.fromIndex(int index) =>
       AvataaarClothes.all.elementAt(index);
+
+  // creates the next [AvataaarClothes] from [AvataaarClothes.all]
+  AvataaarClothes next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarClothes.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarClothes] from [AvataaarClothes.all]
+  AvataaarClothes previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarClothes.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarClothes.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarClothes.all.indexOf(this);
+  int toIndex() => AvataaarClothes.all.indexOf(this);
 
   String toSvgString() => when(
         blazerShirt: (_) => Clothes.blazerShirt,
@@ -324,16 +367,30 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
 
   /// creates random [AvataaarGraphics]
   factory AvataaarGraphics.random() =>
-      AvataaarGraphics.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarGraphics.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarGraphics.all.length));
 
   /// creates [AvataaarGraphics] based on the index found in [AvataaarGraphics.all]
-  factory AvataaarGraphics.fromInt(int index) =>
+  factory AvataaarGraphics.fromIndex(int index) =>
       AvataaarGraphics.all.elementAt(index);
+
+  // creates the next [AvataaarGraphics] from [AvataaarGraphics.all]
+  AvataaarGraphics next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarGraphics.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarGraphics] from [AvataaarGraphics.all]
+  AvataaarGraphics previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarGraphics.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarGraphics.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarGraphics.all.indexOf(this);
+  int toIndex() => AvataaarGraphics.all.indexOf(this);
 
   String Function(String) toSVGFunction() => when(
         bat: () => Graphics.bat,
@@ -413,16 +470,30 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
 
   /// creates random [AvataaarEyebrow]
   factory AvataaarEyebrow.random() =>
-      AvataaarEyebrow.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarEyebrow.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarEyebrow.all.length));
 
   /// creates [AvataaarEyebrow] based on the index found in [AvataaarEyebrow.all]
-  factory AvataaarEyebrow.fromInt(int index) =>
+  factory AvataaarEyebrow.fromIndex(int index) =>
       AvataaarEyebrow.all.elementAt(index);
+
+  // creates the next [AvataaarEyebrow] from [AvataaarEyebrow.all]
+  AvataaarEyebrow next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarEyebrow.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarEyebrow] from [AvataaarEyebrow.all]
+  AvataaarEyebrow previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarEyebrow.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarEyebrow.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarEyebrow.all.indexOf(this);
+  int toIndex() => AvataaarEyebrow.all.indexOf(this);
 
   String toSvgString() => when(
         angry: () => Eyebrow.angry,
@@ -514,16 +585,30 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
 
   /// creates random [AvataaarFacialHair]
   factory AvataaarFacialHair.random() =>
-      AvataaarFacialHair.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarFacialHair.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarFacialHair.all.length));
 
   /// creates [AvataaarFacialHair] based on the index found in [AvataaarFacialHair.all]
-  factory AvataaarFacialHair.fromInt(int index) =>
+  factory AvataaarFacialHair.fromIndex(int index) =>
       AvataaarFacialHair.all.elementAt(index);
+
+  // creates the next [AvataaarFacialHair] from [AvataaarFacialHair.all]
+  AvataaarFacialHair next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarFacialHair.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarFacialHair] from [AvataaarFacialHair.all]
+  AvataaarFacialHair previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarFacialHair.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarFacialHair.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarFacialHair.all.indexOf(this);
+  int toIndex() => AvataaarFacialHair.all.indexOf(this);
 
   String toSvgString() => when(
         blank: (_) => FacialHair.blank,
@@ -775,15 +860,30 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
 
   /// creates random [AvataaarHair]
   factory AvataaarHair.random() =>
-      AvataaarHair.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarHair.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarHair.all.length));
 
   /// creates [AvataaarHair] based on the index found in [AvataaarHair.all]
-  factory AvataaarHair.fromInt(int index) => AvataaarHair.all.elementAt(index);
+  factory AvataaarHair.fromIndex(int index) =>
+      AvataaarHair.all.elementAt(index);
+
+  // creates the next [AvataaarHair] from [AvataaarHair.all]
+  AvataaarHair next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarHair.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarHair] from [AvataaarHair.all]
+  AvataaarHair previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarHair.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarHair.all], or -1 if no entry is found
   @override
-  int toInt() =>
+  int toIndex() =>
       all.map((e) => e.copyWith(color: color)).toList().indexOf(this);
 
   /// returns the header string based on the [languageCode]
@@ -919,16 +1019,30 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
 
   /// creates random [AvataaarMouth]
   factory AvataaarMouth.random() =>
-      AvataaarMouth.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarMouth.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarMouth.all.length));
 
   /// creates [AvataaarMouth] based on the index found in [AvataaarMouth.all]
-  factory AvataaarMouth.fromInt(int index) =>
+  factory AvataaarMouth.fromIndex(int index) =>
       AvataaarMouth.all.elementAt(index);
+
+  // creates the next [AvataaarMouth] from [AvataaarMouth.all]
+  AvataaarMouth next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarMouth.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarMouth] from [AvataaarMouth.all]
+  AvataaarMouth previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarMouth.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarMouth.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarMouth.all.indexOf(this);
+  int toIndex() => AvataaarMouth.all.indexOf(this);
 
   String toSvgString() => when(
         concerned: () => Mouth.concerned,
@@ -980,11 +1094,34 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
   factory AvataaarNose.fromJson(Map<String, dynamic> json) =>
       _$AvataaarNoseFromJson(json);
 
+  /// creates [AvataaarNose] based on the index found in [AvataaarNose.all]
+  factory AvataaarNose.fromIndex(int index) =>
+      AvataaarNose.all.elementAt(index);
+
   @override
   String toSvgString() => when(default0: () => Nose.default0);
 
+  /// returns the index of [AvataaarNose.all], or -1 if no entry is found
   @override
-  int toInt() => 0;
+  int toIndex() => AvataaarNose.all.indexOf(this);
+
+  static const all = [
+    AvataaarNose.default0(),
+  ];
+
+  // creates the next [AvataaarNose] from [AvataaarNose.all]
+  AvataaarNose next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarNose.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarNose] from [AvataaarNose.all]
+  AvataaarNose previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarNose.fromIndex(nextI);
+  }
 
   /// returns the header string based on the [languageCode]
   static String toHeader([String languageCode = 'en']) =>
@@ -1036,15 +1173,30 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
 
   /// creates random [AvataaarSkin]
   factory AvataaarSkin.random() =>
-      AvataaarSkin.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarSkin.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarSkin.all.length));
 
   /// creates [AvataaarSkin] based on the index found in [AvataaarSkin.all]
-  factory AvataaarSkin.fromInt(int index) => AvataaarSkin.all.elementAt(index);
+  factory AvataaarSkin.fromIndex(int index) =>
+      AvataaarSkin.all.elementAt(index);
+
+  // creates the next [AvataaarSkin] from [AvataaarSkin.all]
+  AvataaarSkin next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarSkin.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarSkin] from [AvataaarSkin.all]
+  AvataaarSkin previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarSkin.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarSkin.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarSkin.all.indexOf(this);
+  int toIndex() => AvataaarSkin.all.indexOf(this);
 
   factory AvataaarSkin.fromJson(Map<String, dynamic> json) =>
       _$AvataaarSkinFromJson(json);
@@ -1103,16 +1255,30 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
 
   /// creates random [AvataaarStyle]
   factory AvataaarStyle.random() =>
-      AvataaarStyle.fromInt(Random(DateTime.now().millisecondsSinceEpoch)
+      AvataaarStyle.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
           .nextInt(AvataaarStyle.all.length));
 
   /// creates [AvataaarStyle] based on the index found in [AvataaarStyle.all]
-  factory AvataaarStyle.fromInt(int index) =>
+  factory AvataaarStyle.fromIndex(int index) =>
       AvataaarStyle.all.elementAt(index);
+
+  // creates the next [AvataaarStyle] from [AvataaarStyle.all]
+  AvataaarStyle next() {
+    final i = toIndex();
+    final nextI = (i + 1) >= all.length ? 0 : (i + 1);
+    return AvataaarStyle.fromIndex(nextI);
+  }
+
+  // creates the previous [AvataaarStyle] from [AvataaarStyle.all]
+  AvataaarStyle previous() {
+    final i = toIndex();
+    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    return AvataaarStyle.fromIndex(nextI);
+  }
 
   /// returns the index of [AvataaarStyle.all], or -1 if no entry is found
   @override
-  int toInt() => AvataaarStyle.all.indexOf(this);
+  int toIndex() => AvataaarStyle.all.indexOf(this);
 
   String toSvgString(String path1, String path2, String mask2) => when(
         transparent: (_) => 'Transparent',

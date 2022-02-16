@@ -91,14 +91,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   : null,
             ),
             DropdownButton<AvataaarClothes>(
-              value: avataaar.clothe,
+              value: avataaar.clothes,
               items: AvataaarClothes.all
                   .map((e) =>
                       DropdownMenuItem(value: e, child: Text(e.toLabel())))
                   .toList(),
               onChanged: (v) => v != null
                   ? setState(() {
-                      avataaar = avataaar.copyWith(clothe: v);
+                      avataaar = avataaar.copyWith(clothes: v);
                     })
                   : null,
             ),
