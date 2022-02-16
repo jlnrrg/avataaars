@@ -270,26 +270,49 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
   ];
 
   /// creates random [AvataaarClothes]
-  factory AvataaarClothes.random() =>
-      AvataaarClothes.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarClothes.all.length));
+  factory AvataaarClothes.random([Color? color]) {
+    final e = AvataaarClothes.fromIndex(
+        Random(DateTime.now().millisecondsSinceEpoch)
+            .nextInt(AvataaarClothes.all.length));
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   /// creates [AvataaarClothes] based on the index found in [AvataaarClothes.all]
-  factory AvataaarClothes.fromIndex(int index) =>
-      AvataaarClothes.all.elementAt(index);
+  factory AvataaarClothes.fromIndex(int index, [Color? color]) {
+    final e = AvataaarClothes.all.elementAt(index);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   // creates the next [AvataaarClothes] from [AvataaarClothes.all]
-  AvataaarClothes next() {
+  AvataaarClothes next([Color? color]) {
     final i = toIndex();
     final nextI = (i + 1) >= all.length ? 0 : (i + 1);
-    return AvataaarClothes.fromIndex(nextI);
+    final e = AvataaarClothes.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   // creates the previous [AvataaarClothes] from [AvataaarClothes.all]
-  AvataaarClothes previous() {
+  AvataaarClothes previous([Color? color]) {
     final i = toIndex();
     final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
-    return AvataaarClothes.fromIndex(nextI);
+    final e = AvataaarClothes.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   /// returns the index of [AvataaarClothes.all], or -1 if no entry is found
@@ -584,26 +607,47 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
   ];
 
   /// creates random [AvataaarFacialHair]
-  factory AvataaarFacialHair.random() =>
-      AvataaarFacialHair.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarFacialHair.all.length));
+  factory AvataaarFacialHair.random([Color? color]) {
+    final e = AvataaarFacialHair.fromIndex(
+        Random(DateTime.now().millisecondsSinceEpoch)
+            .nextInt(AvataaarFacialHair.all.length));
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   /// creates [AvataaarFacialHair] based on the index found in [AvataaarFacialHair.all]
-  factory AvataaarFacialHair.fromIndex(int index) =>
-      AvataaarFacialHair.all.elementAt(index);
+  factory AvataaarFacialHair.fromIndex(int index, [Color? color]) {
+    final e = AvataaarFacialHair.all.elementAt(index);
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   // creates the next [AvataaarFacialHair] from [AvataaarFacialHair.all]
-  AvataaarFacialHair next() {
+  AvataaarFacialHair next([Color? color]) {
     final i = toIndex();
     final nextI = (i + 1) >= all.length ? 0 : (i + 1);
-    return AvataaarFacialHair.fromIndex(nextI);
+    final e = AvataaarFacialHair.fromIndex(nextI);
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   // creates the previous [AvataaarFacialHair] from [AvataaarFacialHair.all]
-  AvataaarFacialHair previous() {
+  AvataaarFacialHair previous([Color? color]) {
     final i = toIndex();
     final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
-    return AvataaarFacialHair.fromIndex(nextI);
+    final e = AvataaarFacialHair.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   /// returns the index of [AvataaarFacialHair.all], or -1 if no entry is found
@@ -818,7 +862,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   static const Color defaultHatColorRed = Color.fromARGB(255, 255, 92, 92);
   static const Color defaultHatColorBlue01 = Color.fromARGB(255, 101, 201, 255);
   static const Color defaultHatColorBlue03 = Color.fromARGB(255, 37, 85, 124);
-  static const Color defaultHairColor = Color.fromARGB(255, 74, 49, 44);
+  static const Color defaultHairColor = Color.fromARGB(0, 74, 49, 44);
 
   static const List<AvataaarHair> all = [
     AvataaarHair.noHair(),
@@ -859,26 +903,49 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   ];
 
   /// creates random [AvataaarHair]
-  factory AvataaarHair.random() =>
-      AvataaarHair.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarHair.all.length));
+  factory AvataaarHair.random([Color? color]) {
+    final e = AvataaarHair.fromIndex(
+        Random(DateTime.now().millisecondsSinceEpoch)
+            .nextInt(AvataaarHair.all.length));
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   /// creates [AvataaarHair] based on the index found in [AvataaarHair.all]
-  factory AvataaarHair.fromIndex(int index) =>
-      AvataaarHair.all.elementAt(index);
+  factory AvataaarHair.fromIndex(int index, [Color? color]) {
+    final e = AvataaarHair.all.elementAt(index);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   // creates the next [AvataaarHair] from [AvataaarHair.all]
-  AvataaarHair next() {
+  AvataaarHair next([Color? color]) {
     final i = toIndex();
     final nextI = (i + 1) >= all.length ? 0 : (i + 1);
-    return AvataaarHair.fromIndex(nextI);
+    final e = AvataaarHair.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   // creates the previous [AvataaarHair] from [AvataaarHair.all]
-  AvataaarHair previous() {
+  AvataaarHair previous([Color? color]) {
     final i = toIndex();
     final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
-    return AvataaarHair.fromIndex(nextI);
+    final e = AvataaarHair.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   /// returns the index of [AvataaarHair.all], or -1 if no entry is found
@@ -1254,26 +1321,48 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
   ];
 
   /// creates random [AvataaarStyle]
-  factory AvataaarStyle.random() =>
-      AvataaarStyle.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarStyle.all.length));
+  factory AvataaarStyle.random([Color? color]) {
+    final e = AvataaarStyle.fromIndex(
+        Random(DateTime.now().millisecondsSinceEpoch)
+            .nextInt(AvataaarStyle.all.length));
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   /// creates [AvataaarStyle] based on the index found in [AvataaarStyle.all]
-  factory AvataaarStyle.fromIndex(int index) =>
-      AvataaarStyle.all.elementAt(index);
+  factory AvataaarStyle.fromIndex(int index, [Color? color]) {
+    final e = AvataaarStyle.all.elementAt(index);
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
+  }
 
   // creates the next [AvataaarStyle] from [AvataaarStyle.all]
-  AvataaarStyle next() {
+  AvataaarStyle next([Color? color]) {
     final i = toIndex();
     final nextI = (i + 1) >= all.length ? 0 : (i + 1);
-    return AvataaarStyle.fromIndex(nextI);
+    final e = AvataaarStyle.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   // creates the previous [AvataaarStyle] from [AvataaarStyle.all]
-  AvataaarStyle previous() {
+  AvataaarStyle previous([Color? color]) {
     final i = toIndex();
     final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
-    return AvataaarStyle.fromIndex(nextI);
+    final e = AvataaarStyle.fromIndex(nextI);
+
+    if (color != null) {
+      return e.copyWith(color: color);
+    }
+    return e;
   }
 
   /// returns the index of [AvataaarStyle.all], or -1 if no entry is found
