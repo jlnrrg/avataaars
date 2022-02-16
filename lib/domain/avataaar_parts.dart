@@ -862,7 +862,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   static const Color defaultHatColorRed = Color.fromARGB(255, 255, 92, 92);
   static const Color defaultHatColorBlue01 = Color.fromARGB(255, 101, 201, 255);
   static const Color defaultHatColorBlue03 = Color.fromARGB(255, 37, 85, 124);
-  static const Color defaultHairColor = Color.fromARGB(0, 74, 49, 44);
+  static const Color defaultHairColor = Color.fromARGB(255, 74, 49, 44);
 
   static const List<AvataaarHair> all = [
     AvataaarHair.noHair(),
