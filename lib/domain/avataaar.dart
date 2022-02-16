@@ -70,7 +70,6 @@ class Avataaar with _$Avataaar {
     final _path1 = UniqueKey().hashCode.toString();
     final _path2 = UniqueKey().hashCode.toString();
     final _path3 = UniqueKey().hashCode.toString();
-    final _mask1 = UniqueKey().hashCode.toString();
     final _mask2 = UniqueKey().hashCode.toString();
     final _mask3 = UniqueKey().hashCode.toString();
 
@@ -78,7 +77,6 @@ class Avataaar with _$Avataaar {
 
     final svg = '''
 <svg
-        style="${style.toSvgString()}"
         width="264px"
         height="280px"
         viewBox="0 0 264 280"
@@ -107,33 +105,7 @@ class Avataaar with _$Avataaar {
             transform="translate(-825.000000, -1100.000000)"
             id="Avataaar/Circle">
             <g transform="translate(825.000000, 1100.000000)">
-              ${circle ? '''
-                <g
-                  id="Circle"
-                  stroke-width="1"
-                  fill-rule="evenodd"
-                  transform="translate(12.000000, 40.000000)">
-                  <mask id="$_mask1" fill="white">
-                    <use xlink:href="${'#' + _path1}" />
-                  </mask>
-                  <use
-                    id="Circle-Background"
-                    fill="#E6E6E6"
-                    xlink:href="${'#' + _path1}"
-                  />
-                  <g
-                    id="Color/Palette/Blue-01"
-                    mask="url(#$_mask1)"
-                    fill="#65C9FF">
-                    <rect id="🖍Color" x="0" y="0" width="240" height="240" />
-                  </g>
-                </g>
-              ''' : ''}
-              ${circle ? '''
-                <mask id="$_mask2" fill="white">
-                  <use xlink:href="${'#' + _path2}" />
-                </mask>
-              ''' : ''}
+              ${style.toSvgString(_path1, _path2, _mask2)}
               <g id="Mask" />
               <g
                 id="Avataaar"

@@ -71,9 +71,9 @@ String _vomit() {
           rx="5"
         />
         <g id="Vomit-Stuff">
-          <use fill="green" fill-rule="evenodd" xlink:href="${"#" + _path2}" />
+          <use fill="#88C553" fill-rule="evenodd" xlink:href="${"#" + _path2}" />
           <use
-            fill="green"
+            fill="#88C553"
             opacity="1"
             filter="url(#$_filter1)"
             xlink:href="${"#" + _path2}"

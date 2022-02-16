@@ -10,6 +10,7 @@ import '../avatar/face/eyes/eyes.dart';
 import '../avatar/face/mouth/mouth.dart';
 import '../avatar/face/nose/nose.dart';
 import '../avatar/skin.dart';
+import '../avatar/style/style.dart';
 import '../avatar/top/accessories/accessories.dart';
 import '../avatar/top/facialHair/facialHair.dart';
 import '../avatar/top/hair/hair.dart';
@@ -1047,7 +1048,7 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
 
   static const all = [
     AvataaarStyle.transparent(),
-    AvataaarStyle.transparent(),
+    AvataaarStyle.circle(),
   ];
 
   /// creates random [AvataaarStyle]
@@ -1063,10 +1064,9 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
   @override
   int toInt() => AvataaarStyle.all.indexOf(this);
 
-  @override
-  String toSvgString() => when(
+  String toSvgString(String path1, String path2, String mask2) => when(
         transparent: (_) => 'Transparent',
-        circle: (color) => 'Circle',
+        circle: (color) => Style.circle(path1, path2, mask2, color),
       );
 
   @override

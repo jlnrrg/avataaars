@@ -1214,7 +1214,7 @@ Map<String, dynamic> _$$_VomitToJson(_$_Vomit instance) => <String, dynamic>{
     };
 
 _$_NoseDefault0 _$$_NoseDefault0FromJson(Map<String, dynamic> json) =>
-    _$_NoseDefault0();
+    const _$_NoseDefault0();
 
 Map<String, dynamic> _$$_NoseDefault0ToJson(_$_NoseDefault0 instance) =>
     <String, dynamic>{};
