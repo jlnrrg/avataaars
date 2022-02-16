@@ -51,7 +51,7 @@ String _winterHat3(Color color) {
         >
           <g
             id='hat'
-            strokeWidth='1'
+            stroke-width='1'
             fill-rule='evenodd'
             transform='translate(67.000000, 12.000000)'
           >
@@ -59,13 +59,13 @@ String _winterHat3(Color color) {
             <mask id="$_mask2" fill='white'>
               <use xlink:href="${'#' + _path1}" />
             </mask>
-            <use id='hat-mask' fill='#D8D8D8' xlink:href=${'#' + _path1} />
+            <use id='hat-mask' fill='#D8D8D8' xlink:href="${'#' + _path1}" />
             ${_makeHatColor(_mask2, color)}
           </g>
           <g id='hat-front'>
             <use
               fill='black'
-              fillOpacity='1'
+              opacity='1'
               filter="url(#$_path2)"
               xlink:href="${'#' + _path2}"
             />

@@ -37,7 +37,7 @@ String _round() {
         <g id='Lennon-Glasses'>
           <use
             fill='black'
-            fillOpacity='1'
+            opacity='1'
             filter="url(#$_filter1)"
             xlink:href="${'#' + _path1}"
           />

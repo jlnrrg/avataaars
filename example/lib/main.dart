@@ -35,6 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final v = avataaar.toSvg();
+
     return SafeArea(
         child: Scaffold(
             body: CustomScrollView(
@@ -44,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           floating: true,
           flexibleSpace: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: buildSvg(avataaar.toSvg()),
+            child: buildSvg(v),
           ),
           expandedHeight: 200,
         ),
@@ -55,9 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
             DropdownButton<AvataaarHair>(
               value: avataaar.hair,
               items: AvataaarHair.all
-                  .map((e) => DropdownMenuItem(
-                      value: e.copyWith(color: avataaar.hair.color),
-                      child: Text(e.toLabel())))
+                  .map((e) =>
+                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
                   .toList(),
               onChanged: (v) => v != null
                   ? setState(() {

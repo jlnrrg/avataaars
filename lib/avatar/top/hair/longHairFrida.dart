@@ -13,7 +13,7 @@ String _longHairFrida() {
   final _filter7 = UniqueKey().hashCode.toString();
 
   return """
- <g id='Top' strokeWidth='1' fill-rule='evenodd'>
+ <g id='Top' stroke-width='1' fill-rule='evenodd'>
         <defs>
           <rect id="$_path2" x='0' y='0' width='264' height='280' />
           <filter
@@ -197,7 +197,7 @@ String _longHairFrida() {
           <g transform='translate(-1.000000, 0.000000)'>
             <g
               id='Cabello'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(57.000000, 12.000000)'>
               <path
@@ -207,7 +207,7 @@ String _longHairFrida() {
             </g>
             <g
               id='Ornamentos'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(67.000000, 0.000000)'>
               <g
@@ -316,7 +316,7 @@ String _longHairFrida() {
             </g>
             <g
               id='Arete'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(182.000000, 129.000000)'>
               <rect

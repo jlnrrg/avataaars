@@ -8,7 +8,7 @@ String _shortHairSides(Color color) {
   final _mask2 = UniqueKey().hashCode.toString();
 
   return """
-<g id='Top' strokeWidth='1' fill-rule='evenodd'>
+<g id='Top' stroke-width='1' fill-rule='evenodd'>
         <defs>
           <rect id="$_path1" x='0' y='0' width='264' height='280' />
           <path
@@ -28,7 +28,7 @@ String _shortHairSides(Color color) {
           <g transform='translate(-1.000000, 0.000000)'>
             <g
               id='Hair'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(70.000000, 74.000000)'>
               <mask id="$_mask1" fill='white'>

@@ -33,7 +33,7 @@ class _$AvataaarTearOff {
       AvataaarMouth mouth = const AvataaarMouth.default0(),
       AvataaarSkin skin = const AvataaarSkin.light(),
       AvataaarNose nose = const AvataaarNose.default0(),
-      AvataaarStyle style = const AvataaarStyle.transparent()}) {
+      AvataaarStyle style = const AvataaarStyle.circle()}) {
     return _Avataaar(
       hair: hair,
       accessory: accessory,
@@ -383,7 +383,7 @@ class _$_Avataaar extends _Avataaar {
       this.mouth = const AvataaarMouth.default0(),
       this.skin = const AvataaarSkin.light(),
       this.nose = const AvataaarNose.default0(),
-      this.style = const AvataaarStyle.transparent()})
+      this.style = const AvataaarStyle.circle()})
       : super._();
 
   factory _$_Avataaar.fromJson(Map<String, dynamic> json) =>

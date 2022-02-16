@@ -8,7 +8,7 @@ String _hat() {
   final _filter1 = UniqueKey().hashCode.toString();
 
   return """
-<g id='Top' strokeWidth='1' fill-rule='evenodd'>
+<g id='Top' stroke-width='1' fill-rule='evenodd'>
         <defs>
           <rect id="$_path2" x='0' y='0' width='264' height='280' />
           <path
@@ -48,7 +48,7 @@ String _hat() {
           <g transform='translate(-1.000000, 0.000000)'>
             <g
               id='Hat'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(1.000000, 0.000000)'>
               <mask id="$_mask2" fill='white'>

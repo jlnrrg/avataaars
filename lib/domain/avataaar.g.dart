@@ -40,7 +40,7 @@ _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
           ? const AvataaarNose.default0()
           : AvataaarNose.fromJson(json['nose'] as Map<String, dynamic>),
       style: json['style'] == null
-          ? const AvataaarStyle.transparent()
+          ? const AvataaarStyle.circle()
           : AvataaarStyle.fromJson(json['style'] as Map<String, dynamic>),
     );
 

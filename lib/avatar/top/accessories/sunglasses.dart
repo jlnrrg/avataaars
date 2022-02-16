@@ -12,7 +12,7 @@ String _sunglasses() {
         id='Top/_Resources/Sunglasses'
         fill='none'
         transform='translate(62.000000, 85.000000)'
-        strokeWidth='1'>
+        stroke-width='1'>
         <defs>
           <filter
             x='-0.8%'
@@ -71,9 +71,9 @@ String _sunglasses() {
           transform='translate(8.000000, 8.000000)'>
           <g id='shades'>
             <use
-              fillOpacity='0.700000048'
+              opacity='0.700000048'
               fill='#000000'
-              xlink:href=${'#' + _path1}
+              xlink:href="${'#' + _path1}"
             />
             <use
               fill="url(#$_linearGradient1)"
@@ -83,7 +83,7 @@ String _sunglasses() {
           </g>
           <g id='shades'>
             <use
-              fillOpacity='0.700000048'
+              opacity='0.700000048'
               fill='#000000'
               xlink:href="${'#' + _path2}"
             />

@@ -7,7 +7,7 @@ String _longHairCurly(Color color) {
   final _mask2 = UniqueKey().hashCode.toString();
 
   return """
- <g id='Top' strokeWidth='1' fill-rule='evenodd'>
+ <g id='Top' stroke-width='1' fill-rule='evenodd'>
         <defs>
           <rect id="$_path1" x='0' y='0' width='264' height='280' />
           <path
@@ -24,13 +24,13 @@ String _longHairCurly(Color color) {
             <path
               d='M105.984735,27.7643628 C114.013215,26.6267967 122.796163,26 132,26 C142.358003,26 152.182939,26.7938545 160.999342,28.2161842 C183.451688,38.7497687 199,61.559133 199,88 L199,105.044138 C187.461887,104.672508 173.831239,90.7644306 166.449951,70.7992877 C156.312295,72.8351061 144.547256,74 132,74 C120.038684,74 108.788234,72.9413637 98.9808476,71.0787685 C91.6758772,90.6271291 78.3831001,104.301811 67,105.021902 L67,88 L67,88 C67,61.1745453 83.0039076,38.0870034 105.984735,27.7643628 Z'
               id='Shadow'
-              fillOpacity='0.16'
+              opacity='0.16'
               fill='#000000'
               fill-rule='evenodd'
             />
             <g
               id='Hair'
-              strokeWidth='1'
+              stroke-width='1'
               fill='none'
               fill-rule='evenodd'
               transform='translate(25.000000, 10.000000)'>

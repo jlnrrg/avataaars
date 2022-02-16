@@ -699,10 +699,10 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   factory AvataaarHair.fromJson(Map<String, dynamic> json) =>
       _$AvataaarHairFromJson(json);
 
-  static const Color defaultHatColorRed = Color(0x00FF5C5C);
-  static const Color defaultHatColorBlue01 = Color(0x0065C9FF);
-  static const Color defaultHatColorBlue03 = Color(0x0025557c);
-  static const Color defaultHairColor = Color(0x004A312C);
+  static const Color defaultHatColorRed = Color.fromARGB(0, 255, 92, 92);
+  static const Color defaultHatColorBlue01 = Color.fromARGB(0, 101, 201, 255);
+  static const Color defaultHatColorBlue03 = Color.fromARGB(0, 37, 85, 124);
+  static const Color defaultHairColor = Color.fromARGB(0, 74, 49, 44);
 
   static const List<AvataaarHair> all = [
     AvataaarHair.noHair(),

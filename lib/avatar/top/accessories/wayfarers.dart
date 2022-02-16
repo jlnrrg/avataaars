@@ -11,7 +11,7 @@ String _wayfarers() {
         id='Top/_Resources/Wayfarers'
         fill='none'
         transform='translate(62.000000, 85.000000)'
-        strokeWidth='1'>
+        stroke-width='1'>
         <defs>
           <filter
             x='-0.8%'
@@ -65,7 +65,7 @@ String _wayfarers() {
             fill-rule='nonzero'>
             <g id='Shade'>
               <use
-                fillOpacity='0.700000048'
+                opacity='0.700000048'
                 fill='#000000'
                 fill-rule='evenodd'
                 xlink:href="${'#' + _path1}"
@@ -79,7 +79,7 @@ String _wayfarers() {
             </g>
             <g id='Shade'>
               <use
-                fillOpacity='0.700000048'
+                opacity='0.700000048'
                 fill='#000000'
                 fill-rule='evenodd'
                 xlink:href="${'#' + _path2}"

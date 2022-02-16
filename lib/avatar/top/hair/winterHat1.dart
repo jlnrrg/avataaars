@@ -46,7 +46,7 @@ String _winterHat1(Color color) {
           transform="translate(-1.000000, 0.000000)">
           <g
             id="hat"
-            strokeWidth="1"
+            stroke-width="1"
             fill-rule="evenodd"
             transform="translate(63.000000, 20.000000)">
             <path
@@ -63,7 +63,7 @@ String _winterHat1(Color color) {
           <g id="hat-front">
             <use
               fill="black"
-              fillOpacity="1"
+              opacity="1"
               filter="url(#$_path2)"
               xlink:href="${'#' + _path2}"
             />

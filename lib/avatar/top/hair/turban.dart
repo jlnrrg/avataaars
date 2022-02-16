@@ -10,7 +10,7 @@ String _turban(Color color) {
   final _filter1 = UniqueKey().hashCode.toString();
 
   return """
-<g id='Top' strokeWidth='1' fill-rule='evenodd'>
+<g id='Top' stroke-width='1' fill-rule='evenodd'>
         <defs>
           <rect id="$_path1" x='0' y='0' width='264' height='280' />
           <path
@@ -54,7 +54,7 @@ String _turban(Color color) {
           <g transform='translate(-1.000000, 0.000000)'>
             <g
               id='Behind'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(1.000000, 0.000000)'>
               <mask id="$_mask2" fill='white'>
@@ -64,7 +64,7 @@ String _turban(Color color) {
             </g>
             <g
               id='Turban'
-              strokeWidth='1'
+              stroke-width='1'
               fill-rule='evenodd'
               transform='translate(1.000000, 0.000000)'>
               <path
@@ -82,7 +82,7 @@ String _turban(Color color) {
               <path
                 d='M48.0110963,96.0123559 C48.3807929,121.112082 58.0438337,136.107963 77.0002187,141 C57.6224465,136.289117 47.9557798,121.632254 48.0002187,97.0294118 C48.0008313,96.6902213 48.0044682,96.351197 48.0110963,96.0123559 Z M152.645822,30.4681115 C153.39011,36.1953086 152.126202,42.8891982 148.000219,50.135763 C136.847465,71.5667661 76.561434,72.0039826 76.3339794,129.679698 C76.1051437,67.7612631 136.805324,67.3799133 148.000219,44.5441176 C150.669864,39.5668152 152.141299,34.8351296 152.645822,30.4681115 Z'
                 id='Shadow'
-                fillOpacity='0.16'
+                opacity='0.16'
                 fill='#000000'
               />
             </g>

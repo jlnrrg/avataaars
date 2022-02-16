@@ -63,7 +63,7 @@ String _winterHat4(Color color) {
         >
           <g
             id='hat'
-            strokeWidth='1'
+            stroke-width='1'
             fill-rule='evenodd'
             transform='translate(65.000000, 4.000000)'
           >
@@ -77,7 +77,7 @@ String _winterHat4(Color color) {
             </mask>
             <use
               id='shadow'
-              fillOpacity='0.24'
+              opacity='0.24'
               fill='#000000'
               xlink:href="${'#' + _path2}"
             />
@@ -86,7 +86,7 @@ String _winterHat4(Color color) {
             </mask>
             <use
               id='light'
-              fillOpacity='0.300000012'
+              opacity='0.300000012'
               fill='#FFFFFF'
               xlink:href="${'#' + _path3}"
             />
@@ -94,7 +94,7 @@ String _winterHat4(Color color) {
           <g id='hat-front'>
             <use
               fill='black'
-              fillOpacity='1'
+              opacity='1'
               filter="url(#$_path4)"
               xlink:href="${'#' + _path4}"
             />

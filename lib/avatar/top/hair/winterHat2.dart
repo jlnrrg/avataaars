@@ -30,7 +30,7 @@ String _winterHat2(Color color) {
         >
           <g
             id='hat'
-            strokeWidth='1'
+            stroke-width='1'
             fill-rule='evenodd'
             transform='translate(61.000000, 0.000000)'
           >
@@ -54,11 +54,11 @@ String _winterHat2(Color color) {
             <mask id="$_mask2" fill='white'>
               <use xlink:href="${'#' + _path1}" />
             </mask>
-            <use id='Combined-Shape' fill='#F4F4F4' xlink:href=${'#' + _path1} />
+            <use id='Combined-Shape' fill='#F4F4F4' xlink:href="${'#' + _path1}" />
             ${_makeHatColor(_mask2, color)}
             <rect
               id='color-dark'
-              fillOpacity='0.2'
+              opacity='0.2'
               fill='#000000'
               x='-1'
               y='21'
@@ -70,7 +70,7 @@ String _winterHat2(Color color) {
               id='light-triangles'
               transform='translate(29.000000, 32.000000)'
               fill='#FFFFFF'
-              fillOpacity='0.5'
+              opacity='0.5'
             >
               <polygon
                 id='Triangle'
@@ -92,7 +92,7 @@ String _winterHat2(Color color) {
               id='dark-triangles'
               transform='translate(13.000000, 41.000000)'
               fill='#000000'
-              fillOpacity='0.5'
+              opacity='0.5'
             >
               <polygon id='Triangle' points='12.5 0 25 18 0 18' />
               <polygon id='Triangle' points='43.5 0 56 18 31 18' />

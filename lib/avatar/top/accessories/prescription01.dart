@@ -8,7 +8,7 @@ String _prescription01() {
         id='Top/_Resources/Prescription-01'
         fill='none'
         transform='translate(62.000000, 85.000000)'
-        strokeWidth='1'>
+        stroke-width='1'>
         <defs>
           <filter
             x='-0.8%'
