@@ -126,7 +126,7 @@ class Avataaar with _$Avataaar {
                     mask="url(#$_mask3)"
                   />
                 </g>
-                ${clothes.toSvgString()}
+                ${clothes.toSvgString(graphics)}
                 ${buildFace()}
                 ${buildTop()}
               </g>

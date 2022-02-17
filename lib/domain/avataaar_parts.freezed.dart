@@ -3784,11 +3784,9 @@ class _$AvataaarClothesTearOff {
   }
 
   AvataaarTypeClothesGraphicShirt graphicShirt(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor,
-      AvataaarGraphics graphic = const AvataaarGraphics.skull()]) {
+      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
     return AvataaarTypeClothesGraphicShirt(
       color,
-      graphic,
     );
   }
 
@@ -3845,9 +3843,7 @@ mixin _$AvataaarClothes {
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -3860,8 +3856,7 @@ mixin _$AvataaarClothes {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -3874,8 +3869,7 @@ mixin _$AvataaarClothes {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4051,9 +4045,7 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -4069,8 +4061,7 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4086,8 +4077,7 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4268,9 +4258,7 @@ class _$AvataaarTypeClothesBlazerSweater
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -4286,8 +4274,7 @@ class _$AvataaarTypeClothesBlazerSweater
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4303,8 +4290,7 @@ class _$AvataaarTypeClothesBlazerSweater
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4486,9 +4472,7 @@ class _$AvataaarTypeClothesColarSweater
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -4504,8 +4488,7 @@ class _$AvataaarTypeClothesColarSweater
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4521,8 +4504,7 @@ class _$AvataaarTypeClothesColarSweater
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4624,9 +4606,7 @@ abstract class $AvataaarTypeClothesGraphicShirtCopyWith<$Res>
           $Res Function(AvataaarTypeClothesGraphicShirt) then) =
       _$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>;
   @override
-  $Res call({@ColorSerialiser() Color color, AvataaarGraphics graphic});
-
-  $AvataaarGraphicsCopyWith<$Res> get graphic;
+  $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
@@ -4645,25 +4625,13 @@ class _$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>
   @override
   $Res call({
     Object? color = freezed,
-    Object? graphic = freezed,
   }) {
     return _then(AvataaarTypeClothesGraphicShirt(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color,
-      graphic == freezed
-          ? _value.graphic
-          : graphic // ignore: cast_nullable_to_non_nullable
-              as AvataaarGraphics,
     ));
-  }
-
-  @override
-  $AvataaarGraphicsCopyWith<$Res> get graphic {
-    return $AvataaarGraphicsCopyWith<$Res>(_value.graphic, (value) {
-      return _then(_value.copyWith(graphic: value));
-    });
   }
 }
 
@@ -4673,7 +4641,6 @@ class _$AvataaarTypeClothesGraphicShirt
     extends AvataaarTypeClothesGraphicShirt {
   const _$AvataaarTypeClothesGraphicShirt(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      this.graphic = const AvataaarGraphics.skull(),
       String? $type])
       : $type = $type ?? 'graphicShirt',
         super._();
@@ -4686,16 +4653,13 @@ class _$AvataaarTypeClothesGraphicShirt
   @override
   @ColorSerialiser()
   final Color color;
-  @JsonKey()
-  @override
-  final AvataaarGraphics graphic;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'AvataaarClothes.graphicShirt(color: $color, graphic: $graphic)';
+    return 'AvataaarClothes.graphicShirt(color: $color)';
   }
 
   @override
@@ -4703,15 +4667,12 @@ class _$AvataaarTypeClothesGraphicShirt
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is AvataaarTypeClothesGraphicShirt &&
-            const DeepCollectionEquality().equals(other.color, color) &&
-            const DeepCollectionEquality().equals(other.graphic, graphic));
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(color),
-      const DeepCollectionEquality().hash(graphic));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
@@ -4725,16 +4686,14 @@ class _$AvataaarTypeClothesGraphicShirt
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
     required TResult Function(@ColorSerialiser() Color color) shirtScoopNeck,
     required TResult Function(@ColorSerialiser() Color color) shirtVNeck,
   }) {
-    return graphicShirt(color, graphic);
+    return graphicShirt(color);
   }
 
   @override
@@ -4743,15 +4702,14 @@ class _$AvataaarTypeClothesGraphicShirt
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
     TResult Function(@ColorSerialiser() Color color)? shirtScoopNeck,
     TResult Function(@ColorSerialiser() Color color)? shirtVNeck,
   }) {
-    return graphicShirt?.call(color, graphic);
+    return graphicShirt?.call(color);
   }
 
   @override
@@ -4760,8 +4718,7 @@ class _$AvataaarTypeClothesGraphicShirt
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4770,7 +4727,7 @@ class _$AvataaarTypeClothesGraphicShirt
     required TResult orElse(),
   }) {
     if (graphicShirt != null) {
-      return graphicShirt(color, graphic);
+      return graphicShirt(color);
     }
     return orElse();
   }
@@ -4840,8 +4797,7 @@ class _$AvataaarTypeClothesGraphicShirt
 
 abstract class AvataaarTypeClothesGraphicShirt extends AvataaarClothes {
   const factory AvataaarTypeClothesGraphicShirt(
-      [@ColorSerialiser() Color color,
-      AvataaarGraphics graphic]) = _$AvataaarTypeClothesGraphicShirt;
+      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesGraphicShirt;
   const AvataaarTypeClothesGraphicShirt._() : super._();
 
   factory AvataaarTypeClothesGraphicShirt.fromJson(Map<String, dynamic> json) =
@@ -4850,7 +4806,6 @@ abstract class AvataaarTypeClothesGraphicShirt extends AvataaarClothes {
   @override
   @ColorSerialiser()
   Color get color;
-  AvataaarGraphics get graphic;
   @override
   @JsonKey(ignore: true)
   $AvataaarTypeClothesGraphicShirtCopyWith<AvataaarTypeClothesGraphicShirt>
@@ -4941,9 +4896,7 @@ class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -4959,8 +4912,7 @@ class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -4976,8 +4928,7 @@ class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5156,9 +5107,7 @@ class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -5174,8 +5123,7 @@ class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5191,8 +5139,7 @@ class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5374,9 +5321,7 @@ class _$AvataaarTypeClothesShirtCrewNeck
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -5392,8 +5337,7 @@ class _$AvataaarTypeClothesShirtCrewNeck
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5409,8 +5353,7 @@ class _$AvataaarTypeClothesShirtCrewNeck
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5592,9 +5535,7 @@ class _$AvataaarTypeClothesShirtScoopNeck
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -5610,8 +5551,7 @@ class _$AvataaarTypeClothesShirtScoopNeck
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5627,8 +5567,7 @@ class _$AvataaarTypeClothesShirtScoopNeck
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5808,9 +5747,7 @@ class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
     required TResult Function(@ColorSerialiser() Color color) blazerSweater,
     required TResult Function(@ColorSerialiser() Color color) collarSweater,
-    required TResult Function(
-            @ColorSerialiser() Color color, AvataaarGraphics graphic)
-        graphicShirt,
+    required TResult Function(@ColorSerialiser() Color color) graphicShirt,
     required TResult Function(@ColorSerialiser() Color color) hoodie,
     required TResult Function(@ColorSerialiser() Color color) overall,
     required TResult Function(@ColorSerialiser() Color color) shirtCrewNeck,
@@ -5826,8 +5763,7 @@ class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,
@@ -5843,8 +5779,7 @@ class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
     TResult Function(@ColorSerialiser() Color color)? blazerShirt,
     TResult Function(@ColorSerialiser() Color color)? blazerSweater,
     TResult Function(@ColorSerialiser() Color color)? collarSweater,
-    TResult Function(@ColorSerialiser() Color color, AvataaarGraphics graphic)?
-        graphicShirt,
+    TResult Function(@ColorSerialiser() Color color)? graphicShirt,
     TResult Function(@ColorSerialiser() Color color)? hoodie,
     TResult Function(@ColorSerialiser() Color color)? overall,
     TResult Function(@ColorSerialiser() Color color)? shirtCrewNeck,

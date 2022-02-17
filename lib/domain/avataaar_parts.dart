@@ -232,9 +232,7 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
   const factory AvataaarClothes.graphicShirt(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color,
-      @Default(AvataaarGraphics.skull())
-          AvataaarGraphics graphic]) = AvataaarTypeClothesGraphicShirt;
+          Color color]) = AvataaarTypeClothesGraphicShirt;
   const factory AvataaarClothes.hoodie(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
@@ -258,7 +256,7 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
 
   const AvataaarClothes._();
 
-  static const _defaultColor = Color(0x0025557c);
+  static const _defaultColor = Color.fromARGB(255, 37, 85, 124);
 
   factory AvataaarClothes.fromJson(Map<String, dynamic> json) =>
       _$AvataaarClothesFromJson(json);
@@ -323,14 +321,17 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
 
   /// returns the index of [AvataaarClothes.all], or -1 if no entry is found
   @override
-  int toIndex() => AvataaarClothes.all.indexOf(this);
+  int toIndex() => AvataaarClothes.all
+      .map((e) => e.copyWith(color: color))
+      .toList()
+      .indexOf(this);
 
-  String toSvgString() => when(
+  String toSvgString([AvataaarGraphics? graphics]) => when(
         blazerShirt: (_) => Clothes.blazerShirt,
         blazerSweater: (_) => Clothes.blazerSweater,
         collarSweater: (color) => Clothes.collarSweater(color),
-        graphicShirt: (color, graphic) =>
-            Clothes.graphicShirt(color, graphic.toSVGFunction()),
+        graphicShirt: (color) => Clothes.graphicShirt(
+            color, (graphics?.toSVGFunction() ?? (_) => '')),
         hoodie: (color) => Clothes.hoodie(color),
         overall: (color) => Clothes.overall(color),
         shirtCrewNeck: (color) => Clothes.shirtCrewNeck(color),
@@ -349,7 +350,7 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
       blazerShirt: (_) => const LocalizationStrings.blazerShirt(),
       blazerSweater: (_) => const LocalizationStrings.blazerSweater(),
       collarSweater: (_) => const LocalizationStrings.collarSweater(),
-      graphicShirt: (_, __) => const LocalizationStrings.graphicShirt(),
+      graphicShirt: (_) => const LocalizationStrings.graphicShirt(),
       hoodie: (_) => const LocalizationStrings.hoodie(),
       overall: (_) => const LocalizationStrings.overall(),
       shirtCrewNeck: (_) => const LocalizationStrings.shirtCrewNeck(),
@@ -668,7 +669,10 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
 
   /// returns the index of [AvataaarFacialHair.all], or -1 if no entry is found
   @override
-  int toIndex() => AvataaarFacialHair.all.indexOf(this);
+  int toIndex() => AvataaarFacialHair.all
+      .map((e) => e.copyWith(color: color))
+      .toList()
+      .indexOf(this);
 
   String toSvgString() => when(
         blank: (_) => FacialHair.blank,
@@ -1288,7 +1292,10 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
 
   /// returns the index of [AvataaarSkin.all], or -1 if no entry is found
   @override
-  int toIndex() => AvataaarSkin.all.indexOf(this);
+  int toIndex() => AvataaarSkin.all
+      .map((e) => e.copyWith(color: color))
+      .toList()
+      .indexOf(this);
 
   factory AvataaarSkin.fromJson(Map<String, dynamic> json) =>
       _$AvataaarSkinFromJson(json);
@@ -1393,7 +1400,10 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
 
   /// returns the index of [AvataaarStyle.all], or -1 if no entry is found
   @override
-  int toIndex() => AvataaarStyle.all.indexOf(this);
+  int toIndex() => AvataaarStyle.all
+      .map((e) => e.copyWith(color: color))
+      .toList()
+      .indexOf(this);
 
   String toSvgString(String path1, String path2, String mask2) => when(
         transparent: (_) => 'Transparent',

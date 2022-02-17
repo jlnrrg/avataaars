@@ -290,9 +290,6 @@ _$AvataaarTypeClothesGraphicShirt _$$AvataaarTypeClothesGraphicShirtFromJson(
       json['color'] == null
           ? AvataaarClothes._defaultColor
           : const ColorSerialiser().fromJson(json['color'] as int),
-      json['graphic'] == null
-          ? const AvataaarGraphics.skull()
-          : AvataaarGraphics.fromJson(json['graphic'] as Map<String, dynamic>),
       json['runtimeType'] as String?,
     );
 
@@ -300,7 +297,6 @@ Map<String, dynamic> _$$AvataaarTypeClothesGraphicShirtToJson(
         _$AvataaarTypeClothesGraphicShirt instance) =>
     <String, dynamic>{
       'color': const ColorSerialiser().toJson(instance.color),
-      'graphic': instance.graphic,
       'runtimeType': instance.$type,
     };
 
@@ -1481,7 +1477,7 @@ Map<String, dynamic> _$$AvataaarTypeMouthVomitToJson(
 
 _$AvataaarTypeNoseDefault0 _$$AvataaarTypeNoseDefault0FromJson(
         Map<String, dynamic> json) =>
-    _$AvataaarTypeNoseDefault0();
+    const _$AvataaarTypeNoseDefault0();
 
 Map<String, dynamic> _$$AvataaarTypeNoseDefault0ToJson(
         _$AvataaarTypeNoseDefault0 instance) =>
