@@ -76,7 +76,7 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
   // creates the previous [AvataaarEyes] from [AvataaarEyes.all]
   AvataaarEyes previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarEyes.fromIndex(nextI);
   }
 
@@ -180,7 +180,7 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
   // creates the previous [AvataaarAccessories] from [AvataaarAccessories.all]
   AvataaarAccessories previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarAccessories.fromIndex(nextI);
   }
 
@@ -316,7 +316,7 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
   // creates the previous [AvataaarClothes] from [AvataaarClothes.all]
   AvataaarClothes previous([Color? color]) {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     final e = AvataaarClothes.fromIndex(nextI);
 
     if (color != null) {
@@ -424,7 +424,7 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
   // creates the previous [AvataaarGraphics] from [AvataaarGraphics.all]
   AvataaarGraphics previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarGraphics.fromIndex(nextI);
   }
 
@@ -538,7 +538,7 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
   // creates the previous [AvataaarEyebrow] from [AvataaarEyebrow.all]
   AvataaarEyebrow previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarEyebrow.fromIndex(nextI);
   }
 
@@ -672,7 +672,7 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
   // creates the previous [AvataaarFacialHair] from [AvataaarFacialHair.all]
   AvataaarFacialHair previous([Color? color]) {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     final e = AvataaarFacialHair.fromIndex(nextI);
 
     if (color != null) {
@@ -978,7 +978,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   // creates the previous [AvataaarHair] from [AvataaarHair.all]
   AvataaarHair previous([Color? color]) {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     final e = AvataaarHair.fromIndex(nextI);
 
     if (color != null) {
@@ -1144,7 +1144,7 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
   // creates the previous [AvataaarMouth] from [AvataaarMouth.all]
   AvataaarMouth previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarMouth.fromIndex(nextI);
   }
 
@@ -1229,7 +1229,7 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
   // creates the previous [AvataaarNose] from [AvataaarNose.all]
   AvataaarNose previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarNose.fromIndex(nextI);
   }
 
@@ -1307,7 +1307,7 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
   // creates the previous [AvataaarSkin] from [AvataaarSkin.all]
   AvataaarSkin previous() {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     return AvataaarSkin.fromIndex(nextI);
   }
 
@@ -1438,7 +1438,7 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
   // creates the previous [AvataaarStyle] from [AvataaarStyle.all]
   AvataaarStyle previous([Color? color]) {
     final i = toIndex();
-    final nextI = (i - 1) <= 0 ? (all.length - 1) : (i - 1);
+    final nextI = (i - 1) < 0 ? (all.length - 1) : (i - 1);
     final e = AvataaarStyle.fromIndex(nextI);
 
     if (color != null) {
