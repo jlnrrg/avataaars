@@ -3,7 +3,7 @@ part of 'graphics.dart';
 String _skullOutline(String maskID) => """
 <g
         id='Clothing/Graphic/Skull-Outline'
-        mask="url(#$maskID)
+        mask="url(#$maskID)"
         stroke-width='1'
         fill-rule='evenodd'>
         <g transform='translate(77.000000, 58.000000)' id='Skull'>

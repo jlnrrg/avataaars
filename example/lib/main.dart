@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final v = avataaar.toSvg();
+    final partSVG = avataaar.skin.toSvgPart();
 
     return SafeArea(
         child: Scaffold(
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           sliver: SliverList(
               delegate: SliverChildListDelegate([
+            SvgPicture.string(partSVG),
             DropdownButton<AvataaarHair>(
               value: avataaar.hair,
               items: AvataaarHair.all
@@ -99,6 +101,18 @@ class _MyHomePageState extends State<MyHomePage> {
               onChanged: (v) => v != null
                   ? setState(() {
                       avataaar = avataaar.copyWith(clothes: v);
+                    })
+                  : null,
+            ),
+            DropdownButton<AvataaarGraphics>(
+              value: avataaar.graphics,
+              items: AvataaarGraphics.all
+                  .map((e) =>
+                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
+                  .toList(),
+              onChanged: (v) => v != null
+                  ? setState(() {
+                      avataaar = avataaar.copyWith(graphics: v);
                     })
                   : null,
             ),
