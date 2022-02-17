@@ -28,18 +28,18 @@ abstract class AvataaarParts {
 
 @freezed
 class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
-  const factory AvataaarEyes.closed() = _Closed;
-  const factory AvataaarEyes.cry() = _Cry;
-  const factory AvataaarEyes.default0() = _EyesDefault0;
-  const factory AvataaarEyes.dizzy() = _Dizzy;
-  const factory AvataaarEyes.eyeRoll() = _EyeRoll;
-  const factory AvataaarEyes.happy() = _Happy;
-  const factory AvataaarEyes.hearts() = _Hearts;
-  const factory AvataaarEyes.side() = _Side;
-  const factory AvataaarEyes.surprised() = _Surprised;
-  const factory AvataaarEyes.wink() = _Wink;
-  const factory AvataaarEyes.winkWacky() = _WinkWacky;
-  const factory AvataaarEyes.squint() = _Squint;
+  const factory AvataaarEyes.closed() = AvataaarTypeEyesClosed;
+  const factory AvataaarEyes.cry() = AvataaarTypeEyesCry;
+  const factory AvataaarEyes.default0() = AvataaarTypeEyesDefault0;
+  const factory AvataaarEyes.dizzy() = AvataaarTypeEyesDizzy;
+  const factory AvataaarEyes.eyeRoll() = AvataaarTypeEyesEyeRoll;
+  const factory AvataaarEyes.happy() = AvataaarTypeEyesHappy;
+  const factory AvataaarEyes.hearts() = AvataaarTypeEyesHearts;
+  const factory AvataaarEyes.side() = AvataaarTypeEyesSide;
+  const factory AvataaarEyes.surprised() = AvataaarTypeEyesSurprised;
+  const factory AvataaarEyes.wink() = AvataaarTypeEyesWink;
+  const factory AvataaarEyes.winkWacky() = AvataaarTypeEyesWinkWacky;
+  const factory AvataaarEyes.squint() = AvataaarTypeEyesSquint;
 
   const AvataaarEyes._();
 
@@ -131,13 +131,17 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
 
 @freezed
 class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
-  const factory AvataaarAccessories.blank() = _Blank;
-  const factory AvataaarAccessories.kurt() = _Kurt;
-  const factory AvataaarAccessories.prescription01() = _Prescription01;
-  const factory AvataaarAccessories.prescription02() = _Prescription02;
-  const factory AvataaarAccessories.round() = _Round;
-  const factory AvataaarAccessories.sunglasses() = _Sunglasses;
-  const factory AvataaarAccessories.wayfarers() = _Wayfarers;
+  const factory AvataaarAccessories.blank() = AvataaarTypeAccessoriesBlank;
+  const factory AvataaarAccessories.kurt() = AvataaarTypeAccessoriesKurt;
+  const factory AvataaarAccessories.prescription01() =
+      AvataaarTypeAccessoriesPrescription01;
+  const factory AvataaarAccessories.prescription02() =
+      AvataaarTypeAccessoriesPrescription02;
+  const factory AvataaarAccessories.round() = AvataaarTypeAccessoriesRound;
+  const factory AvataaarAccessories.sunglasses() =
+      AvataaarTypeAccessoriesSunglasses;
+  const factory AvataaarAccessories.wayfarers() =
+      AvataaarTypeAccessoriesWayfarers;
 
   const AvataaarAccessories._();
 
@@ -216,39 +220,41 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
 @freezed
 class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
   const factory AvataaarClothes.blazerShirt(
-      [@Default(Colors.black) @ColorSerialiser() Color color]) = _BlazerShirt;
+          [@Default(Colors.black) @ColorSerialiser() Color color]) =
+      AvataaarTypeClothesBlazerShirt;
   const factory AvataaarClothes.blazerSweater(
-      [@Default(Colors.black) @ColorSerialiser() Color color]) = _BlazerSweater;
+          [@Default(Colors.black) @ColorSerialiser() Color color]) =
+      AvataaarTypeClothesBlazerSweater;
   const factory AvataaarClothes.collarSweater(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _ColarSweater;
+          Color color]) = AvataaarTypeClothesColarSweater;
   const factory AvataaarClothes.graphicShirt(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
           Color color,
       @Default(AvataaarGraphics.skull())
-          AvataaarGraphics graphic]) = _GraphicShirt;
+          AvataaarGraphics graphic]) = AvataaarTypeClothesGraphicShirt;
   const factory AvataaarClothes.hoodie(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _Hoodie;
+          Color color]) = AvataaarTypeClothesHoodie;
   const factory AvataaarClothes.overall(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _Overall;
+          Color color]) = AvataaarTypeClothesOverall;
   const factory AvataaarClothes.shirtCrewNeck(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _ShirtCrewNeck;
+          Color color]) = AvataaarTypeClothesShirtCrewNeck;
   const factory AvataaarClothes.shirtScoopNeck(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _ShirtScoopNeck;
+          Color color]) = AvataaarTypeClothesShirtScoopNeck;
   const factory AvataaarClothes.shirtVNeck(
       [@Default(AvataaarClothes._defaultColor)
       @ColorSerialiser()
-          Color color]) = _ShirtVNeck;
+          Color color]) = AvataaarTypeClothesShirtVNeck;
 
   const AvataaarClothes._();
 
@@ -357,17 +363,18 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
 
 @freezed
 class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
-  const factory AvataaarGraphics.bat() = _Bat;
-  const factory AvataaarGraphics.bear() = _Bear;
-  const factory AvataaarGraphics.cumbia() = _Cumbia;
-  const factory AvataaarGraphics.deer() = _Deer;
-  const factory AvataaarGraphics.diamond() = _Diamond;
-  const factory AvataaarGraphics.hola() = _Hola;
-  const factory AvataaarGraphics.pizza() = _Pizza;
-  const factory AvataaarGraphics.resist() = _Resist;
-  const factory AvataaarGraphics.selena() = _Selena;
-  const factory AvataaarGraphics.skull() = _Skull;
-  const factory AvataaarGraphics.skullOutline() = _SkullOutline;
+  const factory AvataaarGraphics.bat() = AvataaarTypeGraphicsBat;
+  const factory AvataaarGraphics.bear() = AvataaarTypeGraphicsBear;
+  const factory AvataaarGraphics.cumbia() = AvataaarTypeGraphicsCumbia;
+  const factory AvataaarGraphics.deer() = AvataaarTypeGraphicsDeer;
+  const factory AvataaarGraphics.diamond() = AvataaarTypeGraphicsDiamond;
+  const factory AvataaarGraphics.hola() = AvataaarTypeGraphicsHola;
+  const factory AvataaarGraphics.pizza() = AvataaarTypeGraphicsPizza;
+  const factory AvataaarGraphics.resist() = AvataaarTypeGraphicsResist;
+  const factory AvataaarGraphics.selena() = AvataaarTypeGraphicsSelena;
+  const factory AvataaarGraphics.skull() = AvataaarTypeGraphicsSkull;
+  const factory AvataaarGraphics.skullOutline() =
+      AvataaarTypeGraphicsSkullOutline;
 
   const AvataaarGraphics._();
 
@@ -456,19 +463,28 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
 
 @freezed
 class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
-  const factory AvataaarEyebrow.angry() = _Angry;
-  const factory AvataaarEyebrow.angryNatural() = _AngryNatural;
-  const factory AvataaarEyebrow.default0() = _EyebrowDefault0;
-  const factory AvataaarEyebrow.defaultNatural() = _DefaultNatural;
-  const factory AvataaarEyebrow.flatNatural() = _FlatNatural;
-  const factory AvataaarEyebrow.frownNatural() = _FrownNatural;
-  const factory AvataaarEyebrow.raisedExcited() = _RaisedExcited;
-  const factory AvataaarEyebrow.raisedExcitedNatural() = _RaisedExcitedNatural;
-  const factory AvataaarEyebrow.sadConcerned() = _SadConcerned;
-  const factory AvataaarEyebrow.sadConcernedNatural() = _SadConcernedNatural;
-  const factory AvataaarEyebrow.unibrowNatural() = _UnibrowNatural;
-  const factory AvataaarEyebrow.upDown() = _UpDown;
-  const factory AvataaarEyebrow.upDownNatural() = _UpDownNatural;
+  const factory AvataaarEyebrow.angry() = AvataaarTypeEyebrowAngry;
+  const factory AvataaarEyebrow.angryNatural() =
+      AvataaarTypeEyebrowAngryNatural;
+  const factory AvataaarEyebrow.default0() = AvataaarTypeEyebrowDefault0;
+  const factory AvataaarEyebrow.defaultNatural() =
+      AvataaarTypeEyebrowDefaultNatural;
+  const factory AvataaarEyebrow.flatNatural() = AvataaarTypeEyebrowFlatNatural;
+  const factory AvataaarEyebrow.frownNatural() =
+      AvataaarTypeEyebrowFrownNatural;
+  const factory AvataaarEyebrow.raisedExcited() =
+      AvataaarTypeEyebrowRaisedExcited;
+  const factory AvataaarEyebrow.raisedExcitedNatural() =
+      AvataaarTypeEyebrowRaisedExcitedNatural;
+  const factory AvataaarEyebrow.sadConcerned() =
+      AvataaarTypeEyebrowSadConcerned;
+  const factory AvataaarEyebrow.sadConcernedNatural() =
+      AvataaarTypeEyebrowSadConcernedNatural;
+  const factory AvataaarEyebrow.unibrowNatural() =
+      AvataaarTypeEyebrowUnibrowNatural;
+  const factory AvataaarEyebrow.upDown() = AvataaarTypeEyebrowUpDown;
+  const factory AvataaarEyebrow.upDownNatural() =
+      AvataaarTypeEyebrowUpDownNatural;
 
   const AvataaarEyebrow._();
 
@@ -568,27 +584,27 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
   const factory AvataaarFacialHair.blank(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _FacialHairBlank;
+          Color color]) = AvataaarTypeFacialHairBlank;
   const factory AvataaarFacialHair.beardMedium(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _BeardMedium;
+          Color color]) = AvataaarTypeFacialHairBeardMedium;
   const factory AvataaarFacialHair.beardLight(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _BeardLight;
+          Color color]) = AvataaarTypeFacialHairBeardLight;
   const factory AvataaarFacialHair.beardMajestic(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _BeardMajestic;
+          Color color]) = AvataaarTypeFacialHairBeardMajestic;
   const factory AvataaarFacialHair.moustacheFancy(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _MoustacheFancy;
+          Color color]) = AvataaarTypeFacialHairMoustacheFancy;
   const factory AvataaarFacialHair.moustacheMagnum(
       [@Default(AvataaarFacialHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _MoustacheMagnum;
+          Color color]) = AvataaarTypeFacialHairMoustacheMagnum;
 
   const AvataaarFacialHair._();
 
@@ -686,173 +702,175 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
 @freezed
 class AvataaarHair with _$AvataaarHair, AvataaarParts {
   const factory AvataaarHair.noHair(
-      [@Default(Colors.transparent) @ColorSerialiser() Color color]) = _NoHair;
+          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
+      AvataaarTypeHairNoHair;
 
   const factory AvataaarHair.eyepatch(
           [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      _Eyepatch;
+      AvataaarTypeHairEyepatch;
 
   const factory AvataaarHair.hat(
-      [@Default(Colors.transparent) @ColorSerialiser() Color color]) = _Hat;
+          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
+      AvataaarTypeHairHat;
 
   const factory AvataaarHair.hijab(
       [@Default(AvataaarHair.defaultHatColorBlue03)
       @ColorSerialiser()
-          Color color]) = _Hijab;
+          Color color]) = AvataaarTypeHairHijab;
 
   const factory AvataaarHair.turban(
       [@Default(AvataaarHair.defaultHatColorBlue03)
       @ColorSerialiser()
-          Color color]) = _Turban;
+          Color color]) = AvataaarTypeHairTurban;
 
   const factory AvataaarHair.winterHat1(
       [@Default(AvataaarHair.defaultHatColorRed)
       @ColorSerialiser()
-          Color color]) = _WinterHat1;
+          Color color]) = AvataaarTypeHairWinterHat1;
 
   const factory AvataaarHair.winterHat2(
       [@Default(AvataaarHair.defaultHatColorBlue01)
       @ColorSerialiser()
-          Color color]) = _WinterHat2;
+          Color color]) = AvataaarTypeHairWinterHat2;
 
   const factory AvataaarHair.winterHat3(
       [@Default(AvataaarHair.defaultHatColorRed)
       @ColorSerialiser()
-          Color color]) = _WinterHat3;
+          Color color]) = AvataaarTypeHairWinterHat3;
 
   const factory AvataaarHair.winterHat4(
       [@Default(AvataaarHair.defaultHatColorRed)
       @ColorSerialiser()
-          Color color]) = _WinterHat4;
+          Color color]) = AvataaarTypeHairWinterHat4;
 
   const factory AvataaarHair.longHairBigHair(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairBigHair;
+          Color color]) = AvataaarTypeHairLongHairBigHair;
 
   const factory AvataaarHair.longHairBob(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHarBob;
+          Color color]) = AvataaarTypeHairLongHarBob;
 
   const factory AvataaarHair.longHairBun(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairBun;
+          Color color]) = AvataaarTypeHairLongHairBun;
 
   const factory AvataaarHair.longHairCurly(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairCurly;
+          Color color]) = AvataaarTypeHairLongHairCurly;
 
   const factory AvataaarHair.longHairCurvy(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairCurvy;
+          Color color]) = AvataaarTypeHairLongHairCurvy;
 
   const factory AvataaarHair.longHairDreads(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairDreads;
+          Color color]) = AvataaarTypeHairLongHairDreads;
 
   const factory AvataaarHair.longHairFrida(
           [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      _LongHairFrida;
+      AvataaarTypeHairLongHairFrida;
 
   const factory AvataaarHair.longHairFro(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairFro;
+          Color color]) = AvataaarTypeHairLongHairFro;
 
   const factory AvataaarHair.longHairFroBand(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairFroBand;
+          Color color]) = AvataaarTypeHairLongHairFroBand;
 
   const factory AvataaarHair.longHairNotTooLong(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairNotTooLong;
+          Color color]) = AvataaarTypeHairLongHairNotTooLong;
 
   const factory AvataaarHair.longHairShavedSides(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairShavedSides;
+          Color color]) = AvataaarTypeHairLongHairShavedSides;
 
   const factory AvataaarHair.longHairMiaWallace(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairMiaWallace;
+          Color color]) = AvataaarTypeHairLongHairMiaWallace;
 
   const factory AvataaarHair.longHairStraight(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairStraight;
+          Color color]) = AvataaarTypeHairLongHairStraight;
 
   const factory AvataaarHair.longHairStraight2(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairStraight2;
+          Color color]) = AvataaarTypeHairLongHairStraight2;
 
   const factory AvataaarHair.longHairStraightStrand(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _LongHairStraightStrand;
+          Color color]) = AvataaarTypeHairLongHairStraightStrand;
 
   const factory AvataaarHair.shortHairDreads01(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairDreads01;
+          Color color]) = AvataaarTypeHairShortHairDreads01;
 
   const factory AvataaarHair.shortHairDreads02(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairDreads02;
+          Color color]) = AvataaarTypeHairShortHairDreads02;
 
   const factory AvataaarHair.shortHairFrizzle(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairFrizzle;
+          Color color]) = AvataaarTypeHairShortHairFrizzle;
 
   const factory AvataaarHair.shortHairShaggyMullet(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairShaggyMullet;
+          Color color]) = AvataaarTypeHairShortHairShaggyMullet;
 
   const factory AvataaarHair.shortHairShortCurly(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairShortCurly;
+          Color color]) = AvataaarTypeHairShortHairShortCurly;
 
   const factory AvataaarHair.shortHairShortFlat(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairShortFlat;
+          Color color]) = AvataaarTypeHairShortHairShortFlat;
 
   const factory AvataaarHair.shortHairShortRound(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairShortRound;
+          Color color]) = AvataaarTypeHairShortHairShortRound;
 
   const factory AvataaarHair.shortHairShortWaved(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairShortWaved;
+          Color color]) = AvataaarTypeHairShortHairShortWaved;
 
   const factory AvataaarHair.shortHairSides(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairSides;
+          Color color]) = AvataaarTypeHairShortHairSides;
 
   const factory AvataaarHair.shortHairTheCaesar(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairTheCaesar;
+          Color color]) = AvataaarTypeHairShortHairTheCaesar;
 
   const factory AvataaarHair.shortHairTheCaesarSidePart(
       [@Default(AvataaarHair.defaultHairColor)
       @ColorSerialiser()
-          Color color]) = _ShortHairTheCaesarSidePart;
+          Color color]) = AvataaarTypeHairShortHairTheCaesarSidePart;
 
   const AvataaarHair._();
 
@@ -1051,18 +1069,18 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
 
 @freezed
 class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
-  const factory AvataaarMouth.concerned() = _Concerned;
-  const factory AvataaarMouth.default0() = _MouthDefault0;
-  const factory AvataaarMouth.disbelief() = _Disbelief;
-  const factory AvataaarMouth.eating() = _Eating;
-  const factory AvataaarMouth.grimace() = _Grimace;
-  const factory AvataaarMouth.sad() = _Sad;
-  const factory AvataaarMouth.screamOpen() = _ScreamOpen;
-  const factory AvataaarMouth.serious() = _Serious;
-  const factory AvataaarMouth.smile() = _Smile;
-  const factory AvataaarMouth.tongue() = _Tongue;
-  const factory AvataaarMouth.twinkle() = _Twinkle;
-  const factory AvataaarMouth.vomit() = _Vomit;
+  const factory AvataaarMouth.concerned() = AvataaarTypeMouthConcerned;
+  const factory AvataaarMouth.default0() = AvataaarTypeMouthDefault0;
+  const factory AvataaarMouth.disbelief() = AvataaarTypeMouthDisbelief;
+  const factory AvataaarMouth.eating() = AvataaarTypeMouthEating;
+  const factory AvataaarMouth.grimace() = AvataaarTypeMouthGrimace;
+  const factory AvataaarMouth.sad() = AvataaarTypeMouthSad;
+  const factory AvataaarMouth.screamOpen() = AvataaarTypeMouthScreamOpen;
+  const factory AvataaarMouth.serious() = AvataaarTypeMouthSerious;
+  const factory AvataaarMouth.smile() = AvataaarTypeMouthSmile;
+  const factory AvataaarMouth.tongue() = AvataaarTypeMouthTongue;
+  const factory AvataaarMouth.twinkle() = AvataaarTypeMouthTwinkle;
+  const factory AvataaarMouth.vomit() = AvataaarTypeMouthVomit;
 
   const AvataaarMouth._();
 
@@ -1154,7 +1172,7 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
 
 @freezed
 class AvataaarNose with _$AvataaarNose, AvataaarParts {
-  const factory AvataaarNose.default0() = _NoseDefault0;
+  const factory AvataaarNose.default0() = AvataaarTypeNoseDefault0;
 
   const AvataaarNose._();
 
@@ -1208,22 +1226,29 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
 @freezed
 class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
   const factory AvataaarSkin.tanned(
-      [@Default(Color(0x00FD9841)) @ColorSerialiser() Color color]) = _Tanned;
+          [@Default(Color(0x00FD9841)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinTanned;
   const factory AvataaarSkin.yellow(
-      [@Default(Color(0x00F8D25C)) @ColorSerialiser() Color color]) = _Yellow;
+          [@Default(Color(0x00F8D25C)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinYellow;
   const factory AvataaarSkin.pale(
-      [@Default(Color(0x00FFDBB4)) @ColorSerialiser() Color color]) = _Pale;
+          [@Default(Color(0x00FFDBB4)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinPale;
   const factory AvataaarSkin.light(
-      [@Default(Color(0x00EDB98A)) @ColorSerialiser() Color color]) = _White;
+          [@Default(Color(0x00EDB98A)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinWhite;
   const factory AvataaarSkin.brown(
-      [@Default(Color(0x00D08B5B)) @ColorSerialiser() Color color]) = _Brown;
+          [@Default(Color(0x00D08B5B)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinBrown;
   const factory AvataaarSkin.darkBrown(
           [@Default(Color(0x00AE5D29)) @ColorSerialiser() Color color]) =
-      _DarkBrown;
+      AvataaarTypeSkinDarkBrown;
   const factory AvataaarSkin.black(
-      [@Default(Color(0x00614335)) @ColorSerialiser() Color color]) = _Black;
+          [@Default(Color(0x00614335)) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinBlack;
   const factory AvataaarSkin.custom(
-      [@Default(Colors.grey) @ColorSerialiser() Color color]) = _Custom;
+          [@Default(Colors.grey) @ColorSerialiser() Color color]) =
+      AvataaarTypeSkinCustom;
 
   const AvataaarSkin._();
 
@@ -1306,9 +1331,10 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
 class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
   const factory AvataaarStyle.transparent(
           [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      _Transparent;
+      AvataaarTypeStyleTransparent;
   const factory AvataaarStyle.circle(
-      [@Default(Color(0x0065C9FF)) @ColorSerialiser() Color color]) = _Circle;
+          [@Default(Color(0x0065C9FF)) @ColorSerialiser() Color color]) =
+      AvataaarTypeStyleCircle;
 
   const AvataaarStyle._();
 
