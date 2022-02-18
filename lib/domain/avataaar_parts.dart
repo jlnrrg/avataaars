@@ -20,6 +20,8 @@ import 'localization_strings.dart';
 part 'avataaar_parts.freezed.dart';
 part 'avataaar_parts.g.dart';
 
+final _random = Random(DateTime.now().millisecondsSinceEpoch);
+
 abstract class AvataaarParts {
   // String toSvgString([String id = '']);
   String toLabel([String languageCode = 'en']);
@@ -63,8 +65,7 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
 
   /// creates random [AvataaarEyes]
   factory AvataaarEyes.random() =>
-      AvataaarEyes.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarEyes.all.length));
+      AvataaarEyes.fromIndex(_random.nextInt(AvataaarEyes.all.length));
 
   // creates the next [AvataaarEyes] from [AvataaarEyes.all]
   AvataaarEyes next() {
@@ -163,8 +164,7 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
 
   /// creates random [AvataaarAccessories]
   factory AvataaarAccessories.random() => AvataaarAccessories.fromIndex(
-      Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarAccessories.all.length));
+      _random.nextInt(AvataaarAccessories.all.length));
 
   /// creates [AvataaarAccessories] based on the index found in [AvataaarAccessories.all]
   factory AvataaarAccessories.fromIndex(int index) =>
@@ -281,9 +281,8 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
 
   /// creates random [AvataaarClothes]
   factory AvataaarClothes.random([Color? color]) {
-    final e = AvataaarClothes.fromIndex(
-        Random(DateTime.now().millisecondsSinceEpoch)
-            .nextInt(AvataaarClothes.all.length));
+    final e =
+        AvataaarClothes.fromIndex(_random.nextInt(AvataaarClothes.all.length));
 
     if (color != null) {
       return e.copyWith(color: color);
@@ -407,8 +406,7 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
 
   /// creates random [AvataaarGraphics]
   factory AvataaarGraphics.random() =>
-      AvataaarGraphics.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarGraphics.all.length));
+      AvataaarGraphics.fromIndex(_random.nextInt(AvataaarGraphics.all.length));
 
   /// creates [AvataaarGraphics] based on the index found in [AvataaarGraphics.all]
   factory AvataaarGraphics.fromIndex(int index) =>
@@ -521,8 +519,7 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
 
   /// creates random [AvataaarEyebrow]
   factory AvataaarEyebrow.random() =>
-      AvataaarEyebrow.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarEyebrow.all.length));
+      AvataaarEyebrow.fromIndex(_random.nextInt(AvataaarEyebrow.all.length));
 
   /// creates [AvataaarEyebrow] based on the index found in [AvataaarEyebrow.all]
   factory AvataaarEyebrow.fromIndex(int index) =>
@@ -640,8 +637,7 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
   /// creates random [AvataaarFacialHair]
   factory AvataaarFacialHair.random([Color? color]) {
     final e = AvataaarFacialHair.fromIndex(
-        Random(DateTime.now().millisecondsSinceEpoch)
-            .nextInt(AvataaarFacialHair.all.length));
+        _random.nextInt(AvataaarFacialHair.all.length));
 
     if (color != null) {
       return e.copyWith(color: color);
@@ -943,9 +939,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
 
   /// creates random [AvataaarHair]
   factory AvataaarHair.random([Color? color]) {
-    final e = AvataaarHair.fromIndex(
-        Random(DateTime.now().millisecondsSinceEpoch)
-            .nextInt(AvataaarHair.all.length));
+    final e = AvataaarHair.fromIndex(_random.nextInt(AvataaarHair.all.length));
 
     if (color != null) {
       return e.copyWith(color: color);
@@ -1127,8 +1121,7 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
 
   /// creates random [AvataaarMouth]
   factory AvataaarMouth.random() =>
-      AvataaarMouth.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarMouth.all.length));
+      AvataaarMouth.fromIndex(_random.nextInt(AvataaarMouth.all.length));
 
   /// creates [AvataaarMouth] based on the index found in [AvataaarMouth.all]
   factory AvataaarMouth.fromIndex(int index) =>
@@ -1290,8 +1283,7 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
 
   /// creates random [AvataaarSkin]
   factory AvataaarSkin.random() =>
-      AvataaarSkin.fromIndex(Random(DateTime.now().millisecondsSinceEpoch)
-          .nextInt(AvataaarSkin.all.length));
+      AvataaarSkin.fromIndex(_random.nextInt(AvataaarSkin.all.length));
 
   /// creates [AvataaarSkin] based on the index found in [AvataaarSkin.all]
   factory AvataaarSkin.fromIndex(int index) =>
@@ -1404,9 +1396,8 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
 
   /// creates random [AvataaarStyle]
   factory AvataaarStyle.random([Color? color]) {
-    final e = AvataaarStyle.fromIndex(
-        Random(DateTime.now().millisecondsSinceEpoch)
-            .nextInt(AvataaarStyle.all.length));
+    final e =
+        AvataaarStyle.fromIndex(_random.nextInt(AvataaarStyle.all.length));
 
     if (color != null) {
       return e.copyWith(color: color);

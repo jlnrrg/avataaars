@@ -39,7 +39,7 @@ class Avataaar with _$Avataaar {
   factory Avataaar.fromJson(Map<String, dynamic> json) =>
       _$AvataaarFromJson(json);
 
-  String buildFace() => '''
+  String _buildFace() => '''
   <g id="Face" transform="translate(76.000000, 82.000000)" fill="#000000">
   ${mouth.toSvgString()}
   ${nose.toSvgString()}
@@ -48,22 +48,10 @@ class Avataaar with _$Avataaar {
   </g>
 ''';
 
-  String buildTop() => '''
+  String _buildTop() => '''
     ${hair.toSvgString()}
     ${facialHair.toSvgString()}
     ${accessory.toSvgString()}
-''';
-
-  String toPiece([int width = 264, int height = 280]) => '''
-<svg
-        width="${width}px"
-        height="${height}px"
-        viewBox="0 0 264 280"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink">
-        ${mouth.toSvgString()}
-      </svg>
 ''';
 
   String toSvg() {
@@ -125,8 +113,8 @@ class Avataaar with _$Avataaar {
                   />
                 </g>
                 ${clothes.toSvgString(graphics)}
-                ${buildFace()}
-                ${buildTop()}
+                ${_buildFace()}
+                ${_buildTop()}
               </g>
             </g>
           </g>
