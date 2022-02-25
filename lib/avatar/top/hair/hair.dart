@@ -40,8 +40,8 @@ part 'winterHat3.dart';
 part 'winterHat4.dart';
 
 class Hair {
-  static String eyepatch() => _eyepatch();
-  static String hat() => _hat();
+  static String eyepatch(Color color) => _eyepatch(color);
+  static String hat(Color color) => _hat(color);
   static String hijab(Color color) => _hijab(color);
   static String longHairBigHair(Color color) => _longHairBigHair(color);
   static String longHairBob(Color color) => _longHairBob(color);
@@ -49,7 +49,7 @@ class Hair {
   static String longHairCurly(Color color) => _longHairCurly(color);
   static String longHairCurvy(Color color) => _longHairCurvy(color);
   static String longHairDreads(Color color) => _longHairDreads(color);
-  static String longHairFrida() => _longHairFrida();
+  static String longHairFrida(Color color) => _longHairFrida(color);
   static String longHairFro(Color color) => _longHairFro(color);
   static String longHairFroBand(Color color) => _longHairFroBand(color);
   static String longHairMiaWallace(Color color) => _longHairMiaWallace(color);

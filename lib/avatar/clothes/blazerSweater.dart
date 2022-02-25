@@ -1,6 +1,6 @@
 part of 'clothes.dart';
 
-String _blazzerSweater() {
+String _blazzerSweater(Color color) {
   final _path1 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
   return """
@@ -26,7 +26,7 @@ String _blazzerSweater() {
           id='Color/Palette/Black'
           mask="url(#$_mask1)"
           fill-rule='evenodd'
-          fill='#262E33'>
+          fill="${color.toHex()}">
           <rect id='🖍Color' x='0' y='0' width='264' height='110' />
         </g>
         <g

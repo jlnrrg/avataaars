@@ -1,6 +1,6 @@
 part of 'clothes.dart';
 
-String _blazzerShirt() {
+String _blazzerShirt(Color color) {
   final _path1 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
   return """
@@ -18,7 +18,7 @@ String _blazzerShirt() {
             <use xlink:href="${"#" + _path1}" />
           </mask>
           <use id="Clothes" fill="#E6E6E6" xlink:href="${"#" + _path1}" />
-          <g id="Color/Palette/Black" mask="url(#$_mask1)" fill="#262E33">
+          <g id="Color/Palette/Black" mask="url(#$_mask1)" fill="${color.toHex()}">
             <g transform="translate(-32.000000, -29.000000)" id="🖍Color">
               <rect x="0" y="0" width="264" height="110" />
             </g>

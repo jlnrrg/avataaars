@@ -13,8 +13,8 @@ part 'shirtScoopNeck.dart';
 part 'shirtVNeck.dart';
 
 class Clothes {
-  static final String blazerShirt = _blazzerShirt();
-  static final String blazerSweater = _blazzerSweater();
+  static String blazerShirt(Color color) => _blazzerShirt(color);
+  static String blazerSweater(Color color) => _blazzerSweater(color);
   static String collarSweater(Color color) => _collarSweater(color);
   static String graphicShirt(
           Color color, String Function(String maskID) graphic) =>

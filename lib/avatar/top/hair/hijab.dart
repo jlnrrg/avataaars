@@ -73,7 +73,6 @@ String _hijab(Color color) {
               opacity='0.16'
               fill='#000000'
               fill-rule='evenodd'
-              opacity='0.899999976'
               mask="url(#$_mask2)"
             />
           </g>

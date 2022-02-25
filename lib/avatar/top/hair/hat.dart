@@ -1,6 +1,6 @@
 part of 'hair.dart';
 
-String _hat() {
+String _hat(Color color) {
   final _path1 = UniqueKey().hashCode.toString();
   final _path2 = UniqueKey().hashCode.toString();
   final _mask1 = UniqueKey().hashCode.toString();
@@ -57,12 +57,12 @@ String _hat() {
               <g id='Mask-Hair' />
               <path
                 d='M123.182388,2 L141.817612,2 L141.817612,2 C160.609055,2 176.866947,15.0804442 180.890118,33.4361631 L190,75 L75,75 L84.1098821,33.4361631 L84.1098821,33.4361631 C88.1330533,15.0804442 104.390945,2 123.182388,2 Z'
-                fill='#1F333C'
+                fill='${color.toHex()}'
                 mask="url(#$_mask2)"
               />
               <ellipse
                 id='Hipster'
-                fill='#1F333C'
+                fill='${color.toHex()}'
                 mask="url(#$_mask2)"
                 cx='132'
                 cy='87.5'
@@ -71,7 +71,7 @@ String _hat() {
               />
               <ellipse
                 id='Very'
-                fill='#15232A'
+                fill='${color.toHex()}'
                 mask="url(#$_mask2)"
                 cx='132'
                 cy='82'

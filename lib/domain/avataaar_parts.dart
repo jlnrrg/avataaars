@@ -335,8 +335,8 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
       '''<svg viewBox="30 180 205 100" >${toSvgString(graphics)}</svg>''';
 
   String toSvgString([AvataaarGraphics? graphics]) => when(
-        blazerShirt: (_) => Clothes.blazerShirt,
-        blazerSweater: (_) => Clothes.blazerSweater,
+        blazerShirt: (color) => Clothes.blazerShirt(color),
+        blazerSweater: (color) => Clothes.blazerSweater(color),
         collarSweater: (color) => Clothes.collarSweater(color),
         graphicShirt: (color) => Clothes.graphicShirt(
             color, (graphics?.toSVGFunction() ?? (_) => '')),
@@ -723,12 +723,14 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
       AvataaarTypeHairNoHair;
 
   const factory AvataaarHair.eyepatch(
-          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      AvataaarTypeHairEyepatch;
+      [@Default(AvataaarHair.defaultHatColorEyePatch)
+      @ColorSerialiser()
+          Color color]) = AvataaarTypeHairEyepatch;
 
   const factory AvataaarHair.hat(
-          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      AvataaarTypeHairHat;
+      [@Default(AvataaarHair.defaultHatColorHat)
+      @ColorSerialiser()
+          Color color]) = AvataaarTypeHairHat;
 
   const factory AvataaarHair.hijab(
       [@Default(AvataaarHair.defaultHatColorBlue03)
@@ -791,8 +793,9 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
           Color color]) = AvataaarTypeHairLongHairDreads;
 
   const factory AvataaarHair.longHairFrida(
-          [@Default(Colors.transparent) @ColorSerialiser() Color color]) =
-      AvataaarTypeHairLongHairFrida;
+      [@Default(AvataaarHair.defaultHatColorHat)
+      @ColorSerialiser()
+          Color color]) = AvataaarTypeHairLongHairFrida;
 
   const factory AvataaarHair.longHairFro(
       [@Default(AvataaarHair.defaultHairColor)
@@ -897,6 +900,8 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
   static const Color defaultHatColorRed = Color.fromARGB(255, 255, 92, 92);
   static const Color defaultHatColorBlue01 = Color.fromARGB(255, 101, 201, 255);
   static const Color defaultHatColorBlue03 = Color.fromARGB(255, 37, 85, 124);
+  static const Color defaultHatColorEyePatch = Color.fromARGB(255, 40, 53, 75);
+  static const Color defaultHatColorHat = Color.fromARGB(255, 31, 51, 60);
   static const Color defaultHairColor = Color.fromARGB(255, 74, 49, 44);
 
   static const List<AvataaarHair> all = [
@@ -1046,8 +1051,8 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
 
   String toSvgString() => when(
         noHair: (_) => Hair.noHair(),
-        eyepatch: (_) => Hair.eyepatch(),
-        hat: (_) => Hair.hat(),
+        eyepatch: (color) => Hair.eyepatch(color),
+        hat: (color) => Hair.hat(color),
         hijab: (color) => Hair.hijab(color),
         turban: (color) => Hair.turban(color),
         winterHat1: (color) => Hair.winterHat1(color),
@@ -1060,7 +1065,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
         longHairCurly: (color) => Hair.longHairCurly(color),
         longHairCurvy: (color) => Hair.longHairCurvy(color),
         longHairDreads: (color) => Hair.longHairDreads(color),
-        longHairFrida: (_) => Hair.longHairFrida(),
+        longHairFrida: (color) => Hair.longHairFrida(color),
         longHairFro: (color) => Hair.longHairFro(color),
         longHairFroBand: (color) => Hair.longHairFroBand(color),
         longHairNotTooLong: (color) => Hair.longHairNotTooLong(color),
