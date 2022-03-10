@@ -6,7 +6,8 @@ The original avatars were designed by [Pablo Stanley](https://twitter.com/pablos
 ## Presentation
 
 The following Avataaar customizer is not part of this package, but can be found in the example folder. </br>
-It should nevertheless showcase the functionality of the Avataaar classes.
+It should nevertheless showcase the functionality of the Avataaar classes. </br>
+(The Color Picker that is visible in the gif, is part of the [flex_color_picker](https://pub.dev/packages/flex_color_picker) package)
 </br>
 
 ![random](assets/gifs/avataaars_random.gif) ![next](assets/gifs/avataaars_next.gif) ![selection](assets/gifs/avataaars_selection.gif)
