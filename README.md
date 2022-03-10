@@ -17,6 +17,10 @@ It should nevertheless showcase the functionality of the Avataaar classes. </br>
 - Edit the individual parts, by making use of the `copyWith` method.
 - Get the SVG String by calling `Avataaar.toSvg()`
 
+## Label Language Support
+- English
+- German
+- ... (If you want to contribute, feel free to look at the [localization_strings.dart](https://github.com/jlnrrg/avataaars/blob/main/lib/domain/localization_strings.dart))
 
 ## Known Errors
 By using the [flutter_svg](https://pub.dev/packages/flutter_svg) package to render the svg strings, it can happen that a warning appears in the console. </br>
