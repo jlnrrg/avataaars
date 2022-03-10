@@ -788,7 +788,7 @@ _$AvataaarTypeHairEyepatch _$$AvataaarTypeHairEyepatchFromJson(
         Map<String, dynamic> json) =>
     _$AvataaarTypeHairEyepatch(
       json['color'] == null
-          ? Colors.transparent
+          ? AvataaarHair.defaultHatColorEyePatch
           : const ColorSerialiser().fromJson(json['color'] as int),
       json['runtimeType'] as String?,
     );
@@ -804,7 +804,7 @@ _$AvataaarTypeHairHat _$$AvataaarTypeHairHatFromJson(
         Map<String, dynamic> json) =>
     _$AvataaarTypeHairHat(
       json['color'] == null
-          ? Colors.transparent
+          ? AvataaarHair.defaultHatColorHat
           : const ColorSerialiser().fromJson(json['color'] as int),
       json['runtimeType'] as String?,
     );
@@ -1012,7 +1012,7 @@ _$AvataaarTypeHairLongHairFrida _$$AvataaarTypeHairLongHairFridaFromJson(
         Map<String, dynamic> json) =>
     _$AvataaarTypeHairLongHairFrida(
       json['color'] == null
-          ? Colors.transparent
+          ? AvataaarHair.defaultHatColorHat
           : const ColorSerialiser().fromJson(json['color'] as int),
       json['runtimeType'] as String?,
     );
@@ -1477,7 +1477,7 @@ Map<String, dynamic> _$$AvataaarTypeMouthVomitToJson(
 
 _$AvataaarTypeNoseDefault0 _$$AvataaarTypeNoseDefault0FromJson(
         Map<String, dynamic> json) =>
-    const _$AvataaarTypeNoseDefault0();
+    _$AvataaarTypeNoseDefault0();
 
 Map<String, dynamic> _$$AvataaarTypeNoseDefault0ToJson(
         _$AvataaarTypeNoseDefault0 instance) =>

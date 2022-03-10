@@ -22,6 +22,7 @@ class Avataaar with _$Avataaar {
     @Default(AvataaarStyle.circle()) AvataaarStyle style,
   }) = _Avataaar;
 
+  /// Creates a random Avataaar
   factory Avataaar.random() => Avataaar(
         hair: AvataaarHair.random(),
         accessory: AvataaarAccessories.random(),
@@ -54,6 +55,7 @@ class Avataaar with _$Avataaar {
     ${accessory.toSvgString()}
 ''';
 
+  /// Converts the Avataaar to SVG String
   String toSvg() {
     final _path1 = UniqueKey().hashCode.toString();
     final _path2 = UniqueKey().hashCode.toString();

@@ -94,6 +94,7 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.eyes(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -114,9 +115,11 @@ class AvataaarEyes with _$AvataaarEyes, AvataaarParts {
     return LocalizationStrings.applyLanguageCode(localization, languageCode);
   }
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() =>
       """<svg width="20px" height="20px" viewBox="-3 -30 120 120">${toSvgString()}</svg>""";
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         closed: () => Eyes.close,
         cry: () => Eyes.cry,
@@ -188,10 +191,11 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
   @override
   int toIndex() => AvataaarAccessories.all.indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() =>
       """<svg viewBox="70 85 125 55" >${toSvgString()}</svg>""";
 
-  // @override
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         blank: () => Accessories.blank,
         kurt: () => Accessories.kurt(),
@@ -207,6 +211,7 @@ class AvataaarAccessories with _$AvataaarAccessories, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.accessory(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -331,9 +336,11 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
       .toList()
       .indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart([AvataaarGraphics? graphics]) =>
       '''<svg viewBox="30 180 205 100" >${toSvgString(graphics)}</svg>''';
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString([AvataaarGraphics? graphics]) => when(
         blazerShirt: (color) => Clothes.blazerShirt(color),
         blazerSweater: (color) => Clothes.blazerSweater(color),
@@ -352,6 +359,7 @@ class AvataaarClothes with _$AvataaarClothes, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.clothes(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -430,8 +438,10 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
   @override
   int toIndex() => AvataaarGraphics.all.indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() => const AvataaarClothes.graphicShirt().toSvgPart(this);
 
+  /// Individual SVG Part, only usable with the whole Avataaar and [AvataaarClothes.graphicShirt()]
   String Function(String) toSVGFunction() => when(
         bat: () => Graphics.bat,
         bear: () => Graphics.bear,
@@ -451,6 +461,7 @@ class AvataaarGraphics with _$AvataaarGraphics, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.graphics(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -543,9 +554,11 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
   @override
   int toIndex() => AvataaarEyebrow.all.indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() =>
       '''<svg viewBox="5 -10 100 40" >${toSvgString()}</svg>''';
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         angry: () => Eyebrow.angry,
         angryNatural: () => Eyebrow.angryNatural,
@@ -567,6 +580,7 @@ class AvataaarEyebrow with _$AvataaarEyebrow, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.eyebrow(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -684,9 +698,11 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
       .toList()
       .indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() =>
       '''<svg viewBox="70 90 125 130" >${toSvgString()}</svg>''';
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         blank: (_) => FacialHair.blank,
         beardMedium: (color) => FacialHair.beardMedium(color),
@@ -701,6 +717,7 @@ class AvataaarFacialHair with _$AvataaarFacialHair, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.facialHair(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -996,7 +1013,7 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.hair(), languageCode);
 
-  /// returns the label in the respective language based on the [languageCode]
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -1047,8 +1064,10 @@ class AvataaarHair with _$AvataaarHair, AvataaarParts {
     return LocalizationStrings.applyLanguageCode(localization, languageCode);
   }
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() => '''<svg viewBox="7 0 250 280">${toSvgString()}</svg>''';
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         noHair: (_) => Hair.noHair(),
         eyepatch: (color) => Hair.eyepatch(color),
@@ -1150,8 +1169,10 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
   @override
   int toIndex() => AvataaarMouth.all.indexOf(this);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() => '''<svg viewBox="5 40 100 60">${toSvgString()}</svg>''';
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(
         concerned: () => Mouth.concerned,
         default0: () => Mouth.default0,
@@ -1172,6 +1193,7 @@ class AvataaarMouth with _$AvataaarMouth, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.mouth(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -1206,7 +1228,7 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
   factory AvataaarNose.fromIndex(int index) =>
       AvataaarNose.all.elementAt(index);
 
-  @override
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString() => when(default0: () => Nose.default0);
 
   /// returns the index of [AvataaarNose.all], or -1 if no entry is found
@@ -1236,6 +1258,7 @@ class AvataaarNose with _$AvataaarNose, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.nose(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -1318,6 +1341,7 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
   factory AvataaarSkin.fromJson(Map<String, dynamic> json) =>
       _$AvataaarSkinFromJson(json);
 
+  // Single SVG Part, can be displayed without the whole Avataaar
   String toSvgPart() {
     final _path3 = UniqueKey().hashCode.toString();
     final _mask3 = UniqueKey().hashCode.toString();
@@ -1346,7 +1370,7 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
     </svg>''';
   }
 
-  @override
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString(String maskID) => when(
         tanned: (color) => makeSkin(maskID, color),
         yellow: (color) => makeSkin(maskID, color),
@@ -1363,6 +1387,7 @@ class AvataaarSkin with _$AvataaarSkin, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.skin(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(
@@ -1450,6 +1475,7 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
       .toList()
       .indexOf(this);
 
+  /// Individual SVG Part, only usable with the whole Avataaar
   String toSvgString(String path1, String path2, String mask2) => when(
         transparent: (_) => 'Transparent',
         circle: (color) => Style.circle(path1, path2, mask2, color),
@@ -1460,6 +1486,7 @@ class AvataaarStyle with _$AvataaarStyle, AvataaarParts {
       LocalizationStrings.applyLanguageCode(
           const LocalizationStrings.style(), languageCode);
 
+  /// based on [languageCode] and [LocalizationStrings] returns the label
   @override
   String toLabel([String languageCode = 'en']) {
     final localization = when(

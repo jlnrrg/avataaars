@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.0.3
+  flex_color_picker: ^2.3.0
   avataaars:
     path: ../
 

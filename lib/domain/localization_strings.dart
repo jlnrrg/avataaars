@@ -150,6 +150,7 @@ class LocalizationStrings with _$LocalizationStrings {
 
   const LocalizationStrings._();
 
+  /// returns the unions label in english
   String toEnglish() => when(
         noHair: () => 'No Hair',
         eyepatch: () => 'Eyepatch',
@@ -277,6 +278,7 @@ class LocalizationStrings with _$LocalizationStrings {
         style: () => 'Style',
       );
 
+  /// returns the unions label in german
   String toGerman() => when(
         noHair: () => 'Keine Haare',
         eyepatch: () => 'Augenklappe',
@@ -404,6 +406,7 @@ class LocalizationStrings with _$LocalizationStrings {
         style: () => 'Stil',
       );
 
+  /// based on the [languageCode] the [localization] is returned in the corresponding language
   static String applyLanguageCode(
       LocalizationStrings localization, String languageCode) {
     switch (languageCode) {

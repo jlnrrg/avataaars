@@ -12462,14 +12462,14 @@ class _$AvataaarHairTearOff {
   }
 
   AvataaarTypeHairEyepatch eyepatch(
-      [@ColorSerialiser() Color color = Colors.transparent]) {
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorEyePatch]) {
     return AvataaarTypeHairEyepatch(
       color,
     );
   }
 
   AvataaarTypeHairHat hat(
-      [@ColorSerialiser() Color color = Colors.transparent]) {
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorHat]) {
     return AvataaarTypeHairHat(
       color,
     );
@@ -12560,7 +12560,7 @@ class _$AvataaarHairTearOff {
   }
 
   AvataaarTypeHairLongHairFrida longHairFrida(
-      [@ColorSerialiser() Color color = Colors.transparent]) {
+      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorHat]) {
     return AvataaarTypeHairLongHairFrida(
       color,
     );
@@ -13509,7 +13509,8 @@ class _$AvataaarTypeHairEyepatchCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeHairEyepatch extends AvataaarTypeHairEyepatch {
   const _$AvataaarTypeHairEyepatch(
-      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorEyePatch,
+      String? $type])
       : $type = $type ?? 'eyepatch',
         super._();
 
@@ -13932,7 +13933,8 @@ class _$AvataaarTypeHairHatCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeHairHat extends AvataaarTypeHairHat {
   const _$AvataaarTypeHairHat(
-      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorHat,
+      String? $type])
       : $type = $type ?? 'hat',
         super._();
 
@@ -19472,7 +19474,8 @@ class _$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeHairLongHairFrida extends AvataaarTypeHairLongHairFrida {
   const _$AvataaarTypeHairLongHairFrida(
-      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
+      [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorHat,
+      String? $type])
       : $type = $type ?? 'longHairFrida',
         super._();
 

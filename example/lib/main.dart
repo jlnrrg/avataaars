@@ -1,6 +1,7 @@
 import 'package:avataaars/avataaars.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import 'avatar_customizer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -35,148 +37,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final v = avataaar.toSvg();
-    final partSVG = avataaar.skin.toSvgPart();
-
-    return SafeArea(
-        child: Scaffold(
-            body: CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          title: const Text("Avataaars"),
-          floating: true,
-          flexibleSpace: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: buildSvg(v),
-          ),
-          expandedHeight: 200,
-        ),
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          sliver: SliverList(
-              delegate: SliverChildListDelegate([
-            SvgPicture.string(partSVG),
-            DropdownButton<AvataaarHair>(
-              value: avataaar.hair,
-              items: AvataaarHair.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(hair: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarAccessories>(
-              value: avataaar.accessory,
-              items: AvataaarAccessories.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(accessory: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarFacialHair>(
-              value: avataaar.facialHair,
-              items: AvataaarFacialHair.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(facialHair: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarClothes>(
-              value: avataaar.clothes,
-              items: AvataaarClothes.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(clothes: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarGraphics>(
-              value: avataaar.graphics,
-              items: AvataaarGraphics.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(graphics: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarEyes>(
-              value: avataaar.eyes,
-              items: AvataaarEyes.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(eyes: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarEyebrow>(
-              value: avataaar.eyebrow,
-              items: AvataaarEyebrow.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(eyebrow: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarMouth>(
-              value: avataaar.mouth,
-              items: AvataaarMouth.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(mouth: v);
-                    })
-                  : null,
-            ),
-            DropdownButton<AvataaarSkin>(
-              value: avataaar.skin,
-              items: AvataaarSkin.all
-                  .map((e) =>
-                      DropdownMenuItem(value: e, child: Text(e.toLabel())))
-                  .toList(),
-              onChanged: (v) => v != null
-                  ? setState(() {
-                      avataaar = avataaar.copyWith(skin: v);
-                    })
-                  : null,
-            ),
-          ])),
-        ),
-      ],
-    )));
-  }
-
-  Widget buildSvg(String value) {
-    return SvgPicture.string(
-      value,
-      height: 1000,
-      semanticsLabel: "Your Fluttermoji",
-      placeholderBuilder: (context) => const Center(
-        child: CircularProgressIndicator(),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Avataaars')),
+      body: SingleChildScrollView(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          Container(
+              padding: const EdgeInsets.all(10),
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: AvatarCustomizer(
+                initialValue: avataaar,
+                onChanged: (a) => setState(() {
+                  avataaar = a;
+                }),
+              ))
+        ]),
       ),
     );
   }
