@@ -1,5 +1,5 @@
 # Avataaars
-Avataaars is a Flutter package that provides Avataaar classes which enable an easy svg generation of Avataaars. </br>
+Avataaars is a Flutter package that provides Avataaar classes which enable an easy svg generation of beautiful personal avatars. </br>
 This package is heavily inspired by [Avataaars Generator](https://github.com/fangpenlin/avataaars-generator). </br>
 The original avatars were designed by [Pablo Stanley](https://twitter.com/pablostanley), the Sketch library can be found [here](https://www.avataaars.com/).
 
