@@ -12,50 +12,11 @@ part of 'avataaar.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Avataaar _$AvataaarFromJson(Map<String, dynamic> json) {
   return _Avataaar.fromJson(json);
 }
-
-/// @nodoc
-class _$AvataaarTearOff {
-  const _$AvataaarTearOff();
-
-  _Avataaar call(
-      {AvataaarHair hair = const AvataaarHair.longHairStraight(),
-      AvataaarAccessories accessory = const AvataaarAccessories.blank(),
-      AvataaarFacialHair facialHair = const AvataaarFacialHair.blank(),
-      AvataaarClothes clothes = const AvataaarClothes.blazerShirt(),
-      AvataaarGraphics graphics = const AvataaarGraphics.skull(),
-      AvataaarEyes eyes = const AvataaarEyes.default0(),
-      AvataaarEyebrow eyebrow = const AvataaarEyebrow.default0(),
-      AvataaarMouth mouth = const AvataaarMouth.default0(),
-      AvataaarSkin skin = const AvataaarSkin.light(),
-      AvataaarNose nose = const AvataaarNose.default0(),
-      AvataaarStyle style = const AvataaarStyle.circle()}) {
-    return _Avataaar(
-      hair: hair,
-      accessory: accessory,
-      facialHair: facialHair,
-      clothes: clothes,
-      graphics: graphics,
-      eyes: eyes,
-      eyebrow: eyebrow,
-      mouth: mouth,
-      skin: skin,
-      nose: nose,
-      style: style,
-    );
-  }
-
-  Avataaar fromJson(Map<String, Object?> json) {
-    return Avataaar.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Avataaar = _$AvataaarTearOff();
 
 /// @nodoc
 mixin _$Avataaar {
@@ -256,9 +217,10 @@ class _$AvataaarCopyWithImpl<$Res> implements $AvataaarCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
-  factory _$AvataaarCopyWith(_Avataaar value, $Res Function(_Avataaar) then) =
-      __$AvataaarCopyWithImpl<$Res>;
+abstract class _$$_AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
+  factory _$$_AvataaarCopyWith(
+          _$_Avataaar value, $Res Function(_$_Avataaar) then) =
+      __$$_AvataaarCopyWithImpl<$Res>;
   @override
   $Res call(
       {AvataaarHair hair,
@@ -298,13 +260,14 @@ abstract class _$AvataaarCopyWith<$Res> implements $AvataaarCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
-    implements _$AvataaarCopyWith<$Res> {
-  __$AvataaarCopyWithImpl(_Avataaar _value, $Res Function(_Avataaar) _then)
-      : super(_value, (v) => _then(v as _Avataaar));
+class __$$_AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
+    implements _$$_AvataaarCopyWith<$Res> {
+  __$$_AvataaarCopyWithImpl(
+      _$_Avataaar _value, $Res Function(_$_Avataaar) _then)
+      : super(_value, (v) => _then(v as _$_Avataaar));
 
   @override
-  _Avataaar get _value => super._value as _Avataaar;
+  _$_Avataaar get _value => super._value as _$_Avataaar;
 
   @override
   $Res call({
@@ -320,7 +283,7 @@ class __$AvataaarCopyWithImpl<$Res> extends _$AvataaarCopyWithImpl<$Res>
     Object? nose = freezed,
     Object? style = freezed,
   }) {
-    return _then(_Avataaar(
+    return _then(_$_Avataaar(
       hair: hair == freezed
           ? _value.hair
           : hair // ignore: cast_nullable_to_non_nullable
@@ -389,38 +352,38 @@ class _$_Avataaar extends _Avataaar {
   factory _$_Avataaar.fromJson(Map<String, dynamic> json) =>
       _$$_AvataaarFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarHair hair;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarAccessories accessory;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarFacialHair facialHair;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarClothes clothes;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarGraphics graphics;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarEyes eyes;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarEyebrow eyebrow;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarMouth mouth;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarSkin skin;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarNose nose;
-  @JsonKey()
   @override
+  @JsonKey()
   final AvataaarStyle style;
 
   @override
@@ -432,7 +395,7 @@ class _$_Avataaar extends _Avataaar {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Avataaar &&
+            other is _$_Avataaar &&
             const DeepCollectionEquality().equals(other.hair, hair) &&
             const DeepCollectionEquality().equals(other.accessory, accessory) &&
             const DeepCollectionEquality()
@@ -447,6 +410,7 @@ class _$_Avataaar extends _Avataaar {
             const DeepCollectionEquality().equals(other.style, style));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -464,8 +428,8 @@ class _$_Avataaar extends _Avataaar {
 
   @JsonKey(ignore: true)
   @override
-  _$AvataaarCopyWith<_Avataaar> get copyWith =>
-      __$AvataaarCopyWithImpl<_Avataaar>(this, _$identity);
+  _$$_AvataaarCopyWith<_$_Avataaar> get copyWith =>
+      __$$_AvataaarCopyWithImpl<_$_Avataaar>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -475,45 +439,45 @@ class _$_Avataaar extends _Avataaar {
 
 abstract class _Avataaar extends Avataaar {
   const factory _Avataaar(
-      {AvataaarHair hair,
-      AvataaarAccessories accessory,
-      AvataaarFacialHair facialHair,
-      AvataaarClothes clothes,
-      AvataaarGraphics graphics,
-      AvataaarEyes eyes,
-      AvataaarEyebrow eyebrow,
-      AvataaarMouth mouth,
-      AvataaarSkin skin,
-      AvataaarNose nose,
-      AvataaarStyle style}) = _$_Avataaar;
+      {final AvataaarHair hair,
+      final AvataaarAccessories accessory,
+      final AvataaarFacialHair facialHair,
+      final AvataaarClothes clothes,
+      final AvataaarGraphics graphics,
+      final AvataaarEyes eyes,
+      final AvataaarEyebrow eyebrow,
+      final AvataaarMouth mouth,
+      final AvataaarSkin skin,
+      final AvataaarNose nose,
+      final AvataaarStyle style}) = _$_Avataaar;
   const _Avataaar._() : super._();
 
   factory _Avataaar.fromJson(Map<String, dynamic> json) = _$_Avataaar.fromJson;
 
   @override
-  AvataaarHair get hair;
+  AvataaarHair get hair => throw _privateConstructorUsedError;
   @override
-  AvataaarAccessories get accessory;
+  AvataaarAccessories get accessory => throw _privateConstructorUsedError;
   @override
-  AvataaarFacialHair get facialHair;
+  AvataaarFacialHair get facialHair => throw _privateConstructorUsedError;
   @override
-  AvataaarClothes get clothes;
+  AvataaarClothes get clothes => throw _privateConstructorUsedError;
   @override
-  AvataaarGraphics get graphics;
+  AvataaarGraphics get graphics => throw _privateConstructorUsedError;
   @override
-  AvataaarEyes get eyes;
+  AvataaarEyes get eyes => throw _privateConstructorUsedError;
   @override
-  AvataaarEyebrow get eyebrow;
+  AvataaarEyebrow get eyebrow => throw _privateConstructorUsedError;
   @override
-  AvataaarMouth get mouth;
+  AvataaarMouth get mouth => throw _privateConstructorUsedError;
   @override
-  AvataaarSkin get skin;
+  AvataaarSkin get skin => throw _privateConstructorUsedError;
   @override
-  AvataaarNose get nose;
+  AvataaarNose get nose => throw _privateConstructorUsedError;
   @override
-  AvataaarStyle get style;
+  AvataaarStyle get style => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AvataaarCopyWith<_Avataaar> get copyWith =>
+  _$$_AvataaarCopyWith<_$_Avataaar> get copyWith =>
       throw _privateConstructorUsedError;
 }

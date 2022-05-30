@@ -12,7 +12,7 @@ part of 'avataaar_parts.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AvataaarEyes _$AvataaarEyesFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -46,66 +46,6 @@ AvataaarEyes _$AvataaarEyesFromJson(Map<String, dynamic> json) {
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
-
-/// @nodoc
-class _$AvataaarEyesTearOff {
-  const _$AvataaarEyesTearOff();
-
-  AvataaarTypeEyesClosed closed() {
-    return const AvataaarTypeEyesClosed();
-  }
-
-  AvataaarTypeEyesCry cry() {
-    return const AvataaarTypeEyesCry();
-  }
-
-  AvataaarTypeEyesDefault0 default0() {
-    return const AvataaarTypeEyesDefault0();
-  }
-
-  AvataaarTypeEyesDizzy dizzy() {
-    return const AvataaarTypeEyesDizzy();
-  }
-
-  AvataaarTypeEyesEyeRoll eyeRoll() {
-    return const AvataaarTypeEyesEyeRoll();
-  }
-
-  AvataaarTypeEyesHappy happy() {
-    return const AvataaarTypeEyesHappy();
-  }
-
-  AvataaarTypeEyesHearts hearts() {
-    return const AvataaarTypeEyesHearts();
-  }
-
-  AvataaarTypeEyesSide side() {
-    return const AvataaarTypeEyesSide();
-  }
-
-  AvataaarTypeEyesSurprised surprised() {
-    return const AvataaarTypeEyesSurprised();
-  }
-
-  AvataaarTypeEyesWink wink() {
-    return const AvataaarTypeEyesWink();
-  }
-
-  AvataaarTypeEyesWinkWacky winkWacky() {
-    return const AvataaarTypeEyesWinkWacky();
-  }
-
-  AvataaarTypeEyesSquint squint() {
-    return const AvataaarTypeEyesSquint();
-  }
-
-  AvataaarEyes fromJson(Map<String, Object?> json) {
-    return AvataaarEyes.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarEyes = _$AvataaarEyesTearOff();
 
 /// @nodoc
 mixin _$AvataaarEyes {
@@ -227,28 +167,29 @@ class _$AvataaarEyesCopyWithImpl<$Res> implements $AvataaarEyesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesClosedCopyWith<$Res> {
-  factory $AvataaarTypeEyesClosedCopyWith(AvataaarTypeEyesClosed value,
-          $Res Function(AvataaarTypeEyesClosed) then) =
-      _$AvataaarTypeEyesClosedCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesClosedCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesClosedCopyWith(_$AvataaarTypeEyesClosed value,
+          $Res Function(_$AvataaarTypeEyesClosed) then) =
+      __$$AvataaarTypeEyesClosedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesClosedCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesClosedCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesClosedCopyWith<$Res> {
-  _$AvataaarTypeEyesClosedCopyWithImpl(AvataaarTypeEyesClosed _value,
-      $Res Function(AvataaarTypeEyesClosed) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesClosed));
+    implements _$$AvataaarTypeEyesClosedCopyWith<$Res> {
+  __$$AvataaarTypeEyesClosedCopyWithImpl(_$AvataaarTypeEyesClosed _value,
+      $Res Function(_$AvataaarTypeEyesClosed) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesClosed));
 
   @override
-  AvataaarTypeEyesClosed get _value => super._value as AvataaarTypeEyesClosed;
+  _$AvataaarTypeEyesClosed get _value =>
+      super._value as _$AvataaarTypeEyesClosed;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesClosed extends AvataaarTypeEyesClosed {
-  const _$AvataaarTypeEyesClosed({String? $type})
+  const _$AvataaarTypeEyesClosed({final String? $type})
       : $type = $type ?? 'closed',
         super._();
 
@@ -266,9 +207,10 @@ class _$AvataaarTypeEyesClosed extends AvataaarTypeEyesClosed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesClosed);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesClosed);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -409,28 +351,28 @@ abstract class AvataaarTypeEyesClosed extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesCryCopyWith<$Res> {
-  factory $AvataaarTypeEyesCryCopyWith(
-          AvataaarTypeEyesCry value, $Res Function(AvataaarTypeEyesCry) then) =
-      _$AvataaarTypeEyesCryCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesCryCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesCryCopyWith(_$AvataaarTypeEyesCry value,
+          $Res Function(_$AvataaarTypeEyesCry) then) =
+      __$$AvataaarTypeEyesCryCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesCryCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesCryCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesCryCopyWith<$Res> {
-  _$AvataaarTypeEyesCryCopyWithImpl(
-      AvataaarTypeEyesCry _value, $Res Function(AvataaarTypeEyesCry) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesCry));
+    implements _$$AvataaarTypeEyesCryCopyWith<$Res> {
+  __$$AvataaarTypeEyesCryCopyWithImpl(
+      _$AvataaarTypeEyesCry _value, $Res Function(_$AvataaarTypeEyesCry) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesCry));
 
   @override
-  AvataaarTypeEyesCry get _value => super._value as AvataaarTypeEyesCry;
+  _$AvataaarTypeEyesCry get _value => super._value as _$AvataaarTypeEyesCry;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesCry extends AvataaarTypeEyesCry {
-  const _$AvataaarTypeEyesCry({String? $type})
+  const _$AvataaarTypeEyesCry({final String? $type})
       : $type = $type ?? 'cry',
         super._();
 
@@ -448,9 +390,10 @@ class _$AvataaarTypeEyesCry extends AvataaarTypeEyesCry {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesCry);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesCry);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -591,29 +534,29 @@ abstract class AvataaarTypeEyesCry extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesDefault0CopyWith<$Res> {
-  factory $AvataaarTypeEyesDefault0CopyWith(AvataaarTypeEyesDefault0 value,
-          $Res Function(AvataaarTypeEyesDefault0) then) =
-      _$AvataaarTypeEyesDefault0CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesDefault0CopyWith<$Res> {
+  factory _$$AvataaarTypeEyesDefault0CopyWith(_$AvataaarTypeEyesDefault0 value,
+          $Res Function(_$AvataaarTypeEyesDefault0) then) =
+      __$$AvataaarTypeEyesDefault0CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesDefault0CopyWithImpl<$Res>
+class __$$AvataaarTypeEyesDefault0CopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesDefault0CopyWith<$Res> {
-  _$AvataaarTypeEyesDefault0CopyWithImpl(AvataaarTypeEyesDefault0 _value,
-      $Res Function(AvataaarTypeEyesDefault0) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesDefault0));
+    implements _$$AvataaarTypeEyesDefault0CopyWith<$Res> {
+  __$$AvataaarTypeEyesDefault0CopyWithImpl(_$AvataaarTypeEyesDefault0 _value,
+      $Res Function(_$AvataaarTypeEyesDefault0) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesDefault0));
 
   @override
-  AvataaarTypeEyesDefault0 get _value =>
-      super._value as AvataaarTypeEyesDefault0;
+  _$AvataaarTypeEyesDefault0 get _value =>
+      super._value as _$AvataaarTypeEyesDefault0;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesDefault0 extends AvataaarTypeEyesDefault0 {
-  const _$AvataaarTypeEyesDefault0({String? $type})
+  const _$AvataaarTypeEyesDefault0({final String? $type})
       : $type = $type ?? 'default0',
         super._();
 
@@ -631,9 +574,11 @@ class _$AvataaarTypeEyesDefault0 extends AvataaarTypeEyesDefault0 {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesDefault0);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeEyesDefault0);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -774,28 +719,28 @@ abstract class AvataaarTypeEyesDefault0 extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesDizzyCopyWith<$Res> {
-  factory $AvataaarTypeEyesDizzyCopyWith(AvataaarTypeEyesDizzy value,
-          $Res Function(AvataaarTypeEyesDizzy) then) =
-      _$AvataaarTypeEyesDizzyCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesDizzyCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesDizzyCopyWith(_$AvataaarTypeEyesDizzy value,
+          $Res Function(_$AvataaarTypeEyesDizzy) then) =
+      __$$AvataaarTypeEyesDizzyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesDizzyCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesDizzyCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesDizzyCopyWith<$Res> {
-  _$AvataaarTypeEyesDizzyCopyWithImpl(
-      AvataaarTypeEyesDizzy _value, $Res Function(AvataaarTypeEyesDizzy) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesDizzy));
+    implements _$$AvataaarTypeEyesDizzyCopyWith<$Res> {
+  __$$AvataaarTypeEyesDizzyCopyWithImpl(_$AvataaarTypeEyesDizzy _value,
+      $Res Function(_$AvataaarTypeEyesDizzy) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesDizzy));
 
   @override
-  AvataaarTypeEyesDizzy get _value => super._value as AvataaarTypeEyesDizzy;
+  _$AvataaarTypeEyesDizzy get _value => super._value as _$AvataaarTypeEyesDizzy;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesDizzy extends AvataaarTypeEyesDizzy {
-  const _$AvataaarTypeEyesDizzy({String? $type})
+  const _$AvataaarTypeEyesDizzy({final String? $type})
       : $type = $type ?? 'dizzy',
         super._();
 
@@ -813,9 +758,10 @@ class _$AvataaarTypeEyesDizzy extends AvataaarTypeEyesDizzy {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesDizzy);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesDizzy);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -956,28 +902,29 @@ abstract class AvataaarTypeEyesDizzy extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesEyeRollCopyWith<$Res> {
-  factory $AvataaarTypeEyesEyeRollCopyWith(AvataaarTypeEyesEyeRoll value,
-          $Res Function(AvataaarTypeEyesEyeRoll) then) =
-      _$AvataaarTypeEyesEyeRollCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesEyeRollCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesEyeRollCopyWith(_$AvataaarTypeEyesEyeRoll value,
+          $Res Function(_$AvataaarTypeEyesEyeRoll) then) =
+      __$$AvataaarTypeEyesEyeRollCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesEyeRollCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesEyeRollCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesEyeRollCopyWith<$Res> {
-  _$AvataaarTypeEyesEyeRollCopyWithImpl(AvataaarTypeEyesEyeRoll _value,
-      $Res Function(AvataaarTypeEyesEyeRoll) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesEyeRoll));
+    implements _$$AvataaarTypeEyesEyeRollCopyWith<$Res> {
+  __$$AvataaarTypeEyesEyeRollCopyWithImpl(_$AvataaarTypeEyesEyeRoll _value,
+      $Res Function(_$AvataaarTypeEyesEyeRoll) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesEyeRoll));
 
   @override
-  AvataaarTypeEyesEyeRoll get _value => super._value as AvataaarTypeEyesEyeRoll;
+  _$AvataaarTypeEyesEyeRoll get _value =>
+      super._value as _$AvataaarTypeEyesEyeRoll;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesEyeRoll extends AvataaarTypeEyesEyeRoll {
-  const _$AvataaarTypeEyesEyeRoll({String? $type})
+  const _$AvataaarTypeEyesEyeRoll({final String? $type})
       : $type = $type ?? 'eyeRoll',
         super._();
 
@@ -995,9 +942,11 @@ class _$AvataaarTypeEyesEyeRoll extends AvataaarTypeEyesEyeRoll {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesEyeRoll);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeEyesEyeRoll);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1138,28 +1087,28 @@ abstract class AvataaarTypeEyesEyeRoll extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesHappyCopyWith<$Res> {
-  factory $AvataaarTypeEyesHappyCopyWith(AvataaarTypeEyesHappy value,
-          $Res Function(AvataaarTypeEyesHappy) then) =
-      _$AvataaarTypeEyesHappyCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesHappyCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesHappyCopyWith(_$AvataaarTypeEyesHappy value,
+          $Res Function(_$AvataaarTypeEyesHappy) then) =
+      __$$AvataaarTypeEyesHappyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesHappyCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesHappyCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesHappyCopyWith<$Res> {
-  _$AvataaarTypeEyesHappyCopyWithImpl(
-      AvataaarTypeEyesHappy _value, $Res Function(AvataaarTypeEyesHappy) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesHappy));
+    implements _$$AvataaarTypeEyesHappyCopyWith<$Res> {
+  __$$AvataaarTypeEyesHappyCopyWithImpl(_$AvataaarTypeEyesHappy _value,
+      $Res Function(_$AvataaarTypeEyesHappy) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesHappy));
 
   @override
-  AvataaarTypeEyesHappy get _value => super._value as AvataaarTypeEyesHappy;
+  _$AvataaarTypeEyesHappy get _value => super._value as _$AvataaarTypeEyesHappy;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesHappy extends AvataaarTypeEyesHappy {
-  const _$AvataaarTypeEyesHappy({String? $type})
+  const _$AvataaarTypeEyesHappy({final String? $type})
       : $type = $type ?? 'happy',
         super._();
 
@@ -1177,9 +1126,10 @@ class _$AvataaarTypeEyesHappy extends AvataaarTypeEyesHappy {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesHappy);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesHappy);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1320,28 +1270,29 @@ abstract class AvataaarTypeEyesHappy extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesHeartsCopyWith<$Res> {
-  factory $AvataaarTypeEyesHeartsCopyWith(AvataaarTypeEyesHearts value,
-          $Res Function(AvataaarTypeEyesHearts) then) =
-      _$AvataaarTypeEyesHeartsCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesHeartsCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesHeartsCopyWith(_$AvataaarTypeEyesHearts value,
+          $Res Function(_$AvataaarTypeEyesHearts) then) =
+      __$$AvataaarTypeEyesHeartsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesHeartsCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesHeartsCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesHeartsCopyWith<$Res> {
-  _$AvataaarTypeEyesHeartsCopyWithImpl(AvataaarTypeEyesHearts _value,
-      $Res Function(AvataaarTypeEyesHearts) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesHearts));
+    implements _$$AvataaarTypeEyesHeartsCopyWith<$Res> {
+  __$$AvataaarTypeEyesHeartsCopyWithImpl(_$AvataaarTypeEyesHearts _value,
+      $Res Function(_$AvataaarTypeEyesHearts) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesHearts));
 
   @override
-  AvataaarTypeEyesHearts get _value => super._value as AvataaarTypeEyesHearts;
+  _$AvataaarTypeEyesHearts get _value =>
+      super._value as _$AvataaarTypeEyesHearts;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesHearts extends AvataaarTypeEyesHearts {
-  const _$AvataaarTypeEyesHearts({String? $type})
+  const _$AvataaarTypeEyesHearts({final String? $type})
       : $type = $type ?? 'hearts',
         super._();
 
@@ -1359,9 +1310,10 @@ class _$AvataaarTypeEyesHearts extends AvataaarTypeEyesHearts {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesHearts);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesHearts);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1502,28 +1454,28 @@ abstract class AvataaarTypeEyesHearts extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesSideCopyWith<$Res> {
-  factory $AvataaarTypeEyesSideCopyWith(AvataaarTypeEyesSide value,
-          $Res Function(AvataaarTypeEyesSide) then) =
-      _$AvataaarTypeEyesSideCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesSideCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesSideCopyWith(_$AvataaarTypeEyesSide value,
+          $Res Function(_$AvataaarTypeEyesSide) then) =
+      __$$AvataaarTypeEyesSideCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesSideCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesSideCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesSideCopyWith<$Res> {
-  _$AvataaarTypeEyesSideCopyWithImpl(
-      AvataaarTypeEyesSide _value, $Res Function(AvataaarTypeEyesSide) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesSide));
+    implements _$$AvataaarTypeEyesSideCopyWith<$Res> {
+  __$$AvataaarTypeEyesSideCopyWithImpl(_$AvataaarTypeEyesSide _value,
+      $Res Function(_$AvataaarTypeEyesSide) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesSide));
 
   @override
-  AvataaarTypeEyesSide get _value => super._value as AvataaarTypeEyesSide;
+  _$AvataaarTypeEyesSide get _value => super._value as _$AvataaarTypeEyesSide;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesSide extends AvataaarTypeEyesSide {
-  const _$AvataaarTypeEyesSide({String? $type})
+  const _$AvataaarTypeEyesSide({final String? $type})
       : $type = $type ?? 'side',
         super._();
 
@@ -1541,9 +1493,10 @@ class _$AvataaarTypeEyesSide extends AvataaarTypeEyesSide {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesSide);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesSide);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1684,29 +1637,30 @@ abstract class AvataaarTypeEyesSide extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesSurprisedCopyWith<$Res> {
-  factory $AvataaarTypeEyesSurprisedCopyWith(AvataaarTypeEyesSurprised value,
-          $Res Function(AvataaarTypeEyesSurprised) then) =
-      _$AvataaarTypeEyesSurprisedCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesSurprisedCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesSurprisedCopyWith(
+          _$AvataaarTypeEyesSurprised value,
+          $Res Function(_$AvataaarTypeEyesSurprised) then) =
+      __$$AvataaarTypeEyesSurprisedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesSurprisedCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesSurprisedCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesSurprisedCopyWith<$Res> {
-  _$AvataaarTypeEyesSurprisedCopyWithImpl(AvataaarTypeEyesSurprised _value,
-      $Res Function(AvataaarTypeEyesSurprised) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesSurprised));
+    implements _$$AvataaarTypeEyesSurprisedCopyWith<$Res> {
+  __$$AvataaarTypeEyesSurprisedCopyWithImpl(_$AvataaarTypeEyesSurprised _value,
+      $Res Function(_$AvataaarTypeEyesSurprised) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesSurprised));
 
   @override
-  AvataaarTypeEyesSurprised get _value =>
-      super._value as AvataaarTypeEyesSurprised;
+  _$AvataaarTypeEyesSurprised get _value =>
+      super._value as _$AvataaarTypeEyesSurprised;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesSurprised extends AvataaarTypeEyesSurprised {
-  const _$AvataaarTypeEyesSurprised({String? $type})
+  const _$AvataaarTypeEyesSurprised({final String? $type})
       : $type = $type ?? 'surprised',
         super._();
 
@@ -1725,9 +1679,10 @@ class _$AvataaarTypeEyesSurprised extends AvataaarTypeEyesSurprised {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyesSurprised);
+            other is _$AvataaarTypeEyesSurprised);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1868,28 +1823,28 @@ abstract class AvataaarTypeEyesSurprised extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesWinkCopyWith<$Res> {
-  factory $AvataaarTypeEyesWinkCopyWith(AvataaarTypeEyesWink value,
-          $Res Function(AvataaarTypeEyesWink) then) =
-      _$AvataaarTypeEyesWinkCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesWinkCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesWinkCopyWith(_$AvataaarTypeEyesWink value,
+          $Res Function(_$AvataaarTypeEyesWink) then) =
+      __$$AvataaarTypeEyesWinkCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesWinkCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesWinkCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesWinkCopyWith<$Res> {
-  _$AvataaarTypeEyesWinkCopyWithImpl(
-      AvataaarTypeEyesWink _value, $Res Function(AvataaarTypeEyesWink) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesWink));
+    implements _$$AvataaarTypeEyesWinkCopyWith<$Res> {
+  __$$AvataaarTypeEyesWinkCopyWithImpl(_$AvataaarTypeEyesWink _value,
+      $Res Function(_$AvataaarTypeEyesWink) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesWink));
 
   @override
-  AvataaarTypeEyesWink get _value => super._value as AvataaarTypeEyesWink;
+  _$AvataaarTypeEyesWink get _value => super._value as _$AvataaarTypeEyesWink;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesWink extends AvataaarTypeEyesWink {
-  const _$AvataaarTypeEyesWink({String? $type})
+  const _$AvataaarTypeEyesWink({final String? $type})
       : $type = $type ?? 'wink',
         super._();
 
@@ -1907,9 +1862,10 @@ class _$AvataaarTypeEyesWink extends AvataaarTypeEyesWink {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesWink);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesWink);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2050,29 +2006,30 @@ abstract class AvataaarTypeEyesWink extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesWinkWackyCopyWith<$Res> {
-  factory $AvataaarTypeEyesWinkWackyCopyWith(AvataaarTypeEyesWinkWacky value,
-          $Res Function(AvataaarTypeEyesWinkWacky) then) =
-      _$AvataaarTypeEyesWinkWackyCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesWinkWackyCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesWinkWackyCopyWith(
+          _$AvataaarTypeEyesWinkWacky value,
+          $Res Function(_$AvataaarTypeEyesWinkWacky) then) =
+      __$$AvataaarTypeEyesWinkWackyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesWinkWackyCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesWinkWackyCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesWinkWackyCopyWith<$Res> {
-  _$AvataaarTypeEyesWinkWackyCopyWithImpl(AvataaarTypeEyesWinkWacky _value,
-      $Res Function(AvataaarTypeEyesWinkWacky) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesWinkWacky));
+    implements _$$AvataaarTypeEyesWinkWackyCopyWith<$Res> {
+  __$$AvataaarTypeEyesWinkWackyCopyWithImpl(_$AvataaarTypeEyesWinkWacky _value,
+      $Res Function(_$AvataaarTypeEyesWinkWacky) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesWinkWacky));
 
   @override
-  AvataaarTypeEyesWinkWacky get _value =>
-      super._value as AvataaarTypeEyesWinkWacky;
+  _$AvataaarTypeEyesWinkWacky get _value =>
+      super._value as _$AvataaarTypeEyesWinkWacky;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesWinkWacky extends AvataaarTypeEyesWinkWacky {
-  const _$AvataaarTypeEyesWinkWacky({String? $type})
+  const _$AvataaarTypeEyesWinkWacky({final String? $type})
       : $type = $type ?? 'winkWacky',
         super._();
 
@@ -2091,9 +2048,10 @@ class _$AvataaarTypeEyesWinkWacky extends AvataaarTypeEyesWinkWacky {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyesWinkWacky);
+            other is _$AvataaarTypeEyesWinkWacky);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2234,28 +2192,29 @@ abstract class AvataaarTypeEyesWinkWacky extends AvataaarEyes {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyesSquintCopyWith<$Res> {
-  factory $AvataaarTypeEyesSquintCopyWith(AvataaarTypeEyesSquint value,
-          $Res Function(AvataaarTypeEyesSquint) then) =
-      _$AvataaarTypeEyesSquintCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyesSquintCopyWith<$Res> {
+  factory _$$AvataaarTypeEyesSquintCopyWith(_$AvataaarTypeEyesSquint value,
+          $Res Function(_$AvataaarTypeEyesSquint) then) =
+      __$$AvataaarTypeEyesSquintCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyesSquintCopyWithImpl<$Res>
+class __$$AvataaarTypeEyesSquintCopyWithImpl<$Res>
     extends _$AvataaarEyesCopyWithImpl<$Res>
-    implements $AvataaarTypeEyesSquintCopyWith<$Res> {
-  _$AvataaarTypeEyesSquintCopyWithImpl(AvataaarTypeEyesSquint _value,
-      $Res Function(AvataaarTypeEyesSquint) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyesSquint));
+    implements _$$AvataaarTypeEyesSquintCopyWith<$Res> {
+  __$$AvataaarTypeEyesSquintCopyWithImpl(_$AvataaarTypeEyesSquint _value,
+      $Res Function(_$AvataaarTypeEyesSquint) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyesSquint));
 
   @override
-  AvataaarTypeEyesSquint get _value => super._value as AvataaarTypeEyesSquint;
+  _$AvataaarTypeEyesSquint get _value =>
+      super._value as _$AvataaarTypeEyesSquint;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyesSquint extends AvataaarTypeEyesSquint {
-  const _$AvataaarTypeEyesSquint({String? $type})
+  const _$AvataaarTypeEyesSquint({final String? $type})
       : $type = $type ?? 'squint',
         super._();
 
@@ -2273,9 +2232,10 @@ class _$AvataaarTypeEyesSquint extends AvataaarTypeEyesSquint {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyesSquint);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeEyesSquint);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2439,46 +2399,6 @@ AvataaarAccessories _$AvataaarAccessoriesFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarAccessoriesTearOff {
-  const _$AvataaarAccessoriesTearOff();
-
-  AvataaarTypeAccessoriesBlank blank() {
-    return const AvataaarTypeAccessoriesBlank();
-  }
-
-  AvataaarTypeAccessoriesKurt kurt() {
-    return const AvataaarTypeAccessoriesKurt();
-  }
-
-  AvataaarTypeAccessoriesPrescription01 prescription01() {
-    return const AvataaarTypeAccessoriesPrescription01();
-  }
-
-  AvataaarTypeAccessoriesPrescription02 prescription02() {
-    return const AvataaarTypeAccessoriesPrescription02();
-  }
-
-  AvataaarTypeAccessoriesRound round() {
-    return const AvataaarTypeAccessoriesRound();
-  }
-
-  AvataaarTypeAccessoriesSunglasses sunglasses() {
-    return const AvataaarTypeAccessoriesSunglasses();
-  }
-
-  AvataaarTypeAccessoriesWayfarers wayfarers() {
-    return const AvataaarTypeAccessoriesWayfarers();
-  }
-
-  AvataaarAccessories fromJson(Map<String, Object?> json) {
-    return AvataaarAccessories.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarAccessories = _$AvataaarAccessoriesTearOff();
-
-/// @nodoc
 mixin _$AvataaarAccessories {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -2576,31 +2496,31 @@ class _$AvataaarAccessoriesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesBlankCopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesBlankCopyWith(
-          AvataaarTypeAccessoriesBlank value,
-          $Res Function(AvataaarTypeAccessoriesBlank) then) =
-      _$AvataaarTypeAccessoriesBlankCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesBlankCopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesBlankCopyWith(
+          _$AvataaarTypeAccessoriesBlank value,
+          $Res Function(_$AvataaarTypeAccessoriesBlank) then) =
+      __$$AvataaarTypeAccessoriesBlankCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesBlankCopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesBlankCopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesBlankCopyWith<$Res> {
-  _$AvataaarTypeAccessoriesBlankCopyWithImpl(
-      AvataaarTypeAccessoriesBlank _value,
-      $Res Function(AvataaarTypeAccessoriesBlank) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesBlank));
+    implements _$$AvataaarTypeAccessoriesBlankCopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesBlankCopyWithImpl(
+      _$AvataaarTypeAccessoriesBlank _value,
+      $Res Function(_$AvataaarTypeAccessoriesBlank) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeAccessoriesBlank));
 
   @override
-  AvataaarTypeAccessoriesBlank get _value =>
-      super._value as AvataaarTypeAccessoriesBlank;
+  _$AvataaarTypeAccessoriesBlank get _value =>
+      super._value as _$AvataaarTypeAccessoriesBlank;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesBlank extends AvataaarTypeAccessoriesBlank {
-  const _$AvataaarTypeAccessoriesBlank({String? $type})
+  const _$AvataaarTypeAccessoriesBlank({final String? $type})
       : $type = $type ?? 'blank',
         super._();
 
@@ -2619,9 +2539,10 @@ class _$AvataaarTypeAccessoriesBlank extends AvataaarTypeAccessoriesBlank {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesBlank);
+            other is _$AvataaarTypeAccessoriesBlank);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2739,30 +2660,31 @@ abstract class AvataaarTypeAccessoriesBlank extends AvataaarAccessories {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesKurtCopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesKurtCopyWith(
-          AvataaarTypeAccessoriesKurt value,
-          $Res Function(AvataaarTypeAccessoriesKurt) then) =
-      _$AvataaarTypeAccessoriesKurtCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesKurtCopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesKurtCopyWith(
+          _$AvataaarTypeAccessoriesKurt value,
+          $Res Function(_$AvataaarTypeAccessoriesKurt) then) =
+      __$$AvataaarTypeAccessoriesKurtCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesKurtCopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesKurtCopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesKurtCopyWith<$Res> {
-  _$AvataaarTypeAccessoriesKurtCopyWithImpl(AvataaarTypeAccessoriesKurt _value,
-      $Res Function(AvataaarTypeAccessoriesKurt) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesKurt));
+    implements _$$AvataaarTypeAccessoriesKurtCopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesKurtCopyWithImpl(
+      _$AvataaarTypeAccessoriesKurt _value,
+      $Res Function(_$AvataaarTypeAccessoriesKurt) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeAccessoriesKurt));
 
   @override
-  AvataaarTypeAccessoriesKurt get _value =>
-      super._value as AvataaarTypeAccessoriesKurt;
+  _$AvataaarTypeAccessoriesKurt get _value =>
+      super._value as _$AvataaarTypeAccessoriesKurt;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesKurt extends AvataaarTypeAccessoriesKurt {
-  const _$AvataaarTypeAccessoriesKurt({String? $type})
+  const _$AvataaarTypeAccessoriesKurt({final String? $type})
       : $type = $type ?? 'kurt',
         super._();
 
@@ -2781,9 +2703,10 @@ class _$AvataaarTypeAccessoriesKurt extends AvataaarTypeAccessoriesKurt {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesKurt);
+            other is _$AvataaarTypeAccessoriesKurt);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2901,32 +2824,33 @@ abstract class AvataaarTypeAccessoriesKurt extends AvataaarAccessories {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesPrescription01CopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesPrescription01CopyWith(
-          AvataaarTypeAccessoriesPrescription01 value,
-          $Res Function(AvataaarTypeAccessoriesPrescription01) then) =
-      _$AvataaarTypeAccessoriesPrescription01CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesPrescription01CopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesPrescription01CopyWith(
+          _$AvataaarTypeAccessoriesPrescription01 value,
+          $Res Function(_$AvataaarTypeAccessoriesPrescription01) then) =
+      __$$AvataaarTypeAccessoriesPrescription01CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesPrescription01CopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesPrescription01CopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesPrescription01CopyWith<$Res> {
-  _$AvataaarTypeAccessoriesPrescription01CopyWithImpl(
-      AvataaarTypeAccessoriesPrescription01 _value,
-      $Res Function(AvataaarTypeAccessoriesPrescription01) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesPrescription01));
+    implements _$$AvataaarTypeAccessoriesPrescription01CopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesPrescription01CopyWithImpl(
+      _$AvataaarTypeAccessoriesPrescription01 _value,
+      $Res Function(_$AvataaarTypeAccessoriesPrescription01) _then)
+      : super(
+            _value, (v) => _then(v as _$AvataaarTypeAccessoriesPrescription01));
 
   @override
-  AvataaarTypeAccessoriesPrescription01 get _value =>
-      super._value as AvataaarTypeAccessoriesPrescription01;
+  _$AvataaarTypeAccessoriesPrescription01 get _value =>
+      super._value as _$AvataaarTypeAccessoriesPrescription01;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesPrescription01
     extends AvataaarTypeAccessoriesPrescription01 {
-  const _$AvataaarTypeAccessoriesPrescription01({String? $type})
+  const _$AvataaarTypeAccessoriesPrescription01({final String? $type})
       : $type = $type ?? 'prescription01',
         super._();
 
@@ -2946,9 +2870,10 @@ class _$AvataaarTypeAccessoriesPrescription01
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesPrescription01);
+            other is _$AvataaarTypeAccessoriesPrescription01);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3069,32 +2994,33 @@ abstract class AvataaarTypeAccessoriesPrescription01
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesPrescription02CopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesPrescription02CopyWith(
-          AvataaarTypeAccessoriesPrescription02 value,
-          $Res Function(AvataaarTypeAccessoriesPrescription02) then) =
-      _$AvataaarTypeAccessoriesPrescription02CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesPrescription02CopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesPrescription02CopyWith(
+          _$AvataaarTypeAccessoriesPrescription02 value,
+          $Res Function(_$AvataaarTypeAccessoriesPrescription02) then) =
+      __$$AvataaarTypeAccessoriesPrescription02CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesPrescription02CopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesPrescription02CopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesPrescription02CopyWith<$Res> {
-  _$AvataaarTypeAccessoriesPrescription02CopyWithImpl(
-      AvataaarTypeAccessoriesPrescription02 _value,
-      $Res Function(AvataaarTypeAccessoriesPrescription02) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesPrescription02));
+    implements _$$AvataaarTypeAccessoriesPrescription02CopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesPrescription02CopyWithImpl(
+      _$AvataaarTypeAccessoriesPrescription02 _value,
+      $Res Function(_$AvataaarTypeAccessoriesPrescription02) _then)
+      : super(
+            _value, (v) => _then(v as _$AvataaarTypeAccessoriesPrescription02));
 
   @override
-  AvataaarTypeAccessoriesPrescription02 get _value =>
-      super._value as AvataaarTypeAccessoriesPrescription02;
+  _$AvataaarTypeAccessoriesPrescription02 get _value =>
+      super._value as _$AvataaarTypeAccessoriesPrescription02;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesPrescription02
     extends AvataaarTypeAccessoriesPrescription02 {
-  const _$AvataaarTypeAccessoriesPrescription02({String? $type})
+  const _$AvataaarTypeAccessoriesPrescription02({final String? $type})
       : $type = $type ?? 'prescription02',
         super._();
 
@@ -3114,9 +3040,10 @@ class _$AvataaarTypeAccessoriesPrescription02
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesPrescription02);
+            other is _$AvataaarTypeAccessoriesPrescription02);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3237,31 +3164,31 @@ abstract class AvataaarTypeAccessoriesPrescription02
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesRoundCopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesRoundCopyWith(
-          AvataaarTypeAccessoriesRound value,
-          $Res Function(AvataaarTypeAccessoriesRound) then) =
-      _$AvataaarTypeAccessoriesRoundCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesRoundCopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesRoundCopyWith(
+          _$AvataaarTypeAccessoriesRound value,
+          $Res Function(_$AvataaarTypeAccessoriesRound) then) =
+      __$$AvataaarTypeAccessoriesRoundCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesRoundCopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesRoundCopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesRoundCopyWith<$Res> {
-  _$AvataaarTypeAccessoriesRoundCopyWithImpl(
-      AvataaarTypeAccessoriesRound _value,
-      $Res Function(AvataaarTypeAccessoriesRound) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesRound));
+    implements _$$AvataaarTypeAccessoriesRoundCopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesRoundCopyWithImpl(
+      _$AvataaarTypeAccessoriesRound _value,
+      $Res Function(_$AvataaarTypeAccessoriesRound) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeAccessoriesRound));
 
   @override
-  AvataaarTypeAccessoriesRound get _value =>
-      super._value as AvataaarTypeAccessoriesRound;
+  _$AvataaarTypeAccessoriesRound get _value =>
+      super._value as _$AvataaarTypeAccessoriesRound;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesRound extends AvataaarTypeAccessoriesRound {
-  const _$AvataaarTypeAccessoriesRound({String? $type})
+  const _$AvataaarTypeAccessoriesRound({final String? $type})
       : $type = $type ?? 'round',
         super._();
 
@@ -3280,9 +3207,10 @@ class _$AvataaarTypeAccessoriesRound extends AvataaarTypeAccessoriesRound {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesRound);
+            other is _$AvataaarTypeAccessoriesRound);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3400,32 +3328,32 @@ abstract class AvataaarTypeAccessoriesRound extends AvataaarAccessories {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesSunglassesCopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesSunglassesCopyWith(
-          AvataaarTypeAccessoriesSunglasses value,
-          $Res Function(AvataaarTypeAccessoriesSunglasses) then) =
-      _$AvataaarTypeAccessoriesSunglassesCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesSunglassesCopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesSunglassesCopyWith(
+          _$AvataaarTypeAccessoriesSunglasses value,
+          $Res Function(_$AvataaarTypeAccessoriesSunglasses) then) =
+      __$$AvataaarTypeAccessoriesSunglassesCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesSunglassesCopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesSunglassesCopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesSunglassesCopyWith<$Res> {
-  _$AvataaarTypeAccessoriesSunglassesCopyWithImpl(
-      AvataaarTypeAccessoriesSunglasses _value,
-      $Res Function(AvataaarTypeAccessoriesSunglasses) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesSunglasses));
+    implements _$$AvataaarTypeAccessoriesSunglassesCopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesSunglassesCopyWithImpl(
+      _$AvataaarTypeAccessoriesSunglasses _value,
+      $Res Function(_$AvataaarTypeAccessoriesSunglasses) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeAccessoriesSunglasses));
 
   @override
-  AvataaarTypeAccessoriesSunglasses get _value =>
-      super._value as AvataaarTypeAccessoriesSunglasses;
+  _$AvataaarTypeAccessoriesSunglasses get _value =>
+      super._value as _$AvataaarTypeAccessoriesSunglasses;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesSunglasses
     extends AvataaarTypeAccessoriesSunglasses {
-  const _$AvataaarTypeAccessoriesSunglasses({String? $type})
+  const _$AvataaarTypeAccessoriesSunglasses({final String? $type})
       : $type = $type ?? 'sunglasses',
         super._();
 
@@ -3445,9 +3373,10 @@ class _$AvataaarTypeAccessoriesSunglasses
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesSunglasses);
+            other is _$AvataaarTypeAccessoriesSunglasses);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3566,32 +3495,32 @@ abstract class AvataaarTypeAccessoriesSunglasses extends AvataaarAccessories {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeAccessoriesWayfarersCopyWith<$Res> {
-  factory $AvataaarTypeAccessoriesWayfarersCopyWith(
-          AvataaarTypeAccessoriesWayfarers value,
-          $Res Function(AvataaarTypeAccessoriesWayfarers) then) =
-      _$AvataaarTypeAccessoriesWayfarersCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeAccessoriesWayfarersCopyWith<$Res> {
+  factory _$$AvataaarTypeAccessoriesWayfarersCopyWith(
+          _$AvataaarTypeAccessoriesWayfarers value,
+          $Res Function(_$AvataaarTypeAccessoriesWayfarers) then) =
+      __$$AvataaarTypeAccessoriesWayfarersCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeAccessoriesWayfarersCopyWithImpl<$Res>
+class __$$AvataaarTypeAccessoriesWayfarersCopyWithImpl<$Res>
     extends _$AvataaarAccessoriesCopyWithImpl<$Res>
-    implements $AvataaarTypeAccessoriesWayfarersCopyWith<$Res> {
-  _$AvataaarTypeAccessoriesWayfarersCopyWithImpl(
-      AvataaarTypeAccessoriesWayfarers _value,
-      $Res Function(AvataaarTypeAccessoriesWayfarers) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeAccessoriesWayfarers));
+    implements _$$AvataaarTypeAccessoriesWayfarersCopyWith<$Res> {
+  __$$AvataaarTypeAccessoriesWayfarersCopyWithImpl(
+      _$AvataaarTypeAccessoriesWayfarers _value,
+      $Res Function(_$AvataaarTypeAccessoriesWayfarers) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeAccessoriesWayfarers));
 
   @override
-  AvataaarTypeAccessoriesWayfarers get _value =>
-      super._value as AvataaarTypeAccessoriesWayfarers;
+  _$AvataaarTypeAccessoriesWayfarers get _value =>
+      super._value as _$AvataaarTypeAccessoriesWayfarers;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeAccessoriesWayfarers
     extends AvataaarTypeAccessoriesWayfarers {
-  const _$AvataaarTypeAccessoriesWayfarers({String? $type})
+  const _$AvataaarTypeAccessoriesWayfarers({final String? $type})
       : $type = $type ?? 'wayfarers',
         super._();
 
@@ -3611,9 +3540,10 @@ class _$AvataaarTypeAccessoriesWayfarers
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeAccessoriesWayfarers);
+            other is _$AvataaarTypeAccessoriesWayfarers);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3759,85 +3689,9 @@ AvataaarClothes _$AvataaarClothesFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarClothesTearOff {
-  const _$AvataaarClothesTearOff();
-
-  AvataaarTypeClothesBlazerShirt blazerShirt(
-      [@ColorSerialiser() Color color = Colors.black]) {
-    return AvataaarTypeClothesBlazerShirt(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesBlazerSweater blazerSweater(
-      [@ColorSerialiser() Color color = Colors.black]) {
-    return AvataaarTypeClothesBlazerSweater(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesColarSweater collarSweater(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesColarSweater(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesGraphicShirt graphicShirt(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesGraphicShirt(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesHoodie hoodie(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesHoodie(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesOverall overall(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesOverall(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesShirtCrewNeck shirtCrewNeck(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesShirtCrewNeck(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesShirtScoopNeck shirtScoopNeck(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesShirtScoopNeck(
-      color,
-    );
-  }
-
-  AvataaarTypeClothesShirtVNeck shirtVNeck(
-      [@ColorSerialiser() Color color = AvataaarClothes._defaultColor]) {
-    return AvataaarTypeClothesShirtVNeck(
-      color,
-    );
-  }
-
-  AvataaarClothes fromJson(Map<String, Object?> json) {
-    return AvataaarClothes.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarClothes = _$AvataaarClothesTearOff();
-
-/// @nodoc
 mixin _$AvataaarClothes {
   @ColorSerialiser()
   Color get color => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@ColorSerialiser() Color color) blazerShirt,
@@ -3960,34 +3814,34 @@ class _$AvataaarClothesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesBlazerShirtCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesBlazerShirtCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesBlazerShirtCopyWith(
-          AvataaarTypeClothesBlazerShirt value,
-          $Res Function(AvataaarTypeClothesBlazerShirt) then) =
-      _$AvataaarTypeClothesBlazerShirtCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesBlazerShirtCopyWith(
+          _$AvataaarTypeClothesBlazerShirt value,
+          $Res Function(_$AvataaarTypeClothesBlazerShirt) then) =
+      __$$AvataaarTypeClothesBlazerShirtCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesBlazerShirtCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesBlazerShirtCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesBlazerShirtCopyWith<$Res> {
-  _$AvataaarTypeClothesBlazerShirtCopyWithImpl(
-      AvataaarTypeClothesBlazerShirt _value,
-      $Res Function(AvataaarTypeClothesBlazerShirt) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesBlazerShirt));
+    implements _$$AvataaarTypeClothesBlazerShirtCopyWith<$Res> {
+  __$$AvataaarTypeClothesBlazerShirtCopyWithImpl(
+      _$AvataaarTypeClothesBlazerShirt _value,
+      $Res Function(_$AvataaarTypeClothesBlazerShirt) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesBlazerShirt));
 
   @override
-  AvataaarTypeClothesBlazerShirt get _value =>
-      super._value as AvataaarTypeClothesBlazerShirt;
+  _$AvataaarTypeClothesBlazerShirt get _value =>
+      super._value as _$AvataaarTypeClothesBlazerShirt;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesBlazerShirt(
+    return _then(_$AvataaarTypeClothesBlazerShirt(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4000,7 +3854,7 @@ class _$AvataaarTypeClothesBlazerShirtCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
   const _$AvataaarTypeClothesBlazerShirt(
-      [@ColorSerialiser() this.color = Colors.black, String? $type])
+      [@ColorSerialiser() this.color = Colors.black, final String? $type])
       : $type = $type ?? 'blazerShirt',
         super._();
 
@@ -4008,8 +3862,8 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesBlazerShirtFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -4025,19 +3879,20 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesBlazerShirt &&
+            other is _$AvataaarTypeClothesBlazerShirt &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesBlazerShirtCopyWith<AvataaarTypeClothesBlazerShirt>
-      get copyWith => _$AvataaarTypeClothesBlazerShirtCopyWithImpl<
-          AvataaarTypeClothesBlazerShirt>(this, _$identity);
+  _$$AvataaarTypeClothesBlazerShirtCopyWith<_$AvataaarTypeClothesBlazerShirt>
+      get copyWith => __$$AvataaarTypeClothesBlazerShirtCopyWithImpl<
+          _$AvataaarTypeClothesBlazerShirt>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4156,7 +4011,8 @@ class _$AvataaarTypeClothesBlazerShirt extends AvataaarTypeClothesBlazerShirt {
 
 abstract class AvataaarTypeClothesBlazerShirt extends AvataaarClothes {
   const factory AvataaarTypeClothesBlazerShirt(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesBlazerShirt;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesBlazerShirt;
   const AvataaarTypeClothesBlazerShirt._() : super._();
 
   factory AvataaarTypeClothesBlazerShirt.fromJson(Map<String, dynamic> json) =
@@ -4164,42 +4020,42 @@ abstract class AvataaarTypeClothesBlazerShirt extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesBlazerShirtCopyWith<AvataaarTypeClothesBlazerShirt>
+  _$$AvataaarTypeClothesBlazerShirtCopyWith<_$AvataaarTypeClothesBlazerShirt>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesBlazerSweaterCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesBlazerSweaterCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesBlazerSweaterCopyWith(
-          AvataaarTypeClothesBlazerSweater value,
-          $Res Function(AvataaarTypeClothesBlazerSweater) then) =
-      _$AvataaarTypeClothesBlazerSweaterCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesBlazerSweaterCopyWith(
+          _$AvataaarTypeClothesBlazerSweater value,
+          $Res Function(_$AvataaarTypeClothesBlazerSweater) then) =
+      __$$AvataaarTypeClothesBlazerSweaterCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesBlazerSweaterCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesBlazerSweaterCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesBlazerSweaterCopyWith<$Res> {
-  _$AvataaarTypeClothesBlazerSweaterCopyWithImpl(
-      AvataaarTypeClothesBlazerSweater _value,
-      $Res Function(AvataaarTypeClothesBlazerSweater) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesBlazerSweater));
+    implements _$$AvataaarTypeClothesBlazerSweaterCopyWith<$Res> {
+  __$$AvataaarTypeClothesBlazerSweaterCopyWithImpl(
+      _$AvataaarTypeClothesBlazerSweater _value,
+      $Res Function(_$AvataaarTypeClothesBlazerSweater) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesBlazerSweater));
 
   @override
-  AvataaarTypeClothesBlazerSweater get _value =>
-      super._value as AvataaarTypeClothesBlazerSweater;
+  _$AvataaarTypeClothesBlazerSweater get _value =>
+      super._value as _$AvataaarTypeClothesBlazerSweater;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesBlazerSweater(
+    return _then(_$AvataaarTypeClothesBlazerSweater(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4213,7 +4069,7 @@ class _$AvataaarTypeClothesBlazerSweaterCopyWithImpl<$Res>
 class _$AvataaarTypeClothesBlazerSweater
     extends AvataaarTypeClothesBlazerSweater {
   const _$AvataaarTypeClothesBlazerSweater(
-      [@ColorSerialiser() this.color = Colors.black, String? $type])
+      [@ColorSerialiser() this.color = Colors.black, final String? $type])
       : $type = $type ?? 'blazerSweater',
         super._();
 
@@ -4221,8 +4077,8 @@ class _$AvataaarTypeClothesBlazerSweater
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesBlazerSweaterFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -4238,19 +4094,21 @@ class _$AvataaarTypeClothesBlazerSweater
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesBlazerSweater &&
+            other is _$AvataaarTypeClothesBlazerSweater &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesBlazerSweaterCopyWith<AvataaarTypeClothesBlazerSweater>
-      get copyWith => _$AvataaarTypeClothesBlazerSweaterCopyWithImpl<
-          AvataaarTypeClothesBlazerSweater>(this, _$identity);
+  _$$AvataaarTypeClothesBlazerSweaterCopyWith<
+          _$AvataaarTypeClothesBlazerSweater>
+      get copyWith => __$$AvataaarTypeClothesBlazerSweaterCopyWithImpl<
+          _$AvataaarTypeClothesBlazerSweater>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4369,7 +4227,8 @@ class _$AvataaarTypeClothesBlazerSweater
 
 abstract class AvataaarTypeClothesBlazerSweater extends AvataaarClothes {
   const factory AvataaarTypeClothesBlazerSweater(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesBlazerSweater;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesBlazerSweater;
   const AvataaarTypeClothesBlazerSweater._() : super._();
 
   factory AvataaarTypeClothesBlazerSweater.fromJson(Map<String, dynamic> json) =
@@ -4377,42 +4236,43 @@ abstract class AvataaarTypeClothesBlazerSweater extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesBlazerSweaterCopyWith<AvataaarTypeClothesBlazerSweater>
+  _$$AvataaarTypeClothesBlazerSweaterCopyWith<
+          _$AvataaarTypeClothesBlazerSweater>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesColarSweaterCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesColarSweaterCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesColarSweaterCopyWith(
-          AvataaarTypeClothesColarSweater value,
-          $Res Function(AvataaarTypeClothesColarSweater) then) =
-      _$AvataaarTypeClothesColarSweaterCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesColarSweaterCopyWith(
+          _$AvataaarTypeClothesColarSweater value,
+          $Res Function(_$AvataaarTypeClothesColarSweater) then) =
+      __$$AvataaarTypeClothesColarSweaterCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesColarSweaterCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesColarSweaterCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesColarSweaterCopyWith<$Res> {
-  _$AvataaarTypeClothesColarSweaterCopyWithImpl(
-      AvataaarTypeClothesColarSweater _value,
-      $Res Function(AvataaarTypeClothesColarSweater) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesColarSweater));
+    implements _$$AvataaarTypeClothesColarSweaterCopyWith<$Res> {
+  __$$AvataaarTypeClothesColarSweaterCopyWithImpl(
+      _$AvataaarTypeClothesColarSweater _value,
+      $Res Function(_$AvataaarTypeClothesColarSweater) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesColarSweater));
 
   @override
-  AvataaarTypeClothesColarSweater get _value =>
-      super._value as AvataaarTypeClothesColarSweater;
+  _$AvataaarTypeClothesColarSweater get _value =>
+      super._value as _$AvataaarTypeClothesColarSweater;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesColarSweater(
+    return _then(_$AvataaarTypeClothesColarSweater(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4427,7 +4287,7 @@ class _$AvataaarTypeClothesColarSweater
     extends AvataaarTypeClothesColarSweater {
   const _$AvataaarTypeClothesColarSweater(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'collarSweater',
         super._();
 
@@ -4435,8 +4295,8 @@ class _$AvataaarTypeClothesColarSweater
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesColarSweaterFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -4452,19 +4312,20 @@ class _$AvataaarTypeClothesColarSweater
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesColarSweater &&
+            other is _$AvataaarTypeClothesColarSweater &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesColarSweaterCopyWith<AvataaarTypeClothesColarSweater>
-      get copyWith => _$AvataaarTypeClothesColarSweaterCopyWithImpl<
-          AvataaarTypeClothesColarSweater>(this, _$identity);
+  _$$AvataaarTypeClothesColarSweaterCopyWith<_$AvataaarTypeClothesColarSweater>
+      get copyWith => __$$AvataaarTypeClothesColarSweaterCopyWithImpl<
+          _$AvataaarTypeClothesColarSweater>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4583,7 +4444,8 @@ class _$AvataaarTypeClothesColarSweater
 
 abstract class AvataaarTypeClothesColarSweater extends AvataaarClothes {
   const factory AvataaarTypeClothesColarSweater(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesColarSweater;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesColarSweater;
   const AvataaarTypeClothesColarSweater._() : super._();
 
   factory AvataaarTypeClothesColarSweater.fromJson(Map<String, dynamic> json) =
@@ -4591,42 +4453,42 @@ abstract class AvataaarTypeClothesColarSweater extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesColarSweaterCopyWith<AvataaarTypeClothesColarSweater>
+  _$$AvataaarTypeClothesColarSweaterCopyWith<_$AvataaarTypeClothesColarSweater>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesGraphicShirtCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesGraphicShirtCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesGraphicShirtCopyWith(
-          AvataaarTypeClothesGraphicShirt value,
-          $Res Function(AvataaarTypeClothesGraphicShirt) then) =
-      _$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesGraphicShirtCopyWith(
+          _$AvataaarTypeClothesGraphicShirt value,
+          $Res Function(_$AvataaarTypeClothesGraphicShirt) then) =
+      __$$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesGraphicShirtCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesGraphicShirtCopyWith<$Res> {
-  _$AvataaarTypeClothesGraphicShirtCopyWithImpl(
-      AvataaarTypeClothesGraphicShirt _value,
-      $Res Function(AvataaarTypeClothesGraphicShirt) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesGraphicShirt));
+    implements _$$AvataaarTypeClothesGraphicShirtCopyWith<$Res> {
+  __$$AvataaarTypeClothesGraphicShirtCopyWithImpl(
+      _$AvataaarTypeClothesGraphicShirt _value,
+      $Res Function(_$AvataaarTypeClothesGraphicShirt) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesGraphicShirt));
 
   @override
-  AvataaarTypeClothesGraphicShirt get _value =>
-      super._value as AvataaarTypeClothesGraphicShirt;
+  _$AvataaarTypeClothesGraphicShirt get _value =>
+      super._value as _$AvataaarTypeClothesGraphicShirt;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesGraphicShirt(
+    return _then(_$AvataaarTypeClothesGraphicShirt(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4641,7 +4503,7 @@ class _$AvataaarTypeClothesGraphicShirt
     extends AvataaarTypeClothesGraphicShirt {
   const _$AvataaarTypeClothesGraphicShirt(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'graphicShirt',
         super._();
 
@@ -4649,8 +4511,8 @@ class _$AvataaarTypeClothesGraphicShirt
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesGraphicShirtFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -4666,19 +4528,20 @@ class _$AvataaarTypeClothesGraphicShirt
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesGraphicShirt &&
+            other is _$AvataaarTypeClothesGraphicShirt &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesGraphicShirtCopyWith<AvataaarTypeClothesGraphicShirt>
-      get copyWith => _$AvataaarTypeClothesGraphicShirtCopyWithImpl<
-          AvataaarTypeClothesGraphicShirt>(this, _$identity);
+  _$$AvataaarTypeClothesGraphicShirtCopyWith<_$AvataaarTypeClothesGraphicShirt>
+      get copyWith => __$$AvataaarTypeClothesGraphicShirtCopyWithImpl<
+          _$AvataaarTypeClothesGraphicShirt>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4797,7 +4660,8 @@ class _$AvataaarTypeClothesGraphicShirt
 
 abstract class AvataaarTypeClothesGraphicShirt extends AvataaarClothes {
   const factory AvataaarTypeClothesGraphicShirt(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesGraphicShirt;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesGraphicShirt;
   const AvataaarTypeClothesGraphicShirt._() : super._();
 
   factory AvataaarTypeClothesGraphicShirt.fromJson(Map<String, dynamic> json) =
@@ -4805,40 +4669,41 @@ abstract class AvataaarTypeClothesGraphicShirt extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesGraphicShirtCopyWith<AvataaarTypeClothesGraphicShirt>
+  _$$AvataaarTypeClothesGraphicShirtCopyWith<_$AvataaarTypeClothesGraphicShirt>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesHoodieCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesHoodieCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesHoodieCopyWith(AvataaarTypeClothesHoodie value,
-          $Res Function(AvataaarTypeClothesHoodie) then) =
-      _$AvataaarTypeClothesHoodieCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesHoodieCopyWith(
+          _$AvataaarTypeClothesHoodie value,
+          $Res Function(_$AvataaarTypeClothesHoodie) then) =
+      __$$AvataaarTypeClothesHoodieCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesHoodieCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesHoodieCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesHoodieCopyWith<$Res> {
-  _$AvataaarTypeClothesHoodieCopyWithImpl(AvataaarTypeClothesHoodie _value,
-      $Res Function(AvataaarTypeClothesHoodie) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesHoodie));
+    implements _$$AvataaarTypeClothesHoodieCopyWith<$Res> {
+  __$$AvataaarTypeClothesHoodieCopyWithImpl(_$AvataaarTypeClothesHoodie _value,
+      $Res Function(_$AvataaarTypeClothesHoodie) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesHoodie));
 
   @override
-  AvataaarTypeClothesHoodie get _value =>
-      super._value as AvataaarTypeClothesHoodie;
+  _$AvataaarTypeClothesHoodie get _value =>
+      super._value as _$AvataaarTypeClothesHoodie;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesHoodie(
+    return _then(_$AvataaarTypeClothesHoodie(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4852,15 +4717,15 @@ class _$AvataaarTypeClothesHoodieCopyWithImpl<$Res>
 class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
   const _$AvataaarTypeClothesHoodie(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'hoodie',
         super._();
 
   factory _$AvataaarTypeClothesHoodie.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesHoodieFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -4876,19 +4741,20 @@ class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesHoodie &&
+            other is _$AvataaarTypeClothesHoodie &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesHoodieCopyWith<AvataaarTypeClothesHoodie> get copyWith =>
-      _$AvataaarTypeClothesHoodieCopyWithImpl<AvataaarTypeClothesHoodie>(
-          this, _$identity);
+  _$$AvataaarTypeClothesHoodieCopyWith<_$AvataaarTypeClothesHoodie>
+      get copyWith => __$$AvataaarTypeClothesHoodieCopyWithImpl<
+          _$AvataaarTypeClothesHoodie>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5006,8 +4872,8 @@ class _$AvataaarTypeClothesHoodie extends AvataaarTypeClothesHoodie {
 }
 
 abstract class AvataaarTypeClothesHoodie extends AvataaarClothes {
-  const factory AvataaarTypeClothesHoodie([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeClothesHoodie;
+  const factory AvataaarTypeClothesHoodie(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeClothesHoodie;
   const AvataaarTypeClothesHoodie._() : super._();
 
   factory AvataaarTypeClothesHoodie.fromJson(Map<String, dynamic> json) =
@@ -5015,40 +4881,42 @@ abstract class AvataaarTypeClothesHoodie extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesHoodieCopyWith<AvataaarTypeClothesHoodie> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AvataaarTypeClothesHoodieCopyWith<_$AvataaarTypeClothesHoodie>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesOverallCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesOverallCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesOverallCopyWith(AvataaarTypeClothesOverall value,
-          $Res Function(AvataaarTypeClothesOverall) then) =
-      _$AvataaarTypeClothesOverallCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesOverallCopyWith(
+          _$AvataaarTypeClothesOverall value,
+          $Res Function(_$AvataaarTypeClothesOverall) then) =
+      __$$AvataaarTypeClothesOverallCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesOverallCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesOverallCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesOverallCopyWith<$Res> {
-  _$AvataaarTypeClothesOverallCopyWithImpl(AvataaarTypeClothesOverall _value,
-      $Res Function(AvataaarTypeClothesOverall) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesOverall));
+    implements _$$AvataaarTypeClothesOverallCopyWith<$Res> {
+  __$$AvataaarTypeClothesOverallCopyWithImpl(
+      _$AvataaarTypeClothesOverall _value,
+      $Res Function(_$AvataaarTypeClothesOverall) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesOverall));
 
   @override
-  AvataaarTypeClothesOverall get _value =>
-      super._value as AvataaarTypeClothesOverall;
+  _$AvataaarTypeClothesOverall get _value =>
+      super._value as _$AvataaarTypeClothesOverall;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesOverall(
+    return _then(_$AvataaarTypeClothesOverall(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -5062,15 +4930,15 @@ class _$AvataaarTypeClothesOverallCopyWithImpl<$Res>
 class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
   const _$AvataaarTypeClothesOverall(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'overall',
         super._();
 
   factory _$AvataaarTypeClothesOverall.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesOverallFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -5086,20 +4954,20 @@ class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesOverall &&
+            other is _$AvataaarTypeClothesOverall &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesOverallCopyWith<AvataaarTypeClothesOverall>
-      get copyWith =>
-          _$AvataaarTypeClothesOverallCopyWithImpl<AvataaarTypeClothesOverall>(
-              this, _$identity);
+  _$$AvataaarTypeClothesOverallCopyWith<_$AvataaarTypeClothesOverall>
+      get copyWith => __$$AvataaarTypeClothesOverallCopyWithImpl<
+          _$AvataaarTypeClothesOverall>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5217,8 +5085,8 @@ class _$AvataaarTypeClothesOverall extends AvataaarTypeClothesOverall {
 }
 
 abstract class AvataaarTypeClothesOverall extends AvataaarClothes {
-  const factory AvataaarTypeClothesOverall([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeClothesOverall;
+  const factory AvataaarTypeClothesOverall(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeClothesOverall;
   const AvataaarTypeClothesOverall._() : super._();
 
   factory AvataaarTypeClothesOverall.fromJson(Map<String, dynamic> json) =
@@ -5226,42 +5094,42 @@ abstract class AvataaarTypeClothesOverall extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesOverallCopyWith<AvataaarTypeClothesOverall>
+  _$$AvataaarTypeClothesOverallCopyWith<_$AvataaarTypeClothesOverall>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesShirtCrewNeckCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesShirtCrewNeckCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesShirtCrewNeckCopyWith(
-          AvataaarTypeClothesShirtCrewNeck value,
-          $Res Function(AvataaarTypeClothesShirtCrewNeck) then) =
-      _$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesShirtCrewNeckCopyWith(
+          _$AvataaarTypeClothesShirtCrewNeck value,
+          $Res Function(_$AvataaarTypeClothesShirtCrewNeck) then) =
+      __$$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesShirtCrewNeckCopyWith<$Res> {
-  _$AvataaarTypeClothesShirtCrewNeckCopyWithImpl(
-      AvataaarTypeClothesShirtCrewNeck _value,
-      $Res Function(AvataaarTypeClothesShirtCrewNeck) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesShirtCrewNeck));
+    implements _$$AvataaarTypeClothesShirtCrewNeckCopyWith<$Res> {
+  __$$AvataaarTypeClothesShirtCrewNeckCopyWithImpl(
+      _$AvataaarTypeClothesShirtCrewNeck _value,
+      $Res Function(_$AvataaarTypeClothesShirtCrewNeck) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesShirtCrewNeck));
 
   @override
-  AvataaarTypeClothesShirtCrewNeck get _value =>
-      super._value as AvataaarTypeClothesShirtCrewNeck;
+  _$AvataaarTypeClothesShirtCrewNeck get _value =>
+      super._value as _$AvataaarTypeClothesShirtCrewNeck;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesShirtCrewNeck(
+    return _then(_$AvataaarTypeClothesShirtCrewNeck(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -5276,7 +5144,7 @@ class _$AvataaarTypeClothesShirtCrewNeck
     extends AvataaarTypeClothesShirtCrewNeck {
   const _$AvataaarTypeClothesShirtCrewNeck(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shirtCrewNeck',
         super._();
 
@@ -5284,8 +5152,8 @@ class _$AvataaarTypeClothesShirtCrewNeck
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesShirtCrewNeckFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -5301,19 +5169,21 @@ class _$AvataaarTypeClothesShirtCrewNeck
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesShirtCrewNeck &&
+            other is _$AvataaarTypeClothesShirtCrewNeck &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesShirtCrewNeckCopyWith<AvataaarTypeClothesShirtCrewNeck>
-      get copyWith => _$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<
-          AvataaarTypeClothesShirtCrewNeck>(this, _$identity);
+  _$$AvataaarTypeClothesShirtCrewNeckCopyWith<
+          _$AvataaarTypeClothesShirtCrewNeck>
+      get copyWith => __$$AvataaarTypeClothesShirtCrewNeckCopyWithImpl<
+          _$AvataaarTypeClothesShirtCrewNeck>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5432,7 +5302,8 @@ class _$AvataaarTypeClothesShirtCrewNeck
 
 abstract class AvataaarTypeClothesShirtCrewNeck extends AvataaarClothes {
   const factory AvataaarTypeClothesShirtCrewNeck(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesShirtCrewNeck;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesShirtCrewNeck;
   const AvataaarTypeClothesShirtCrewNeck._() : super._();
 
   factory AvataaarTypeClothesShirtCrewNeck.fromJson(Map<String, dynamic> json) =
@@ -5440,42 +5311,43 @@ abstract class AvataaarTypeClothesShirtCrewNeck extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesShirtCrewNeckCopyWith<AvataaarTypeClothesShirtCrewNeck>
+  _$$AvataaarTypeClothesShirtCrewNeckCopyWith<
+          _$AvataaarTypeClothesShirtCrewNeck>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesShirtScoopNeckCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesShirtScoopNeckCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesShirtScoopNeckCopyWith(
-          AvataaarTypeClothesShirtScoopNeck value,
-          $Res Function(AvataaarTypeClothesShirtScoopNeck) then) =
-      _$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesShirtScoopNeckCopyWith(
+          _$AvataaarTypeClothesShirtScoopNeck value,
+          $Res Function(_$AvataaarTypeClothesShirtScoopNeck) then) =
+      __$$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesShirtScoopNeckCopyWith<$Res> {
-  _$AvataaarTypeClothesShirtScoopNeckCopyWithImpl(
-      AvataaarTypeClothesShirtScoopNeck _value,
-      $Res Function(AvataaarTypeClothesShirtScoopNeck) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesShirtScoopNeck));
+    implements _$$AvataaarTypeClothesShirtScoopNeckCopyWith<$Res> {
+  __$$AvataaarTypeClothesShirtScoopNeckCopyWithImpl(
+      _$AvataaarTypeClothesShirtScoopNeck _value,
+      $Res Function(_$AvataaarTypeClothesShirtScoopNeck) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesShirtScoopNeck));
 
   @override
-  AvataaarTypeClothesShirtScoopNeck get _value =>
-      super._value as AvataaarTypeClothesShirtScoopNeck;
+  _$AvataaarTypeClothesShirtScoopNeck get _value =>
+      super._value as _$AvataaarTypeClothesShirtScoopNeck;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesShirtScoopNeck(
+    return _then(_$AvataaarTypeClothesShirtScoopNeck(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -5490,7 +5362,7 @@ class _$AvataaarTypeClothesShirtScoopNeck
     extends AvataaarTypeClothesShirtScoopNeck {
   const _$AvataaarTypeClothesShirtScoopNeck(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shirtScoopNeck',
         super._();
 
@@ -5498,8 +5370,8 @@ class _$AvataaarTypeClothesShirtScoopNeck
           Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesShirtScoopNeckFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -5515,19 +5387,21 @@ class _$AvataaarTypeClothesShirtScoopNeck
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesShirtScoopNeck &&
+            other is _$AvataaarTypeClothesShirtScoopNeck &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesShirtScoopNeckCopyWith<AvataaarTypeClothesShirtScoopNeck>
-      get copyWith => _$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<
-          AvataaarTypeClothesShirtScoopNeck>(this, _$identity);
+  _$$AvataaarTypeClothesShirtScoopNeckCopyWith<
+          _$AvataaarTypeClothesShirtScoopNeck>
+      get copyWith => __$$AvataaarTypeClothesShirtScoopNeckCopyWithImpl<
+          _$AvataaarTypeClothesShirtScoopNeck>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5646,7 +5520,8 @@ class _$AvataaarTypeClothesShirtScoopNeck
 
 abstract class AvataaarTypeClothesShirtScoopNeck extends AvataaarClothes {
   const factory AvataaarTypeClothesShirtScoopNeck(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesShirtScoopNeck;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeClothesShirtScoopNeck;
   const AvataaarTypeClothesShirtScoopNeck._() : super._();
 
   factory AvataaarTypeClothesShirtScoopNeck.fromJson(
@@ -5654,42 +5529,43 @@ abstract class AvataaarTypeClothesShirtScoopNeck extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesShirtScoopNeckCopyWith<AvataaarTypeClothesShirtScoopNeck>
+  _$$AvataaarTypeClothesShirtScoopNeckCopyWith<
+          _$AvataaarTypeClothesShirtScoopNeck>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeClothesShirtVNeckCopyWith<$Res>
+abstract class _$$AvataaarTypeClothesShirtVNeckCopyWith<$Res>
     implements $AvataaarClothesCopyWith<$Res> {
-  factory $AvataaarTypeClothesShirtVNeckCopyWith(
-          AvataaarTypeClothesShirtVNeck value,
-          $Res Function(AvataaarTypeClothesShirtVNeck) then) =
-      _$AvataaarTypeClothesShirtVNeckCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeClothesShirtVNeckCopyWith(
+          _$AvataaarTypeClothesShirtVNeck value,
+          $Res Function(_$AvataaarTypeClothesShirtVNeck) then) =
+      __$$AvataaarTypeClothesShirtVNeckCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeClothesShirtVNeckCopyWithImpl<$Res>
+class __$$AvataaarTypeClothesShirtVNeckCopyWithImpl<$Res>
     extends _$AvataaarClothesCopyWithImpl<$Res>
-    implements $AvataaarTypeClothesShirtVNeckCopyWith<$Res> {
-  _$AvataaarTypeClothesShirtVNeckCopyWithImpl(
-      AvataaarTypeClothesShirtVNeck _value,
-      $Res Function(AvataaarTypeClothesShirtVNeck) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeClothesShirtVNeck));
+    implements _$$AvataaarTypeClothesShirtVNeckCopyWith<$Res> {
+  __$$AvataaarTypeClothesShirtVNeckCopyWithImpl(
+      _$AvataaarTypeClothesShirtVNeck _value,
+      $Res Function(_$AvataaarTypeClothesShirtVNeck) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeClothesShirtVNeck));
 
   @override
-  AvataaarTypeClothesShirtVNeck get _value =>
-      super._value as AvataaarTypeClothesShirtVNeck;
+  _$AvataaarTypeClothesShirtVNeck get _value =>
+      super._value as _$AvataaarTypeClothesShirtVNeck;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeClothesShirtVNeck(
+    return _then(_$AvataaarTypeClothesShirtVNeck(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -5703,15 +5579,15 @@ class _$AvataaarTypeClothesShirtVNeckCopyWithImpl<$Res>
 class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
   const _$AvataaarTypeClothesShirtVNeck(
       [@ColorSerialiser() this.color = AvataaarClothes._defaultColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shirtVNeck',
         super._();
 
   factory _$AvataaarTypeClothesShirtVNeck.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeClothesShirtVNeckFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -5727,19 +5603,20 @@ class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeClothesShirtVNeck &&
+            other is _$AvataaarTypeClothesShirtVNeck &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeClothesShirtVNeckCopyWith<AvataaarTypeClothesShirtVNeck>
-      get copyWith => _$AvataaarTypeClothesShirtVNeckCopyWithImpl<
-          AvataaarTypeClothesShirtVNeck>(this, _$identity);
+  _$$AvataaarTypeClothesShirtVNeckCopyWith<_$AvataaarTypeClothesShirtVNeck>
+      get copyWith => __$$AvataaarTypeClothesShirtVNeckCopyWithImpl<
+          _$AvataaarTypeClothesShirtVNeck>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5858,7 +5735,7 @@ class _$AvataaarTypeClothesShirtVNeck extends AvataaarTypeClothesShirtVNeck {
 
 abstract class AvataaarTypeClothesShirtVNeck extends AvataaarClothes {
   const factory AvataaarTypeClothesShirtVNeck(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeClothesShirtVNeck;
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeClothesShirtVNeck;
   const AvataaarTypeClothesShirtVNeck._() : super._();
 
   factory AvataaarTypeClothesShirtVNeck.fromJson(Map<String, dynamic> json) =
@@ -5866,10 +5743,10 @@ abstract class AvataaarTypeClothesShirtVNeck extends AvataaarClothes {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeClothesShirtVNeckCopyWith<AvataaarTypeClothesShirtVNeck>
+  _$$AvataaarTypeClothesShirtVNeckCopyWith<_$AvataaarTypeClothesShirtVNeck>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5903,62 +5780,6 @@ AvataaarGraphics _$AvataaarGraphicsFromJson(Map<String, dynamic> json) {
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
-
-/// @nodoc
-class _$AvataaarGraphicsTearOff {
-  const _$AvataaarGraphicsTearOff();
-
-  AvataaarTypeGraphicsBat bat() {
-    return const AvataaarTypeGraphicsBat();
-  }
-
-  AvataaarTypeGraphicsBear bear() {
-    return const AvataaarTypeGraphicsBear();
-  }
-
-  AvataaarTypeGraphicsCumbia cumbia() {
-    return const AvataaarTypeGraphicsCumbia();
-  }
-
-  AvataaarTypeGraphicsDeer deer() {
-    return const AvataaarTypeGraphicsDeer();
-  }
-
-  AvataaarTypeGraphicsDiamond diamond() {
-    return const AvataaarTypeGraphicsDiamond();
-  }
-
-  AvataaarTypeGraphicsHola hola() {
-    return const AvataaarTypeGraphicsHola();
-  }
-
-  AvataaarTypeGraphicsPizza pizza() {
-    return const AvataaarTypeGraphicsPizza();
-  }
-
-  AvataaarTypeGraphicsResist resist() {
-    return const AvataaarTypeGraphicsResist();
-  }
-
-  AvataaarTypeGraphicsSelena selena() {
-    return const AvataaarTypeGraphicsSelena();
-  }
-
-  AvataaarTypeGraphicsSkull skull() {
-    return const AvataaarTypeGraphicsSkull();
-  }
-
-  AvataaarTypeGraphicsSkullOutline skullOutline() {
-    return const AvataaarTypeGraphicsSkullOutline();
-  }
-
-  AvataaarGraphics fromJson(Map<String, Object?> json) {
-    return AvataaarGraphics.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarGraphics = _$AvataaarGraphicsTearOff();
 
 /// @nodoc
 mixin _$AvataaarGraphics {
@@ -6076,28 +5897,29 @@ class _$AvataaarGraphicsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsBatCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsBatCopyWith(AvataaarTypeGraphicsBat value,
-          $Res Function(AvataaarTypeGraphicsBat) then) =
-      _$AvataaarTypeGraphicsBatCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsBatCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsBatCopyWith(_$AvataaarTypeGraphicsBat value,
+          $Res Function(_$AvataaarTypeGraphicsBat) then) =
+      __$$AvataaarTypeGraphicsBatCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsBatCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsBatCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsBatCopyWith<$Res> {
-  _$AvataaarTypeGraphicsBatCopyWithImpl(AvataaarTypeGraphicsBat _value,
-      $Res Function(AvataaarTypeGraphicsBat) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsBat));
+    implements _$$AvataaarTypeGraphicsBatCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsBatCopyWithImpl(_$AvataaarTypeGraphicsBat _value,
+      $Res Function(_$AvataaarTypeGraphicsBat) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsBat));
 
   @override
-  AvataaarTypeGraphicsBat get _value => super._value as AvataaarTypeGraphicsBat;
+  _$AvataaarTypeGraphicsBat get _value =>
+      super._value as _$AvataaarTypeGraphicsBat;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsBat extends AvataaarTypeGraphicsBat {
-  const _$AvataaarTypeGraphicsBat({String? $type})
+  const _$AvataaarTypeGraphicsBat({final String? $type})
       : $type = $type ?? 'bat',
         super._();
 
@@ -6115,9 +5937,11 @@ class _$AvataaarTypeGraphicsBat extends AvataaarTypeGraphicsBat {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeGraphicsBat);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeGraphicsBat);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -6253,29 +6077,29 @@ abstract class AvataaarTypeGraphicsBat extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsBearCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsBearCopyWith(AvataaarTypeGraphicsBear value,
-          $Res Function(AvataaarTypeGraphicsBear) then) =
-      _$AvataaarTypeGraphicsBearCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsBearCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsBearCopyWith(_$AvataaarTypeGraphicsBear value,
+          $Res Function(_$AvataaarTypeGraphicsBear) then) =
+      __$$AvataaarTypeGraphicsBearCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsBearCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsBearCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsBearCopyWith<$Res> {
-  _$AvataaarTypeGraphicsBearCopyWithImpl(AvataaarTypeGraphicsBear _value,
-      $Res Function(AvataaarTypeGraphicsBear) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsBear));
+    implements _$$AvataaarTypeGraphicsBearCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsBearCopyWithImpl(_$AvataaarTypeGraphicsBear _value,
+      $Res Function(_$AvataaarTypeGraphicsBear) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsBear));
 
   @override
-  AvataaarTypeGraphicsBear get _value =>
-      super._value as AvataaarTypeGraphicsBear;
+  _$AvataaarTypeGraphicsBear get _value =>
+      super._value as _$AvataaarTypeGraphicsBear;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsBear extends AvataaarTypeGraphicsBear {
-  const _$AvataaarTypeGraphicsBear({String? $type})
+  const _$AvataaarTypeGraphicsBear({final String? $type})
       : $type = $type ?? 'bear',
         super._();
 
@@ -6293,9 +6117,11 @@ class _$AvataaarTypeGraphicsBear extends AvataaarTypeGraphicsBear {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeGraphicsBear);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeGraphicsBear);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -6431,29 +6257,31 @@ abstract class AvataaarTypeGraphicsBear extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsCumbiaCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsCumbiaCopyWith(AvataaarTypeGraphicsCumbia value,
-          $Res Function(AvataaarTypeGraphicsCumbia) then) =
-      _$AvataaarTypeGraphicsCumbiaCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsCumbiaCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsCumbiaCopyWith(
+          _$AvataaarTypeGraphicsCumbia value,
+          $Res Function(_$AvataaarTypeGraphicsCumbia) then) =
+      __$$AvataaarTypeGraphicsCumbiaCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsCumbiaCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsCumbiaCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsCumbiaCopyWith<$Res> {
-  _$AvataaarTypeGraphicsCumbiaCopyWithImpl(AvataaarTypeGraphicsCumbia _value,
-      $Res Function(AvataaarTypeGraphicsCumbia) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsCumbia));
+    implements _$$AvataaarTypeGraphicsCumbiaCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsCumbiaCopyWithImpl(
+      _$AvataaarTypeGraphicsCumbia _value,
+      $Res Function(_$AvataaarTypeGraphicsCumbia) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsCumbia));
 
   @override
-  AvataaarTypeGraphicsCumbia get _value =>
-      super._value as AvataaarTypeGraphicsCumbia;
+  _$AvataaarTypeGraphicsCumbia get _value =>
+      super._value as _$AvataaarTypeGraphicsCumbia;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsCumbia extends AvataaarTypeGraphicsCumbia {
-  const _$AvataaarTypeGraphicsCumbia({String? $type})
+  const _$AvataaarTypeGraphicsCumbia({final String? $type})
       : $type = $type ?? 'cumbia',
         super._();
 
@@ -6472,9 +6300,10 @@ class _$AvataaarTypeGraphicsCumbia extends AvataaarTypeGraphicsCumbia {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsCumbia);
+            other is _$AvataaarTypeGraphicsCumbia);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -6610,29 +6439,29 @@ abstract class AvataaarTypeGraphicsCumbia extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsDeerCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsDeerCopyWith(AvataaarTypeGraphicsDeer value,
-          $Res Function(AvataaarTypeGraphicsDeer) then) =
-      _$AvataaarTypeGraphicsDeerCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsDeerCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsDeerCopyWith(_$AvataaarTypeGraphicsDeer value,
+          $Res Function(_$AvataaarTypeGraphicsDeer) then) =
+      __$$AvataaarTypeGraphicsDeerCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsDeerCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsDeerCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsDeerCopyWith<$Res> {
-  _$AvataaarTypeGraphicsDeerCopyWithImpl(AvataaarTypeGraphicsDeer _value,
-      $Res Function(AvataaarTypeGraphicsDeer) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsDeer));
+    implements _$$AvataaarTypeGraphicsDeerCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsDeerCopyWithImpl(_$AvataaarTypeGraphicsDeer _value,
+      $Res Function(_$AvataaarTypeGraphicsDeer) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsDeer));
 
   @override
-  AvataaarTypeGraphicsDeer get _value =>
-      super._value as AvataaarTypeGraphicsDeer;
+  _$AvataaarTypeGraphicsDeer get _value =>
+      super._value as _$AvataaarTypeGraphicsDeer;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsDeer extends AvataaarTypeGraphicsDeer {
-  const _$AvataaarTypeGraphicsDeer({String? $type})
+  const _$AvataaarTypeGraphicsDeer({final String? $type})
       : $type = $type ?? 'deer',
         super._();
 
@@ -6650,9 +6479,11 @@ class _$AvataaarTypeGraphicsDeer extends AvataaarTypeGraphicsDeer {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeGraphicsDeer);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeGraphicsDeer);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -6788,30 +6619,31 @@ abstract class AvataaarTypeGraphicsDeer extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsDiamondCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsDiamondCopyWith(
-          AvataaarTypeGraphicsDiamond value,
-          $Res Function(AvataaarTypeGraphicsDiamond) then) =
-      _$AvataaarTypeGraphicsDiamondCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsDiamondCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsDiamondCopyWith(
+          _$AvataaarTypeGraphicsDiamond value,
+          $Res Function(_$AvataaarTypeGraphicsDiamond) then) =
+      __$$AvataaarTypeGraphicsDiamondCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsDiamondCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsDiamondCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsDiamondCopyWith<$Res> {
-  _$AvataaarTypeGraphicsDiamondCopyWithImpl(AvataaarTypeGraphicsDiamond _value,
-      $Res Function(AvataaarTypeGraphicsDiamond) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsDiamond));
+    implements _$$AvataaarTypeGraphicsDiamondCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsDiamondCopyWithImpl(
+      _$AvataaarTypeGraphicsDiamond _value,
+      $Res Function(_$AvataaarTypeGraphicsDiamond) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsDiamond));
 
   @override
-  AvataaarTypeGraphicsDiamond get _value =>
-      super._value as AvataaarTypeGraphicsDiamond;
+  _$AvataaarTypeGraphicsDiamond get _value =>
+      super._value as _$AvataaarTypeGraphicsDiamond;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsDiamond extends AvataaarTypeGraphicsDiamond {
-  const _$AvataaarTypeGraphicsDiamond({String? $type})
+  const _$AvataaarTypeGraphicsDiamond({final String? $type})
       : $type = $type ?? 'diamond',
         super._();
 
@@ -6830,9 +6662,10 @@ class _$AvataaarTypeGraphicsDiamond extends AvataaarTypeGraphicsDiamond {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsDiamond);
+            other is _$AvataaarTypeGraphicsDiamond);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -6968,29 +6801,29 @@ abstract class AvataaarTypeGraphicsDiamond extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsHolaCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsHolaCopyWith(AvataaarTypeGraphicsHola value,
-          $Res Function(AvataaarTypeGraphicsHola) then) =
-      _$AvataaarTypeGraphicsHolaCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsHolaCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsHolaCopyWith(_$AvataaarTypeGraphicsHola value,
+          $Res Function(_$AvataaarTypeGraphicsHola) then) =
+      __$$AvataaarTypeGraphicsHolaCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsHolaCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsHolaCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsHolaCopyWith<$Res> {
-  _$AvataaarTypeGraphicsHolaCopyWithImpl(AvataaarTypeGraphicsHola _value,
-      $Res Function(AvataaarTypeGraphicsHola) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsHola));
+    implements _$$AvataaarTypeGraphicsHolaCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsHolaCopyWithImpl(_$AvataaarTypeGraphicsHola _value,
+      $Res Function(_$AvataaarTypeGraphicsHola) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsHola));
 
   @override
-  AvataaarTypeGraphicsHola get _value =>
-      super._value as AvataaarTypeGraphicsHola;
+  _$AvataaarTypeGraphicsHola get _value =>
+      super._value as _$AvataaarTypeGraphicsHola;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsHola extends AvataaarTypeGraphicsHola {
-  const _$AvataaarTypeGraphicsHola({String? $type})
+  const _$AvataaarTypeGraphicsHola({final String? $type})
       : $type = $type ?? 'hola',
         super._();
 
@@ -7008,9 +6841,11 @@ class _$AvataaarTypeGraphicsHola extends AvataaarTypeGraphicsHola {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeGraphicsHola);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeGraphicsHola);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -7146,29 +6981,30 @@ abstract class AvataaarTypeGraphicsHola extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsPizzaCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsPizzaCopyWith(AvataaarTypeGraphicsPizza value,
-          $Res Function(AvataaarTypeGraphicsPizza) then) =
-      _$AvataaarTypeGraphicsPizzaCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsPizzaCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsPizzaCopyWith(
+          _$AvataaarTypeGraphicsPizza value,
+          $Res Function(_$AvataaarTypeGraphicsPizza) then) =
+      __$$AvataaarTypeGraphicsPizzaCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsPizzaCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsPizzaCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsPizzaCopyWith<$Res> {
-  _$AvataaarTypeGraphicsPizzaCopyWithImpl(AvataaarTypeGraphicsPizza _value,
-      $Res Function(AvataaarTypeGraphicsPizza) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsPizza));
+    implements _$$AvataaarTypeGraphicsPizzaCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsPizzaCopyWithImpl(_$AvataaarTypeGraphicsPizza _value,
+      $Res Function(_$AvataaarTypeGraphicsPizza) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsPizza));
 
   @override
-  AvataaarTypeGraphicsPizza get _value =>
-      super._value as AvataaarTypeGraphicsPizza;
+  _$AvataaarTypeGraphicsPizza get _value =>
+      super._value as _$AvataaarTypeGraphicsPizza;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsPizza extends AvataaarTypeGraphicsPizza {
-  const _$AvataaarTypeGraphicsPizza({String? $type})
+  const _$AvataaarTypeGraphicsPizza({final String? $type})
       : $type = $type ?? 'pizza',
         super._();
 
@@ -7187,9 +7023,10 @@ class _$AvataaarTypeGraphicsPizza extends AvataaarTypeGraphicsPizza {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsPizza);
+            other is _$AvataaarTypeGraphicsPizza);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -7325,29 +7162,31 @@ abstract class AvataaarTypeGraphicsPizza extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsResistCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsResistCopyWith(AvataaarTypeGraphicsResist value,
-          $Res Function(AvataaarTypeGraphicsResist) then) =
-      _$AvataaarTypeGraphicsResistCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsResistCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsResistCopyWith(
+          _$AvataaarTypeGraphicsResist value,
+          $Res Function(_$AvataaarTypeGraphicsResist) then) =
+      __$$AvataaarTypeGraphicsResistCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsResistCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsResistCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsResistCopyWith<$Res> {
-  _$AvataaarTypeGraphicsResistCopyWithImpl(AvataaarTypeGraphicsResist _value,
-      $Res Function(AvataaarTypeGraphicsResist) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsResist));
+    implements _$$AvataaarTypeGraphicsResistCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsResistCopyWithImpl(
+      _$AvataaarTypeGraphicsResist _value,
+      $Res Function(_$AvataaarTypeGraphicsResist) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsResist));
 
   @override
-  AvataaarTypeGraphicsResist get _value =>
-      super._value as AvataaarTypeGraphicsResist;
+  _$AvataaarTypeGraphicsResist get _value =>
+      super._value as _$AvataaarTypeGraphicsResist;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsResist extends AvataaarTypeGraphicsResist {
-  const _$AvataaarTypeGraphicsResist({String? $type})
+  const _$AvataaarTypeGraphicsResist({final String? $type})
       : $type = $type ?? 'resist',
         super._();
 
@@ -7366,9 +7205,10 @@ class _$AvataaarTypeGraphicsResist extends AvataaarTypeGraphicsResist {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsResist);
+            other is _$AvataaarTypeGraphicsResist);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -7504,29 +7344,31 @@ abstract class AvataaarTypeGraphicsResist extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsSelenaCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsSelenaCopyWith(AvataaarTypeGraphicsSelena value,
-          $Res Function(AvataaarTypeGraphicsSelena) then) =
-      _$AvataaarTypeGraphicsSelenaCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsSelenaCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsSelenaCopyWith(
+          _$AvataaarTypeGraphicsSelena value,
+          $Res Function(_$AvataaarTypeGraphicsSelena) then) =
+      __$$AvataaarTypeGraphicsSelenaCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsSelenaCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsSelenaCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsSelenaCopyWith<$Res> {
-  _$AvataaarTypeGraphicsSelenaCopyWithImpl(AvataaarTypeGraphicsSelena _value,
-      $Res Function(AvataaarTypeGraphicsSelena) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsSelena));
+    implements _$$AvataaarTypeGraphicsSelenaCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsSelenaCopyWithImpl(
+      _$AvataaarTypeGraphicsSelena _value,
+      $Res Function(_$AvataaarTypeGraphicsSelena) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsSelena));
 
   @override
-  AvataaarTypeGraphicsSelena get _value =>
-      super._value as AvataaarTypeGraphicsSelena;
+  _$AvataaarTypeGraphicsSelena get _value =>
+      super._value as _$AvataaarTypeGraphicsSelena;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsSelena extends AvataaarTypeGraphicsSelena {
-  const _$AvataaarTypeGraphicsSelena({String? $type})
+  const _$AvataaarTypeGraphicsSelena({final String? $type})
       : $type = $type ?? 'selena',
         super._();
 
@@ -7545,9 +7387,10 @@ class _$AvataaarTypeGraphicsSelena extends AvataaarTypeGraphicsSelena {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsSelena);
+            other is _$AvataaarTypeGraphicsSelena);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -7683,29 +7526,30 @@ abstract class AvataaarTypeGraphicsSelena extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsSkullCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsSkullCopyWith(AvataaarTypeGraphicsSkull value,
-          $Res Function(AvataaarTypeGraphicsSkull) then) =
-      _$AvataaarTypeGraphicsSkullCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsSkullCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsSkullCopyWith(
+          _$AvataaarTypeGraphicsSkull value,
+          $Res Function(_$AvataaarTypeGraphicsSkull) then) =
+      __$$AvataaarTypeGraphicsSkullCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsSkullCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsSkullCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsSkullCopyWith<$Res> {
-  _$AvataaarTypeGraphicsSkullCopyWithImpl(AvataaarTypeGraphicsSkull _value,
-      $Res Function(AvataaarTypeGraphicsSkull) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsSkull));
+    implements _$$AvataaarTypeGraphicsSkullCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsSkullCopyWithImpl(_$AvataaarTypeGraphicsSkull _value,
+      $Res Function(_$AvataaarTypeGraphicsSkull) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsSkull));
 
   @override
-  AvataaarTypeGraphicsSkull get _value =>
-      super._value as AvataaarTypeGraphicsSkull;
+  _$AvataaarTypeGraphicsSkull get _value =>
+      super._value as _$AvataaarTypeGraphicsSkull;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsSkull extends AvataaarTypeGraphicsSkull {
-  const _$AvataaarTypeGraphicsSkull({String? $type})
+  const _$AvataaarTypeGraphicsSkull({final String? $type})
       : $type = $type ?? 'skull',
         super._();
 
@@ -7724,9 +7568,10 @@ class _$AvataaarTypeGraphicsSkull extends AvataaarTypeGraphicsSkull {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsSkull);
+            other is _$AvataaarTypeGraphicsSkull);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -7862,32 +7707,32 @@ abstract class AvataaarTypeGraphicsSkull extends AvataaarGraphics {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeGraphicsSkullOutlineCopyWith<$Res> {
-  factory $AvataaarTypeGraphicsSkullOutlineCopyWith(
-          AvataaarTypeGraphicsSkullOutline value,
-          $Res Function(AvataaarTypeGraphicsSkullOutline) then) =
-      _$AvataaarTypeGraphicsSkullOutlineCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeGraphicsSkullOutlineCopyWith<$Res> {
+  factory _$$AvataaarTypeGraphicsSkullOutlineCopyWith(
+          _$AvataaarTypeGraphicsSkullOutline value,
+          $Res Function(_$AvataaarTypeGraphicsSkullOutline) then) =
+      __$$AvataaarTypeGraphicsSkullOutlineCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeGraphicsSkullOutlineCopyWithImpl<$Res>
+class __$$AvataaarTypeGraphicsSkullOutlineCopyWithImpl<$Res>
     extends _$AvataaarGraphicsCopyWithImpl<$Res>
-    implements $AvataaarTypeGraphicsSkullOutlineCopyWith<$Res> {
-  _$AvataaarTypeGraphicsSkullOutlineCopyWithImpl(
-      AvataaarTypeGraphicsSkullOutline _value,
-      $Res Function(AvataaarTypeGraphicsSkullOutline) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeGraphicsSkullOutline));
+    implements _$$AvataaarTypeGraphicsSkullOutlineCopyWith<$Res> {
+  __$$AvataaarTypeGraphicsSkullOutlineCopyWithImpl(
+      _$AvataaarTypeGraphicsSkullOutline _value,
+      $Res Function(_$AvataaarTypeGraphicsSkullOutline) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeGraphicsSkullOutline));
 
   @override
-  AvataaarTypeGraphicsSkullOutline get _value =>
-      super._value as AvataaarTypeGraphicsSkullOutline;
+  _$AvataaarTypeGraphicsSkullOutline get _value =>
+      super._value as _$AvataaarTypeGraphicsSkullOutline;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeGraphicsSkullOutline
     extends AvataaarTypeGraphicsSkullOutline {
-  const _$AvataaarTypeGraphicsSkullOutline({String? $type})
+  const _$AvataaarTypeGraphicsSkullOutline({final String? $type})
       : $type = $type ?? 'skullOutline',
         super._();
 
@@ -7907,9 +7752,10 @@ class _$AvataaarTypeGraphicsSkullOutline
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeGraphicsSkullOutline);
+            other is _$AvataaarTypeGraphicsSkullOutline);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -8081,70 +7927,6 @@ AvataaarEyebrow _$AvataaarEyebrowFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarEyebrowTearOff {
-  const _$AvataaarEyebrowTearOff();
-
-  AvataaarTypeEyebrowAngry angry() {
-    return const AvataaarTypeEyebrowAngry();
-  }
-
-  AvataaarTypeEyebrowAngryNatural angryNatural() {
-    return const AvataaarTypeEyebrowAngryNatural();
-  }
-
-  AvataaarTypeEyebrowDefault0 default0() {
-    return const AvataaarTypeEyebrowDefault0();
-  }
-
-  AvataaarTypeEyebrowDefaultNatural defaultNatural() {
-    return const AvataaarTypeEyebrowDefaultNatural();
-  }
-
-  AvataaarTypeEyebrowFlatNatural flatNatural() {
-    return const AvataaarTypeEyebrowFlatNatural();
-  }
-
-  AvataaarTypeEyebrowFrownNatural frownNatural() {
-    return const AvataaarTypeEyebrowFrownNatural();
-  }
-
-  AvataaarTypeEyebrowRaisedExcited raisedExcited() {
-    return const AvataaarTypeEyebrowRaisedExcited();
-  }
-
-  AvataaarTypeEyebrowRaisedExcitedNatural raisedExcitedNatural() {
-    return const AvataaarTypeEyebrowRaisedExcitedNatural();
-  }
-
-  AvataaarTypeEyebrowSadConcerned sadConcerned() {
-    return const AvataaarTypeEyebrowSadConcerned();
-  }
-
-  AvataaarTypeEyebrowSadConcernedNatural sadConcernedNatural() {
-    return const AvataaarTypeEyebrowSadConcernedNatural();
-  }
-
-  AvataaarTypeEyebrowUnibrowNatural unibrowNatural() {
-    return const AvataaarTypeEyebrowUnibrowNatural();
-  }
-
-  AvataaarTypeEyebrowUpDown upDown() {
-    return const AvataaarTypeEyebrowUpDown();
-  }
-
-  AvataaarTypeEyebrowUpDownNatural upDownNatural() {
-    return const AvataaarTypeEyebrowUpDownNatural();
-  }
-
-  AvataaarEyebrow fromJson(Map<String, Object?> json) {
-    return AvataaarEyebrow.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarEyebrow = _$AvataaarEyebrowTearOff();
-
-/// @nodoc
 mixin _$AvataaarEyebrow {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -8284,29 +8066,29 @@ class _$AvataaarEyebrowCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowAngryCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowAngryCopyWith(AvataaarTypeEyebrowAngry value,
-          $Res Function(AvataaarTypeEyebrowAngry) then) =
-      _$AvataaarTypeEyebrowAngryCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowAngryCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowAngryCopyWith(_$AvataaarTypeEyebrowAngry value,
+          $Res Function(_$AvataaarTypeEyebrowAngry) then) =
+      __$$AvataaarTypeEyebrowAngryCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowAngryCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowAngryCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowAngryCopyWith<$Res> {
-  _$AvataaarTypeEyebrowAngryCopyWithImpl(AvataaarTypeEyebrowAngry _value,
-      $Res Function(AvataaarTypeEyebrowAngry) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowAngry));
+    implements _$$AvataaarTypeEyebrowAngryCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowAngryCopyWithImpl(_$AvataaarTypeEyebrowAngry _value,
+      $Res Function(_$AvataaarTypeEyebrowAngry) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowAngry));
 
   @override
-  AvataaarTypeEyebrowAngry get _value =>
-      super._value as AvataaarTypeEyebrowAngry;
+  _$AvataaarTypeEyebrowAngry get _value =>
+      super._value as _$AvataaarTypeEyebrowAngry;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowAngry extends AvataaarTypeEyebrowAngry {
-  const _$AvataaarTypeEyebrowAngry({String? $type})
+  const _$AvataaarTypeEyebrowAngry({final String? $type})
       : $type = $type ?? 'angry',
         super._();
 
@@ -8324,9 +8106,11 @@ class _$AvataaarTypeEyebrowAngry extends AvataaarTypeEyebrowAngry {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeEyebrowAngry);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeEyebrowAngry);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -8486,32 +8270,32 @@ abstract class AvataaarTypeEyebrowAngry extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowAngryNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowAngryNaturalCopyWith(
-          AvataaarTypeEyebrowAngryNatural value,
-          $Res Function(AvataaarTypeEyebrowAngryNatural) then) =
-      _$AvataaarTypeEyebrowAngryNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowAngryNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowAngryNaturalCopyWith(
+          _$AvataaarTypeEyebrowAngryNatural value,
+          $Res Function(_$AvataaarTypeEyebrowAngryNatural) then) =
+      __$$AvataaarTypeEyebrowAngryNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowAngryNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowAngryNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowAngryNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowAngryNaturalCopyWithImpl(
-      AvataaarTypeEyebrowAngryNatural _value,
-      $Res Function(AvataaarTypeEyebrowAngryNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowAngryNatural));
+    implements _$$AvataaarTypeEyebrowAngryNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowAngryNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowAngryNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowAngryNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowAngryNatural));
 
   @override
-  AvataaarTypeEyebrowAngryNatural get _value =>
-      super._value as AvataaarTypeEyebrowAngryNatural;
+  _$AvataaarTypeEyebrowAngryNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowAngryNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowAngryNatural
     extends AvataaarTypeEyebrowAngryNatural {
-  const _$AvataaarTypeEyebrowAngryNatural({String? $type})
+  const _$AvataaarTypeEyebrowAngryNatural({final String? $type})
       : $type = $type ?? 'angryNatural',
         super._();
 
@@ -8531,9 +8315,10 @@ class _$AvataaarTypeEyebrowAngryNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowAngryNatural);
+            other is _$AvataaarTypeEyebrowAngryNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -8694,30 +8479,31 @@ abstract class AvataaarTypeEyebrowAngryNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowDefault0CopyWith<$Res> {
-  factory $AvataaarTypeEyebrowDefault0CopyWith(
-          AvataaarTypeEyebrowDefault0 value,
-          $Res Function(AvataaarTypeEyebrowDefault0) then) =
-      _$AvataaarTypeEyebrowDefault0CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowDefault0CopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowDefault0CopyWith(
+          _$AvataaarTypeEyebrowDefault0 value,
+          $Res Function(_$AvataaarTypeEyebrowDefault0) then) =
+      __$$AvataaarTypeEyebrowDefault0CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowDefault0CopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowDefault0CopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowDefault0CopyWith<$Res> {
-  _$AvataaarTypeEyebrowDefault0CopyWithImpl(AvataaarTypeEyebrowDefault0 _value,
-      $Res Function(AvataaarTypeEyebrowDefault0) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowDefault0));
+    implements _$$AvataaarTypeEyebrowDefault0CopyWith<$Res> {
+  __$$AvataaarTypeEyebrowDefault0CopyWithImpl(
+      _$AvataaarTypeEyebrowDefault0 _value,
+      $Res Function(_$AvataaarTypeEyebrowDefault0) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowDefault0));
 
   @override
-  AvataaarTypeEyebrowDefault0 get _value =>
-      super._value as AvataaarTypeEyebrowDefault0;
+  _$AvataaarTypeEyebrowDefault0 get _value =>
+      super._value as _$AvataaarTypeEyebrowDefault0;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowDefault0 extends AvataaarTypeEyebrowDefault0 {
-  const _$AvataaarTypeEyebrowDefault0({String? $type})
+  const _$AvataaarTypeEyebrowDefault0({final String? $type})
       : $type = $type ?? 'default0',
         super._();
 
@@ -8736,9 +8522,10 @@ class _$AvataaarTypeEyebrowDefault0 extends AvataaarTypeEyebrowDefault0 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowDefault0);
+            other is _$AvataaarTypeEyebrowDefault0);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -8898,32 +8685,32 @@ abstract class AvataaarTypeEyebrowDefault0 extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowDefaultNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowDefaultNaturalCopyWith(
-          AvataaarTypeEyebrowDefaultNatural value,
-          $Res Function(AvataaarTypeEyebrowDefaultNatural) then) =
-      _$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowDefaultNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowDefaultNaturalCopyWith(
+          _$AvataaarTypeEyebrowDefaultNatural value,
+          $Res Function(_$AvataaarTypeEyebrowDefaultNatural) then) =
+      __$$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowDefaultNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl(
-      AvataaarTypeEyebrowDefaultNatural _value,
-      $Res Function(AvataaarTypeEyebrowDefaultNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowDefaultNatural));
+    implements _$$AvataaarTypeEyebrowDefaultNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowDefaultNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowDefaultNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowDefaultNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowDefaultNatural));
 
   @override
-  AvataaarTypeEyebrowDefaultNatural get _value =>
-      super._value as AvataaarTypeEyebrowDefaultNatural;
+  _$AvataaarTypeEyebrowDefaultNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowDefaultNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowDefaultNatural
     extends AvataaarTypeEyebrowDefaultNatural {
-  const _$AvataaarTypeEyebrowDefaultNatural({String? $type})
+  const _$AvataaarTypeEyebrowDefaultNatural({final String? $type})
       : $type = $type ?? 'defaultNatural',
         super._();
 
@@ -8943,9 +8730,10 @@ class _$AvataaarTypeEyebrowDefaultNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowDefaultNatural);
+            other is _$AvataaarTypeEyebrowDefaultNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -9106,31 +8894,31 @@ abstract class AvataaarTypeEyebrowDefaultNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowFlatNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowFlatNaturalCopyWith(
-          AvataaarTypeEyebrowFlatNatural value,
-          $Res Function(AvataaarTypeEyebrowFlatNatural) then) =
-      _$AvataaarTypeEyebrowFlatNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowFlatNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowFlatNaturalCopyWith(
+          _$AvataaarTypeEyebrowFlatNatural value,
+          $Res Function(_$AvataaarTypeEyebrowFlatNatural) then) =
+      __$$AvataaarTypeEyebrowFlatNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowFlatNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowFlatNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowFlatNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowFlatNaturalCopyWithImpl(
-      AvataaarTypeEyebrowFlatNatural _value,
-      $Res Function(AvataaarTypeEyebrowFlatNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowFlatNatural));
+    implements _$$AvataaarTypeEyebrowFlatNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowFlatNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowFlatNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowFlatNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowFlatNatural));
 
   @override
-  AvataaarTypeEyebrowFlatNatural get _value =>
-      super._value as AvataaarTypeEyebrowFlatNatural;
+  _$AvataaarTypeEyebrowFlatNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowFlatNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowFlatNatural extends AvataaarTypeEyebrowFlatNatural {
-  const _$AvataaarTypeEyebrowFlatNatural({String? $type})
+  const _$AvataaarTypeEyebrowFlatNatural({final String? $type})
       : $type = $type ?? 'flatNatural',
         super._();
 
@@ -9150,9 +8938,10 @@ class _$AvataaarTypeEyebrowFlatNatural extends AvataaarTypeEyebrowFlatNatural {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowFlatNatural);
+            other is _$AvataaarTypeEyebrowFlatNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -9313,32 +9102,32 @@ abstract class AvataaarTypeEyebrowFlatNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowFrownNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowFrownNaturalCopyWith(
-          AvataaarTypeEyebrowFrownNatural value,
-          $Res Function(AvataaarTypeEyebrowFrownNatural) then) =
-      _$AvataaarTypeEyebrowFrownNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowFrownNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowFrownNaturalCopyWith(
+          _$AvataaarTypeEyebrowFrownNatural value,
+          $Res Function(_$AvataaarTypeEyebrowFrownNatural) then) =
+      __$$AvataaarTypeEyebrowFrownNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowFrownNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowFrownNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowFrownNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowFrownNaturalCopyWithImpl(
-      AvataaarTypeEyebrowFrownNatural _value,
-      $Res Function(AvataaarTypeEyebrowFrownNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowFrownNatural));
+    implements _$$AvataaarTypeEyebrowFrownNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowFrownNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowFrownNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowFrownNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowFrownNatural));
 
   @override
-  AvataaarTypeEyebrowFrownNatural get _value =>
-      super._value as AvataaarTypeEyebrowFrownNatural;
+  _$AvataaarTypeEyebrowFrownNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowFrownNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowFrownNatural
     extends AvataaarTypeEyebrowFrownNatural {
-  const _$AvataaarTypeEyebrowFrownNatural({String? $type})
+  const _$AvataaarTypeEyebrowFrownNatural({final String? $type})
       : $type = $type ?? 'frownNatural',
         super._();
 
@@ -9358,9 +9147,10 @@ class _$AvataaarTypeEyebrowFrownNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowFrownNatural);
+            other is _$AvataaarTypeEyebrowFrownNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -9521,32 +9311,32 @@ abstract class AvataaarTypeEyebrowFrownNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowRaisedExcitedCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowRaisedExcitedCopyWith(
-          AvataaarTypeEyebrowRaisedExcited value,
-          $Res Function(AvataaarTypeEyebrowRaisedExcited) then) =
-      _$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowRaisedExcitedCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowRaisedExcitedCopyWith(
+          _$AvataaarTypeEyebrowRaisedExcited value,
+          $Res Function(_$AvataaarTypeEyebrowRaisedExcited) then) =
+      __$$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowRaisedExcitedCopyWith<$Res> {
-  _$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl(
-      AvataaarTypeEyebrowRaisedExcited _value,
-      $Res Function(AvataaarTypeEyebrowRaisedExcited) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowRaisedExcited));
+    implements _$$AvataaarTypeEyebrowRaisedExcitedCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowRaisedExcitedCopyWithImpl(
+      _$AvataaarTypeEyebrowRaisedExcited _value,
+      $Res Function(_$AvataaarTypeEyebrowRaisedExcited) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowRaisedExcited));
 
   @override
-  AvataaarTypeEyebrowRaisedExcited get _value =>
-      super._value as AvataaarTypeEyebrowRaisedExcited;
+  _$AvataaarTypeEyebrowRaisedExcited get _value =>
+      super._value as _$AvataaarTypeEyebrowRaisedExcited;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowRaisedExcited
     extends AvataaarTypeEyebrowRaisedExcited {
-  const _$AvataaarTypeEyebrowRaisedExcited({String? $type})
+  const _$AvataaarTypeEyebrowRaisedExcited({final String? $type})
       : $type = $type ?? 'raisedExcited',
         super._();
 
@@ -9566,9 +9356,10 @@ class _$AvataaarTypeEyebrowRaisedExcited
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowRaisedExcited);
+            other is _$AvataaarTypeEyebrowRaisedExcited);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -9729,33 +9520,33 @@ abstract class AvataaarTypeEyebrowRaisedExcited extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith(
-          AvataaarTypeEyebrowRaisedExcitedNatural value,
-          $Res Function(AvataaarTypeEyebrowRaisedExcitedNatural) then) =
-      _$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith(
+          _$AvataaarTypeEyebrowRaisedExcitedNatural value,
+          $Res Function(_$AvataaarTypeEyebrowRaisedExcitedNatural) then) =
+      __$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl(
-      AvataaarTypeEyebrowRaisedExcitedNatural _value,
-      $Res Function(AvataaarTypeEyebrowRaisedExcitedNatural) _then)
-      : super(
-            _value, (v) => _then(v as AvataaarTypeEyebrowRaisedExcitedNatural));
+    implements _$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowRaisedExcitedNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowRaisedExcitedNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowRaisedExcitedNatural) _then)
+      : super(_value,
+            (v) => _then(v as _$AvataaarTypeEyebrowRaisedExcitedNatural));
 
   @override
-  AvataaarTypeEyebrowRaisedExcitedNatural get _value =>
-      super._value as AvataaarTypeEyebrowRaisedExcitedNatural;
+  _$AvataaarTypeEyebrowRaisedExcitedNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowRaisedExcitedNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowRaisedExcitedNatural
     extends AvataaarTypeEyebrowRaisedExcitedNatural {
-  const _$AvataaarTypeEyebrowRaisedExcitedNatural({String? $type})
+  const _$AvataaarTypeEyebrowRaisedExcitedNatural({final String? $type})
       : $type = $type ?? 'raisedExcitedNatural',
         super._();
 
@@ -9775,9 +9566,10 @@ class _$AvataaarTypeEyebrowRaisedExcitedNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowRaisedExcitedNatural);
+            other is _$AvataaarTypeEyebrowRaisedExcitedNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -9939,32 +9731,32 @@ abstract class AvataaarTypeEyebrowRaisedExcitedNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowSadConcernedCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowSadConcernedCopyWith(
-          AvataaarTypeEyebrowSadConcerned value,
-          $Res Function(AvataaarTypeEyebrowSadConcerned) then) =
-      _$AvataaarTypeEyebrowSadConcernedCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowSadConcernedCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowSadConcernedCopyWith(
+          _$AvataaarTypeEyebrowSadConcerned value,
+          $Res Function(_$AvataaarTypeEyebrowSadConcerned) then) =
+      __$$AvataaarTypeEyebrowSadConcernedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowSadConcernedCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowSadConcernedCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowSadConcernedCopyWith<$Res> {
-  _$AvataaarTypeEyebrowSadConcernedCopyWithImpl(
-      AvataaarTypeEyebrowSadConcerned _value,
-      $Res Function(AvataaarTypeEyebrowSadConcerned) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowSadConcerned));
+    implements _$$AvataaarTypeEyebrowSadConcernedCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowSadConcernedCopyWithImpl(
+      _$AvataaarTypeEyebrowSadConcerned _value,
+      $Res Function(_$AvataaarTypeEyebrowSadConcerned) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowSadConcerned));
 
   @override
-  AvataaarTypeEyebrowSadConcerned get _value =>
-      super._value as AvataaarTypeEyebrowSadConcerned;
+  _$AvataaarTypeEyebrowSadConcerned get _value =>
+      super._value as _$AvataaarTypeEyebrowSadConcerned;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowSadConcerned
     extends AvataaarTypeEyebrowSadConcerned {
-  const _$AvataaarTypeEyebrowSadConcerned({String? $type})
+  const _$AvataaarTypeEyebrowSadConcerned({final String? $type})
       : $type = $type ?? 'sadConcerned',
         super._();
 
@@ -9984,9 +9776,10 @@ class _$AvataaarTypeEyebrowSadConcerned
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowSadConcerned);
+            other is _$AvataaarTypeEyebrowSadConcerned);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -10147,33 +9940,33 @@ abstract class AvataaarTypeEyebrowSadConcerned extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowSadConcernedNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowSadConcernedNaturalCopyWith(
-          AvataaarTypeEyebrowSadConcernedNatural value,
-          $Res Function(AvataaarTypeEyebrowSadConcernedNatural) then) =
-      _$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowSadConcernedNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowSadConcernedNaturalCopyWith(
+          _$AvataaarTypeEyebrowSadConcernedNatural value,
+          $Res Function(_$AvataaarTypeEyebrowSadConcernedNatural) then) =
+      __$$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowSadConcernedNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl(
-      AvataaarTypeEyebrowSadConcernedNatural _value,
-      $Res Function(AvataaarTypeEyebrowSadConcernedNatural) _then)
-      : super(
-            _value, (v) => _then(v as AvataaarTypeEyebrowSadConcernedNatural));
+    implements _$$AvataaarTypeEyebrowSadConcernedNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowSadConcernedNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowSadConcernedNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowSadConcernedNatural) _then)
+      : super(_value,
+            (v) => _then(v as _$AvataaarTypeEyebrowSadConcernedNatural));
 
   @override
-  AvataaarTypeEyebrowSadConcernedNatural get _value =>
-      super._value as AvataaarTypeEyebrowSadConcernedNatural;
+  _$AvataaarTypeEyebrowSadConcernedNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowSadConcernedNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowSadConcernedNatural
     extends AvataaarTypeEyebrowSadConcernedNatural {
-  const _$AvataaarTypeEyebrowSadConcernedNatural({String? $type})
+  const _$AvataaarTypeEyebrowSadConcernedNatural({final String? $type})
       : $type = $type ?? 'sadConcernedNatural',
         super._();
 
@@ -10193,9 +9986,10 @@ class _$AvataaarTypeEyebrowSadConcernedNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowSadConcernedNatural);
+            other is _$AvataaarTypeEyebrowSadConcernedNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -10357,32 +10151,32 @@ abstract class AvataaarTypeEyebrowSadConcernedNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowUnibrowNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowUnibrowNaturalCopyWith(
-          AvataaarTypeEyebrowUnibrowNatural value,
-          $Res Function(AvataaarTypeEyebrowUnibrowNatural) then) =
-      _$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowUnibrowNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowUnibrowNaturalCopyWith(
+          _$AvataaarTypeEyebrowUnibrowNatural value,
+          $Res Function(_$AvataaarTypeEyebrowUnibrowNatural) then) =
+      __$$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowUnibrowNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl(
-      AvataaarTypeEyebrowUnibrowNatural _value,
-      $Res Function(AvataaarTypeEyebrowUnibrowNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowUnibrowNatural));
+    implements _$$AvataaarTypeEyebrowUnibrowNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowUnibrowNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowUnibrowNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowUnibrowNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowUnibrowNatural));
 
   @override
-  AvataaarTypeEyebrowUnibrowNatural get _value =>
-      super._value as AvataaarTypeEyebrowUnibrowNatural;
+  _$AvataaarTypeEyebrowUnibrowNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowUnibrowNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowUnibrowNatural
     extends AvataaarTypeEyebrowUnibrowNatural {
-  const _$AvataaarTypeEyebrowUnibrowNatural({String? $type})
+  const _$AvataaarTypeEyebrowUnibrowNatural({final String? $type})
       : $type = $type ?? 'unibrowNatural',
         super._();
 
@@ -10402,9 +10196,10 @@ class _$AvataaarTypeEyebrowUnibrowNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowUnibrowNatural);
+            other is _$AvataaarTypeEyebrowUnibrowNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -10565,29 +10360,30 @@ abstract class AvataaarTypeEyebrowUnibrowNatural extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowUpDownCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowUpDownCopyWith(AvataaarTypeEyebrowUpDown value,
-          $Res Function(AvataaarTypeEyebrowUpDown) then) =
-      _$AvataaarTypeEyebrowUpDownCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowUpDownCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowUpDownCopyWith(
+          _$AvataaarTypeEyebrowUpDown value,
+          $Res Function(_$AvataaarTypeEyebrowUpDown) then) =
+      __$$AvataaarTypeEyebrowUpDownCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowUpDownCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowUpDownCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowUpDownCopyWith<$Res> {
-  _$AvataaarTypeEyebrowUpDownCopyWithImpl(AvataaarTypeEyebrowUpDown _value,
-      $Res Function(AvataaarTypeEyebrowUpDown) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowUpDown));
+    implements _$$AvataaarTypeEyebrowUpDownCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowUpDownCopyWithImpl(_$AvataaarTypeEyebrowUpDown _value,
+      $Res Function(_$AvataaarTypeEyebrowUpDown) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowUpDown));
 
   @override
-  AvataaarTypeEyebrowUpDown get _value =>
-      super._value as AvataaarTypeEyebrowUpDown;
+  _$AvataaarTypeEyebrowUpDown get _value =>
+      super._value as _$AvataaarTypeEyebrowUpDown;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowUpDown extends AvataaarTypeEyebrowUpDown {
-  const _$AvataaarTypeEyebrowUpDown({String? $type})
+  const _$AvataaarTypeEyebrowUpDown({final String? $type})
       : $type = $type ?? 'upDown',
         super._();
 
@@ -10606,9 +10402,10 @@ class _$AvataaarTypeEyebrowUpDown extends AvataaarTypeEyebrowUpDown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowUpDown);
+            other is _$AvataaarTypeEyebrowUpDown);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -10768,32 +10565,32 @@ abstract class AvataaarTypeEyebrowUpDown extends AvataaarEyebrow {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeEyebrowUpDownNaturalCopyWith<$Res> {
-  factory $AvataaarTypeEyebrowUpDownNaturalCopyWith(
-          AvataaarTypeEyebrowUpDownNatural value,
-          $Res Function(AvataaarTypeEyebrowUpDownNatural) then) =
-      _$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeEyebrowUpDownNaturalCopyWith<$Res> {
+  factory _$$AvataaarTypeEyebrowUpDownNaturalCopyWith(
+          _$AvataaarTypeEyebrowUpDownNatural value,
+          $Res Function(_$AvataaarTypeEyebrowUpDownNatural) then) =
+      __$$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl<$Res>
+class __$$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl<$Res>
     extends _$AvataaarEyebrowCopyWithImpl<$Res>
-    implements $AvataaarTypeEyebrowUpDownNaturalCopyWith<$Res> {
-  _$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl(
-      AvataaarTypeEyebrowUpDownNatural _value,
-      $Res Function(AvataaarTypeEyebrowUpDownNatural) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeEyebrowUpDownNatural));
+    implements _$$AvataaarTypeEyebrowUpDownNaturalCopyWith<$Res> {
+  __$$AvataaarTypeEyebrowUpDownNaturalCopyWithImpl(
+      _$AvataaarTypeEyebrowUpDownNatural _value,
+      $Res Function(_$AvataaarTypeEyebrowUpDownNatural) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeEyebrowUpDownNatural));
 
   @override
-  AvataaarTypeEyebrowUpDownNatural get _value =>
-      super._value as AvataaarTypeEyebrowUpDownNatural;
+  _$AvataaarTypeEyebrowUpDownNatural get _value =>
+      super._value as _$AvataaarTypeEyebrowUpDownNatural;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeEyebrowUpDownNatural
     extends AvataaarTypeEyebrowUpDownNatural {
-  const _$AvataaarTypeEyebrowUpDownNatural({String? $type})
+  const _$AvataaarTypeEyebrowUpDownNatural({final String? $type})
       : $type = $type ?? 'upDownNatural',
         super._();
 
@@ -10813,9 +10610,10 @@ class _$AvataaarTypeEyebrowUpDownNatural
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeEyebrowUpDownNatural);
+            other is _$AvataaarTypeEyebrowUpDownNatural);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -10997,64 +10795,9 @@ AvataaarFacialHair _$AvataaarFacialHairFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarFacialHairTearOff {
-  const _$AvataaarFacialHairTearOff();
-
-  AvataaarTypeFacialHairBlank blank(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairBlank(
-      color,
-    );
-  }
-
-  AvataaarTypeFacialHairBeardMedium beardMedium(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairBeardMedium(
-      color,
-    );
-  }
-
-  AvataaarTypeFacialHairBeardLight beardLight(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairBeardLight(
-      color,
-    );
-  }
-
-  AvataaarTypeFacialHairBeardMajestic beardMajestic(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairBeardMajestic(
-      color,
-    );
-  }
-
-  AvataaarTypeFacialHairMoustacheFancy moustacheFancy(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairMoustacheFancy(
-      color,
-    );
-  }
-
-  AvataaarTypeFacialHairMoustacheMagnum moustacheMagnum(
-      [@ColorSerialiser() Color color = AvataaarFacialHair.defaultHairColor]) {
-    return AvataaarTypeFacialHairMoustacheMagnum(
-      color,
-    );
-  }
-
-  AvataaarFacialHair fromJson(Map<String, Object?> json) {
-    return AvataaarFacialHair.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarFacialHair = _$AvataaarFacialHairTearOff();
-
-/// @nodoc
 mixin _$AvataaarFacialHair {
   @ColorSerialiser()
   Color get color => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@ColorSerialiser() Color color) blank,
@@ -11163,33 +10906,34 @@ class _$AvataaarFacialHairCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairBlankCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairBlankCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairBlankCopyWith(
-          AvataaarTypeFacialHairBlank value,
-          $Res Function(AvataaarTypeFacialHairBlank) then) =
-      _$AvataaarTypeFacialHairBlankCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairBlankCopyWith(
+          _$AvataaarTypeFacialHairBlank value,
+          $Res Function(_$AvataaarTypeFacialHairBlank) then) =
+      __$$AvataaarTypeFacialHairBlankCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairBlankCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairBlankCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairBlankCopyWith<$Res> {
-  _$AvataaarTypeFacialHairBlankCopyWithImpl(AvataaarTypeFacialHairBlank _value,
-      $Res Function(AvataaarTypeFacialHairBlank) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairBlank));
+    implements _$$AvataaarTypeFacialHairBlankCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairBlankCopyWithImpl(
+      _$AvataaarTypeFacialHairBlank _value,
+      $Res Function(_$AvataaarTypeFacialHairBlank) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeFacialHairBlank));
 
   @override
-  AvataaarTypeFacialHairBlank get _value =>
-      super._value as AvataaarTypeFacialHairBlank;
+  _$AvataaarTypeFacialHairBlank get _value =>
+      super._value as _$AvataaarTypeFacialHairBlank;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairBlank(
+    return _then(_$AvataaarTypeFacialHairBlank(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -11203,15 +10947,15 @@ class _$AvataaarTypeFacialHairBlankCopyWithImpl<$Res>
 class _$AvataaarTypeFacialHairBlank extends AvataaarTypeFacialHairBlank {
   const _$AvataaarTypeFacialHairBlank(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'blank',
         super._();
 
   factory _$AvataaarTypeFacialHairBlank.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairBlankFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -11227,19 +10971,20 @@ class _$AvataaarTypeFacialHairBlank extends AvataaarTypeFacialHairBlank {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairBlank &&
+            other is _$AvataaarTypeFacialHairBlank &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairBlankCopyWith<AvataaarTypeFacialHairBlank>
-      get copyWith => _$AvataaarTypeFacialHairBlankCopyWithImpl<
-          AvataaarTypeFacialHairBlank>(this, _$identity);
+  _$$AvataaarTypeFacialHairBlankCopyWith<_$AvataaarTypeFacialHairBlank>
+      get copyWith => __$$AvataaarTypeFacialHairBlankCopyWithImpl<
+          _$AvataaarTypeFacialHairBlank>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11343,8 +11088,8 @@ class _$AvataaarTypeFacialHairBlank extends AvataaarTypeFacialHairBlank {
 }
 
 abstract class AvataaarTypeFacialHairBlank extends AvataaarFacialHair {
-  const factory AvataaarTypeFacialHairBlank([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeFacialHairBlank;
+  const factory AvataaarTypeFacialHairBlank(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeFacialHairBlank;
   const AvataaarTypeFacialHairBlank._() : super._();
 
   factory AvataaarTypeFacialHairBlank.fromJson(Map<String, dynamic> json) =
@@ -11352,42 +11097,42 @@ abstract class AvataaarTypeFacialHairBlank extends AvataaarFacialHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairBlankCopyWith<AvataaarTypeFacialHairBlank>
+  _$$AvataaarTypeFacialHairBlankCopyWith<_$AvataaarTypeFacialHairBlank>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairBeardMediumCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairBeardMediumCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairBeardMediumCopyWith(
-          AvataaarTypeFacialHairBeardMedium value,
-          $Res Function(AvataaarTypeFacialHairBeardMedium) then) =
-      _$AvataaarTypeFacialHairBeardMediumCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairBeardMediumCopyWith(
+          _$AvataaarTypeFacialHairBeardMedium value,
+          $Res Function(_$AvataaarTypeFacialHairBeardMedium) then) =
+      __$$AvataaarTypeFacialHairBeardMediumCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairBeardMediumCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairBeardMediumCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairBeardMediumCopyWith<$Res> {
-  _$AvataaarTypeFacialHairBeardMediumCopyWithImpl(
-      AvataaarTypeFacialHairBeardMedium _value,
-      $Res Function(AvataaarTypeFacialHairBeardMedium) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairBeardMedium));
+    implements _$$AvataaarTypeFacialHairBeardMediumCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairBeardMediumCopyWithImpl(
+      _$AvataaarTypeFacialHairBeardMedium _value,
+      $Res Function(_$AvataaarTypeFacialHairBeardMedium) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeFacialHairBeardMedium));
 
   @override
-  AvataaarTypeFacialHairBeardMedium get _value =>
-      super._value as AvataaarTypeFacialHairBeardMedium;
+  _$AvataaarTypeFacialHairBeardMedium get _value =>
+      super._value as _$AvataaarTypeFacialHairBeardMedium;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairBeardMedium(
+    return _then(_$AvataaarTypeFacialHairBeardMedium(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -11402,7 +11147,7 @@ class _$AvataaarTypeFacialHairBeardMedium
     extends AvataaarTypeFacialHairBeardMedium {
   const _$AvataaarTypeFacialHairBeardMedium(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'beardMedium',
         super._();
 
@@ -11410,8 +11155,8 @@ class _$AvataaarTypeFacialHairBeardMedium
           Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairBeardMediumFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -11427,19 +11172,21 @@ class _$AvataaarTypeFacialHairBeardMedium
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairBeardMedium &&
+            other is _$AvataaarTypeFacialHairBeardMedium &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairBeardMediumCopyWith<AvataaarTypeFacialHairBeardMedium>
-      get copyWith => _$AvataaarTypeFacialHairBeardMediumCopyWithImpl<
-          AvataaarTypeFacialHairBeardMedium>(this, _$identity);
+  _$$AvataaarTypeFacialHairBeardMediumCopyWith<
+          _$AvataaarTypeFacialHairBeardMedium>
+      get copyWith => __$$AvataaarTypeFacialHairBeardMediumCopyWithImpl<
+          _$AvataaarTypeFacialHairBeardMedium>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11544,7 +11291,8 @@ class _$AvataaarTypeFacialHairBeardMedium
 
 abstract class AvataaarTypeFacialHairBeardMedium extends AvataaarFacialHair {
   const factory AvataaarTypeFacialHairBeardMedium(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeFacialHairBeardMedium;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeFacialHairBeardMedium;
   const AvataaarTypeFacialHairBeardMedium._() : super._();
 
   factory AvataaarTypeFacialHairBeardMedium.fromJson(
@@ -11552,42 +11300,43 @@ abstract class AvataaarTypeFacialHairBeardMedium extends AvataaarFacialHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairBeardMediumCopyWith<AvataaarTypeFacialHairBeardMedium>
+  _$$AvataaarTypeFacialHairBeardMediumCopyWith<
+          _$AvataaarTypeFacialHairBeardMedium>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairBeardLightCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairBeardLightCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairBeardLightCopyWith(
-          AvataaarTypeFacialHairBeardLight value,
-          $Res Function(AvataaarTypeFacialHairBeardLight) then) =
-      _$AvataaarTypeFacialHairBeardLightCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairBeardLightCopyWith(
+          _$AvataaarTypeFacialHairBeardLight value,
+          $Res Function(_$AvataaarTypeFacialHairBeardLight) then) =
+      __$$AvataaarTypeFacialHairBeardLightCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairBeardLightCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairBeardLightCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairBeardLightCopyWith<$Res> {
-  _$AvataaarTypeFacialHairBeardLightCopyWithImpl(
-      AvataaarTypeFacialHairBeardLight _value,
-      $Res Function(AvataaarTypeFacialHairBeardLight) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairBeardLight));
+    implements _$$AvataaarTypeFacialHairBeardLightCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairBeardLightCopyWithImpl(
+      _$AvataaarTypeFacialHairBeardLight _value,
+      $Res Function(_$AvataaarTypeFacialHairBeardLight) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeFacialHairBeardLight));
 
   @override
-  AvataaarTypeFacialHairBeardLight get _value =>
-      super._value as AvataaarTypeFacialHairBeardLight;
+  _$AvataaarTypeFacialHairBeardLight get _value =>
+      super._value as _$AvataaarTypeFacialHairBeardLight;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairBeardLight(
+    return _then(_$AvataaarTypeFacialHairBeardLight(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -11602,7 +11351,7 @@ class _$AvataaarTypeFacialHairBeardLight
     extends AvataaarTypeFacialHairBeardLight {
   const _$AvataaarTypeFacialHairBeardLight(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'beardLight',
         super._();
 
@@ -11610,8 +11359,8 @@ class _$AvataaarTypeFacialHairBeardLight
           Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairBeardLightFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -11627,19 +11376,21 @@ class _$AvataaarTypeFacialHairBeardLight
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairBeardLight &&
+            other is _$AvataaarTypeFacialHairBeardLight &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairBeardLightCopyWith<AvataaarTypeFacialHairBeardLight>
-      get copyWith => _$AvataaarTypeFacialHairBeardLightCopyWithImpl<
-          AvataaarTypeFacialHairBeardLight>(this, _$identity);
+  _$$AvataaarTypeFacialHairBeardLightCopyWith<
+          _$AvataaarTypeFacialHairBeardLight>
+      get copyWith => __$$AvataaarTypeFacialHairBeardLightCopyWithImpl<
+          _$AvataaarTypeFacialHairBeardLight>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11744,7 +11495,8 @@ class _$AvataaarTypeFacialHairBeardLight
 
 abstract class AvataaarTypeFacialHairBeardLight extends AvataaarFacialHair {
   const factory AvataaarTypeFacialHairBeardLight(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeFacialHairBeardLight;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeFacialHairBeardLight;
   const AvataaarTypeFacialHairBeardLight._() : super._();
 
   factory AvataaarTypeFacialHairBeardLight.fromJson(Map<String, dynamic> json) =
@@ -11752,42 +11504,43 @@ abstract class AvataaarTypeFacialHairBeardLight extends AvataaarFacialHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairBeardLightCopyWith<AvataaarTypeFacialHairBeardLight>
+  _$$AvataaarTypeFacialHairBeardLightCopyWith<
+          _$AvataaarTypeFacialHairBeardLight>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairBeardMajesticCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairBeardMajesticCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairBeardMajesticCopyWith(
-          AvataaarTypeFacialHairBeardMajestic value,
-          $Res Function(AvataaarTypeFacialHairBeardMajestic) then) =
-      _$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairBeardMajesticCopyWith(
+          _$AvataaarTypeFacialHairBeardMajestic value,
+          $Res Function(_$AvataaarTypeFacialHairBeardMajestic) then) =
+      __$$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairBeardMajesticCopyWith<$Res> {
-  _$AvataaarTypeFacialHairBeardMajesticCopyWithImpl(
-      AvataaarTypeFacialHairBeardMajestic _value,
-      $Res Function(AvataaarTypeFacialHairBeardMajestic) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairBeardMajestic));
+    implements _$$AvataaarTypeFacialHairBeardMajesticCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairBeardMajesticCopyWithImpl(
+      _$AvataaarTypeFacialHairBeardMajestic _value,
+      $Res Function(_$AvataaarTypeFacialHairBeardMajestic) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeFacialHairBeardMajestic));
 
   @override
-  AvataaarTypeFacialHairBeardMajestic get _value =>
-      super._value as AvataaarTypeFacialHairBeardMajestic;
+  _$AvataaarTypeFacialHairBeardMajestic get _value =>
+      super._value as _$AvataaarTypeFacialHairBeardMajestic;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairBeardMajestic(
+    return _then(_$AvataaarTypeFacialHairBeardMajestic(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -11802,7 +11555,7 @@ class _$AvataaarTypeFacialHairBeardMajestic
     extends AvataaarTypeFacialHairBeardMajestic {
   const _$AvataaarTypeFacialHairBeardMajestic(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'beardMajestic',
         super._();
 
@@ -11810,8 +11563,8 @@ class _$AvataaarTypeFacialHairBeardMajestic
           Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairBeardMajesticFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -11827,20 +11580,21 @@ class _$AvataaarTypeFacialHairBeardMajestic
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairBeardMajestic &&
+            other is _$AvataaarTypeFacialHairBeardMajestic &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairBeardMajesticCopyWith<
-          AvataaarTypeFacialHairBeardMajestic>
-      get copyWith => _$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<
-          AvataaarTypeFacialHairBeardMajestic>(this, _$identity);
+  _$$AvataaarTypeFacialHairBeardMajesticCopyWith<
+          _$AvataaarTypeFacialHairBeardMajestic>
+      get copyWith => __$$AvataaarTypeFacialHairBeardMajesticCopyWithImpl<
+          _$AvataaarTypeFacialHairBeardMajestic>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11945,7 +11699,8 @@ class _$AvataaarTypeFacialHairBeardMajestic
 
 abstract class AvataaarTypeFacialHairBeardMajestic extends AvataaarFacialHair {
   const factory AvataaarTypeFacialHairBeardMajestic(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeFacialHairBeardMajestic;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeFacialHairBeardMajestic;
   const AvataaarTypeFacialHairBeardMajestic._() : super._();
 
   factory AvataaarTypeFacialHairBeardMajestic.fromJson(
@@ -11954,43 +11709,44 @@ abstract class AvataaarTypeFacialHairBeardMajestic extends AvataaarFacialHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairBeardMajesticCopyWith<
-          AvataaarTypeFacialHairBeardMajestic>
+  _$$AvataaarTypeFacialHairBeardMajesticCopyWith<
+          _$AvataaarTypeFacialHairBeardMajestic>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairMoustacheFancyCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairMoustacheFancyCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairMoustacheFancyCopyWith(
-          AvataaarTypeFacialHairMoustacheFancy value,
-          $Res Function(AvataaarTypeFacialHairMoustacheFancy) then) =
-      _$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairMoustacheFancyCopyWith(
+          _$AvataaarTypeFacialHairMoustacheFancy value,
+          $Res Function(_$AvataaarTypeFacialHairMoustacheFancy) then) =
+      __$$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairMoustacheFancyCopyWith<$Res> {
-  _$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl(
-      AvataaarTypeFacialHairMoustacheFancy _value,
-      $Res Function(AvataaarTypeFacialHairMoustacheFancy) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairMoustacheFancy));
+    implements _$$AvataaarTypeFacialHairMoustacheFancyCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl(
+      _$AvataaarTypeFacialHairMoustacheFancy _value,
+      $Res Function(_$AvataaarTypeFacialHairMoustacheFancy) _then)
+      : super(
+            _value, (v) => _then(v as _$AvataaarTypeFacialHairMoustacheFancy));
 
   @override
-  AvataaarTypeFacialHairMoustacheFancy get _value =>
-      super._value as AvataaarTypeFacialHairMoustacheFancy;
+  _$AvataaarTypeFacialHairMoustacheFancy get _value =>
+      super._value as _$AvataaarTypeFacialHairMoustacheFancy;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairMoustacheFancy(
+    return _then(_$AvataaarTypeFacialHairMoustacheFancy(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -12005,7 +11761,7 @@ class _$AvataaarTypeFacialHairMoustacheFancy
     extends AvataaarTypeFacialHairMoustacheFancy {
   const _$AvataaarTypeFacialHairMoustacheFancy(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'moustacheFancy',
         super._();
 
@@ -12013,8 +11769,8 @@ class _$AvataaarTypeFacialHairMoustacheFancy
           Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairMoustacheFancyFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -12030,20 +11786,21 @@ class _$AvataaarTypeFacialHairMoustacheFancy
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairMoustacheFancy &&
+            other is _$AvataaarTypeFacialHairMoustacheFancy &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairMoustacheFancyCopyWith<
-          AvataaarTypeFacialHairMoustacheFancy>
-      get copyWith => _$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<
-          AvataaarTypeFacialHairMoustacheFancy>(this, _$identity);
+  _$$AvataaarTypeFacialHairMoustacheFancyCopyWith<
+          _$AvataaarTypeFacialHairMoustacheFancy>
+      get copyWith => __$$AvataaarTypeFacialHairMoustacheFancyCopyWithImpl<
+          _$AvataaarTypeFacialHairMoustacheFancy>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12148,7 +11905,7 @@ class _$AvataaarTypeFacialHairMoustacheFancy
 
 abstract class AvataaarTypeFacialHairMoustacheFancy extends AvataaarFacialHair {
   const factory AvataaarTypeFacialHairMoustacheFancy(
-          [@ColorSerialiser() Color color]) =
+          [@ColorSerialiser() final Color color]) =
       _$AvataaarTypeFacialHairMoustacheFancy;
   const AvataaarTypeFacialHairMoustacheFancy._() : super._();
 
@@ -12158,43 +11915,44 @@ abstract class AvataaarTypeFacialHairMoustacheFancy extends AvataaarFacialHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairMoustacheFancyCopyWith<
-          AvataaarTypeFacialHairMoustacheFancy>
+  _$$AvataaarTypeFacialHairMoustacheFancyCopyWith<
+          _$AvataaarTypeFacialHairMoustacheFancy>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeFacialHairMoustacheMagnumCopyWith<$Res>
+abstract class _$$AvataaarTypeFacialHairMoustacheMagnumCopyWith<$Res>
     implements $AvataaarFacialHairCopyWith<$Res> {
-  factory $AvataaarTypeFacialHairMoustacheMagnumCopyWith(
-          AvataaarTypeFacialHairMoustacheMagnum value,
-          $Res Function(AvataaarTypeFacialHairMoustacheMagnum) then) =
-      _$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeFacialHairMoustacheMagnumCopyWith(
+          _$AvataaarTypeFacialHairMoustacheMagnum value,
+          $Res Function(_$AvataaarTypeFacialHairMoustacheMagnum) then) =
+      __$$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<$Res>
+class __$$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<$Res>
     extends _$AvataaarFacialHairCopyWithImpl<$Res>
-    implements $AvataaarTypeFacialHairMoustacheMagnumCopyWith<$Res> {
-  _$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl(
-      AvataaarTypeFacialHairMoustacheMagnum _value,
-      $Res Function(AvataaarTypeFacialHairMoustacheMagnum) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeFacialHairMoustacheMagnum));
+    implements _$$AvataaarTypeFacialHairMoustacheMagnumCopyWith<$Res> {
+  __$$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl(
+      _$AvataaarTypeFacialHairMoustacheMagnum _value,
+      $Res Function(_$AvataaarTypeFacialHairMoustacheMagnum) _then)
+      : super(
+            _value, (v) => _then(v as _$AvataaarTypeFacialHairMoustacheMagnum));
 
   @override
-  AvataaarTypeFacialHairMoustacheMagnum get _value =>
-      super._value as AvataaarTypeFacialHairMoustacheMagnum;
+  _$AvataaarTypeFacialHairMoustacheMagnum get _value =>
+      super._value as _$AvataaarTypeFacialHairMoustacheMagnum;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeFacialHairMoustacheMagnum(
+    return _then(_$AvataaarTypeFacialHairMoustacheMagnum(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -12209,7 +11967,7 @@ class _$AvataaarTypeFacialHairMoustacheMagnum
     extends AvataaarTypeFacialHairMoustacheMagnum {
   const _$AvataaarTypeFacialHairMoustacheMagnum(
       [@ColorSerialiser() this.color = AvataaarFacialHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'moustacheMagnum',
         super._();
 
@@ -12217,8 +11975,8 @@ class _$AvataaarTypeFacialHairMoustacheMagnum
           Map<String, dynamic> json) =>
       _$$AvataaarTypeFacialHairMoustacheMagnumFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -12234,20 +11992,21 @@ class _$AvataaarTypeFacialHairMoustacheMagnum
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeFacialHairMoustacheMagnum &&
+            other is _$AvataaarTypeFacialHairMoustacheMagnum &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeFacialHairMoustacheMagnumCopyWith<
-          AvataaarTypeFacialHairMoustacheMagnum>
-      get copyWith => _$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<
-          AvataaarTypeFacialHairMoustacheMagnum>(this, _$identity);
+  _$$AvataaarTypeFacialHairMoustacheMagnumCopyWith<
+          _$AvataaarTypeFacialHairMoustacheMagnum>
+      get copyWith => __$$AvataaarTypeFacialHairMoustacheMagnumCopyWithImpl<
+          _$AvataaarTypeFacialHairMoustacheMagnum>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12353,7 +12112,7 @@ class _$AvataaarTypeFacialHairMoustacheMagnum
 abstract class AvataaarTypeFacialHairMoustacheMagnum
     extends AvataaarFacialHair {
   const factory AvataaarTypeFacialHairMoustacheMagnum(
-          [@ColorSerialiser() Color color]) =
+          [@ColorSerialiser() final Color color]) =
       _$AvataaarTypeFacialHairMoustacheMagnum;
   const AvataaarTypeFacialHairMoustacheMagnum._() : super._();
 
@@ -12363,11 +12122,11 @@ abstract class AvataaarTypeFacialHairMoustacheMagnum
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeFacialHairMoustacheMagnumCopyWith<
-          AvataaarTypeFacialHairMoustacheMagnum>
+  _$$AvataaarTypeFacialHairMoustacheMagnumCopyWith<
+          _$AvataaarTypeFacialHairMoustacheMagnum>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12451,267 +12210,9 @@ AvataaarHair _$AvataaarHairFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarHairTearOff {
-  const _$AvataaarHairTearOff();
-
-  AvataaarTypeHairNoHair noHair(
-      [@ColorSerialiser() Color color = Colors.transparent]) {
-    return AvataaarTypeHairNoHair(
-      color,
-    );
-  }
-
-  AvataaarTypeHairEyepatch eyepatch(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorEyePatch]) {
-    return AvataaarTypeHairEyepatch(
-      color,
-    );
-  }
-
-  AvataaarTypeHairHat hat(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorHat]) {
-    return AvataaarTypeHairHat(
-      color,
-    );
-  }
-
-  AvataaarTypeHairHijab hijab(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue03]) {
-    return AvataaarTypeHairHijab(
-      color,
-    );
-  }
-
-  AvataaarTypeHairTurban turban(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue03]) {
-    return AvataaarTypeHairTurban(
-      color,
-    );
-  }
-
-  AvataaarTypeHairWinterHat1 winterHat1(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
-    return AvataaarTypeHairWinterHat1(
-      color,
-    );
-  }
-
-  AvataaarTypeHairWinterHat2 winterHat2(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorBlue01]) {
-    return AvataaarTypeHairWinterHat2(
-      color,
-    );
-  }
-
-  AvataaarTypeHairWinterHat3 winterHat3(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
-    return AvataaarTypeHairWinterHat3(
-      color,
-    );
-  }
-
-  AvataaarTypeHairWinterHat4 winterHat4(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorRed]) {
-    return AvataaarTypeHairWinterHat4(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairBigHair longHairBigHair(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairBigHair(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHarBob longHairBob(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHarBob(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairBun longHairBun(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairBun(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairCurly longHairCurly(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairCurly(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairCurvy longHairCurvy(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairCurvy(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairDreads longHairDreads(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairDreads(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairFrida longHairFrida(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHatColorHat]) {
-    return AvataaarTypeHairLongHairFrida(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairFro longHairFro(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairFro(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairFroBand longHairFroBand(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairFroBand(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairNotTooLong longHairNotTooLong(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairNotTooLong(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairShavedSides longHairShavedSides(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairShavedSides(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairMiaWallace longHairMiaWallace(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairMiaWallace(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairStraight longHairStraight(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairStraight(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairStraight2 longHairStraight2(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairStraight2(
-      color,
-    );
-  }
-
-  AvataaarTypeHairLongHairStraightStrand longHairStraightStrand(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairLongHairStraightStrand(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairDreads01 shortHairDreads01(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairDreads01(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairDreads02 shortHairDreads02(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairDreads02(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairFrizzle shortHairFrizzle(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairFrizzle(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairShaggyMullet shortHairShaggyMullet(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairShaggyMullet(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairShortCurly shortHairShortCurly(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairShortCurly(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairShortFlat shortHairShortFlat(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairShortFlat(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairShortRound shortHairShortRound(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairShortRound(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairShortWaved shortHairShortWaved(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairShortWaved(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairSides shortHairSides(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairSides(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairTheCaesar shortHairTheCaesar(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairTheCaesar(
-      color,
-    );
-  }
-
-  AvataaarTypeHairShortHairTheCaesarSidePart shortHairTheCaesarSidePart(
-      [@ColorSerialiser() Color color = AvataaarHair.defaultHairColor]) {
-    return AvataaarTypeHairShortHairTheCaesarSidePart(
-      color,
-    );
-  }
-
-  AvataaarHair fromJson(Map<String, Object?> json) {
-    return AvataaarHair.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarHair = _$AvataaarHairTearOff();
-
-/// @nodoc
 mixin _$AvataaarHair {
   @ColorSerialiser()
   Color get color => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@ColorSerialiser() Color color) noHair,
@@ -13048,31 +12549,32 @@ class _$AvataaarHairCopyWithImpl<$Res> implements $AvataaarHairCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairNoHairCopyWith<$Res>
+abstract class _$$AvataaarTypeHairNoHairCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairNoHairCopyWith(AvataaarTypeHairNoHair value,
-          $Res Function(AvataaarTypeHairNoHair) then) =
-      _$AvataaarTypeHairNoHairCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairNoHairCopyWith(_$AvataaarTypeHairNoHair value,
+          $Res Function(_$AvataaarTypeHairNoHair) then) =
+      __$$AvataaarTypeHairNoHairCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairNoHairCopyWithImpl<$Res>
+class __$$AvataaarTypeHairNoHairCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairNoHairCopyWith<$Res> {
-  _$AvataaarTypeHairNoHairCopyWithImpl(AvataaarTypeHairNoHair _value,
-      $Res Function(AvataaarTypeHairNoHair) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairNoHair));
+    implements _$$AvataaarTypeHairNoHairCopyWith<$Res> {
+  __$$AvataaarTypeHairNoHairCopyWithImpl(_$AvataaarTypeHairNoHair _value,
+      $Res Function(_$AvataaarTypeHairNoHair) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairNoHair));
 
   @override
-  AvataaarTypeHairNoHair get _value => super._value as AvataaarTypeHairNoHair;
+  _$AvataaarTypeHairNoHair get _value =>
+      super._value as _$AvataaarTypeHairNoHair;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairNoHair(
+    return _then(_$AvataaarTypeHairNoHair(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -13085,15 +12587,15 @@ class _$AvataaarTypeHairNoHairCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeHairNoHair extends AvataaarTypeHairNoHair {
   const _$AvataaarTypeHairNoHair(
-      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
+      [@ColorSerialiser() this.color = Colors.transparent, final String? $type])
       : $type = $type ?? 'noHair',
         super._();
 
   factory _$AvataaarTypeHairNoHair.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairNoHairFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -13109,18 +12611,19 @@ class _$AvataaarTypeHairNoHair extends AvataaarTypeHairNoHair {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairNoHair &&
+            other is _$AvataaarTypeHairNoHair &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairNoHairCopyWith<AvataaarTypeHairNoHair> get copyWith =>
-      _$AvataaarTypeHairNoHairCopyWithImpl<AvataaarTypeHairNoHair>(
+  _$$AvataaarTypeHairNoHairCopyWith<_$AvataaarTypeHairNoHair> get copyWith =>
+      __$$AvataaarTypeHairNoHairCopyWithImpl<_$AvataaarTypeHairNoHair>(
           this, _$identity);
 
   @override
@@ -13454,7 +12957,7 @@ class _$AvataaarTypeHairNoHair extends AvataaarTypeHairNoHair {
 }
 
 abstract class AvataaarTypeHairNoHair extends AvataaarHair {
-  const factory AvataaarTypeHairNoHair([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeHairNoHair([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairNoHair;
   const AvataaarTypeHairNoHair._() : super._();
 
@@ -13463,40 +12966,40 @@ abstract class AvataaarTypeHairNoHair extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairNoHairCopyWith<AvataaarTypeHairNoHair> get copyWith =>
+  _$$AvataaarTypeHairNoHairCopyWith<_$AvataaarTypeHairNoHair> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairEyepatchCopyWith<$Res>
+abstract class _$$AvataaarTypeHairEyepatchCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairEyepatchCopyWith(AvataaarTypeHairEyepatch value,
-          $Res Function(AvataaarTypeHairEyepatch) then) =
-      _$AvataaarTypeHairEyepatchCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairEyepatchCopyWith(_$AvataaarTypeHairEyepatch value,
+          $Res Function(_$AvataaarTypeHairEyepatch) then) =
+      __$$AvataaarTypeHairEyepatchCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairEyepatchCopyWithImpl<$Res>
+class __$$AvataaarTypeHairEyepatchCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairEyepatchCopyWith<$Res> {
-  _$AvataaarTypeHairEyepatchCopyWithImpl(AvataaarTypeHairEyepatch _value,
-      $Res Function(AvataaarTypeHairEyepatch) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairEyepatch));
+    implements _$$AvataaarTypeHairEyepatchCopyWith<$Res> {
+  __$$AvataaarTypeHairEyepatchCopyWithImpl(_$AvataaarTypeHairEyepatch _value,
+      $Res Function(_$AvataaarTypeHairEyepatch) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairEyepatch));
 
   @override
-  AvataaarTypeHairEyepatch get _value =>
-      super._value as AvataaarTypeHairEyepatch;
+  _$AvataaarTypeHairEyepatch get _value =>
+      super._value as _$AvataaarTypeHairEyepatch;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairEyepatch(
+    return _then(_$AvataaarTypeHairEyepatch(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -13510,15 +13013,15 @@ class _$AvataaarTypeHairEyepatchCopyWithImpl<$Res>
 class _$AvataaarTypeHairEyepatch extends AvataaarTypeHairEyepatch {
   const _$AvataaarTypeHairEyepatch(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorEyePatch,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'eyepatch',
         super._();
 
   factory _$AvataaarTypeHairEyepatch.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairEyepatchFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -13534,19 +13037,21 @@ class _$AvataaarTypeHairEyepatch extends AvataaarTypeHairEyepatch {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairEyepatch &&
+            other is _$AvataaarTypeHairEyepatch &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairEyepatchCopyWith<AvataaarTypeHairEyepatch> get copyWith =>
-      _$AvataaarTypeHairEyepatchCopyWithImpl<AvataaarTypeHairEyepatch>(
-          this, _$identity);
+  _$$AvataaarTypeHairEyepatchCopyWith<_$AvataaarTypeHairEyepatch>
+      get copyWith =>
+          __$$AvataaarTypeHairEyepatchCopyWithImpl<_$AvataaarTypeHairEyepatch>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -13879,8 +13384,8 @@ class _$AvataaarTypeHairEyepatch extends AvataaarTypeHairEyepatch {
 }
 
 abstract class AvataaarTypeHairEyepatch extends AvataaarHair {
-  const factory AvataaarTypeHairEyepatch([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairEyepatch;
+  const factory AvataaarTypeHairEyepatch(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairEyepatch;
   const AvataaarTypeHairEyepatch._() : super._();
 
   factory AvataaarTypeHairEyepatch.fromJson(Map<String, dynamic> json) =
@@ -13888,39 +13393,39 @@ abstract class AvataaarTypeHairEyepatch extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairEyepatchCopyWith<AvataaarTypeHairEyepatch> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AvataaarTypeHairEyepatchCopyWith<_$AvataaarTypeHairEyepatch>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairHatCopyWith<$Res>
+abstract class _$$AvataaarTypeHairHatCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairHatCopyWith(
-          AvataaarTypeHairHat value, $Res Function(AvataaarTypeHairHat) then) =
-      _$AvataaarTypeHairHatCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairHatCopyWith(_$AvataaarTypeHairHat value,
+          $Res Function(_$AvataaarTypeHairHat) then) =
+      __$$AvataaarTypeHairHatCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairHatCopyWithImpl<$Res>
+class __$$AvataaarTypeHairHatCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairHatCopyWith<$Res> {
-  _$AvataaarTypeHairHatCopyWithImpl(
-      AvataaarTypeHairHat _value, $Res Function(AvataaarTypeHairHat) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairHat));
+    implements _$$AvataaarTypeHairHatCopyWith<$Res> {
+  __$$AvataaarTypeHairHatCopyWithImpl(
+      _$AvataaarTypeHairHat _value, $Res Function(_$AvataaarTypeHairHat) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairHat));
 
   @override
-  AvataaarTypeHairHat get _value => super._value as AvataaarTypeHairHat;
+  _$AvataaarTypeHairHat get _value => super._value as _$AvataaarTypeHairHat;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairHat(
+    return _then(_$AvataaarTypeHairHat(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -13934,15 +13439,15 @@ class _$AvataaarTypeHairHatCopyWithImpl<$Res>
 class _$AvataaarTypeHairHat extends AvataaarTypeHairHat {
   const _$AvataaarTypeHairHat(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorHat,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'hat',
         super._();
 
   factory _$AvataaarTypeHairHat.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairHatFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -13958,18 +13463,20 @@ class _$AvataaarTypeHairHat extends AvataaarTypeHairHat {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairHat &&
+            other is _$AvataaarTypeHairHat &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairHatCopyWith<AvataaarTypeHairHat> get copyWith =>
-      _$AvataaarTypeHairHatCopyWithImpl<AvataaarTypeHairHat>(this, _$identity);
+  _$$AvataaarTypeHairHatCopyWith<_$AvataaarTypeHairHat> get copyWith =>
+      __$$AvataaarTypeHairHatCopyWithImpl<_$AvataaarTypeHairHat>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -14302,7 +13809,7 @@ class _$AvataaarTypeHairHat extends AvataaarTypeHairHat {
 }
 
 abstract class AvataaarTypeHairHat extends AvataaarHair {
-  const factory AvataaarTypeHairHat([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeHairHat([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairHat;
   const AvataaarTypeHairHat._() : super._();
 
@@ -14311,39 +13818,39 @@ abstract class AvataaarTypeHairHat extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairHatCopyWith<AvataaarTypeHairHat> get copyWith =>
+  _$$AvataaarTypeHairHatCopyWith<_$AvataaarTypeHairHat> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairHijabCopyWith<$Res>
+abstract class _$$AvataaarTypeHairHijabCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairHijabCopyWith(AvataaarTypeHairHijab value,
-          $Res Function(AvataaarTypeHairHijab) then) =
-      _$AvataaarTypeHairHijabCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairHijabCopyWith(_$AvataaarTypeHairHijab value,
+          $Res Function(_$AvataaarTypeHairHijab) then) =
+      __$$AvataaarTypeHairHijabCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairHijabCopyWithImpl<$Res>
+class __$$AvataaarTypeHairHijabCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairHijabCopyWith<$Res> {
-  _$AvataaarTypeHairHijabCopyWithImpl(
-      AvataaarTypeHairHijab _value, $Res Function(AvataaarTypeHairHijab) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairHijab));
+    implements _$$AvataaarTypeHairHijabCopyWith<$Res> {
+  __$$AvataaarTypeHairHijabCopyWithImpl(_$AvataaarTypeHairHijab _value,
+      $Res Function(_$AvataaarTypeHairHijab) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairHijab));
 
   @override
-  AvataaarTypeHairHijab get _value => super._value as AvataaarTypeHairHijab;
+  _$AvataaarTypeHairHijab get _value => super._value as _$AvataaarTypeHairHijab;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairHijab(
+    return _then(_$AvataaarTypeHairHijab(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -14357,15 +13864,15 @@ class _$AvataaarTypeHairHijabCopyWithImpl<$Res>
 class _$AvataaarTypeHairHijab extends AvataaarTypeHairHijab {
   const _$AvataaarTypeHairHijab(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue03,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'hijab',
         super._();
 
   factory _$AvataaarTypeHairHijab.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairHijabFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -14381,18 +13888,19 @@ class _$AvataaarTypeHairHijab extends AvataaarTypeHairHijab {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairHijab &&
+            other is _$AvataaarTypeHairHijab &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairHijabCopyWith<AvataaarTypeHairHijab> get copyWith =>
-      _$AvataaarTypeHairHijabCopyWithImpl<AvataaarTypeHairHijab>(
+  _$$AvataaarTypeHairHijabCopyWith<_$AvataaarTypeHairHijab> get copyWith =>
+      __$$AvataaarTypeHairHijabCopyWithImpl<_$AvataaarTypeHairHijab>(
           this, _$identity);
 
   @override
@@ -14726,7 +14234,7 @@ class _$AvataaarTypeHairHijab extends AvataaarTypeHairHijab {
 }
 
 abstract class AvataaarTypeHairHijab extends AvataaarHair {
-  const factory AvataaarTypeHairHijab([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeHairHijab([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairHijab;
   const AvataaarTypeHairHijab._() : super._();
 
@@ -14735,39 +14243,40 @@ abstract class AvataaarTypeHairHijab extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairHijabCopyWith<AvataaarTypeHairHijab> get copyWith =>
+  _$$AvataaarTypeHairHijabCopyWith<_$AvataaarTypeHairHijab> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairTurbanCopyWith<$Res>
+abstract class _$$AvataaarTypeHairTurbanCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairTurbanCopyWith(AvataaarTypeHairTurban value,
-          $Res Function(AvataaarTypeHairTurban) then) =
-      _$AvataaarTypeHairTurbanCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairTurbanCopyWith(_$AvataaarTypeHairTurban value,
+          $Res Function(_$AvataaarTypeHairTurban) then) =
+      __$$AvataaarTypeHairTurbanCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairTurbanCopyWithImpl<$Res>
+class __$$AvataaarTypeHairTurbanCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairTurbanCopyWith<$Res> {
-  _$AvataaarTypeHairTurbanCopyWithImpl(AvataaarTypeHairTurban _value,
-      $Res Function(AvataaarTypeHairTurban) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairTurban));
+    implements _$$AvataaarTypeHairTurbanCopyWith<$Res> {
+  __$$AvataaarTypeHairTurbanCopyWithImpl(_$AvataaarTypeHairTurban _value,
+      $Res Function(_$AvataaarTypeHairTurban) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairTurban));
 
   @override
-  AvataaarTypeHairTurban get _value => super._value as AvataaarTypeHairTurban;
+  _$AvataaarTypeHairTurban get _value =>
+      super._value as _$AvataaarTypeHairTurban;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairTurban(
+    return _then(_$AvataaarTypeHairTurban(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -14781,15 +14290,15 @@ class _$AvataaarTypeHairTurbanCopyWithImpl<$Res>
 class _$AvataaarTypeHairTurban extends AvataaarTypeHairTurban {
   const _$AvataaarTypeHairTurban(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue03,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'turban',
         super._();
 
   factory _$AvataaarTypeHairTurban.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairTurbanFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -14805,18 +14314,19 @@ class _$AvataaarTypeHairTurban extends AvataaarTypeHairTurban {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairTurban &&
+            other is _$AvataaarTypeHairTurban &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairTurbanCopyWith<AvataaarTypeHairTurban> get copyWith =>
-      _$AvataaarTypeHairTurbanCopyWithImpl<AvataaarTypeHairTurban>(
+  _$$AvataaarTypeHairTurbanCopyWith<_$AvataaarTypeHairTurban> get copyWith =>
+      __$$AvataaarTypeHairTurbanCopyWithImpl<_$AvataaarTypeHairTurban>(
           this, _$identity);
 
   @override
@@ -15150,7 +14660,7 @@ class _$AvataaarTypeHairTurban extends AvataaarTypeHairTurban {
 }
 
 abstract class AvataaarTypeHairTurban extends AvataaarHair {
-  const factory AvataaarTypeHairTurban([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeHairTurban([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairTurban;
   const AvataaarTypeHairTurban._() : super._();
 
@@ -15159,40 +14669,42 @@ abstract class AvataaarTypeHairTurban extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairTurbanCopyWith<AvataaarTypeHairTurban> get copyWith =>
+  _$$AvataaarTypeHairTurbanCopyWith<_$AvataaarTypeHairTurban> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairWinterHat1CopyWith<$Res>
+abstract class _$$AvataaarTypeHairWinterHat1CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairWinterHat1CopyWith(AvataaarTypeHairWinterHat1 value,
-          $Res Function(AvataaarTypeHairWinterHat1) then) =
-      _$AvataaarTypeHairWinterHat1CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairWinterHat1CopyWith(
+          _$AvataaarTypeHairWinterHat1 value,
+          $Res Function(_$AvataaarTypeHairWinterHat1) then) =
+      __$$AvataaarTypeHairWinterHat1CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairWinterHat1CopyWithImpl<$Res>
+class __$$AvataaarTypeHairWinterHat1CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairWinterHat1CopyWith<$Res> {
-  _$AvataaarTypeHairWinterHat1CopyWithImpl(AvataaarTypeHairWinterHat1 _value,
-      $Res Function(AvataaarTypeHairWinterHat1) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairWinterHat1));
+    implements _$$AvataaarTypeHairWinterHat1CopyWith<$Res> {
+  __$$AvataaarTypeHairWinterHat1CopyWithImpl(
+      _$AvataaarTypeHairWinterHat1 _value,
+      $Res Function(_$AvataaarTypeHairWinterHat1) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairWinterHat1));
 
   @override
-  AvataaarTypeHairWinterHat1 get _value =>
-      super._value as AvataaarTypeHairWinterHat1;
+  _$AvataaarTypeHairWinterHat1 get _value =>
+      super._value as _$AvataaarTypeHairWinterHat1;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairWinterHat1(
+    return _then(_$AvataaarTypeHairWinterHat1(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -15206,15 +14718,15 @@ class _$AvataaarTypeHairWinterHat1CopyWithImpl<$Res>
 class _$AvataaarTypeHairWinterHat1 extends AvataaarTypeHairWinterHat1 {
   const _$AvataaarTypeHairWinterHat1(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'winterHat1',
         super._();
 
   factory _$AvataaarTypeHairWinterHat1.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairWinterHat1FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -15230,20 +14742,20 @@ class _$AvataaarTypeHairWinterHat1 extends AvataaarTypeHairWinterHat1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairWinterHat1 &&
+            other is _$AvataaarTypeHairWinterHat1 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairWinterHat1CopyWith<AvataaarTypeHairWinterHat1>
-      get copyWith =>
-          _$AvataaarTypeHairWinterHat1CopyWithImpl<AvataaarTypeHairWinterHat1>(
-              this, _$identity);
+  _$$AvataaarTypeHairWinterHat1CopyWith<_$AvataaarTypeHairWinterHat1>
+      get copyWith => __$$AvataaarTypeHairWinterHat1CopyWithImpl<
+          _$AvataaarTypeHairWinterHat1>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -15576,8 +15088,8 @@ class _$AvataaarTypeHairWinterHat1 extends AvataaarTypeHairWinterHat1 {
 }
 
 abstract class AvataaarTypeHairWinterHat1 extends AvataaarHair {
-  const factory AvataaarTypeHairWinterHat1([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairWinterHat1;
+  const factory AvataaarTypeHairWinterHat1(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairWinterHat1;
   const AvataaarTypeHairWinterHat1._() : super._();
 
   factory AvataaarTypeHairWinterHat1.fromJson(Map<String, dynamic> json) =
@@ -15585,40 +15097,42 @@ abstract class AvataaarTypeHairWinterHat1 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairWinterHat1CopyWith<AvataaarTypeHairWinterHat1>
+  _$$AvataaarTypeHairWinterHat1CopyWith<_$AvataaarTypeHairWinterHat1>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairWinterHat2CopyWith<$Res>
+abstract class _$$AvataaarTypeHairWinterHat2CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairWinterHat2CopyWith(AvataaarTypeHairWinterHat2 value,
-          $Res Function(AvataaarTypeHairWinterHat2) then) =
-      _$AvataaarTypeHairWinterHat2CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairWinterHat2CopyWith(
+          _$AvataaarTypeHairWinterHat2 value,
+          $Res Function(_$AvataaarTypeHairWinterHat2) then) =
+      __$$AvataaarTypeHairWinterHat2CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairWinterHat2CopyWithImpl<$Res>
+class __$$AvataaarTypeHairWinterHat2CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairWinterHat2CopyWith<$Res> {
-  _$AvataaarTypeHairWinterHat2CopyWithImpl(AvataaarTypeHairWinterHat2 _value,
-      $Res Function(AvataaarTypeHairWinterHat2) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairWinterHat2));
+    implements _$$AvataaarTypeHairWinterHat2CopyWith<$Res> {
+  __$$AvataaarTypeHairWinterHat2CopyWithImpl(
+      _$AvataaarTypeHairWinterHat2 _value,
+      $Res Function(_$AvataaarTypeHairWinterHat2) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairWinterHat2));
 
   @override
-  AvataaarTypeHairWinterHat2 get _value =>
-      super._value as AvataaarTypeHairWinterHat2;
+  _$AvataaarTypeHairWinterHat2 get _value =>
+      super._value as _$AvataaarTypeHairWinterHat2;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairWinterHat2(
+    return _then(_$AvataaarTypeHairWinterHat2(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -15632,15 +15146,15 @@ class _$AvataaarTypeHairWinterHat2CopyWithImpl<$Res>
 class _$AvataaarTypeHairWinterHat2 extends AvataaarTypeHairWinterHat2 {
   const _$AvataaarTypeHairWinterHat2(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorBlue01,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'winterHat2',
         super._();
 
   factory _$AvataaarTypeHairWinterHat2.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairWinterHat2FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -15656,20 +15170,20 @@ class _$AvataaarTypeHairWinterHat2 extends AvataaarTypeHairWinterHat2 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairWinterHat2 &&
+            other is _$AvataaarTypeHairWinterHat2 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairWinterHat2CopyWith<AvataaarTypeHairWinterHat2>
-      get copyWith =>
-          _$AvataaarTypeHairWinterHat2CopyWithImpl<AvataaarTypeHairWinterHat2>(
-              this, _$identity);
+  _$$AvataaarTypeHairWinterHat2CopyWith<_$AvataaarTypeHairWinterHat2>
+      get copyWith => __$$AvataaarTypeHairWinterHat2CopyWithImpl<
+          _$AvataaarTypeHairWinterHat2>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16002,8 +15516,8 @@ class _$AvataaarTypeHairWinterHat2 extends AvataaarTypeHairWinterHat2 {
 }
 
 abstract class AvataaarTypeHairWinterHat2 extends AvataaarHair {
-  const factory AvataaarTypeHairWinterHat2([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairWinterHat2;
+  const factory AvataaarTypeHairWinterHat2(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairWinterHat2;
   const AvataaarTypeHairWinterHat2._() : super._();
 
   factory AvataaarTypeHairWinterHat2.fromJson(Map<String, dynamic> json) =
@@ -16011,40 +15525,42 @@ abstract class AvataaarTypeHairWinterHat2 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairWinterHat2CopyWith<AvataaarTypeHairWinterHat2>
+  _$$AvataaarTypeHairWinterHat2CopyWith<_$AvataaarTypeHairWinterHat2>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairWinterHat3CopyWith<$Res>
+abstract class _$$AvataaarTypeHairWinterHat3CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairWinterHat3CopyWith(AvataaarTypeHairWinterHat3 value,
-          $Res Function(AvataaarTypeHairWinterHat3) then) =
-      _$AvataaarTypeHairWinterHat3CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairWinterHat3CopyWith(
+          _$AvataaarTypeHairWinterHat3 value,
+          $Res Function(_$AvataaarTypeHairWinterHat3) then) =
+      __$$AvataaarTypeHairWinterHat3CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairWinterHat3CopyWithImpl<$Res>
+class __$$AvataaarTypeHairWinterHat3CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairWinterHat3CopyWith<$Res> {
-  _$AvataaarTypeHairWinterHat3CopyWithImpl(AvataaarTypeHairWinterHat3 _value,
-      $Res Function(AvataaarTypeHairWinterHat3) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairWinterHat3));
+    implements _$$AvataaarTypeHairWinterHat3CopyWith<$Res> {
+  __$$AvataaarTypeHairWinterHat3CopyWithImpl(
+      _$AvataaarTypeHairWinterHat3 _value,
+      $Res Function(_$AvataaarTypeHairWinterHat3) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairWinterHat3));
 
   @override
-  AvataaarTypeHairWinterHat3 get _value =>
-      super._value as AvataaarTypeHairWinterHat3;
+  _$AvataaarTypeHairWinterHat3 get _value =>
+      super._value as _$AvataaarTypeHairWinterHat3;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairWinterHat3(
+    return _then(_$AvataaarTypeHairWinterHat3(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -16058,15 +15574,15 @@ class _$AvataaarTypeHairWinterHat3CopyWithImpl<$Res>
 class _$AvataaarTypeHairWinterHat3 extends AvataaarTypeHairWinterHat3 {
   const _$AvataaarTypeHairWinterHat3(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'winterHat3',
         super._();
 
   factory _$AvataaarTypeHairWinterHat3.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairWinterHat3FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -16082,20 +15598,20 @@ class _$AvataaarTypeHairWinterHat3 extends AvataaarTypeHairWinterHat3 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairWinterHat3 &&
+            other is _$AvataaarTypeHairWinterHat3 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairWinterHat3CopyWith<AvataaarTypeHairWinterHat3>
-      get copyWith =>
-          _$AvataaarTypeHairWinterHat3CopyWithImpl<AvataaarTypeHairWinterHat3>(
-              this, _$identity);
+  _$$AvataaarTypeHairWinterHat3CopyWith<_$AvataaarTypeHairWinterHat3>
+      get copyWith => __$$AvataaarTypeHairWinterHat3CopyWithImpl<
+          _$AvataaarTypeHairWinterHat3>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16428,8 +15944,8 @@ class _$AvataaarTypeHairWinterHat3 extends AvataaarTypeHairWinterHat3 {
 }
 
 abstract class AvataaarTypeHairWinterHat3 extends AvataaarHair {
-  const factory AvataaarTypeHairWinterHat3([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairWinterHat3;
+  const factory AvataaarTypeHairWinterHat3(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairWinterHat3;
   const AvataaarTypeHairWinterHat3._() : super._();
 
   factory AvataaarTypeHairWinterHat3.fromJson(Map<String, dynamic> json) =
@@ -16437,40 +15953,42 @@ abstract class AvataaarTypeHairWinterHat3 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairWinterHat3CopyWith<AvataaarTypeHairWinterHat3>
+  _$$AvataaarTypeHairWinterHat3CopyWith<_$AvataaarTypeHairWinterHat3>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairWinterHat4CopyWith<$Res>
+abstract class _$$AvataaarTypeHairWinterHat4CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairWinterHat4CopyWith(AvataaarTypeHairWinterHat4 value,
-          $Res Function(AvataaarTypeHairWinterHat4) then) =
-      _$AvataaarTypeHairWinterHat4CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairWinterHat4CopyWith(
+          _$AvataaarTypeHairWinterHat4 value,
+          $Res Function(_$AvataaarTypeHairWinterHat4) then) =
+      __$$AvataaarTypeHairWinterHat4CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairWinterHat4CopyWithImpl<$Res>
+class __$$AvataaarTypeHairWinterHat4CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairWinterHat4CopyWith<$Res> {
-  _$AvataaarTypeHairWinterHat4CopyWithImpl(AvataaarTypeHairWinterHat4 _value,
-      $Res Function(AvataaarTypeHairWinterHat4) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairWinterHat4));
+    implements _$$AvataaarTypeHairWinterHat4CopyWith<$Res> {
+  __$$AvataaarTypeHairWinterHat4CopyWithImpl(
+      _$AvataaarTypeHairWinterHat4 _value,
+      $Res Function(_$AvataaarTypeHairWinterHat4) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairWinterHat4));
 
   @override
-  AvataaarTypeHairWinterHat4 get _value =>
-      super._value as AvataaarTypeHairWinterHat4;
+  _$AvataaarTypeHairWinterHat4 get _value =>
+      super._value as _$AvataaarTypeHairWinterHat4;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairWinterHat4(
+    return _then(_$AvataaarTypeHairWinterHat4(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -16484,15 +16002,15 @@ class _$AvataaarTypeHairWinterHat4CopyWithImpl<$Res>
 class _$AvataaarTypeHairWinterHat4 extends AvataaarTypeHairWinterHat4 {
   const _$AvataaarTypeHairWinterHat4(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorRed,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'winterHat4',
         super._();
 
   factory _$AvataaarTypeHairWinterHat4.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairWinterHat4FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -16508,20 +16026,20 @@ class _$AvataaarTypeHairWinterHat4 extends AvataaarTypeHairWinterHat4 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairWinterHat4 &&
+            other is _$AvataaarTypeHairWinterHat4 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairWinterHat4CopyWith<AvataaarTypeHairWinterHat4>
-      get copyWith =>
-          _$AvataaarTypeHairWinterHat4CopyWithImpl<AvataaarTypeHairWinterHat4>(
-              this, _$identity);
+  _$$AvataaarTypeHairWinterHat4CopyWith<_$AvataaarTypeHairWinterHat4>
+      get copyWith => __$$AvataaarTypeHairWinterHat4CopyWithImpl<
+          _$AvataaarTypeHairWinterHat4>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16854,8 +16372,8 @@ class _$AvataaarTypeHairWinterHat4 extends AvataaarTypeHairWinterHat4 {
 }
 
 abstract class AvataaarTypeHairWinterHat4 extends AvataaarHair {
-  const factory AvataaarTypeHairWinterHat4([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairWinterHat4;
+  const factory AvataaarTypeHairWinterHat4(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairWinterHat4;
   const AvataaarTypeHairWinterHat4._() : super._();
 
   factory AvataaarTypeHairWinterHat4.fromJson(Map<String, dynamic> json) =
@@ -16863,42 +16381,42 @@ abstract class AvataaarTypeHairWinterHat4 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairWinterHat4CopyWith<AvataaarTypeHairWinterHat4>
+  _$$AvataaarTypeHairWinterHat4CopyWith<_$AvataaarTypeHairWinterHat4>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairBigHairCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairBigHairCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairBigHairCopyWith(
-          AvataaarTypeHairLongHairBigHair value,
-          $Res Function(AvataaarTypeHairLongHairBigHair) then) =
-      _$AvataaarTypeHairLongHairBigHairCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairBigHairCopyWith(
+          _$AvataaarTypeHairLongHairBigHair value,
+          $Res Function(_$AvataaarTypeHairLongHairBigHair) then) =
+      __$$AvataaarTypeHairLongHairBigHairCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairBigHairCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairBigHairCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairBigHairCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairBigHairCopyWithImpl(
-      AvataaarTypeHairLongHairBigHair _value,
-      $Res Function(AvataaarTypeHairLongHairBigHair) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairBigHair));
+    implements _$$AvataaarTypeHairLongHairBigHairCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairBigHairCopyWithImpl(
+      _$AvataaarTypeHairLongHairBigHair _value,
+      $Res Function(_$AvataaarTypeHairLongHairBigHair) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairBigHair));
 
   @override
-  AvataaarTypeHairLongHairBigHair get _value =>
-      super._value as AvataaarTypeHairLongHairBigHair;
+  _$AvataaarTypeHairLongHairBigHair get _value =>
+      super._value as _$AvataaarTypeHairLongHairBigHair;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairBigHair(
+    return _then(_$AvataaarTypeHairLongHairBigHair(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -16913,7 +16431,7 @@ class _$AvataaarTypeHairLongHairBigHair
     extends AvataaarTypeHairLongHairBigHair {
   const _$AvataaarTypeHairLongHairBigHair(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairBigHair',
         super._();
 
@@ -16921,8 +16439,8 @@ class _$AvataaarTypeHairLongHairBigHair
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairBigHairFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -16938,19 +16456,20 @@ class _$AvataaarTypeHairLongHairBigHair
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairBigHair &&
+            other is _$AvataaarTypeHairLongHairBigHair &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairBigHairCopyWith<AvataaarTypeHairLongHairBigHair>
-      get copyWith => _$AvataaarTypeHairLongHairBigHairCopyWithImpl<
-          AvataaarTypeHairLongHairBigHair>(this, _$identity);
+  _$$AvataaarTypeHairLongHairBigHairCopyWith<_$AvataaarTypeHairLongHairBigHair>
+      get copyWith => __$$AvataaarTypeHairLongHairBigHairCopyWithImpl<
+          _$AvataaarTypeHairLongHairBigHair>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -17284,7 +16803,8 @@ class _$AvataaarTypeHairLongHairBigHair
 
 abstract class AvataaarTypeHairLongHairBigHair extends AvataaarHair {
   const factory AvataaarTypeHairLongHairBigHair(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairBigHair;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairBigHair;
   const AvataaarTypeHairLongHairBigHair._() : super._();
 
   factory AvataaarTypeHairLongHairBigHair.fromJson(Map<String, dynamic> json) =
@@ -17292,40 +16812,42 @@ abstract class AvataaarTypeHairLongHairBigHair extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairBigHairCopyWith<AvataaarTypeHairLongHairBigHair>
+  _$$AvataaarTypeHairLongHairBigHairCopyWith<_$AvataaarTypeHairLongHairBigHair>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHarBobCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHarBobCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHarBobCopyWith(AvataaarTypeHairLongHarBob value,
-          $Res Function(AvataaarTypeHairLongHarBob) then) =
-      _$AvataaarTypeHairLongHarBobCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHarBobCopyWith(
+          _$AvataaarTypeHairLongHarBob value,
+          $Res Function(_$AvataaarTypeHairLongHarBob) then) =
+      __$$AvataaarTypeHairLongHarBobCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHarBobCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHarBobCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHarBobCopyWith<$Res> {
-  _$AvataaarTypeHairLongHarBobCopyWithImpl(AvataaarTypeHairLongHarBob _value,
-      $Res Function(AvataaarTypeHairLongHarBob) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHarBob));
+    implements _$$AvataaarTypeHairLongHarBobCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHarBobCopyWithImpl(
+      _$AvataaarTypeHairLongHarBob _value,
+      $Res Function(_$AvataaarTypeHairLongHarBob) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHarBob));
 
   @override
-  AvataaarTypeHairLongHarBob get _value =>
-      super._value as AvataaarTypeHairLongHarBob;
+  _$AvataaarTypeHairLongHarBob get _value =>
+      super._value as _$AvataaarTypeHairLongHarBob;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHarBob(
+    return _then(_$AvataaarTypeHairLongHarBob(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -17339,15 +16861,15 @@ class _$AvataaarTypeHairLongHarBobCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHarBob extends AvataaarTypeHairLongHarBob {
   const _$AvataaarTypeHairLongHarBob(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairBob',
         super._();
 
   factory _$AvataaarTypeHairLongHarBob.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHarBobFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -17363,20 +16885,20 @@ class _$AvataaarTypeHairLongHarBob extends AvataaarTypeHairLongHarBob {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHarBob &&
+            other is _$AvataaarTypeHairLongHarBob &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHarBobCopyWith<AvataaarTypeHairLongHarBob>
-      get copyWith =>
-          _$AvataaarTypeHairLongHarBobCopyWithImpl<AvataaarTypeHairLongHarBob>(
-              this, _$identity);
+  _$$AvataaarTypeHairLongHarBobCopyWith<_$AvataaarTypeHairLongHarBob>
+      get copyWith => __$$AvataaarTypeHairLongHarBobCopyWithImpl<
+          _$AvataaarTypeHairLongHarBob>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -17709,8 +17231,8 @@ class _$AvataaarTypeHairLongHarBob extends AvataaarTypeHairLongHarBob {
 }
 
 abstract class AvataaarTypeHairLongHarBob extends AvataaarHair {
-  const factory AvataaarTypeHairLongHarBob([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairLongHarBob;
+  const factory AvataaarTypeHairLongHarBob(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHarBob;
   const AvataaarTypeHairLongHarBob._() : super._();
 
   factory AvataaarTypeHairLongHarBob.fromJson(Map<String, dynamic> json) =
@@ -17718,41 +17240,42 @@ abstract class AvataaarTypeHairLongHarBob extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHarBobCopyWith<AvataaarTypeHairLongHarBob>
+  _$$AvataaarTypeHairLongHarBobCopyWith<_$AvataaarTypeHairLongHarBob>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairBunCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairBunCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairBunCopyWith(
-          AvataaarTypeHairLongHairBun value,
-          $Res Function(AvataaarTypeHairLongHairBun) then) =
-      _$AvataaarTypeHairLongHairBunCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairBunCopyWith(
+          _$AvataaarTypeHairLongHairBun value,
+          $Res Function(_$AvataaarTypeHairLongHairBun) then) =
+      __$$AvataaarTypeHairLongHairBunCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairBunCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairBunCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairBunCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairBunCopyWithImpl(AvataaarTypeHairLongHairBun _value,
-      $Res Function(AvataaarTypeHairLongHairBun) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairBun));
+    implements _$$AvataaarTypeHairLongHairBunCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairBunCopyWithImpl(
+      _$AvataaarTypeHairLongHairBun _value,
+      $Res Function(_$AvataaarTypeHairLongHairBun) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairBun));
 
   @override
-  AvataaarTypeHairLongHairBun get _value =>
-      super._value as AvataaarTypeHairLongHairBun;
+  _$AvataaarTypeHairLongHairBun get _value =>
+      super._value as _$AvataaarTypeHairLongHairBun;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairBun(
+    return _then(_$AvataaarTypeHairLongHairBun(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -17766,15 +17289,15 @@ class _$AvataaarTypeHairLongHairBunCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairBun extends AvataaarTypeHairLongHairBun {
   const _$AvataaarTypeHairLongHairBun(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairBun',
         super._();
 
   factory _$AvataaarTypeHairLongHairBun.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairBunFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -17790,19 +17313,20 @@ class _$AvataaarTypeHairLongHairBun extends AvataaarTypeHairLongHairBun {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairBun &&
+            other is _$AvataaarTypeHairLongHairBun &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairBunCopyWith<AvataaarTypeHairLongHairBun>
-      get copyWith => _$AvataaarTypeHairLongHairBunCopyWithImpl<
-          AvataaarTypeHairLongHairBun>(this, _$identity);
+  _$$AvataaarTypeHairLongHairBunCopyWith<_$AvataaarTypeHairLongHairBun>
+      get copyWith => __$$AvataaarTypeHairLongHairBunCopyWithImpl<
+          _$AvataaarTypeHairLongHairBun>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -18135,8 +17659,8 @@ class _$AvataaarTypeHairLongHairBun extends AvataaarTypeHairLongHairBun {
 }
 
 abstract class AvataaarTypeHairLongHairBun extends AvataaarHair {
-  const factory AvataaarTypeHairLongHairBun([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairLongHairBun;
+  const factory AvataaarTypeHairLongHairBun(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHairBun;
   const AvataaarTypeHairLongHairBun._() : super._();
 
   factory AvataaarTypeHairLongHairBun.fromJson(Map<String, dynamic> json) =
@@ -18144,42 +17668,42 @@ abstract class AvataaarTypeHairLongHairBun extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairBunCopyWith<AvataaarTypeHairLongHairBun>
+  _$$AvataaarTypeHairLongHairBunCopyWith<_$AvataaarTypeHairLongHairBun>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairCurlyCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairCurlyCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairCurlyCopyWith(
-          AvataaarTypeHairLongHairCurly value,
-          $Res Function(AvataaarTypeHairLongHairCurly) then) =
-      _$AvataaarTypeHairLongHairCurlyCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairCurlyCopyWith(
+          _$AvataaarTypeHairLongHairCurly value,
+          $Res Function(_$AvataaarTypeHairLongHairCurly) then) =
+      __$$AvataaarTypeHairLongHairCurlyCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairCurlyCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairCurlyCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairCurlyCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairCurlyCopyWithImpl(
-      AvataaarTypeHairLongHairCurly _value,
-      $Res Function(AvataaarTypeHairLongHairCurly) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairCurly));
+    implements _$$AvataaarTypeHairLongHairCurlyCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairCurlyCopyWithImpl(
+      _$AvataaarTypeHairLongHairCurly _value,
+      $Res Function(_$AvataaarTypeHairLongHairCurly) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairCurly));
 
   @override
-  AvataaarTypeHairLongHairCurly get _value =>
-      super._value as AvataaarTypeHairLongHairCurly;
+  _$AvataaarTypeHairLongHairCurly get _value =>
+      super._value as _$AvataaarTypeHairLongHairCurly;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairCurly(
+    return _then(_$AvataaarTypeHairLongHairCurly(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -18193,15 +17717,15 @@ class _$AvataaarTypeHairLongHairCurlyCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairCurly extends AvataaarTypeHairLongHairCurly {
   const _$AvataaarTypeHairLongHairCurly(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairCurly',
         super._();
 
   factory _$AvataaarTypeHairLongHairCurly.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairCurlyFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -18217,19 +17741,20 @@ class _$AvataaarTypeHairLongHairCurly extends AvataaarTypeHairLongHairCurly {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairCurly &&
+            other is _$AvataaarTypeHairLongHairCurly &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairCurlyCopyWith<AvataaarTypeHairLongHairCurly>
-      get copyWith => _$AvataaarTypeHairLongHairCurlyCopyWithImpl<
-          AvataaarTypeHairLongHairCurly>(this, _$identity);
+  _$$AvataaarTypeHairLongHairCurlyCopyWith<_$AvataaarTypeHairLongHairCurly>
+      get copyWith => __$$AvataaarTypeHairLongHairCurlyCopyWithImpl<
+          _$AvataaarTypeHairLongHairCurly>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -18563,7 +18088,7 @@ class _$AvataaarTypeHairLongHairCurly extends AvataaarTypeHairLongHairCurly {
 
 abstract class AvataaarTypeHairLongHairCurly extends AvataaarHair {
   const factory AvataaarTypeHairLongHairCurly(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairCurly;
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHairCurly;
   const AvataaarTypeHairLongHairCurly._() : super._();
 
   factory AvataaarTypeHairLongHairCurly.fromJson(Map<String, dynamic> json) =
@@ -18571,42 +18096,42 @@ abstract class AvataaarTypeHairLongHairCurly extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairCurlyCopyWith<AvataaarTypeHairLongHairCurly>
+  _$$AvataaarTypeHairLongHairCurlyCopyWith<_$AvataaarTypeHairLongHairCurly>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairCurvyCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairCurvyCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairCurvyCopyWith(
-          AvataaarTypeHairLongHairCurvy value,
-          $Res Function(AvataaarTypeHairLongHairCurvy) then) =
-      _$AvataaarTypeHairLongHairCurvyCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairCurvyCopyWith(
+          _$AvataaarTypeHairLongHairCurvy value,
+          $Res Function(_$AvataaarTypeHairLongHairCurvy) then) =
+      __$$AvataaarTypeHairLongHairCurvyCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairCurvyCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairCurvyCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairCurvyCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairCurvyCopyWithImpl(
-      AvataaarTypeHairLongHairCurvy _value,
-      $Res Function(AvataaarTypeHairLongHairCurvy) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairCurvy));
+    implements _$$AvataaarTypeHairLongHairCurvyCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairCurvyCopyWithImpl(
+      _$AvataaarTypeHairLongHairCurvy _value,
+      $Res Function(_$AvataaarTypeHairLongHairCurvy) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairCurvy));
 
   @override
-  AvataaarTypeHairLongHairCurvy get _value =>
-      super._value as AvataaarTypeHairLongHairCurvy;
+  _$AvataaarTypeHairLongHairCurvy get _value =>
+      super._value as _$AvataaarTypeHairLongHairCurvy;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairCurvy(
+    return _then(_$AvataaarTypeHairLongHairCurvy(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -18620,15 +18145,15 @@ class _$AvataaarTypeHairLongHairCurvyCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairCurvy extends AvataaarTypeHairLongHairCurvy {
   const _$AvataaarTypeHairLongHairCurvy(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairCurvy',
         super._();
 
   factory _$AvataaarTypeHairLongHairCurvy.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairCurvyFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -18644,19 +18169,20 @@ class _$AvataaarTypeHairLongHairCurvy extends AvataaarTypeHairLongHairCurvy {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairCurvy &&
+            other is _$AvataaarTypeHairLongHairCurvy &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairCurvyCopyWith<AvataaarTypeHairLongHairCurvy>
-      get copyWith => _$AvataaarTypeHairLongHairCurvyCopyWithImpl<
-          AvataaarTypeHairLongHairCurvy>(this, _$identity);
+  _$$AvataaarTypeHairLongHairCurvyCopyWith<_$AvataaarTypeHairLongHairCurvy>
+      get copyWith => __$$AvataaarTypeHairLongHairCurvyCopyWithImpl<
+          _$AvataaarTypeHairLongHairCurvy>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -18990,7 +18516,7 @@ class _$AvataaarTypeHairLongHairCurvy extends AvataaarTypeHairLongHairCurvy {
 
 abstract class AvataaarTypeHairLongHairCurvy extends AvataaarHair {
   const factory AvataaarTypeHairLongHairCurvy(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairCurvy;
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHairCurvy;
   const AvataaarTypeHairLongHairCurvy._() : super._();
 
   factory AvataaarTypeHairLongHairCurvy.fromJson(Map<String, dynamic> json) =
@@ -18998,42 +18524,42 @@ abstract class AvataaarTypeHairLongHairCurvy extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairCurvyCopyWith<AvataaarTypeHairLongHairCurvy>
+  _$$AvataaarTypeHairLongHairCurvyCopyWith<_$AvataaarTypeHairLongHairCurvy>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairDreadsCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairDreadsCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairDreadsCopyWith(
-          AvataaarTypeHairLongHairDreads value,
-          $Res Function(AvataaarTypeHairLongHairDreads) then) =
-      _$AvataaarTypeHairLongHairDreadsCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairDreadsCopyWith(
+          _$AvataaarTypeHairLongHairDreads value,
+          $Res Function(_$AvataaarTypeHairLongHairDreads) then) =
+      __$$AvataaarTypeHairLongHairDreadsCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairDreadsCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairDreadsCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairDreadsCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairDreadsCopyWithImpl(
-      AvataaarTypeHairLongHairDreads _value,
-      $Res Function(AvataaarTypeHairLongHairDreads) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairDreads));
+    implements _$$AvataaarTypeHairLongHairDreadsCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairDreadsCopyWithImpl(
+      _$AvataaarTypeHairLongHairDreads _value,
+      $Res Function(_$AvataaarTypeHairLongHairDreads) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairDreads));
 
   @override
-  AvataaarTypeHairLongHairDreads get _value =>
-      super._value as AvataaarTypeHairLongHairDreads;
+  _$AvataaarTypeHairLongHairDreads get _value =>
+      super._value as _$AvataaarTypeHairLongHairDreads;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairDreads(
+    return _then(_$AvataaarTypeHairLongHairDreads(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -19047,7 +18573,7 @@ class _$AvataaarTypeHairLongHairDreadsCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairDreads extends AvataaarTypeHairLongHairDreads {
   const _$AvataaarTypeHairLongHairDreads(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairDreads',
         super._();
 
@@ -19055,8 +18581,8 @@ class _$AvataaarTypeHairLongHairDreads extends AvataaarTypeHairLongHairDreads {
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairDreadsFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -19072,19 +18598,20 @@ class _$AvataaarTypeHairLongHairDreads extends AvataaarTypeHairLongHairDreads {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairDreads &&
+            other is _$AvataaarTypeHairLongHairDreads &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairDreadsCopyWith<AvataaarTypeHairLongHairDreads>
-      get copyWith => _$AvataaarTypeHairLongHairDreadsCopyWithImpl<
-          AvataaarTypeHairLongHairDreads>(this, _$identity);
+  _$$AvataaarTypeHairLongHairDreadsCopyWith<_$AvataaarTypeHairLongHairDreads>
+      get copyWith => __$$AvataaarTypeHairLongHairDreadsCopyWithImpl<
+          _$AvataaarTypeHairLongHairDreads>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -19418,7 +18945,8 @@ class _$AvataaarTypeHairLongHairDreads extends AvataaarTypeHairLongHairDreads {
 
 abstract class AvataaarTypeHairLongHairDreads extends AvataaarHair {
   const factory AvataaarTypeHairLongHairDreads(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairDreads;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairDreads;
   const AvataaarTypeHairLongHairDreads._() : super._();
 
   factory AvataaarTypeHairLongHairDreads.fromJson(Map<String, dynamic> json) =
@@ -19426,42 +18954,42 @@ abstract class AvataaarTypeHairLongHairDreads extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairDreadsCopyWith<AvataaarTypeHairLongHairDreads>
+  _$$AvataaarTypeHairLongHairDreadsCopyWith<_$AvataaarTypeHairLongHairDreads>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairFridaCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairFridaCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairFridaCopyWith(
-          AvataaarTypeHairLongHairFrida value,
-          $Res Function(AvataaarTypeHairLongHairFrida) then) =
-      _$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairFridaCopyWith(
+          _$AvataaarTypeHairLongHairFrida value,
+          $Res Function(_$AvataaarTypeHairLongHairFrida) then) =
+      __$$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairFridaCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairFridaCopyWithImpl(
-      AvataaarTypeHairLongHairFrida _value,
-      $Res Function(AvataaarTypeHairLongHairFrida) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairFrida));
+    implements _$$AvataaarTypeHairLongHairFridaCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairFridaCopyWithImpl(
+      _$AvataaarTypeHairLongHairFrida _value,
+      $Res Function(_$AvataaarTypeHairLongHairFrida) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairFrida));
 
   @override
-  AvataaarTypeHairLongHairFrida get _value =>
-      super._value as AvataaarTypeHairLongHairFrida;
+  _$AvataaarTypeHairLongHairFrida get _value =>
+      super._value as _$AvataaarTypeHairLongHairFrida;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairFrida(
+    return _then(_$AvataaarTypeHairLongHairFrida(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -19475,15 +19003,15 @@ class _$AvataaarTypeHairLongHairFridaCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairFrida extends AvataaarTypeHairLongHairFrida {
   const _$AvataaarTypeHairLongHairFrida(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHatColorHat,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairFrida',
         super._();
 
   factory _$AvataaarTypeHairLongHairFrida.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairFridaFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -19499,19 +19027,20 @@ class _$AvataaarTypeHairLongHairFrida extends AvataaarTypeHairLongHairFrida {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairFrida &&
+            other is _$AvataaarTypeHairLongHairFrida &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairFridaCopyWith<AvataaarTypeHairLongHairFrida>
-      get copyWith => _$AvataaarTypeHairLongHairFridaCopyWithImpl<
-          AvataaarTypeHairLongHairFrida>(this, _$identity);
+  _$$AvataaarTypeHairLongHairFridaCopyWith<_$AvataaarTypeHairLongHairFrida>
+      get copyWith => __$$AvataaarTypeHairLongHairFridaCopyWithImpl<
+          _$AvataaarTypeHairLongHairFrida>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -19845,7 +19374,7 @@ class _$AvataaarTypeHairLongHairFrida extends AvataaarTypeHairLongHairFrida {
 
 abstract class AvataaarTypeHairLongHairFrida extends AvataaarHair {
   const factory AvataaarTypeHairLongHairFrida(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairFrida;
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHairFrida;
   const AvataaarTypeHairLongHairFrida._() : super._();
 
   factory AvataaarTypeHairLongHairFrida.fromJson(Map<String, dynamic> json) =
@@ -19853,41 +19382,42 @@ abstract class AvataaarTypeHairLongHairFrida extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairFridaCopyWith<AvataaarTypeHairLongHairFrida>
+  _$$AvataaarTypeHairLongHairFridaCopyWith<_$AvataaarTypeHairLongHairFrida>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairFroCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairFroCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairFroCopyWith(
-          AvataaarTypeHairLongHairFro value,
-          $Res Function(AvataaarTypeHairLongHairFro) then) =
-      _$AvataaarTypeHairLongHairFroCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairFroCopyWith(
+          _$AvataaarTypeHairLongHairFro value,
+          $Res Function(_$AvataaarTypeHairLongHairFro) then) =
+      __$$AvataaarTypeHairLongHairFroCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairFroCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairFroCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairFroCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairFroCopyWithImpl(AvataaarTypeHairLongHairFro _value,
-      $Res Function(AvataaarTypeHairLongHairFro) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairFro));
+    implements _$$AvataaarTypeHairLongHairFroCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairFroCopyWithImpl(
+      _$AvataaarTypeHairLongHairFro _value,
+      $Res Function(_$AvataaarTypeHairLongHairFro) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairFro));
 
   @override
-  AvataaarTypeHairLongHairFro get _value =>
-      super._value as AvataaarTypeHairLongHairFro;
+  _$AvataaarTypeHairLongHairFro get _value =>
+      super._value as _$AvataaarTypeHairLongHairFro;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairFro(
+    return _then(_$AvataaarTypeHairLongHairFro(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -19901,15 +19431,15 @@ class _$AvataaarTypeHairLongHairFroCopyWithImpl<$Res>
 class _$AvataaarTypeHairLongHairFro extends AvataaarTypeHairLongHairFro {
   const _$AvataaarTypeHairLongHairFro(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairFro',
         super._();
 
   factory _$AvataaarTypeHairLongHairFro.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairFroFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -19925,19 +19455,20 @@ class _$AvataaarTypeHairLongHairFro extends AvataaarTypeHairLongHairFro {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairFro &&
+            other is _$AvataaarTypeHairLongHairFro &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairFroCopyWith<AvataaarTypeHairLongHairFro>
-      get copyWith => _$AvataaarTypeHairLongHairFroCopyWithImpl<
-          AvataaarTypeHairLongHairFro>(this, _$identity);
+  _$$AvataaarTypeHairLongHairFroCopyWith<_$AvataaarTypeHairLongHairFro>
+      get copyWith => __$$AvataaarTypeHairLongHairFroCopyWithImpl<
+          _$AvataaarTypeHairLongHairFro>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -20270,8 +19801,8 @@ class _$AvataaarTypeHairLongHairFro extends AvataaarTypeHairLongHairFro {
 }
 
 abstract class AvataaarTypeHairLongHairFro extends AvataaarHair {
-  const factory AvataaarTypeHairLongHairFro([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeHairLongHairFro;
+  const factory AvataaarTypeHairLongHairFro(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeHairLongHairFro;
   const AvataaarTypeHairLongHairFro._() : super._();
 
   factory AvataaarTypeHairLongHairFro.fromJson(Map<String, dynamic> json) =
@@ -20279,42 +19810,42 @@ abstract class AvataaarTypeHairLongHairFro extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairFroCopyWith<AvataaarTypeHairLongHairFro>
+  _$$AvataaarTypeHairLongHairFroCopyWith<_$AvataaarTypeHairLongHairFro>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairFroBandCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairFroBandCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairFroBandCopyWith(
-          AvataaarTypeHairLongHairFroBand value,
-          $Res Function(AvataaarTypeHairLongHairFroBand) then) =
-      _$AvataaarTypeHairLongHairFroBandCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairFroBandCopyWith(
+          _$AvataaarTypeHairLongHairFroBand value,
+          $Res Function(_$AvataaarTypeHairLongHairFroBand) then) =
+      __$$AvataaarTypeHairLongHairFroBandCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairFroBandCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairFroBandCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairFroBandCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairFroBandCopyWithImpl(
-      AvataaarTypeHairLongHairFroBand _value,
-      $Res Function(AvataaarTypeHairLongHairFroBand) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairFroBand));
+    implements _$$AvataaarTypeHairLongHairFroBandCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairFroBandCopyWithImpl(
+      _$AvataaarTypeHairLongHairFroBand _value,
+      $Res Function(_$AvataaarTypeHairLongHairFroBand) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairFroBand));
 
   @override
-  AvataaarTypeHairLongHairFroBand get _value =>
-      super._value as AvataaarTypeHairLongHairFroBand;
+  _$AvataaarTypeHairLongHairFroBand get _value =>
+      super._value as _$AvataaarTypeHairLongHairFroBand;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairFroBand(
+    return _then(_$AvataaarTypeHairLongHairFroBand(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -20329,7 +19860,7 @@ class _$AvataaarTypeHairLongHairFroBand
     extends AvataaarTypeHairLongHairFroBand {
   const _$AvataaarTypeHairLongHairFroBand(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairFroBand',
         super._();
 
@@ -20337,8 +19868,8 @@ class _$AvataaarTypeHairLongHairFroBand
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairFroBandFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -20354,19 +19885,20 @@ class _$AvataaarTypeHairLongHairFroBand
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairFroBand &&
+            other is _$AvataaarTypeHairLongHairFroBand &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairFroBandCopyWith<AvataaarTypeHairLongHairFroBand>
-      get copyWith => _$AvataaarTypeHairLongHairFroBandCopyWithImpl<
-          AvataaarTypeHairLongHairFroBand>(this, _$identity);
+  _$$AvataaarTypeHairLongHairFroBandCopyWith<_$AvataaarTypeHairLongHairFroBand>
+      get copyWith => __$$AvataaarTypeHairLongHairFroBandCopyWithImpl<
+          _$AvataaarTypeHairLongHairFroBand>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -20700,7 +20232,8 @@ class _$AvataaarTypeHairLongHairFroBand
 
 abstract class AvataaarTypeHairLongHairFroBand extends AvataaarHair {
   const factory AvataaarTypeHairLongHairFroBand(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairFroBand;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairFroBand;
   const AvataaarTypeHairLongHairFroBand._() : super._();
 
   factory AvataaarTypeHairLongHairFroBand.fromJson(Map<String, dynamic> json) =
@@ -20708,42 +20241,42 @@ abstract class AvataaarTypeHairLongHairFroBand extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairFroBandCopyWith<AvataaarTypeHairLongHairFroBand>
+  _$$AvataaarTypeHairLongHairFroBandCopyWith<_$AvataaarTypeHairLongHairFroBand>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairNotTooLongCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairNotTooLongCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairNotTooLongCopyWith(
-          AvataaarTypeHairLongHairNotTooLong value,
-          $Res Function(AvataaarTypeHairLongHairNotTooLong) then) =
-      _$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairNotTooLongCopyWith(
+          _$AvataaarTypeHairLongHairNotTooLong value,
+          $Res Function(_$AvataaarTypeHairLongHairNotTooLong) then) =
+      __$$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairNotTooLongCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairNotTooLongCopyWithImpl(
-      AvataaarTypeHairLongHairNotTooLong _value,
-      $Res Function(AvataaarTypeHairLongHairNotTooLong) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairNotTooLong));
+    implements _$$AvataaarTypeHairLongHairNotTooLongCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairNotTooLongCopyWithImpl(
+      _$AvataaarTypeHairLongHairNotTooLong _value,
+      $Res Function(_$AvataaarTypeHairLongHairNotTooLong) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairNotTooLong));
 
   @override
-  AvataaarTypeHairLongHairNotTooLong get _value =>
-      super._value as AvataaarTypeHairLongHairNotTooLong;
+  _$AvataaarTypeHairLongHairNotTooLong get _value =>
+      super._value as _$AvataaarTypeHairLongHairNotTooLong;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairNotTooLong(
+    return _then(_$AvataaarTypeHairLongHairNotTooLong(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -20758,7 +20291,7 @@ class _$AvataaarTypeHairLongHairNotTooLong
     extends AvataaarTypeHairLongHairNotTooLong {
   const _$AvataaarTypeHairLongHairNotTooLong(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairNotTooLong',
         super._();
 
@@ -20766,8 +20299,8 @@ class _$AvataaarTypeHairLongHairNotTooLong
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairNotTooLongFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -20783,20 +20316,21 @@ class _$AvataaarTypeHairLongHairNotTooLong
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairNotTooLong &&
+            other is _$AvataaarTypeHairLongHairNotTooLong &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairNotTooLongCopyWith<
-          AvataaarTypeHairLongHairNotTooLong>
-      get copyWith => _$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<
-          AvataaarTypeHairLongHairNotTooLong>(this, _$identity);
+  _$$AvataaarTypeHairLongHairNotTooLongCopyWith<
+          _$AvataaarTypeHairLongHairNotTooLong>
+      get copyWith => __$$AvataaarTypeHairLongHairNotTooLongCopyWithImpl<
+          _$AvataaarTypeHairLongHairNotTooLong>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -21130,7 +20664,8 @@ class _$AvataaarTypeHairLongHairNotTooLong
 
 abstract class AvataaarTypeHairLongHairNotTooLong extends AvataaarHair {
   const factory AvataaarTypeHairLongHairNotTooLong(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairNotTooLong;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairNotTooLong;
   const AvataaarTypeHairLongHairNotTooLong._() : super._();
 
   factory AvataaarTypeHairLongHairNotTooLong.fromJson(
@@ -21139,43 +20674,43 @@ abstract class AvataaarTypeHairLongHairNotTooLong extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairNotTooLongCopyWith<
-          AvataaarTypeHairLongHairNotTooLong>
+  _$$AvataaarTypeHairLongHairNotTooLongCopyWith<
+          _$AvataaarTypeHairLongHairNotTooLong>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairShavedSidesCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairShavedSidesCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairShavedSidesCopyWith(
-          AvataaarTypeHairLongHairShavedSides value,
-          $Res Function(AvataaarTypeHairLongHairShavedSides) then) =
-      _$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairShavedSidesCopyWith(
+          _$AvataaarTypeHairLongHairShavedSides value,
+          $Res Function(_$AvataaarTypeHairLongHairShavedSides) then) =
+      __$$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairShavedSidesCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairShavedSidesCopyWithImpl(
-      AvataaarTypeHairLongHairShavedSides _value,
-      $Res Function(AvataaarTypeHairLongHairShavedSides) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairShavedSides));
+    implements _$$AvataaarTypeHairLongHairShavedSidesCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairShavedSidesCopyWithImpl(
+      _$AvataaarTypeHairLongHairShavedSides _value,
+      $Res Function(_$AvataaarTypeHairLongHairShavedSides) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairShavedSides));
 
   @override
-  AvataaarTypeHairLongHairShavedSides get _value =>
-      super._value as AvataaarTypeHairLongHairShavedSides;
+  _$AvataaarTypeHairLongHairShavedSides get _value =>
+      super._value as _$AvataaarTypeHairLongHairShavedSides;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairShavedSides(
+    return _then(_$AvataaarTypeHairLongHairShavedSides(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -21190,7 +20725,7 @@ class _$AvataaarTypeHairLongHairShavedSides
     extends AvataaarTypeHairLongHairShavedSides {
   const _$AvataaarTypeHairLongHairShavedSides(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairShavedSides',
         super._();
 
@@ -21198,8 +20733,8 @@ class _$AvataaarTypeHairLongHairShavedSides
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairShavedSidesFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -21215,20 +20750,21 @@ class _$AvataaarTypeHairLongHairShavedSides
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairShavedSides &&
+            other is _$AvataaarTypeHairLongHairShavedSides &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairShavedSidesCopyWith<
-          AvataaarTypeHairLongHairShavedSides>
-      get copyWith => _$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<
-          AvataaarTypeHairLongHairShavedSides>(this, _$identity);
+  _$$AvataaarTypeHairLongHairShavedSidesCopyWith<
+          _$AvataaarTypeHairLongHairShavedSides>
+      get copyWith => __$$AvataaarTypeHairLongHairShavedSidesCopyWithImpl<
+          _$AvataaarTypeHairLongHairShavedSides>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -21562,7 +21098,8 @@ class _$AvataaarTypeHairLongHairShavedSides
 
 abstract class AvataaarTypeHairLongHairShavedSides extends AvataaarHair {
   const factory AvataaarTypeHairLongHairShavedSides(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairShavedSides;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairShavedSides;
   const AvataaarTypeHairLongHairShavedSides._() : super._();
 
   factory AvataaarTypeHairLongHairShavedSides.fromJson(
@@ -21571,43 +21108,43 @@ abstract class AvataaarTypeHairLongHairShavedSides extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairShavedSidesCopyWith<
-          AvataaarTypeHairLongHairShavedSides>
+  _$$AvataaarTypeHairLongHairShavedSidesCopyWith<
+          _$AvataaarTypeHairLongHairShavedSides>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairMiaWallaceCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairMiaWallaceCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairMiaWallaceCopyWith(
-          AvataaarTypeHairLongHairMiaWallace value,
-          $Res Function(AvataaarTypeHairLongHairMiaWallace) then) =
-      _$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairMiaWallaceCopyWith(
+          _$AvataaarTypeHairLongHairMiaWallace value,
+          $Res Function(_$AvataaarTypeHairLongHairMiaWallace) then) =
+      __$$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairMiaWallaceCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl(
-      AvataaarTypeHairLongHairMiaWallace _value,
-      $Res Function(AvataaarTypeHairLongHairMiaWallace) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairMiaWallace));
+    implements _$$AvataaarTypeHairLongHairMiaWallaceCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl(
+      _$AvataaarTypeHairLongHairMiaWallace _value,
+      $Res Function(_$AvataaarTypeHairLongHairMiaWallace) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairMiaWallace));
 
   @override
-  AvataaarTypeHairLongHairMiaWallace get _value =>
-      super._value as AvataaarTypeHairLongHairMiaWallace;
+  _$AvataaarTypeHairLongHairMiaWallace get _value =>
+      super._value as _$AvataaarTypeHairLongHairMiaWallace;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairMiaWallace(
+    return _then(_$AvataaarTypeHairLongHairMiaWallace(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -21622,7 +21159,7 @@ class _$AvataaarTypeHairLongHairMiaWallace
     extends AvataaarTypeHairLongHairMiaWallace {
   const _$AvataaarTypeHairLongHairMiaWallace(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairMiaWallace',
         super._();
 
@@ -21630,8 +21167,8 @@ class _$AvataaarTypeHairLongHairMiaWallace
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairMiaWallaceFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -21647,20 +21184,21 @@ class _$AvataaarTypeHairLongHairMiaWallace
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairMiaWallace &&
+            other is _$AvataaarTypeHairLongHairMiaWallace &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairMiaWallaceCopyWith<
-          AvataaarTypeHairLongHairMiaWallace>
-      get copyWith => _$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<
-          AvataaarTypeHairLongHairMiaWallace>(this, _$identity);
+  _$$AvataaarTypeHairLongHairMiaWallaceCopyWith<
+          _$AvataaarTypeHairLongHairMiaWallace>
+      get copyWith => __$$AvataaarTypeHairLongHairMiaWallaceCopyWithImpl<
+          _$AvataaarTypeHairLongHairMiaWallace>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -21994,7 +21532,8 @@ class _$AvataaarTypeHairLongHairMiaWallace
 
 abstract class AvataaarTypeHairLongHairMiaWallace extends AvataaarHair {
   const factory AvataaarTypeHairLongHairMiaWallace(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairMiaWallace;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairMiaWallace;
   const AvataaarTypeHairLongHairMiaWallace._() : super._();
 
   factory AvataaarTypeHairLongHairMiaWallace.fromJson(
@@ -22003,43 +21542,43 @@ abstract class AvataaarTypeHairLongHairMiaWallace extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairMiaWallaceCopyWith<
-          AvataaarTypeHairLongHairMiaWallace>
+  _$$AvataaarTypeHairLongHairMiaWallaceCopyWith<
+          _$AvataaarTypeHairLongHairMiaWallace>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairStraightCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairStraightCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairStraightCopyWith(
-          AvataaarTypeHairLongHairStraight value,
-          $Res Function(AvataaarTypeHairLongHairStraight) then) =
-      _$AvataaarTypeHairLongHairStraightCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairStraightCopyWith(
+          _$AvataaarTypeHairLongHairStraight value,
+          $Res Function(_$AvataaarTypeHairLongHairStraight) then) =
+      __$$AvataaarTypeHairLongHairStraightCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairStraightCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairStraightCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairStraightCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairStraightCopyWithImpl(
-      AvataaarTypeHairLongHairStraight _value,
-      $Res Function(AvataaarTypeHairLongHairStraight) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairStraight));
+    implements _$$AvataaarTypeHairLongHairStraightCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairStraightCopyWithImpl(
+      _$AvataaarTypeHairLongHairStraight _value,
+      $Res Function(_$AvataaarTypeHairLongHairStraight) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairStraight));
 
   @override
-  AvataaarTypeHairLongHairStraight get _value =>
-      super._value as AvataaarTypeHairLongHairStraight;
+  _$AvataaarTypeHairLongHairStraight get _value =>
+      super._value as _$AvataaarTypeHairLongHairStraight;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairStraight(
+    return _then(_$AvataaarTypeHairLongHairStraight(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -22054,7 +21593,7 @@ class _$AvataaarTypeHairLongHairStraight
     extends AvataaarTypeHairLongHairStraight {
   const _$AvataaarTypeHairLongHairStraight(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairStraight',
         super._();
 
@@ -22062,8 +21601,8 @@ class _$AvataaarTypeHairLongHairStraight
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairStraightFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -22079,19 +21618,21 @@ class _$AvataaarTypeHairLongHairStraight
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairStraight &&
+            other is _$AvataaarTypeHairLongHairStraight &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairStraightCopyWith<AvataaarTypeHairLongHairStraight>
-      get copyWith => _$AvataaarTypeHairLongHairStraightCopyWithImpl<
-          AvataaarTypeHairLongHairStraight>(this, _$identity);
+  _$$AvataaarTypeHairLongHairStraightCopyWith<
+          _$AvataaarTypeHairLongHairStraight>
+      get copyWith => __$$AvataaarTypeHairLongHairStraightCopyWithImpl<
+          _$AvataaarTypeHairLongHairStraight>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -22425,7 +21966,8 @@ class _$AvataaarTypeHairLongHairStraight
 
 abstract class AvataaarTypeHairLongHairStraight extends AvataaarHair {
   const factory AvataaarTypeHairLongHairStraight(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairStraight;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairStraight;
   const AvataaarTypeHairLongHairStraight._() : super._();
 
   factory AvataaarTypeHairLongHairStraight.fromJson(Map<String, dynamic> json) =
@@ -22433,42 +21975,43 @@ abstract class AvataaarTypeHairLongHairStraight extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairStraightCopyWith<AvataaarTypeHairLongHairStraight>
+  _$$AvataaarTypeHairLongHairStraightCopyWith<
+          _$AvataaarTypeHairLongHairStraight>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairStraight2CopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairStraight2CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairStraight2CopyWith(
-          AvataaarTypeHairLongHairStraight2 value,
-          $Res Function(AvataaarTypeHairLongHairStraight2) then) =
-      _$AvataaarTypeHairLongHairStraight2CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairStraight2CopyWith(
+          _$AvataaarTypeHairLongHairStraight2 value,
+          $Res Function(_$AvataaarTypeHairLongHairStraight2) then) =
+      __$$AvataaarTypeHairLongHairStraight2CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairStraight2CopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairStraight2CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairStraight2CopyWith<$Res> {
-  _$AvataaarTypeHairLongHairStraight2CopyWithImpl(
-      AvataaarTypeHairLongHairStraight2 _value,
-      $Res Function(AvataaarTypeHairLongHairStraight2) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairLongHairStraight2));
+    implements _$$AvataaarTypeHairLongHairStraight2CopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairStraight2CopyWithImpl(
+      _$AvataaarTypeHairLongHairStraight2 _value,
+      $Res Function(_$AvataaarTypeHairLongHairStraight2) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairLongHairStraight2));
 
   @override
-  AvataaarTypeHairLongHairStraight2 get _value =>
-      super._value as AvataaarTypeHairLongHairStraight2;
+  _$AvataaarTypeHairLongHairStraight2 get _value =>
+      super._value as _$AvataaarTypeHairLongHairStraight2;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairStraight2(
+    return _then(_$AvataaarTypeHairLongHairStraight2(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -22483,7 +22026,7 @@ class _$AvataaarTypeHairLongHairStraight2
     extends AvataaarTypeHairLongHairStraight2 {
   const _$AvataaarTypeHairLongHairStraight2(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairStraight2',
         super._();
 
@@ -22491,8 +22034,8 @@ class _$AvataaarTypeHairLongHairStraight2
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairStraight2FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -22508,19 +22051,21 @@ class _$AvataaarTypeHairLongHairStraight2
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairStraight2 &&
+            other is _$AvataaarTypeHairLongHairStraight2 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairStraight2CopyWith<AvataaarTypeHairLongHairStraight2>
-      get copyWith => _$AvataaarTypeHairLongHairStraight2CopyWithImpl<
-          AvataaarTypeHairLongHairStraight2>(this, _$identity);
+  _$$AvataaarTypeHairLongHairStraight2CopyWith<
+          _$AvataaarTypeHairLongHairStraight2>
+      get copyWith => __$$AvataaarTypeHairLongHairStraight2CopyWithImpl<
+          _$AvataaarTypeHairLongHairStraight2>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -22854,7 +22399,8 @@ class _$AvataaarTypeHairLongHairStraight2
 
 abstract class AvataaarTypeHairLongHairStraight2 extends AvataaarHair {
   const factory AvataaarTypeHairLongHairStraight2(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairLongHairStraight2;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairLongHairStraight2;
   const AvataaarTypeHairLongHairStraight2._() : super._();
 
   factory AvataaarTypeHairLongHairStraight2.fromJson(
@@ -22862,43 +22408,44 @@ abstract class AvataaarTypeHairLongHairStraight2 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairStraight2CopyWith<AvataaarTypeHairLongHairStraight2>
+  _$$AvataaarTypeHairLongHairStraight2CopyWith<
+          _$AvataaarTypeHairLongHairStraight2>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairLongHairStraightStrandCopyWith<$Res>
+abstract class _$$AvataaarTypeHairLongHairStraightStrandCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairLongHairStraightStrandCopyWith(
-          AvataaarTypeHairLongHairStraightStrand value,
-          $Res Function(AvataaarTypeHairLongHairStraightStrand) then) =
-      _$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairLongHairStraightStrandCopyWith(
+          _$AvataaarTypeHairLongHairStraightStrand value,
+          $Res Function(_$AvataaarTypeHairLongHairStraightStrand) then) =
+      __$$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<$Res>
+class __$$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairLongHairStraightStrandCopyWith<$Res> {
-  _$AvataaarTypeHairLongHairStraightStrandCopyWithImpl(
-      AvataaarTypeHairLongHairStraightStrand _value,
-      $Res Function(AvataaarTypeHairLongHairStraightStrand) _then)
-      : super(
-            _value, (v) => _then(v as AvataaarTypeHairLongHairStraightStrand));
+    implements _$$AvataaarTypeHairLongHairStraightStrandCopyWith<$Res> {
+  __$$AvataaarTypeHairLongHairStraightStrandCopyWithImpl(
+      _$AvataaarTypeHairLongHairStraightStrand _value,
+      $Res Function(_$AvataaarTypeHairLongHairStraightStrand) _then)
+      : super(_value,
+            (v) => _then(v as _$AvataaarTypeHairLongHairStraightStrand));
 
   @override
-  AvataaarTypeHairLongHairStraightStrand get _value =>
-      super._value as AvataaarTypeHairLongHairStraightStrand;
+  _$AvataaarTypeHairLongHairStraightStrand get _value =>
+      super._value as _$AvataaarTypeHairLongHairStraightStrand;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairLongHairStraightStrand(
+    return _then(_$AvataaarTypeHairLongHairStraightStrand(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -22913,7 +22460,7 @@ class _$AvataaarTypeHairLongHairStraightStrand
     extends AvataaarTypeHairLongHairStraightStrand {
   const _$AvataaarTypeHairLongHairStraightStrand(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'longHairStraightStrand',
         super._();
 
@@ -22921,8 +22468,8 @@ class _$AvataaarTypeHairLongHairStraightStrand
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairLongHairStraightStrandFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -22938,20 +22485,21 @@ class _$AvataaarTypeHairLongHairStraightStrand
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairLongHairStraightStrand &&
+            other is _$AvataaarTypeHairLongHairStraightStrand &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairLongHairStraightStrandCopyWith<
-          AvataaarTypeHairLongHairStraightStrand>
-      get copyWith => _$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<
-          AvataaarTypeHairLongHairStraightStrand>(this, _$identity);
+  _$$AvataaarTypeHairLongHairStraightStrandCopyWith<
+          _$AvataaarTypeHairLongHairStraightStrand>
+      get copyWith => __$$AvataaarTypeHairLongHairStraightStrandCopyWithImpl<
+          _$AvataaarTypeHairLongHairStraightStrand>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -23285,7 +22833,7 @@ class _$AvataaarTypeHairLongHairStraightStrand
 
 abstract class AvataaarTypeHairLongHairStraightStrand extends AvataaarHair {
   const factory AvataaarTypeHairLongHairStraightStrand(
-          [@ColorSerialiser() Color color]) =
+          [@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairLongHairStraightStrand;
   const AvataaarTypeHairLongHairStraightStrand._() : super._();
 
@@ -23295,43 +22843,43 @@ abstract class AvataaarTypeHairLongHairStraightStrand extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairLongHairStraightStrandCopyWith<
-          AvataaarTypeHairLongHairStraightStrand>
+  _$$AvataaarTypeHairLongHairStraightStrandCopyWith<
+          _$AvataaarTypeHairLongHairStraightStrand>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairDreads01CopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairDreads01CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairDreads01CopyWith(
-          AvataaarTypeHairShortHairDreads01 value,
-          $Res Function(AvataaarTypeHairShortHairDreads01) then) =
-      _$AvataaarTypeHairShortHairDreads01CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairDreads01CopyWith(
+          _$AvataaarTypeHairShortHairDreads01 value,
+          $Res Function(_$AvataaarTypeHairShortHairDreads01) then) =
+      __$$AvataaarTypeHairShortHairDreads01CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairDreads01CopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairDreads01CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairDreads01CopyWith<$Res> {
-  _$AvataaarTypeHairShortHairDreads01CopyWithImpl(
-      AvataaarTypeHairShortHairDreads01 _value,
-      $Res Function(AvataaarTypeHairShortHairDreads01) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairDreads01));
+    implements _$$AvataaarTypeHairShortHairDreads01CopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairDreads01CopyWithImpl(
+      _$AvataaarTypeHairShortHairDreads01 _value,
+      $Res Function(_$AvataaarTypeHairShortHairDreads01) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairDreads01));
 
   @override
-  AvataaarTypeHairShortHairDreads01 get _value =>
-      super._value as AvataaarTypeHairShortHairDreads01;
+  _$AvataaarTypeHairShortHairDreads01 get _value =>
+      super._value as _$AvataaarTypeHairShortHairDreads01;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairDreads01(
+    return _then(_$AvataaarTypeHairShortHairDreads01(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -23346,7 +22894,7 @@ class _$AvataaarTypeHairShortHairDreads01
     extends AvataaarTypeHairShortHairDreads01 {
   const _$AvataaarTypeHairShortHairDreads01(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairDreads01',
         super._();
 
@@ -23354,8 +22902,8 @@ class _$AvataaarTypeHairShortHairDreads01
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairDreads01FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -23371,19 +22919,21 @@ class _$AvataaarTypeHairShortHairDreads01
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairDreads01 &&
+            other is _$AvataaarTypeHairShortHairDreads01 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairDreads01CopyWith<AvataaarTypeHairShortHairDreads01>
-      get copyWith => _$AvataaarTypeHairShortHairDreads01CopyWithImpl<
-          AvataaarTypeHairShortHairDreads01>(this, _$identity);
+  _$$AvataaarTypeHairShortHairDreads01CopyWith<
+          _$AvataaarTypeHairShortHairDreads01>
+      get copyWith => __$$AvataaarTypeHairShortHairDreads01CopyWithImpl<
+          _$AvataaarTypeHairShortHairDreads01>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -23717,7 +23267,8 @@ class _$AvataaarTypeHairShortHairDreads01
 
 abstract class AvataaarTypeHairShortHairDreads01 extends AvataaarHair {
   const factory AvataaarTypeHairShortHairDreads01(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairDreads01;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairDreads01;
   const AvataaarTypeHairShortHairDreads01._() : super._();
 
   factory AvataaarTypeHairShortHairDreads01.fromJson(
@@ -23725,42 +23276,43 @@ abstract class AvataaarTypeHairShortHairDreads01 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairDreads01CopyWith<AvataaarTypeHairShortHairDreads01>
+  _$$AvataaarTypeHairShortHairDreads01CopyWith<
+          _$AvataaarTypeHairShortHairDreads01>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairDreads02CopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairDreads02CopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairDreads02CopyWith(
-          AvataaarTypeHairShortHairDreads02 value,
-          $Res Function(AvataaarTypeHairShortHairDreads02) then) =
-      _$AvataaarTypeHairShortHairDreads02CopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairDreads02CopyWith(
+          _$AvataaarTypeHairShortHairDreads02 value,
+          $Res Function(_$AvataaarTypeHairShortHairDreads02) then) =
+      __$$AvataaarTypeHairShortHairDreads02CopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairDreads02CopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairDreads02CopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairDreads02CopyWith<$Res> {
-  _$AvataaarTypeHairShortHairDreads02CopyWithImpl(
-      AvataaarTypeHairShortHairDreads02 _value,
-      $Res Function(AvataaarTypeHairShortHairDreads02) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairDreads02));
+    implements _$$AvataaarTypeHairShortHairDreads02CopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairDreads02CopyWithImpl(
+      _$AvataaarTypeHairShortHairDreads02 _value,
+      $Res Function(_$AvataaarTypeHairShortHairDreads02) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairDreads02));
 
   @override
-  AvataaarTypeHairShortHairDreads02 get _value =>
-      super._value as AvataaarTypeHairShortHairDreads02;
+  _$AvataaarTypeHairShortHairDreads02 get _value =>
+      super._value as _$AvataaarTypeHairShortHairDreads02;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairDreads02(
+    return _then(_$AvataaarTypeHairShortHairDreads02(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -23775,7 +23327,7 @@ class _$AvataaarTypeHairShortHairDreads02
     extends AvataaarTypeHairShortHairDreads02 {
   const _$AvataaarTypeHairShortHairDreads02(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairDreads02',
         super._();
 
@@ -23783,8 +23335,8 @@ class _$AvataaarTypeHairShortHairDreads02
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairDreads02FromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -23800,19 +23352,21 @@ class _$AvataaarTypeHairShortHairDreads02
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairDreads02 &&
+            other is _$AvataaarTypeHairShortHairDreads02 &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairDreads02CopyWith<AvataaarTypeHairShortHairDreads02>
-      get copyWith => _$AvataaarTypeHairShortHairDreads02CopyWithImpl<
-          AvataaarTypeHairShortHairDreads02>(this, _$identity);
+  _$$AvataaarTypeHairShortHairDreads02CopyWith<
+          _$AvataaarTypeHairShortHairDreads02>
+      get copyWith => __$$AvataaarTypeHairShortHairDreads02CopyWithImpl<
+          _$AvataaarTypeHairShortHairDreads02>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -24146,7 +23700,8 @@ class _$AvataaarTypeHairShortHairDreads02
 
 abstract class AvataaarTypeHairShortHairDreads02 extends AvataaarHair {
   const factory AvataaarTypeHairShortHairDreads02(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairDreads02;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairDreads02;
   const AvataaarTypeHairShortHairDreads02._() : super._();
 
   factory AvataaarTypeHairShortHairDreads02.fromJson(
@@ -24154,42 +23709,43 @@ abstract class AvataaarTypeHairShortHairDreads02 extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairDreads02CopyWith<AvataaarTypeHairShortHairDreads02>
+  _$$AvataaarTypeHairShortHairDreads02CopyWith<
+          _$AvataaarTypeHairShortHairDreads02>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairFrizzleCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairFrizzleCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairFrizzleCopyWith(
-          AvataaarTypeHairShortHairFrizzle value,
-          $Res Function(AvataaarTypeHairShortHairFrizzle) then) =
-      _$AvataaarTypeHairShortHairFrizzleCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairFrizzleCopyWith(
+          _$AvataaarTypeHairShortHairFrizzle value,
+          $Res Function(_$AvataaarTypeHairShortHairFrizzle) then) =
+      __$$AvataaarTypeHairShortHairFrizzleCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairFrizzleCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairFrizzleCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairFrizzleCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairFrizzleCopyWithImpl(
-      AvataaarTypeHairShortHairFrizzle _value,
-      $Res Function(AvataaarTypeHairShortHairFrizzle) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairFrizzle));
+    implements _$$AvataaarTypeHairShortHairFrizzleCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairFrizzleCopyWithImpl(
+      _$AvataaarTypeHairShortHairFrizzle _value,
+      $Res Function(_$AvataaarTypeHairShortHairFrizzle) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairFrizzle));
 
   @override
-  AvataaarTypeHairShortHairFrizzle get _value =>
-      super._value as AvataaarTypeHairShortHairFrizzle;
+  _$AvataaarTypeHairShortHairFrizzle get _value =>
+      super._value as _$AvataaarTypeHairShortHairFrizzle;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairFrizzle(
+    return _then(_$AvataaarTypeHairShortHairFrizzle(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -24204,7 +23760,7 @@ class _$AvataaarTypeHairShortHairFrizzle
     extends AvataaarTypeHairShortHairFrizzle {
   const _$AvataaarTypeHairShortHairFrizzle(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairFrizzle',
         super._();
 
@@ -24212,8 +23768,8 @@ class _$AvataaarTypeHairShortHairFrizzle
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairFrizzleFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -24229,19 +23785,21 @@ class _$AvataaarTypeHairShortHairFrizzle
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairFrizzle &&
+            other is _$AvataaarTypeHairShortHairFrizzle &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairFrizzleCopyWith<AvataaarTypeHairShortHairFrizzle>
-      get copyWith => _$AvataaarTypeHairShortHairFrizzleCopyWithImpl<
-          AvataaarTypeHairShortHairFrizzle>(this, _$identity);
+  _$$AvataaarTypeHairShortHairFrizzleCopyWith<
+          _$AvataaarTypeHairShortHairFrizzle>
+      get copyWith => __$$AvataaarTypeHairShortHairFrizzleCopyWithImpl<
+          _$AvataaarTypeHairShortHairFrizzle>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -24575,7 +24133,8 @@ class _$AvataaarTypeHairShortHairFrizzle
 
 abstract class AvataaarTypeHairShortHairFrizzle extends AvataaarHair {
   const factory AvataaarTypeHairShortHairFrizzle(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairFrizzle;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairFrizzle;
   const AvataaarTypeHairShortHairFrizzle._() : super._();
 
   factory AvataaarTypeHairShortHairFrizzle.fromJson(Map<String, dynamic> json) =
@@ -24583,42 +24142,44 @@ abstract class AvataaarTypeHairShortHairFrizzle extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairFrizzleCopyWith<AvataaarTypeHairShortHairFrizzle>
+  _$$AvataaarTypeHairShortHairFrizzleCopyWith<
+          _$AvataaarTypeHairShortHairFrizzle>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairShaggyMulletCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairShaggyMulletCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairShaggyMulletCopyWith(
-          AvataaarTypeHairShortHairShaggyMullet value,
-          $Res Function(AvataaarTypeHairShortHairShaggyMullet) then) =
-      _$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairShaggyMulletCopyWith(
+          _$AvataaarTypeHairShortHairShaggyMullet value,
+          $Res Function(_$AvataaarTypeHairShortHairShaggyMullet) then) =
+      __$$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairShaggyMulletCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl(
-      AvataaarTypeHairShortHairShaggyMullet _value,
-      $Res Function(AvataaarTypeHairShortHairShaggyMullet) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairShaggyMullet));
+    implements _$$AvataaarTypeHairShortHairShaggyMulletCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl(
+      _$AvataaarTypeHairShortHairShaggyMullet _value,
+      $Res Function(_$AvataaarTypeHairShortHairShaggyMullet) _then)
+      : super(
+            _value, (v) => _then(v as _$AvataaarTypeHairShortHairShaggyMullet));
 
   @override
-  AvataaarTypeHairShortHairShaggyMullet get _value =>
-      super._value as AvataaarTypeHairShortHairShaggyMullet;
+  _$AvataaarTypeHairShortHairShaggyMullet get _value =>
+      super._value as _$AvataaarTypeHairShortHairShaggyMullet;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairShaggyMullet(
+    return _then(_$AvataaarTypeHairShortHairShaggyMullet(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -24633,7 +24194,7 @@ class _$AvataaarTypeHairShortHairShaggyMullet
     extends AvataaarTypeHairShortHairShaggyMullet {
   const _$AvataaarTypeHairShortHairShaggyMullet(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairShaggyMullet',
         super._();
 
@@ -24641,8 +24202,8 @@ class _$AvataaarTypeHairShortHairShaggyMullet
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairShaggyMulletFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -24658,20 +24219,21 @@ class _$AvataaarTypeHairShortHairShaggyMullet
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairShaggyMullet &&
+            other is _$AvataaarTypeHairShortHairShaggyMullet &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairShaggyMulletCopyWith<
-          AvataaarTypeHairShortHairShaggyMullet>
-      get copyWith => _$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<
-          AvataaarTypeHairShortHairShaggyMullet>(this, _$identity);
+  _$$AvataaarTypeHairShortHairShaggyMulletCopyWith<
+          _$AvataaarTypeHairShortHairShaggyMullet>
+      get copyWith => __$$AvataaarTypeHairShortHairShaggyMulletCopyWithImpl<
+          _$AvataaarTypeHairShortHairShaggyMullet>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -25005,7 +24567,7 @@ class _$AvataaarTypeHairShortHairShaggyMullet
 
 abstract class AvataaarTypeHairShortHairShaggyMullet extends AvataaarHair {
   const factory AvataaarTypeHairShortHairShaggyMullet(
-          [@ColorSerialiser() Color color]) =
+          [@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairShortHairShaggyMullet;
   const AvataaarTypeHairShortHairShaggyMullet._() : super._();
 
@@ -25015,43 +24577,43 @@ abstract class AvataaarTypeHairShortHairShaggyMullet extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairShaggyMulletCopyWith<
-          AvataaarTypeHairShortHairShaggyMullet>
+  _$$AvataaarTypeHairShortHairShaggyMulletCopyWith<
+          _$AvataaarTypeHairShortHairShaggyMullet>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairShortCurlyCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairShortCurlyCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairShortCurlyCopyWith(
-          AvataaarTypeHairShortHairShortCurly value,
-          $Res Function(AvataaarTypeHairShortHairShortCurly) then) =
-      _$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairShortCurlyCopyWith(
+          _$AvataaarTypeHairShortHairShortCurly value,
+          $Res Function(_$AvataaarTypeHairShortHairShortCurly) then) =
+      __$$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairShortCurlyCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairShortCurlyCopyWithImpl(
-      AvataaarTypeHairShortHairShortCurly _value,
-      $Res Function(AvataaarTypeHairShortHairShortCurly) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairShortCurly));
+    implements _$$AvataaarTypeHairShortHairShortCurlyCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairShortCurlyCopyWithImpl(
+      _$AvataaarTypeHairShortHairShortCurly _value,
+      $Res Function(_$AvataaarTypeHairShortHairShortCurly) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairShortCurly));
 
   @override
-  AvataaarTypeHairShortHairShortCurly get _value =>
-      super._value as AvataaarTypeHairShortHairShortCurly;
+  _$AvataaarTypeHairShortHairShortCurly get _value =>
+      super._value as _$AvataaarTypeHairShortHairShortCurly;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairShortCurly(
+    return _then(_$AvataaarTypeHairShortHairShortCurly(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -25066,7 +24628,7 @@ class _$AvataaarTypeHairShortHairShortCurly
     extends AvataaarTypeHairShortHairShortCurly {
   const _$AvataaarTypeHairShortHairShortCurly(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairShortCurly',
         super._();
 
@@ -25074,8 +24636,8 @@ class _$AvataaarTypeHairShortHairShortCurly
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairShortCurlyFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -25091,20 +24653,21 @@ class _$AvataaarTypeHairShortHairShortCurly
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairShortCurly &&
+            other is _$AvataaarTypeHairShortHairShortCurly &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairShortCurlyCopyWith<
-          AvataaarTypeHairShortHairShortCurly>
-      get copyWith => _$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<
-          AvataaarTypeHairShortHairShortCurly>(this, _$identity);
+  _$$AvataaarTypeHairShortHairShortCurlyCopyWith<
+          _$AvataaarTypeHairShortHairShortCurly>
+      get copyWith => __$$AvataaarTypeHairShortHairShortCurlyCopyWithImpl<
+          _$AvataaarTypeHairShortHairShortCurly>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -25438,7 +25001,8 @@ class _$AvataaarTypeHairShortHairShortCurly
 
 abstract class AvataaarTypeHairShortHairShortCurly extends AvataaarHair {
   const factory AvataaarTypeHairShortHairShortCurly(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairShortCurly;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairShortCurly;
   const AvataaarTypeHairShortHairShortCurly._() : super._();
 
   factory AvataaarTypeHairShortHairShortCurly.fromJson(
@@ -25447,43 +25011,43 @@ abstract class AvataaarTypeHairShortHairShortCurly extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairShortCurlyCopyWith<
-          AvataaarTypeHairShortHairShortCurly>
+  _$$AvataaarTypeHairShortHairShortCurlyCopyWith<
+          _$AvataaarTypeHairShortHairShortCurly>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairShortFlatCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairShortFlatCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairShortFlatCopyWith(
-          AvataaarTypeHairShortHairShortFlat value,
-          $Res Function(AvataaarTypeHairShortHairShortFlat) then) =
-      _$AvataaarTypeHairShortHairShortFlatCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairShortFlatCopyWith(
+          _$AvataaarTypeHairShortHairShortFlat value,
+          $Res Function(_$AvataaarTypeHairShortHairShortFlat) then) =
+      __$$AvataaarTypeHairShortHairShortFlatCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairShortFlatCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairShortFlatCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairShortFlatCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairShortFlatCopyWithImpl(
-      AvataaarTypeHairShortHairShortFlat _value,
-      $Res Function(AvataaarTypeHairShortHairShortFlat) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairShortFlat));
+    implements _$$AvataaarTypeHairShortHairShortFlatCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairShortFlatCopyWithImpl(
+      _$AvataaarTypeHairShortHairShortFlat _value,
+      $Res Function(_$AvataaarTypeHairShortHairShortFlat) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairShortFlat));
 
   @override
-  AvataaarTypeHairShortHairShortFlat get _value =>
-      super._value as AvataaarTypeHairShortHairShortFlat;
+  _$AvataaarTypeHairShortHairShortFlat get _value =>
+      super._value as _$AvataaarTypeHairShortHairShortFlat;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairShortFlat(
+    return _then(_$AvataaarTypeHairShortHairShortFlat(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -25498,7 +25062,7 @@ class _$AvataaarTypeHairShortHairShortFlat
     extends AvataaarTypeHairShortHairShortFlat {
   const _$AvataaarTypeHairShortHairShortFlat(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairShortFlat',
         super._();
 
@@ -25506,8 +25070,8 @@ class _$AvataaarTypeHairShortHairShortFlat
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairShortFlatFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -25523,20 +25087,21 @@ class _$AvataaarTypeHairShortHairShortFlat
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairShortFlat &&
+            other is _$AvataaarTypeHairShortHairShortFlat &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairShortFlatCopyWith<
-          AvataaarTypeHairShortHairShortFlat>
-      get copyWith => _$AvataaarTypeHairShortHairShortFlatCopyWithImpl<
-          AvataaarTypeHairShortHairShortFlat>(this, _$identity);
+  _$$AvataaarTypeHairShortHairShortFlatCopyWith<
+          _$AvataaarTypeHairShortHairShortFlat>
+      get copyWith => __$$AvataaarTypeHairShortHairShortFlatCopyWithImpl<
+          _$AvataaarTypeHairShortHairShortFlat>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -25870,7 +25435,8 @@ class _$AvataaarTypeHairShortHairShortFlat
 
 abstract class AvataaarTypeHairShortHairShortFlat extends AvataaarHair {
   const factory AvataaarTypeHairShortHairShortFlat(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairShortFlat;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairShortFlat;
   const AvataaarTypeHairShortHairShortFlat._() : super._();
 
   factory AvataaarTypeHairShortHairShortFlat.fromJson(
@@ -25879,43 +25445,43 @@ abstract class AvataaarTypeHairShortHairShortFlat extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairShortFlatCopyWith<
-          AvataaarTypeHairShortHairShortFlat>
+  _$$AvataaarTypeHairShortHairShortFlatCopyWith<
+          _$AvataaarTypeHairShortHairShortFlat>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairShortRoundCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairShortRoundCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairShortRoundCopyWith(
-          AvataaarTypeHairShortHairShortRound value,
-          $Res Function(AvataaarTypeHairShortHairShortRound) then) =
-      _$AvataaarTypeHairShortHairShortRoundCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairShortRoundCopyWith(
+          _$AvataaarTypeHairShortHairShortRound value,
+          $Res Function(_$AvataaarTypeHairShortHairShortRound) then) =
+      __$$AvataaarTypeHairShortHairShortRoundCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairShortRoundCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairShortRoundCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairShortRoundCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairShortRoundCopyWithImpl(
-      AvataaarTypeHairShortHairShortRound _value,
-      $Res Function(AvataaarTypeHairShortHairShortRound) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairShortRound));
+    implements _$$AvataaarTypeHairShortHairShortRoundCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairShortRoundCopyWithImpl(
+      _$AvataaarTypeHairShortHairShortRound _value,
+      $Res Function(_$AvataaarTypeHairShortHairShortRound) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairShortRound));
 
   @override
-  AvataaarTypeHairShortHairShortRound get _value =>
-      super._value as AvataaarTypeHairShortHairShortRound;
+  _$AvataaarTypeHairShortHairShortRound get _value =>
+      super._value as _$AvataaarTypeHairShortHairShortRound;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairShortRound(
+    return _then(_$AvataaarTypeHairShortHairShortRound(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -25930,7 +25496,7 @@ class _$AvataaarTypeHairShortHairShortRound
     extends AvataaarTypeHairShortHairShortRound {
   const _$AvataaarTypeHairShortHairShortRound(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairShortRound',
         super._();
 
@@ -25938,8 +25504,8 @@ class _$AvataaarTypeHairShortHairShortRound
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairShortRoundFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -25955,20 +25521,21 @@ class _$AvataaarTypeHairShortHairShortRound
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairShortRound &&
+            other is _$AvataaarTypeHairShortHairShortRound &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairShortRoundCopyWith<
-          AvataaarTypeHairShortHairShortRound>
-      get copyWith => _$AvataaarTypeHairShortHairShortRoundCopyWithImpl<
-          AvataaarTypeHairShortHairShortRound>(this, _$identity);
+  _$$AvataaarTypeHairShortHairShortRoundCopyWith<
+          _$AvataaarTypeHairShortHairShortRound>
+      get copyWith => __$$AvataaarTypeHairShortHairShortRoundCopyWithImpl<
+          _$AvataaarTypeHairShortHairShortRound>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -26302,7 +25869,8 @@ class _$AvataaarTypeHairShortHairShortRound
 
 abstract class AvataaarTypeHairShortHairShortRound extends AvataaarHair {
   const factory AvataaarTypeHairShortHairShortRound(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairShortRound;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairShortRound;
   const AvataaarTypeHairShortHairShortRound._() : super._();
 
   factory AvataaarTypeHairShortHairShortRound.fromJson(
@@ -26311,43 +25879,43 @@ abstract class AvataaarTypeHairShortHairShortRound extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairShortRoundCopyWith<
-          AvataaarTypeHairShortHairShortRound>
+  _$$AvataaarTypeHairShortHairShortRoundCopyWith<
+          _$AvataaarTypeHairShortHairShortRound>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairShortWavedCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairShortWavedCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairShortWavedCopyWith(
-          AvataaarTypeHairShortHairShortWaved value,
-          $Res Function(AvataaarTypeHairShortHairShortWaved) then) =
-      _$AvataaarTypeHairShortHairShortWavedCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairShortWavedCopyWith(
+          _$AvataaarTypeHairShortHairShortWaved value,
+          $Res Function(_$AvataaarTypeHairShortHairShortWaved) then) =
+      __$$AvataaarTypeHairShortHairShortWavedCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairShortWavedCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairShortWavedCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairShortWavedCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairShortWavedCopyWithImpl(
-      AvataaarTypeHairShortHairShortWaved _value,
-      $Res Function(AvataaarTypeHairShortHairShortWaved) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairShortWaved));
+    implements _$$AvataaarTypeHairShortHairShortWavedCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairShortWavedCopyWithImpl(
+      _$AvataaarTypeHairShortHairShortWaved _value,
+      $Res Function(_$AvataaarTypeHairShortHairShortWaved) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairShortWaved));
 
   @override
-  AvataaarTypeHairShortHairShortWaved get _value =>
-      super._value as AvataaarTypeHairShortHairShortWaved;
+  _$AvataaarTypeHairShortHairShortWaved get _value =>
+      super._value as _$AvataaarTypeHairShortHairShortWaved;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairShortWaved(
+    return _then(_$AvataaarTypeHairShortHairShortWaved(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -26362,7 +25930,7 @@ class _$AvataaarTypeHairShortHairShortWaved
     extends AvataaarTypeHairShortHairShortWaved {
   const _$AvataaarTypeHairShortHairShortWaved(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairShortWaved',
         super._();
 
@@ -26370,8 +25938,8 @@ class _$AvataaarTypeHairShortHairShortWaved
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairShortWavedFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -26387,20 +25955,21 @@ class _$AvataaarTypeHairShortHairShortWaved
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairShortWaved &&
+            other is _$AvataaarTypeHairShortHairShortWaved &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairShortWavedCopyWith<
-          AvataaarTypeHairShortHairShortWaved>
-      get copyWith => _$AvataaarTypeHairShortHairShortWavedCopyWithImpl<
-          AvataaarTypeHairShortHairShortWaved>(this, _$identity);
+  _$$AvataaarTypeHairShortHairShortWavedCopyWith<
+          _$AvataaarTypeHairShortHairShortWaved>
+      get copyWith => __$$AvataaarTypeHairShortHairShortWavedCopyWithImpl<
+          _$AvataaarTypeHairShortHairShortWaved>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -26734,7 +26303,8 @@ class _$AvataaarTypeHairShortHairShortWaved
 
 abstract class AvataaarTypeHairShortHairShortWaved extends AvataaarHair {
   const factory AvataaarTypeHairShortHairShortWaved(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairShortWaved;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairShortWaved;
   const AvataaarTypeHairShortHairShortWaved._() : super._();
 
   factory AvataaarTypeHairShortHairShortWaved.fromJson(
@@ -26743,43 +26313,43 @@ abstract class AvataaarTypeHairShortHairShortWaved extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairShortWavedCopyWith<
-          AvataaarTypeHairShortHairShortWaved>
+  _$$AvataaarTypeHairShortHairShortWavedCopyWith<
+          _$AvataaarTypeHairShortHairShortWaved>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairSidesCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairSidesCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairSidesCopyWith(
-          AvataaarTypeHairShortHairSides value,
-          $Res Function(AvataaarTypeHairShortHairSides) then) =
-      _$AvataaarTypeHairShortHairSidesCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairSidesCopyWith(
+          _$AvataaarTypeHairShortHairSides value,
+          $Res Function(_$AvataaarTypeHairShortHairSides) then) =
+      __$$AvataaarTypeHairShortHairSidesCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairSidesCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairSidesCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairSidesCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairSidesCopyWithImpl(
-      AvataaarTypeHairShortHairSides _value,
-      $Res Function(AvataaarTypeHairShortHairSides) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairSides));
+    implements _$$AvataaarTypeHairShortHairSidesCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairSidesCopyWithImpl(
+      _$AvataaarTypeHairShortHairSides _value,
+      $Res Function(_$AvataaarTypeHairShortHairSides) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairSides));
 
   @override
-  AvataaarTypeHairShortHairSides get _value =>
-      super._value as AvataaarTypeHairShortHairSides;
+  _$AvataaarTypeHairShortHairSides get _value =>
+      super._value as _$AvataaarTypeHairShortHairSides;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairSides(
+    return _then(_$AvataaarTypeHairShortHairSides(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -26793,7 +26363,7 @@ class _$AvataaarTypeHairShortHairSidesCopyWithImpl<$Res>
 class _$AvataaarTypeHairShortHairSides extends AvataaarTypeHairShortHairSides {
   const _$AvataaarTypeHairShortHairSides(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairSides',
         super._();
 
@@ -26801,8 +26371,8 @@ class _$AvataaarTypeHairShortHairSides extends AvataaarTypeHairShortHairSides {
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairSidesFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -26818,19 +26388,20 @@ class _$AvataaarTypeHairShortHairSides extends AvataaarTypeHairShortHairSides {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairSides &&
+            other is _$AvataaarTypeHairShortHairSides &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairSidesCopyWith<AvataaarTypeHairShortHairSides>
-      get copyWith => _$AvataaarTypeHairShortHairSidesCopyWithImpl<
-          AvataaarTypeHairShortHairSides>(this, _$identity);
+  _$$AvataaarTypeHairShortHairSidesCopyWith<_$AvataaarTypeHairShortHairSides>
+      get copyWith => __$$AvataaarTypeHairShortHairSidesCopyWithImpl<
+          _$AvataaarTypeHairShortHairSides>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -27164,7 +26735,8 @@ class _$AvataaarTypeHairShortHairSides extends AvataaarTypeHairShortHairSides {
 
 abstract class AvataaarTypeHairShortHairSides extends AvataaarHair {
   const factory AvataaarTypeHairShortHairSides(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairSides;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairSides;
   const AvataaarTypeHairShortHairSides._() : super._();
 
   factory AvataaarTypeHairShortHairSides.fromJson(Map<String, dynamic> json) =
@@ -27172,42 +26744,42 @@ abstract class AvataaarTypeHairShortHairSides extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairSidesCopyWith<AvataaarTypeHairShortHairSides>
+  _$$AvataaarTypeHairShortHairSidesCopyWith<_$AvataaarTypeHairShortHairSides>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairTheCaesarCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairTheCaesarCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairTheCaesarCopyWith(
-          AvataaarTypeHairShortHairTheCaesar value,
-          $Res Function(AvataaarTypeHairShortHairTheCaesar) then) =
-      _$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairTheCaesarCopyWith(
+          _$AvataaarTypeHairShortHairTheCaesar value,
+          $Res Function(_$AvataaarTypeHairShortHairTheCaesar) then) =
+      __$$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairTheCaesarCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairTheCaesarCopyWithImpl(
-      AvataaarTypeHairShortHairTheCaesar _value,
-      $Res Function(AvataaarTypeHairShortHairTheCaesar) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeHairShortHairTheCaesar));
+    implements _$$AvataaarTypeHairShortHairTheCaesarCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairTheCaesarCopyWithImpl(
+      _$AvataaarTypeHairShortHairTheCaesar _value,
+      $Res Function(_$AvataaarTypeHairShortHairTheCaesar) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeHairShortHairTheCaesar));
 
   @override
-  AvataaarTypeHairShortHairTheCaesar get _value =>
-      super._value as AvataaarTypeHairShortHairTheCaesar;
+  _$AvataaarTypeHairShortHairTheCaesar get _value =>
+      super._value as _$AvataaarTypeHairShortHairTheCaesar;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairTheCaesar(
+    return _then(_$AvataaarTypeHairShortHairTheCaesar(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -27222,7 +26794,7 @@ class _$AvataaarTypeHairShortHairTheCaesar
     extends AvataaarTypeHairShortHairTheCaesar {
   const _$AvataaarTypeHairShortHairTheCaesar(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairTheCaesar',
         super._();
 
@@ -27230,8 +26802,8 @@ class _$AvataaarTypeHairShortHairTheCaesar
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairTheCaesarFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -27247,20 +26819,21 @@ class _$AvataaarTypeHairShortHairTheCaesar
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairTheCaesar &&
+            other is _$AvataaarTypeHairShortHairTheCaesar &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairTheCaesarCopyWith<
-          AvataaarTypeHairShortHairTheCaesar>
-      get copyWith => _$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<
-          AvataaarTypeHairShortHairTheCaesar>(this, _$identity);
+  _$$AvataaarTypeHairShortHairTheCaesarCopyWith<
+          _$AvataaarTypeHairShortHairTheCaesar>
+      get copyWith => __$$AvataaarTypeHairShortHairTheCaesarCopyWithImpl<
+          _$AvataaarTypeHairShortHairTheCaesar>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -27594,7 +27167,8 @@ class _$AvataaarTypeHairShortHairTheCaesar
 
 abstract class AvataaarTypeHairShortHairTheCaesar extends AvataaarHair {
   const factory AvataaarTypeHairShortHairTheCaesar(
-      [@ColorSerialiser() Color color]) = _$AvataaarTypeHairShortHairTheCaesar;
+          [@ColorSerialiser() final Color color]) =
+      _$AvataaarTypeHairShortHairTheCaesar;
   const AvataaarTypeHairShortHairTheCaesar._() : super._();
 
   factory AvataaarTypeHairShortHairTheCaesar.fromJson(
@@ -27603,44 +27177,44 @@ abstract class AvataaarTypeHairShortHairTheCaesar extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairTheCaesarCopyWith<
-          AvataaarTypeHairShortHairTheCaesar>
+  _$$AvataaarTypeHairShortHairTheCaesarCopyWith<
+          _$AvataaarTypeHairShortHairTheCaesar>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<$Res>
+abstract class _$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<$Res>
     implements $AvataaarHairCopyWith<$Res> {
-  factory $AvataaarTypeHairShortHairTheCaesarSidePartCopyWith(
-          AvataaarTypeHairShortHairTheCaesarSidePart value,
-          $Res Function(AvataaarTypeHairShortHairTheCaesarSidePart) then) =
-      _$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWith(
+          _$AvataaarTypeHairShortHairTheCaesarSidePart value,
+          $Res Function(_$AvataaarTypeHairShortHairTheCaesarSidePart) then) =
+      __$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<$Res>
+class __$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<$Res>
     extends _$AvataaarHairCopyWithImpl<$Res>
-    implements $AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<$Res> {
-  _$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl(
-      AvataaarTypeHairShortHairTheCaesarSidePart _value,
-      $Res Function(AvataaarTypeHairShortHairTheCaesarSidePart) _then)
+    implements _$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<$Res> {
+  __$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl(
+      _$AvataaarTypeHairShortHairTheCaesarSidePart _value,
+      $Res Function(_$AvataaarTypeHairShortHairTheCaesarSidePart) _then)
       : super(_value,
-            (v) => _then(v as AvataaarTypeHairShortHairTheCaesarSidePart));
+            (v) => _then(v as _$AvataaarTypeHairShortHairTheCaesarSidePart));
 
   @override
-  AvataaarTypeHairShortHairTheCaesarSidePart get _value =>
-      super._value as AvataaarTypeHairShortHairTheCaesarSidePart;
+  _$AvataaarTypeHairShortHairTheCaesarSidePart get _value =>
+      super._value as _$AvataaarTypeHairShortHairTheCaesarSidePart;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeHairShortHairTheCaesarSidePart(
+    return _then(_$AvataaarTypeHairShortHairTheCaesarSidePart(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -27655,7 +27229,7 @@ class _$AvataaarTypeHairShortHairTheCaesarSidePart
     extends AvataaarTypeHairShortHairTheCaesarSidePart {
   const _$AvataaarTypeHairShortHairTheCaesarSidePart(
       [@ColorSerialiser() this.color = AvataaarHair.defaultHairColor,
-      String? $type])
+      final String? $type])
       : $type = $type ?? 'shortHairTheCaesarSidePart',
         super._();
 
@@ -27663,8 +27237,8 @@ class _$AvataaarTypeHairShortHairTheCaesarSidePart
           Map<String, dynamic> json) =>
       _$$AvataaarTypeHairShortHairTheCaesarSidePartFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -27680,20 +27254,22 @@ class _$AvataaarTypeHairShortHairTheCaesarSidePart
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeHairShortHairTheCaesarSidePart &&
+            other is _$AvataaarTypeHairShortHairTheCaesarSidePart &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<
-          AvataaarTypeHairShortHairTheCaesarSidePart>
-      get copyWith => _$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<
-          AvataaarTypeHairShortHairTheCaesarSidePart>(this, _$identity);
+  _$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<
+          _$AvataaarTypeHairShortHairTheCaesarSidePart>
+      get copyWith =>
+          __$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWithImpl<
+              _$AvataaarTypeHairShortHairTheCaesarSidePart>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -28027,7 +27603,7 @@ class _$AvataaarTypeHairShortHairTheCaesarSidePart
 
 abstract class AvataaarTypeHairShortHairTheCaesarSidePart extends AvataaarHair {
   const factory AvataaarTypeHairShortHairTheCaesarSidePart(
-          [@ColorSerialiser() Color color]) =
+          [@ColorSerialiser() final Color color]) =
       _$AvataaarTypeHairShortHairTheCaesarSidePart;
   const AvataaarTypeHairShortHairTheCaesarSidePart._() : super._();
 
@@ -28037,11 +27613,11 @@ abstract class AvataaarTypeHairShortHairTheCaesarSidePart extends AvataaarHair {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<
-          AvataaarTypeHairShortHairTheCaesarSidePart>
+  _$$AvataaarTypeHairShortHairTheCaesarSidePartCopyWith<
+          _$AvataaarTypeHairShortHairTheCaesarSidePart>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -28077,66 +27653,6 @@ AvataaarMouth _$AvataaarMouthFromJson(Map<String, dynamic> json) {
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
-
-/// @nodoc
-class _$AvataaarMouthTearOff {
-  const _$AvataaarMouthTearOff();
-
-  AvataaarTypeMouthConcerned concerned() {
-    return const AvataaarTypeMouthConcerned();
-  }
-
-  AvataaarTypeMouthDefault0 default0() {
-    return const AvataaarTypeMouthDefault0();
-  }
-
-  AvataaarTypeMouthDisbelief disbelief() {
-    return const AvataaarTypeMouthDisbelief();
-  }
-
-  AvataaarTypeMouthEating eating() {
-    return const AvataaarTypeMouthEating();
-  }
-
-  AvataaarTypeMouthGrimace grimace() {
-    return const AvataaarTypeMouthGrimace();
-  }
-
-  AvataaarTypeMouthSad sad() {
-    return const AvataaarTypeMouthSad();
-  }
-
-  AvataaarTypeMouthScreamOpen screamOpen() {
-    return const AvataaarTypeMouthScreamOpen();
-  }
-
-  AvataaarTypeMouthSerious serious() {
-    return const AvataaarTypeMouthSerious();
-  }
-
-  AvataaarTypeMouthSmile smile() {
-    return const AvataaarTypeMouthSmile();
-  }
-
-  AvataaarTypeMouthTongue tongue() {
-    return const AvataaarTypeMouthTongue();
-  }
-
-  AvataaarTypeMouthTwinkle twinkle() {
-    return const AvataaarTypeMouthTwinkle();
-  }
-
-  AvataaarTypeMouthVomit vomit() {
-    return const AvataaarTypeMouthVomit();
-  }
-
-  AvataaarMouth fromJson(Map<String, Object?> json) {
-    return AvataaarMouth.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarMouth = _$AvataaarMouthTearOff();
 
 /// @nodoc
 mixin _$AvataaarMouth {
@@ -28259,29 +27775,31 @@ class _$AvataaarMouthCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthConcernedCopyWith<$Res> {
-  factory $AvataaarTypeMouthConcernedCopyWith(AvataaarTypeMouthConcerned value,
-          $Res Function(AvataaarTypeMouthConcerned) then) =
-      _$AvataaarTypeMouthConcernedCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthConcernedCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthConcernedCopyWith(
+          _$AvataaarTypeMouthConcerned value,
+          $Res Function(_$AvataaarTypeMouthConcerned) then) =
+      __$$AvataaarTypeMouthConcernedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthConcernedCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthConcernedCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthConcernedCopyWith<$Res> {
-  _$AvataaarTypeMouthConcernedCopyWithImpl(AvataaarTypeMouthConcerned _value,
-      $Res Function(AvataaarTypeMouthConcerned) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthConcerned));
+    implements _$$AvataaarTypeMouthConcernedCopyWith<$Res> {
+  __$$AvataaarTypeMouthConcernedCopyWithImpl(
+      _$AvataaarTypeMouthConcerned _value,
+      $Res Function(_$AvataaarTypeMouthConcerned) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthConcerned));
 
   @override
-  AvataaarTypeMouthConcerned get _value =>
-      super._value as AvataaarTypeMouthConcerned;
+  _$AvataaarTypeMouthConcerned get _value =>
+      super._value as _$AvataaarTypeMouthConcerned;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthConcerned extends AvataaarTypeMouthConcerned {
-  const _$AvataaarTypeMouthConcerned({String? $type})
+  const _$AvataaarTypeMouthConcerned({final String? $type})
       : $type = $type ?? 'concerned',
         super._();
 
@@ -28300,9 +27818,10 @@ class _$AvataaarTypeMouthConcerned extends AvataaarTypeMouthConcerned {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeMouthConcerned);
+            other is _$AvataaarTypeMouthConcerned);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -28443,29 +27962,30 @@ abstract class AvataaarTypeMouthConcerned extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthDefault0CopyWith<$Res> {
-  factory $AvataaarTypeMouthDefault0CopyWith(AvataaarTypeMouthDefault0 value,
-          $Res Function(AvataaarTypeMouthDefault0) then) =
-      _$AvataaarTypeMouthDefault0CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthDefault0CopyWith<$Res> {
+  factory _$$AvataaarTypeMouthDefault0CopyWith(
+          _$AvataaarTypeMouthDefault0 value,
+          $Res Function(_$AvataaarTypeMouthDefault0) then) =
+      __$$AvataaarTypeMouthDefault0CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthDefault0CopyWithImpl<$Res>
+class __$$AvataaarTypeMouthDefault0CopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthDefault0CopyWith<$Res> {
-  _$AvataaarTypeMouthDefault0CopyWithImpl(AvataaarTypeMouthDefault0 _value,
-      $Res Function(AvataaarTypeMouthDefault0) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthDefault0));
+    implements _$$AvataaarTypeMouthDefault0CopyWith<$Res> {
+  __$$AvataaarTypeMouthDefault0CopyWithImpl(_$AvataaarTypeMouthDefault0 _value,
+      $Res Function(_$AvataaarTypeMouthDefault0) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthDefault0));
 
   @override
-  AvataaarTypeMouthDefault0 get _value =>
-      super._value as AvataaarTypeMouthDefault0;
+  _$AvataaarTypeMouthDefault0 get _value =>
+      super._value as _$AvataaarTypeMouthDefault0;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthDefault0 extends AvataaarTypeMouthDefault0 {
-  const _$AvataaarTypeMouthDefault0({String? $type})
+  const _$AvataaarTypeMouthDefault0({final String? $type})
       : $type = $type ?? 'default0',
         super._();
 
@@ -28484,9 +28004,10 @@ class _$AvataaarTypeMouthDefault0 extends AvataaarTypeMouthDefault0 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeMouthDefault0);
+            other is _$AvataaarTypeMouthDefault0);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -28627,29 +28148,31 @@ abstract class AvataaarTypeMouthDefault0 extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthDisbeliefCopyWith<$Res> {
-  factory $AvataaarTypeMouthDisbeliefCopyWith(AvataaarTypeMouthDisbelief value,
-          $Res Function(AvataaarTypeMouthDisbelief) then) =
-      _$AvataaarTypeMouthDisbeliefCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthDisbeliefCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthDisbeliefCopyWith(
+          _$AvataaarTypeMouthDisbelief value,
+          $Res Function(_$AvataaarTypeMouthDisbelief) then) =
+      __$$AvataaarTypeMouthDisbeliefCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthDisbeliefCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthDisbeliefCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthDisbeliefCopyWith<$Res> {
-  _$AvataaarTypeMouthDisbeliefCopyWithImpl(AvataaarTypeMouthDisbelief _value,
-      $Res Function(AvataaarTypeMouthDisbelief) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthDisbelief));
+    implements _$$AvataaarTypeMouthDisbeliefCopyWith<$Res> {
+  __$$AvataaarTypeMouthDisbeliefCopyWithImpl(
+      _$AvataaarTypeMouthDisbelief _value,
+      $Res Function(_$AvataaarTypeMouthDisbelief) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthDisbelief));
 
   @override
-  AvataaarTypeMouthDisbelief get _value =>
-      super._value as AvataaarTypeMouthDisbelief;
+  _$AvataaarTypeMouthDisbelief get _value =>
+      super._value as _$AvataaarTypeMouthDisbelief;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthDisbelief extends AvataaarTypeMouthDisbelief {
-  const _$AvataaarTypeMouthDisbelief({String? $type})
+  const _$AvataaarTypeMouthDisbelief({final String? $type})
       : $type = $type ?? 'disbelief',
         super._();
 
@@ -28668,9 +28191,10 @@ class _$AvataaarTypeMouthDisbelief extends AvataaarTypeMouthDisbelief {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeMouthDisbelief);
+            other is _$AvataaarTypeMouthDisbelief);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -28811,28 +28335,29 @@ abstract class AvataaarTypeMouthDisbelief extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthEatingCopyWith<$Res> {
-  factory $AvataaarTypeMouthEatingCopyWith(AvataaarTypeMouthEating value,
-          $Res Function(AvataaarTypeMouthEating) then) =
-      _$AvataaarTypeMouthEatingCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthEatingCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthEatingCopyWith(_$AvataaarTypeMouthEating value,
+          $Res Function(_$AvataaarTypeMouthEating) then) =
+      __$$AvataaarTypeMouthEatingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthEatingCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthEatingCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthEatingCopyWith<$Res> {
-  _$AvataaarTypeMouthEatingCopyWithImpl(AvataaarTypeMouthEating _value,
-      $Res Function(AvataaarTypeMouthEating) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthEating));
+    implements _$$AvataaarTypeMouthEatingCopyWith<$Res> {
+  __$$AvataaarTypeMouthEatingCopyWithImpl(_$AvataaarTypeMouthEating _value,
+      $Res Function(_$AvataaarTypeMouthEating) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthEating));
 
   @override
-  AvataaarTypeMouthEating get _value => super._value as AvataaarTypeMouthEating;
+  _$AvataaarTypeMouthEating get _value =>
+      super._value as _$AvataaarTypeMouthEating;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthEating extends AvataaarTypeMouthEating {
-  const _$AvataaarTypeMouthEating({String? $type})
+  const _$AvataaarTypeMouthEating({final String? $type})
       : $type = $type ?? 'eating',
         super._();
 
@@ -28850,9 +28375,11 @@ class _$AvataaarTypeMouthEating extends AvataaarTypeMouthEating {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthEating);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeMouthEating);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -28993,29 +28520,29 @@ abstract class AvataaarTypeMouthEating extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthGrimaceCopyWith<$Res> {
-  factory $AvataaarTypeMouthGrimaceCopyWith(AvataaarTypeMouthGrimace value,
-          $Res Function(AvataaarTypeMouthGrimace) then) =
-      _$AvataaarTypeMouthGrimaceCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthGrimaceCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthGrimaceCopyWith(_$AvataaarTypeMouthGrimace value,
+          $Res Function(_$AvataaarTypeMouthGrimace) then) =
+      __$$AvataaarTypeMouthGrimaceCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthGrimaceCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthGrimaceCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthGrimaceCopyWith<$Res> {
-  _$AvataaarTypeMouthGrimaceCopyWithImpl(AvataaarTypeMouthGrimace _value,
-      $Res Function(AvataaarTypeMouthGrimace) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthGrimace));
+    implements _$$AvataaarTypeMouthGrimaceCopyWith<$Res> {
+  __$$AvataaarTypeMouthGrimaceCopyWithImpl(_$AvataaarTypeMouthGrimace _value,
+      $Res Function(_$AvataaarTypeMouthGrimace) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthGrimace));
 
   @override
-  AvataaarTypeMouthGrimace get _value =>
-      super._value as AvataaarTypeMouthGrimace;
+  _$AvataaarTypeMouthGrimace get _value =>
+      super._value as _$AvataaarTypeMouthGrimace;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthGrimace extends AvataaarTypeMouthGrimace {
-  const _$AvataaarTypeMouthGrimace({String? $type})
+  const _$AvataaarTypeMouthGrimace({final String? $type})
       : $type = $type ?? 'grimace',
         super._();
 
@@ -29033,9 +28560,11 @@ class _$AvataaarTypeMouthGrimace extends AvataaarTypeMouthGrimace {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthGrimace);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeMouthGrimace);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -29176,28 +28705,28 @@ abstract class AvataaarTypeMouthGrimace extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthSadCopyWith<$Res> {
-  factory $AvataaarTypeMouthSadCopyWith(AvataaarTypeMouthSad value,
-          $Res Function(AvataaarTypeMouthSad) then) =
-      _$AvataaarTypeMouthSadCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthSadCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthSadCopyWith(_$AvataaarTypeMouthSad value,
+          $Res Function(_$AvataaarTypeMouthSad) then) =
+      __$$AvataaarTypeMouthSadCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthSadCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthSadCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthSadCopyWith<$Res> {
-  _$AvataaarTypeMouthSadCopyWithImpl(
-      AvataaarTypeMouthSad _value, $Res Function(AvataaarTypeMouthSad) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthSad));
+    implements _$$AvataaarTypeMouthSadCopyWith<$Res> {
+  __$$AvataaarTypeMouthSadCopyWithImpl(_$AvataaarTypeMouthSad _value,
+      $Res Function(_$AvataaarTypeMouthSad) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthSad));
 
   @override
-  AvataaarTypeMouthSad get _value => super._value as AvataaarTypeMouthSad;
+  _$AvataaarTypeMouthSad get _value => super._value as _$AvataaarTypeMouthSad;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthSad extends AvataaarTypeMouthSad {
-  const _$AvataaarTypeMouthSad({String? $type})
+  const _$AvataaarTypeMouthSad({final String? $type})
       : $type = $type ?? 'sad',
         super._();
 
@@ -29215,9 +28744,10 @@ class _$AvataaarTypeMouthSad extends AvataaarTypeMouthSad {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthSad);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeMouthSad);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -29358,30 +28888,31 @@ abstract class AvataaarTypeMouthSad extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthScreamOpenCopyWith<$Res> {
-  factory $AvataaarTypeMouthScreamOpenCopyWith(
-          AvataaarTypeMouthScreamOpen value,
-          $Res Function(AvataaarTypeMouthScreamOpen) then) =
-      _$AvataaarTypeMouthScreamOpenCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthScreamOpenCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthScreamOpenCopyWith(
+          _$AvataaarTypeMouthScreamOpen value,
+          $Res Function(_$AvataaarTypeMouthScreamOpen) then) =
+      __$$AvataaarTypeMouthScreamOpenCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthScreamOpenCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthScreamOpenCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthScreamOpenCopyWith<$Res> {
-  _$AvataaarTypeMouthScreamOpenCopyWithImpl(AvataaarTypeMouthScreamOpen _value,
-      $Res Function(AvataaarTypeMouthScreamOpen) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthScreamOpen));
+    implements _$$AvataaarTypeMouthScreamOpenCopyWith<$Res> {
+  __$$AvataaarTypeMouthScreamOpenCopyWithImpl(
+      _$AvataaarTypeMouthScreamOpen _value,
+      $Res Function(_$AvataaarTypeMouthScreamOpen) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthScreamOpen));
 
   @override
-  AvataaarTypeMouthScreamOpen get _value =>
-      super._value as AvataaarTypeMouthScreamOpen;
+  _$AvataaarTypeMouthScreamOpen get _value =>
+      super._value as _$AvataaarTypeMouthScreamOpen;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthScreamOpen extends AvataaarTypeMouthScreamOpen {
-  const _$AvataaarTypeMouthScreamOpen({String? $type})
+  const _$AvataaarTypeMouthScreamOpen({final String? $type})
       : $type = $type ?? 'screamOpen',
         super._();
 
@@ -29400,9 +28931,10 @@ class _$AvataaarTypeMouthScreamOpen extends AvataaarTypeMouthScreamOpen {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeMouthScreamOpen);
+            other is _$AvataaarTypeMouthScreamOpen);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -29543,29 +29075,29 @@ abstract class AvataaarTypeMouthScreamOpen extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthSeriousCopyWith<$Res> {
-  factory $AvataaarTypeMouthSeriousCopyWith(AvataaarTypeMouthSerious value,
-          $Res Function(AvataaarTypeMouthSerious) then) =
-      _$AvataaarTypeMouthSeriousCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthSeriousCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthSeriousCopyWith(_$AvataaarTypeMouthSerious value,
+          $Res Function(_$AvataaarTypeMouthSerious) then) =
+      __$$AvataaarTypeMouthSeriousCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthSeriousCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthSeriousCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthSeriousCopyWith<$Res> {
-  _$AvataaarTypeMouthSeriousCopyWithImpl(AvataaarTypeMouthSerious _value,
-      $Res Function(AvataaarTypeMouthSerious) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthSerious));
+    implements _$$AvataaarTypeMouthSeriousCopyWith<$Res> {
+  __$$AvataaarTypeMouthSeriousCopyWithImpl(_$AvataaarTypeMouthSerious _value,
+      $Res Function(_$AvataaarTypeMouthSerious) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthSerious));
 
   @override
-  AvataaarTypeMouthSerious get _value =>
-      super._value as AvataaarTypeMouthSerious;
+  _$AvataaarTypeMouthSerious get _value =>
+      super._value as _$AvataaarTypeMouthSerious;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthSerious extends AvataaarTypeMouthSerious {
-  const _$AvataaarTypeMouthSerious({String? $type})
+  const _$AvataaarTypeMouthSerious({final String? $type})
       : $type = $type ?? 'serious',
         super._();
 
@@ -29583,9 +29115,11 @@ class _$AvataaarTypeMouthSerious extends AvataaarTypeMouthSerious {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthSerious);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeMouthSerious);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -29726,28 +29260,29 @@ abstract class AvataaarTypeMouthSerious extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthSmileCopyWith<$Res> {
-  factory $AvataaarTypeMouthSmileCopyWith(AvataaarTypeMouthSmile value,
-          $Res Function(AvataaarTypeMouthSmile) then) =
-      _$AvataaarTypeMouthSmileCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthSmileCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthSmileCopyWith(_$AvataaarTypeMouthSmile value,
+          $Res Function(_$AvataaarTypeMouthSmile) then) =
+      __$$AvataaarTypeMouthSmileCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthSmileCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthSmileCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthSmileCopyWith<$Res> {
-  _$AvataaarTypeMouthSmileCopyWithImpl(AvataaarTypeMouthSmile _value,
-      $Res Function(AvataaarTypeMouthSmile) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthSmile));
+    implements _$$AvataaarTypeMouthSmileCopyWith<$Res> {
+  __$$AvataaarTypeMouthSmileCopyWithImpl(_$AvataaarTypeMouthSmile _value,
+      $Res Function(_$AvataaarTypeMouthSmile) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthSmile));
 
   @override
-  AvataaarTypeMouthSmile get _value => super._value as AvataaarTypeMouthSmile;
+  _$AvataaarTypeMouthSmile get _value =>
+      super._value as _$AvataaarTypeMouthSmile;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthSmile extends AvataaarTypeMouthSmile {
-  const _$AvataaarTypeMouthSmile({String? $type})
+  const _$AvataaarTypeMouthSmile({final String? $type})
       : $type = $type ?? 'smile',
         super._();
 
@@ -29765,9 +29300,10 @@ class _$AvataaarTypeMouthSmile extends AvataaarTypeMouthSmile {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthSmile);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeMouthSmile);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -29908,28 +29444,29 @@ abstract class AvataaarTypeMouthSmile extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthTongueCopyWith<$Res> {
-  factory $AvataaarTypeMouthTongueCopyWith(AvataaarTypeMouthTongue value,
-          $Res Function(AvataaarTypeMouthTongue) then) =
-      _$AvataaarTypeMouthTongueCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthTongueCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthTongueCopyWith(_$AvataaarTypeMouthTongue value,
+          $Res Function(_$AvataaarTypeMouthTongue) then) =
+      __$$AvataaarTypeMouthTongueCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthTongueCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthTongueCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthTongueCopyWith<$Res> {
-  _$AvataaarTypeMouthTongueCopyWithImpl(AvataaarTypeMouthTongue _value,
-      $Res Function(AvataaarTypeMouthTongue) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthTongue));
+    implements _$$AvataaarTypeMouthTongueCopyWith<$Res> {
+  __$$AvataaarTypeMouthTongueCopyWithImpl(_$AvataaarTypeMouthTongue _value,
+      $Res Function(_$AvataaarTypeMouthTongue) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthTongue));
 
   @override
-  AvataaarTypeMouthTongue get _value => super._value as AvataaarTypeMouthTongue;
+  _$AvataaarTypeMouthTongue get _value =>
+      super._value as _$AvataaarTypeMouthTongue;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthTongue extends AvataaarTypeMouthTongue {
-  const _$AvataaarTypeMouthTongue({String? $type})
+  const _$AvataaarTypeMouthTongue({final String? $type})
       : $type = $type ?? 'tongue',
         super._();
 
@@ -29947,9 +29484,11 @@ class _$AvataaarTypeMouthTongue extends AvataaarTypeMouthTongue {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthTongue);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeMouthTongue);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -30090,29 +29629,29 @@ abstract class AvataaarTypeMouthTongue extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthTwinkleCopyWith<$Res> {
-  factory $AvataaarTypeMouthTwinkleCopyWith(AvataaarTypeMouthTwinkle value,
-          $Res Function(AvataaarTypeMouthTwinkle) then) =
-      _$AvataaarTypeMouthTwinkleCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthTwinkleCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthTwinkleCopyWith(_$AvataaarTypeMouthTwinkle value,
+          $Res Function(_$AvataaarTypeMouthTwinkle) then) =
+      __$$AvataaarTypeMouthTwinkleCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthTwinkleCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthTwinkleCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthTwinkleCopyWith<$Res> {
-  _$AvataaarTypeMouthTwinkleCopyWithImpl(AvataaarTypeMouthTwinkle _value,
-      $Res Function(AvataaarTypeMouthTwinkle) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthTwinkle));
+    implements _$$AvataaarTypeMouthTwinkleCopyWith<$Res> {
+  __$$AvataaarTypeMouthTwinkleCopyWithImpl(_$AvataaarTypeMouthTwinkle _value,
+      $Res Function(_$AvataaarTypeMouthTwinkle) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthTwinkle));
 
   @override
-  AvataaarTypeMouthTwinkle get _value =>
-      super._value as AvataaarTypeMouthTwinkle;
+  _$AvataaarTypeMouthTwinkle get _value =>
+      super._value as _$AvataaarTypeMouthTwinkle;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthTwinkle extends AvataaarTypeMouthTwinkle {
-  const _$AvataaarTypeMouthTwinkle({String? $type})
+  const _$AvataaarTypeMouthTwinkle({final String? $type})
       : $type = $type ?? 'twinkle',
         super._();
 
@@ -30130,9 +29669,11 @@ class _$AvataaarTypeMouthTwinkle extends AvataaarTypeMouthTwinkle {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthTwinkle);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeMouthTwinkle);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -30273,28 +29814,29 @@ abstract class AvataaarTypeMouthTwinkle extends AvataaarMouth {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeMouthVomitCopyWith<$Res> {
-  factory $AvataaarTypeMouthVomitCopyWith(AvataaarTypeMouthVomit value,
-          $Res Function(AvataaarTypeMouthVomit) then) =
-      _$AvataaarTypeMouthVomitCopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeMouthVomitCopyWith<$Res> {
+  factory _$$AvataaarTypeMouthVomitCopyWith(_$AvataaarTypeMouthVomit value,
+          $Res Function(_$AvataaarTypeMouthVomit) then) =
+      __$$AvataaarTypeMouthVomitCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeMouthVomitCopyWithImpl<$Res>
+class __$$AvataaarTypeMouthVomitCopyWithImpl<$Res>
     extends _$AvataaarMouthCopyWithImpl<$Res>
-    implements $AvataaarTypeMouthVomitCopyWith<$Res> {
-  _$AvataaarTypeMouthVomitCopyWithImpl(AvataaarTypeMouthVomit _value,
-      $Res Function(AvataaarTypeMouthVomit) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeMouthVomit));
+    implements _$$AvataaarTypeMouthVomitCopyWith<$Res> {
+  __$$AvataaarTypeMouthVomitCopyWithImpl(_$AvataaarTypeMouthVomit _value,
+      $Res Function(_$AvataaarTypeMouthVomit) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeMouthVomit));
 
   @override
-  AvataaarTypeMouthVomit get _value => super._value as AvataaarTypeMouthVomit;
+  _$AvataaarTypeMouthVomit get _value =>
+      super._value as _$AvataaarTypeMouthVomit;
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvataaarTypeMouthVomit extends AvataaarTypeMouthVomit {
-  const _$AvataaarTypeMouthVomit({String? $type})
+  const _$AvataaarTypeMouthVomit({final String? $type})
       : $type = $type ?? 'vomit',
         super._();
 
@@ -30312,9 +29854,10 @@ class _$AvataaarTypeMouthVomit extends AvataaarTypeMouthVomit {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeMouthVomit);
+        (other.runtimeType == runtimeType && other is _$AvataaarTypeMouthVomit);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -30459,22 +30002,6 @@ AvataaarNose _$AvataaarNoseFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarNoseTearOff {
-  const _$AvataaarNoseTearOff();
-
-  AvataaarTypeNoseDefault0 default0() {
-    return const AvataaarTypeNoseDefault0();
-  }
-
-  AvataaarNose fromJson(Map<String, Object?> json) {
-    return AvataaarNose.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarNose = _$AvataaarNoseTearOff();
-
-/// @nodoc
 mixin _$AvataaarNose {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -30528,23 +30055,23 @@ class _$AvataaarNoseCopyWithImpl<$Res> implements $AvataaarNoseCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeNoseDefault0CopyWith<$Res> {
-  factory $AvataaarTypeNoseDefault0CopyWith(AvataaarTypeNoseDefault0 value,
-          $Res Function(AvataaarTypeNoseDefault0) then) =
-      _$AvataaarTypeNoseDefault0CopyWithImpl<$Res>;
+abstract class _$$AvataaarTypeNoseDefault0CopyWith<$Res> {
+  factory _$$AvataaarTypeNoseDefault0CopyWith(_$AvataaarTypeNoseDefault0 value,
+          $Res Function(_$AvataaarTypeNoseDefault0) then) =
+      __$$AvataaarTypeNoseDefault0CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AvataaarTypeNoseDefault0CopyWithImpl<$Res>
+class __$$AvataaarTypeNoseDefault0CopyWithImpl<$Res>
     extends _$AvataaarNoseCopyWithImpl<$Res>
-    implements $AvataaarTypeNoseDefault0CopyWith<$Res> {
-  _$AvataaarTypeNoseDefault0CopyWithImpl(AvataaarTypeNoseDefault0 _value,
-      $Res Function(AvataaarTypeNoseDefault0) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeNoseDefault0));
+    implements _$$AvataaarTypeNoseDefault0CopyWith<$Res> {
+  __$$AvataaarTypeNoseDefault0CopyWithImpl(_$AvataaarTypeNoseDefault0 _value,
+      $Res Function(_$AvataaarTypeNoseDefault0) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeNoseDefault0));
 
   @override
-  AvataaarTypeNoseDefault0 get _value =>
-      super._value as AvataaarTypeNoseDefault0;
+  _$AvataaarTypeNoseDefault0 get _value =>
+      super._value as _$AvataaarTypeNoseDefault0;
 }
 
 /// @nodoc
@@ -30563,9 +30090,11 @@ class _$AvataaarTypeNoseDefault0 extends AvataaarTypeNoseDefault0 {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is AvataaarTypeNoseDefault0);
+        (other.runtimeType == runtimeType &&
+            other is _$AvataaarTypeNoseDefault0);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -30665,78 +30194,9 @@ AvataaarSkin _$AvataaarSkinFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarSkinTearOff {
-  const _$AvataaarSkinTearOff();
-
-  AvataaarTypeSkinTanned tanned(
-      [@ColorSerialiser() Color color = const Color(0x00FD9841)]) {
-    return AvataaarTypeSkinTanned(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinYellow yellow(
-      [@ColorSerialiser() Color color = const Color(0x00F8D25C)]) {
-    return AvataaarTypeSkinYellow(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinPale pale(
-      [@ColorSerialiser() Color color = const Color(0x00FFDBB4)]) {
-    return AvataaarTypeSkinPale(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinWhite light(
-      [@ColorSerialiser() Color color = const Color(0x00EDB98A)]) {
-    return AvataaarTypeSkinWhite(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinBrown brown(
-      [@ColorSerialiser() Color color = const Color(0x00D08B5B)]) {
-    return AvataaarTypeSkinBrown(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinDarkBrown darkBrown(
-      [@ColorSerialiser() Color color = const Color(0x00AE5D29)]) {
-    return AvataaarTypeSkinDarkBrown(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinBlack black(
-      [@ColorSerialiser() Color color = const Color(0x00614335)]) {
-    return AvataaarTypeSkinBlack(
-      color,
-    );
-  }
-
-  AvataaarTypeSkinCustom custom(
-      [@ColorSerialiser() Color color = Colors.grey]) {
-    return AvataaarTypeSkinCustom(
-      color,
-    );
-  }
-
-  AvataaarSkin fromJson(Map<String, Object?> json) {
-    return AvataaarSkin.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarSkin = _$AvataaarSkinTearOff();
-
-/// @nodoc
 mixin _$AvataaarSkin {
   @ColorSerialiser()
   Color get color => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@ColorSerialiser() Color color) tanned,
@@ -30847,31 +30307,32 @@ class _$AvataaarSkinCopyWithImpl<$Res> implements $AvataaarSkinCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinTannedCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinTannedCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinTannedCopyWith(AvataaarTypeSkinTanned value,
-          $Res Function(AvataaarTypeSkinTanned) then) =
-      _$AvataaarTypeSkinTannedCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinTannedCopyWith(_$AvataaarTypeSkinTanned value,
+          $Res Function(_$AvataaarTypeSkinTanned) then) =
+      __$$AvataaarTypeSkinTannedCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinTannedCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinTannedCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinTannedCopyWith<$Res> {
-  _$AvataaarTypeSkinTannedCopyWithImpl(AvataaarTypeSkinTanned _value,
-      $Res Function(AvataaarTypeSkinTanned) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinTanned));
+    implements _$$AvataaarTypeSkinTannedCopyWith<$Res> {
+  __$$AvataaarTypeSkinTannedCopyWithImpl(_$AvataaarTypeSkinTanned _value,
+      $Res Function(_$AvataaarTypeSkinTanned) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinTanned));
 
   @override
-  AvataaarTypeSkinTanned get _value => super._value as AvataaarTypeSkinTanned;
+  _$AvataaarTypeSkinTanned get _value =>
+      super._value as _$AvataaarTypeSkinTanned;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinTanned(
+    return _then(_$AvataaarTypeSkinTanned(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -30884,15 +30345,16 @@ class _$AvataaarTypeSkinTannedCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinTanned extends AvataaarTypeSkinTanned {
   const _$AvataaarTypeSkinTanned(
-      [@ColorSerialiser() this.color = const Color(0x00FD9841), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00FD9841),
+      final String? $type])
       : $type = $type ?? 'tanned',
         super._();
 
   factory _$AvataaarTypeSkinTanned.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinTannedFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -30908,18 +30370,19 @@ class _$AvataaarTypeSkinTanned extends AvataaarTypeSkinTanned {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinTanned &&
+            other is _$AvataaarTypeSkinTanned &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinTannedCopyWith<AvataaarTypeSkinTanned> get copyWith =>
-      _$AvataaarTypeSkinTannedCopyWithImpl<AvataaarTypeSkinTanned>(
+  _$$AvataaarTypeSkinTannedCopyWith<_$AvataaarTypeSkinTanned> get copyWith =>
+      __$$AvataaarTypeSkinTannedCopyWithImpl<_$AvataaarTypeSkinTanned>(
           this, _$identity);
 
   @override
@@ -31027,7 +30490,7 @@ class _$AvataaarTypeSkinTanned extends AvataaarTypeSkinTanned {
 }
 
 abstract class AvataaarTypeSkinTanned extends AvataaarSkin {
-  const factory AvataaarTypeSkinTanned([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinTanned([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinTanned;
   const AvataaarTypeSkinTanned._() : super._();
 
@@ -31036,39 +30499,40 @@ abstract class AvataaarTypeSkinTanned extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinTannedCopyWith<AvataaarTypeSkinTanned> get copyWith =>
+  _$$AvataaarTypeSkinTannedCopyWith<_$AvataaarTypeSkinTanned> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinYellowCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinYellowCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinYellowCopyWith(AvataaarTypeSkinYellow value,
-          $Res Function(AvataaarTypeSkinYellow) then) =
-      _$AvataaarTypeSkinYellowCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinYellowCopyWith(_$AvataaarTypeSkinYellow value,
+          $Res Function(_$AvataaarTypeSkinYellow) then) =
+      __$$AvataaarTypeSkinYellowCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinYellowCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinYellowCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinYellowCopyWith<$Res> {
-  _$AvataaarTypeSkinYellowCopyWithImpl(AvataaarTypeSkinYellow _value,
-      $Res Function(AvataaarTypeSkinYellow) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinYellow));
+    implements _$$AvataaarTypeSkinYellowCopyWith<$Res> {
+  __$$AvataaarTypeSkinYellowCopyWithImpl(_$AvataaarTypeSkinYellow _value,
+      $Res Function(_$AvataaarTypeSkinYellow) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinYellow));
 
   @override
-  AvataaarTypeSkinYellow get _value => super._value as AvataaarTypeSkinYellow;
+  _$AvataaarTypeSkinYellow get _value =>
+      super._value as _$AvataaarTypeSkinYellow;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinYellow(
+    return _then(_$AvataaarTypeSkinYellow(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -31081,15 +30545,16 @@ class _$AvataaarTypeSkinYellowCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinYellow extends AvataaarTypeSkinYellow {
   const _$AvataaarTypeSkinYellow(
-      [@ColorSerialiser() this.color = const Color(0x00F8D25C), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00F8D25C),
+      final String? $type])
       : $type = $type ?? 'yellow',
         super._();
 
   factory _$AvataaarTypeSkinYellow.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinYellowFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -31105,18 +30570,19 @@ class _$AvataaarTypeSkinYellow extends AvataaarTypeSkinYellow {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinYellow &&
+            other is _$AvataaarTypeSkinYellow &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinYellowCopyWith<AvataaarTypeSkinYellow> get copyWith =>
-      _$AvataaarTypeSkinYellowCopyWithImpl<AvataaarTypeSkinYellow>(
+  _$$AvataaarTypeSkinYellowCopyWith<_$AvataaarTypeSkinYellow> get copyWith =>
+      __$$AvataaarTypeSkinYellowCopyWithImpl<_$AvataaarTypeSkinYellow>(
           this, _$identity);
 
   @override
@@ -31224,7 +30690,7 @@ class _$AvataaarTypeSkinYellow extends AvataaarTypeSkinYellow {
 }
 
 abstract class AvataaarTypeSkinYellow extends AvataaarSkin {
-  const factory AvataaarTypeSkinYellow([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinYellow([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinYellow;
   const AvataaarTypeSkinYellow._() : super._();
 
@@ -31233,39 +30699,39 @@ abstract class AvataaarTypeSkinYellow extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinYellowCopyWith<AvataaarTypeSkinYellow> get copyWith =>
+  _$$AvataaarTypeSkinYellowCopyWith<_$AvataaarTypeSkinYellow> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinPaleCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinPaleCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinPaleCopyWith(AvataaarTypeSkinPale value,
-          $Res Function(AvataaarTypeSkinPale) then) =
-      _$AvataaarTypeSkinPaleCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinPaleCopyWith(_$AvataaarTypeSkinPale value,
+          $Res Function(_$AvataaarTypeSkinPale) then) =
+      __$$AvataaarTypeSkinPaleCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinPaleCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinPaleCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinPaleCopyWith<$Res> {
-  _$AvataaarTypeSkinPaleCopyWithImpl(
-      AvataaarTypeSkinPale _value, $Res Function(AvataaarTypeSkinPale) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinPale));
+    implements _$$AvataaarTypeSkinPaleCopyWith<$Res> {
+  __$$AvataaarTypeSkinPaleCopyWithImpl(_$AvataaarTypeSkinPale _value,
+      $Res Function(_$AvataaarTypeSkinPale) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinPale));
 
   @override
-  AvataaarTypeSkinPale get _value => super._value as AvataaarTypeSkinPale;
+  _$AvataaarTypeSkinPale get _value => super._value as _$AvataaarTypeSkinPale;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinPale(
+    return _then(_$AvataaarTypeSkinPale(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -31278,15 +30744,16 @@ class _$AvataaarTypeSkinPaleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinPale extends AvataaarTypeSkinPale {
   const _$AvataaarTypeSkinPale(
-      [@ColorSerialiser() this.color = const Color(0x00FFDBB4), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00FFDBB4),
+      final String? $type])
       : $type = $type ?? 'pale',
         super._();
 
   factory _$AvataaarTypeSkinPale.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinPaleFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -31302,18 +30769,19 @@ class _$AvataaarTypeSkinPale extends AvataaarTypeSkinPale {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinPale &&
+            other is _$AvataaarTypeSkinPale &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinPaleCopyWith<AvataaarTypeSkinPale> get copyWith =>
-      _$AvataaarTypeSkinPaleCopyWithImpl<AvataaarTypeSkinPale>(
+  _$$AvataaarTypeSkinPaleCopyWith<_$AvataaarTypeSkinPale> get copyWith =>
+      __$$AvataaarTypeSkinPaleCopyWithImpl<_$AvataaarTypeSkinPale>(
           this, _$identity);
 
   @override
@@ -31421,7 +30889,7 @@ class _$AvataaarTypeSkinPale extends AvataaarTypeSkinPale {
 }
 
 abstract class AvataaarTypeSkinPale extends AvataaarSkin {
-  const factory AvataaarTypeSkinPale([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinPale([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinPale;
   const AvataaarTypeSkinPale._() : super._();
 
@@ -31430,39 +30898,39 @@ abstract class AvataaarTypeSkinPale extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinPaleCopyWith<AvataaarTypeSkinPale> get copyWith =>
+  _$$AvataaarTypeSkinPaleCopyWith<_$AvataaarTypeSkinPale> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinWhiteCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinWhiteCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinWhiteCopyWith(AvataaarTypeSkinWhite value,
-          $Res Function(AvataaarTypeSkinWhite) then) =
-      _$AvataaarTypeSkinWhiteCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinWhiteCopyWith(_$AvataaarTypeSkinWhite value,
+          $Res Function(_$AvataaarTypeSkinWhite) then) =
+      __$$AvataaarTypeSkinWhiteCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinWhiteCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinWhiteCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinWhiteCopyWith<$Res> {
-  _$AvataaarTypeSkinWhiteCopyWithImpl(
-      AvataaarTypeSkinWhite _value, $Res Function(AvataaarTypeSkinWhite) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinWhite));
+    implements _$$AvataaarTypeSkinWhiteCopyWith<$Res> {
+  __$$AvataaarTypeSkinWhiteCopyWithImpl(_$AvataaarTypeSkinWhite _value,
+      $Res Function(_$AvataaarTypeSkinWhite) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinWhite));
 
   @override
-  AvataaarTypeSkinWhite get _value => super._value as AvataaarTypeSkinWhite;
+  _$AvataaarTypeSkinWhite get _value => super._value as _$AvataaarTypeSkinWhite;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinWhite(
+    return _then(_$AvataaarTypeSkinWhite(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -31475,15 +30943,16 @@ class _$AvataaarTypeSkinWhiteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinWhite extends AvataaarTypeSkinWhite {
   const _$AvataaarTypeSkinWhite(
-      [@ColorSerialiser() this.color = const Color(0x00EDB98A), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00EDB98A),
+      final String? $type])
       : $type = $type ?? 'light',
         super._();
 
   factory _$AvataaarTypeSkinWhite.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinWhiteFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -31499,18 +30968,19 @@ class _$AvataaarTypeSkinWhite extends AvataaarTypeSkinWhite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinWhite &&
+            other is _$AvataaarTypeSkinWhite &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinWhiteCopyWith<AvataaarTypeSkinWhite> get copyWith =>
-      _$AvataaarTypeSkinWhiteCopyWithImpl<AvataaarTypeSkinWhite>(
+  _$$AvataaarTypeSkinWhiteCopyWith<_$AvataaarTypeSkinWhite> get copyWith =>
+      __$$AvataaarTypeSkinWhiteCopyWithImpl<_$AvataaarTypeSkinWhite>(
           this, _$identity);
 
   @override
@@ -31618,7 +31088,7 @@ class _$AvataaarTypeSkinWhite extends AvataaarTypeSkinWhite {
 }
 
 abstract class AvataaarTypeSkinWhite extends AvataaarSkin {
-  const factory AvataaarTypeSkinWhite([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinWhite([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinWhite;
   const AvataaarTypeSkinWhite._() : super._();
 
@@ -31627,39 +31097,39 @@ abstract class AvataaarTypeSkinWhite extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinWhiteCopyWith<AvataaarTypeSkinWhite> get copyWith =>
+  _$$AvataaarTypeSkinWhiteCopyWith<_$AvataaarTypeSkinWhite> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinBrownCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinBrownCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinBrownCopyWith(AvataaarTypeSkinBrown value,
-          $Res Function(AvataaarTypeSkinBrown) then) =
-      _$AvataaarTypeSkinBrownCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinBrownCopyWith(_$AvataaarTypeSkinBrown value,
+          $Res Function(_$AvataaarTypeSkinBrown) then) =
+      __$$AvataaarTypeSkinBrownCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinBrownCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinBrownCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinBrownCopyWith<$Res> {
-  _$AvataaarTypeSkinBrownCopyWithImpl(
-      AvataaarTypeSkinBrown _value, $Res Function(AvataaarTypeSkinBrown) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinBrown));
+    implements _$$AvataaarTypeSkinBrownCopyWith<$Res> {
+  __$$AvataaarTypeSkinBrownCopyWithImpl(_$AvataaarTypeSkinBrown _value,
+      $Res Function(_$AvataaarTypeSkinBrown) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinBrown));
 
   @override
-  AvataaarTypeSkinBrown get _value => super._value as AvataaarTypeSkinBrown;
+  _$AvataaarTypeSkinBrown get _value => super._value as _$AvataaarTypeSkinBrown;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinBrown(
+    return _then(_$AvataaarTypeSkinBrown(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -31672,15 +31142,16 @@ class _$AvataaarTypeSkinBrownCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinBrown extends AvataaarTypeSkinBrown {
   const _$AvataaarTypeSkinBrown(
-      [@ColorSerialiser() this.color = const Color(0x00D08B5B), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00D08B5B),
+      final String? $type])
       : $type = $type ?? 'brown',
         super._();
 
   factory _$AvataaarTypeSkinBrown.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinBrownFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -31696,18 +31167,19 @@ class _$AvataaarTypeSkinBrown extends AvataaarTypeSkinBrown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinBrown &&
+            other is _$AvataaarTypeSkinBrown &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinBrownCopyWith<AvataaarTypeSkinBrown> get copyWith =>
-      _$AvataaarTypeSkinBrownCopyWithImpl<AvataaarTypeSkinBrown>(
+  _$$AvataaarTypeSkinBrownCopyWith<_$AvataaarTypeSkinBrown> get copyWith =>
+      __$$AvataaarTypeSkinBrownCopyWithImpl<_$AvataaarTypeSkinBrown>(
           this, _$identity);
 
   @override
@@ -31815,7 +31287,7 @@ class _$AvataaarTypeSkinBrown extends AvataaarTypeSkinBrown {
 }
 
 abstract class AvataaarTypeSkinBrown extends AvataaarSkin {
-  const factory AvataaarTypeSkinBrown([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinBrown([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinBrown;
   const AvataaarTypeSkinBrown._() : super._();
 
@@ -31824,40 +31296,41 @@ abstract class AvataaarTypeSkinBrown extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinBrownCopyWith<AvataaarTypeSkinBrown> get copyWith =>
+  _$$AvataaarTypeSkinBrownCopyWith<_$AvataaarTypeSkinBrown> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinDarkBrownCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinDarkBrownCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinDarkBrownCopyWith(AvataaarTypeSkinDarkBrown value,
-          $Res Function(AvataaarTypeSkinDarkBrown) then) =
-      _$AvataaarTypeSkinDarkBrownCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinDarkBrownCopyWith(
+          _$AvataaarTypeSkinDarkBrown value,
+          $Res Function(_$AvataaarTypeSkinDarkBrown) then) =
+      __$$AvataaarTypeSkinDarkBrownCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinDarkBrownCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinDarkBrownCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinDarkBrownCopyWith<$Res> {
-  _$AvataaarTypeSkinDarkBrownCopyWithImpl(AvataaarTypeSkinDarkBrown _value,
-      $Res Function(AvataaarTypeSkinDarkBrown) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinDarkBrown));
+    implements _$$AvataaarTypeSkinDarkBrownCopyWith<$Res> {
+  __$$AvataaarTypeSkinDarkBrownCopyWithImpl(_$AvataaarTypeSkinDarkBrown _value,
+      $Res Function(_$AvataaarTypeSkinDarkBrown) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinDarkBrown));
 
   @override
-  AvataaarTypeSkinDarkBrown get _value =>
-      super._value as AvataaarTypeSkinDarkBrown;
+  _$AvataaarTypeSkinDarkBrown get _value =>
+      super._value as _$AvataaarTypeSkinDarkBrown;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinDarkBrown(
+    return _then(_$AvataaarTypeSkinDarkBrown(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -31870,15 +31343,16 @@ class _$AvataaarTypeSkinDarkBrownCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinDarkBrown extends AvataaarTypeSkinDarkBrown {
   const _$AvataaarTypeSkinDarkBrown(
-      [@ColorSerialiser() this.color = const Color(0x00AE5D29), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00AE5D29),
+      final String? $type])
       : $type = $type ?? 'darkBrown',
         super._();
 
   factory _$AvataaarTypeSkinDarkBrown.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinDarkBrownFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -31894,19 +31368,20 @@ class _$AvataaarTypeSkinDarkBrown extends AvataaarTypeSkinDarkBrown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinDarkBrown &&
+            other is _$AvataaarTypeSkinDarkBrown &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinDarkBrownCopyWith<AvataaarTypeSkinDarkBrown> get copyWith =>
-      _$AvataaarTypeSkinDarkBrownCopyWithImpl<AvataaarTypeSkinDarkBrown>(
-          this, _$identity);
+  _$$AvataaarTypeSkinDarkBrownCopyWith<_$AvataaarTypeSkinDarkBrown>
+      get copyWith => __$$AvataaarTypeSkinDarkBrownCopyWithImpl<
+          _$AvataaarTypeSkinDarkBrown>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -32013,8 +31488,8 @@ class _$AvataaarTypeSkinDarkBrown extends AvataaarTypeSkinDarkBrown {
 }
 
 abstract class AvataaarTypeSkinDarkBrown extends AvataaarSkin {
-  const factory AvataaarTypeSkinDarkBrown([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeSkinDarkBrown;
+  const factory AvataaarTypeSkinDarkBrown(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeSkinDarkBrown;
   const AvataaarTypeSkinDarkBrown._() : super._();
 
   factory AvataaarTypeSkinDarkBrown.fromJson(Map<String, dynamic> json) =
@@ -32022,39 +31497,39 @@ abstract class AvataaarTypeSkinDarkBrown extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinDarkBrownCopyWith<AvataaarTypeSkinDarkBrown> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AvataaarTypeSkinDarkBrownCopyWith<_$AvataaarTypeSkinDarkBrown>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinBlackCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinBlackCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinBlackCopyWith(AvataaarTypeSkinBlack value,
-          $Res Function(AvataaarTypeSkinBlack) then) =
-      _$AvataaarTypeSkinBlackCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinBlackCopyWith(_$AvataaarTypeSkinBlack value,
+          $Res Function(_$AvataaarTypeSkinBlack) then) =
+      __$$AvataaarTypeSkinBlackCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinBlackCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinBlackCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinBlackCopyWith<$Res> {
-  _$AvataaarTypeSkinBlackCopyWithImpl(
-      AvataaarTypeSkinBlack _value, $Res Function(AvataaarTypeSkinBlack) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinBlack));
+    implements _$$AvataaarTypeSkinBlackCopyWith<$Res> {
+  __$$AvataaarTypeSkinBlackCopyWithImpl(_$AvataaarTypeSkinBlack _value,
+      $Res Function(_$AvataaarTypeSkinBlack) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinBlack));
 
   @override
-  AvataaarTypeSkinBlack get _value => super._value as AvataaarTypeSkinBlack;
+  _$AvataaarTypeSkinBlack get _value => super._value as _$AvataaarTypeSkinBlack;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinBlack(
+    return _then(_$AvataaarTypeSkinBlack(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -32067,15 +31542,16 @@ class _$AvataaarTypeSkinBlackCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinBlack extends AvataaarTypeSkinBlack {
   const _$AvataaarTypeSkinBlack(
-      [@ColorSerialiser() this.color = const Color(0x00614335), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x00614335),
+      final String? $type])
       : $type = $type ?? 'black',
         super._();
 
   factory _$AvataaarTypeSkinBlack.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinBlackFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -32091,18 +31567,19 @@ class _$AvataaarTypeSkinBlack extends AvataaarTypeSkinBlack {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinBlack &&
+            other is _$AvataaarTypeSkinBlack &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinBlackCopyWith<AvataaarTypeSkinBlack> get copyWith =>
-      _$AvataaarTypeSkinBlackCopyWithImpl<AvataaarTypeSkinBlack>(
+  _$$AvataaarTypeSkinBlackCopyWith<_$AvataaarTypeSkinBlack> get copyWith =>
+      __$$AvataaarTypeSkinBlackCopyWithImpl<_$AvataaarTypeSkinBlack>(
           this, _$identity);
 
   @override
@@ -32210,7 +31687,7 @@ class _$AvataaarTypeSkinBlack extends AvataaarTypeSkinBlack {
 }
 
 abstract class AvataaarTypeSkinBlack extends AvataaarSkin {
-  const factory AvataaarTypeSkinBlack([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinBlack([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinBlack;
   const AvataaarTypeSkinBlack._() : super._();
 
@@ -32219,39 +31696,40 @@ abstract class AvataaarTypeSkinBlack extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinBlackCopyWith<AvataaarTypeSkinBlack> get copyWith =>
+  _$$AvataaarTypeSkinBlackCopyWith<_$AvataaarTypeSkinBlack> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeSkinCustomCopyWith<$Res>
+abstract class _$$AvataaarTypeSkinCustomCopyWith<$Res>
     implements $AvataaarSkinCopyWith<$Res> {
-  factory $AvataaarTypeSkinCustomCopyWith(AvataaarTypeSkinCustom value,
-          $Res Function(AvataaarTypeSkinCustom) then) =
-      _$AvataaarTypeSkinCustomCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeSkinCustomCopyWith(_$AvataaarTypeSkinCustom value,
+          $Res Function(_$AvataaarTypeSkinCustom) then) =
+      __$$AvataaarTypeSkinCustomCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeSkinCustomCopyWithImpl<$Res>
+class __$$AvataaarTypeSkinCustomCopyWithImpl<$Res>
     extends _$AvataaarSkinCopyWithImpl<$Res>
-    implements $AvataaarTypeSkinCustomCopyWith<$Res> {
-  _$AvataaarTypeSkinCustomCopyWithImpl(AvataaarTypeSkinCustom _value,
-      $Res Function(AvataaarTypeSkinCustom) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeSkinCustom));
+    implements _$$AvataaarTypeSkinCustomCopyWith<$Res> {
+  __$$AvataaarTypeSkinCustomCopyWithImpl(_$AvataaarTypeSkinCustom _value,
+      $Res Function(_$AvataaarTypeSkinCustom) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeSkinCustom));
 
   @override
-  AvataaarTypeSkinCustom get _value => super._value as AvataaarTypeSkinCustom;
+  _$AvataaarTypeSkinCustom get _value =>
+      super._value as _$AvataaarTypeSkinCustom;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeSkinCustom(
+    return _then(_$AvataaarTypeSkinCustom(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -32264,15 +31742,15 @@ class _$AvataaarTypeSkinCustomCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeSkinCustom extends AvataaarTypeSkinCustom {
   const _$AvataaarTypeSkinCustom(
-      [@ColorSerialiser() this.color = Colors.grey, String? $type])
+      [@ColorSerialiser() this.color = Colors.grey, final String? $type])
       : $type = $type ?? 'custom',
         super._();
 
   factory _$AvataaarTypeSkinCustom.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeSkinCustomFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -32288,18 +31766,19 @@ class _$AvataaarTypeSkinCustom extends AvataaarTypeSkinCustom {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeSkinCustom &&
+            other is _$AvataaarTypeSkinCustom &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeSkinCustomCopyWith<AvataaarTypeSkinCustom> get copyWith =>
-      _$AvataaarTypeSkinCustomCopyWithImpl<AvataaarTypeSkinCustom>(
+  _$$AvataaarTypeSkinCustomCopyWith<_$AvataaarTypeSkinCustom> get copyWith =>
+      __$$AvataaarTypeSkinCustomCopyWithImpl<_$AvataaarTypeSkinCustom>(
           this, _$identity);
 
   @override
@@ -32407,7 +31886,7 @@ class _$AvataaarTypeSkinCustom extends AvataaarTypeSkinCustom {
 }
 
 abstract class AvataaarTypeSkinCustom extends AvataaarSkin {
-  const factory AvataaarTypeSkinCustom([@ColorSerialiser() Color color]) =
+  const factory AvataaarTypeSkinCustom([@ColorSerialiser() final Color color]) =
       _$AvataaarTypeSkinCustom;
   const AvataaarTypeSkinCustom._() : super._();
 
@@ -32416,10 +31895,10 @@ abstract class AvataaarTypeSkinCustom extends AvataaarSkin {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeSkinCustomCopyWith<AvataaarTypeSkinCustom> get copyWith =>
+  _$$AvataaarTypeSkinCustomCopyWith<_$AvataaarTypeSkinCustom> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -32437,36 +31916,9 @@ AvataaarStyle _$AvataaarStyleFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AvataaarStyleTearOff {
-  const _$AvataaarStyleTearOff();
-
-  AvataaarTypeStyleTransparent transparent(
-      [@ColorSerialiser() Color color = Colors.transparent]) {
-    return AvataaarTypeStyleTransparent(
-      color,
-    );
-  }
-
-  AvataaarTypeStyleCircle circle(
-      [@ColorSerialiser() Color color = const Color(0x0065C9FF)]) {
-    return AvataaarTypeStyleCircle(
-      color,
-    );
-  }
-
-  AvataaarStyle fromJson(Map<String, Object?> json) {
-    return AvataaarStyle.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AvataaarStyle = _$AvataaarStyleTearOff();
-
-/// @nodoc
 mixin _$AvataaarStyle {
   @ColorSerialiser()
   Color get color => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@ColorSerialiser() Color color) transparent,
@@ -32542,34 +31994,34 @@ class _$AvataaarStyleCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $AvataaarTypeStyleTransparentCopyWith<$Res>
+abstract class _$$AvataaarTypeStyleTransparentCopyWith<$Res>
     implements $AvataaarStyleCopyWith<$Res> {
-  factory $AvataaarTypeStyleTransparentCopyWith(
-          AvataaarTypeStyleTransparent value,
-          $Res Function(AvataaarTypeStyleTransparent) then) =
-      _$AvataaarTypeStyleTransparentCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeStyleTransparentCopyWith(
+          _$AvataaarTypeStyleTransparent value,
+          $Res Function(_$AvataaarTypeStyleTransparent) then) =
+      __$$AvataaarTypeStyleTransparentCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeStyleTransparentCopyWithImpl<$Res>
+class __$$AvataaarTypeStyleTransparentCopyWithImpl<$Res>
     extends _$AvataaarStyleCopyWithImpl<$Res>
-    implements $AvataaarTypeStyleTransparentCopyWith<$Res> {
-  _$AvataaarTypeStyleTransparentCopyWithImpl(
-      AvataaarTypeStyleTransparent _value,
-      $Res Function(AvataaarTypeStyleTransparent) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeStyleTransparent));
+    implements _$$AvataaarTypeStyleTransparentCopyWith<$Res> {
+  __$$AvataaarTypeStyleTransparentCopyWithImpl(
+      _$AvataaarTypeStyleTransparent _value,
+      $Res Function(_$AvataaarTypeStyleTransparent) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeStyleTransparent));
 
   @override
-  AvataaarTypeStyleTransparent get _value =>
-      super._value as AvataaarTypeStyleTransparent;
+  _$AvataaarTypeStyleTransparent get _value =>
+      super._value as _$AvataaarTypeStyleTransparent;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeStyleTransparent(
+    return _then(_$AvataaarTypeStyleTransparent(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -32582,15 +32034,15 @@ class _$AvataaarTypeStyleTransparentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeStyleTransparent extends AvataaarTypeStyleTransparent {
   const _$AvataaarTypeStyleTransparent(
-      [@ColorSerialiser() this.color = Colors.transparent, String? $type])
+      [@ColorSerialiser() this.color = Colors.transparent, final String? $type])
       : $type = $type ?? 'transparent',
         super._();
 
   factory _$AvataaarTypeStyleTransparent.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeStyleTransparentFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -32606,19 +32058,20 @@ class _$AvataaarTypeStyleTransparent extends AvataaarTypeStyleTransparent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeStyleTransparent &&
+            other is _$AvataaarTypeStyleTransparent &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeStyleTransparentCopyWith<AvataaarTypeStyleTransparent>
-      get copyWith => _$AvataaarTypeStyleTransparentCopyWithImpl<
-          AvataaarTypeStyleTransparent>(this, _$identity);
+  _$$AvataaarTypeStyleTransparentCopyWith<_$AvataaarTypeStyleTransparent>
+      get copyWith => __$$AvataaarTypeStyleTransparentCopyWithImpl<
+          _$AvataaarTypeStyleTransparent>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -32689,8 +32142,8 @@ class _$AvataaarTypeStyleTransparent extends AvataaarTypeStyleTransparent {
 }
 
 abstract class AvataaarTypeStyleTransparent extends AvataaarStyle {
-  const factory AvataaarTypeStyleTransparent([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeStyleTransparent;
+  const factory AvataaarTypeStyleTransparent(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeStyleTransparent;
   const AvataaarTypeStyleTransparent._() : super._();
 
   factory AvataaarTypeStyleTransparent.fromJson(Map<String, dynamic> json) =
@@ -32698,39 +32151,40 @@ abstract class AvataaarTypeStyleTransparent extends AvataaarStyle {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeStyleTransparentCopyWith<AvataaarTypeStyleTransparent>
+  _$$AvataaarTypeStyleTransparentCopyWith<_$AvataaarTypeStyleTransparent>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AvataaarTypeStyleCircleCopyWith<$Res>
+abstract class _$$AvataaarTypeStyleCircleCopyWith<$Res>
     implements $AvataaarStyleCopyWith<$Res> {
-  factory $AvataaarTypeStyleCircleCopyWith(AvataaarTypeStyleCircle value,
-          $Res Function(AvataaarTypeStyleCircle) then) =
-      _$AvataaarTypeStyleCircleCopyWithImpl<$Res>;
+  factory _$$AvataaarTypeStyleCircleCopyWith(_$AvataaarTypeStyleCircle value,
+          $Res Function(_$AvataaarTypeStyleCircle) then) =
+      __$$AvataaarTypeStyleCircleCopyWithImpl<$Res>;
   @override
   $Res call({@ColorSerialiser() Color color});
 }
 
 /// @nodoc
-class _$AvataaarTypeStyleCircleCopyWithImpl<$Res>
+class __$$AvataaarTypeStyleCircleCopyWithImpl<$Res>
     extends _$AvataaarStyleCopyWithImpl<$Res>
-    implements $AvataaarTypeStyleCircleCopyWith<$Res> {
-  _$AvataaarTypeStyleCircleCopyWithImpl(AvataaarTypeStyleCircle _value,
-      $Res Function(AvataaarTypeStyleCircle) _then)
-      : super(_value, (v) => _then(v as AvataaarTypeStyleCircle));
+    implements _$$AvataaarTypeStyleCircleCopyWith<$Res> {
+  __$$AvataaarTypeStyleCircleCopyWithImpl(_$AvataaarTypeStyleCircle _value,
+      $Res Function(_$AvataaarTypeStyleCircle) _then)
+      : super(_value, (v) => _then(v as _$AvataaarTypeStyleCircle));
 
   @override
-  AvataaarTypeStyleCircle get _value => super._value as AvataaarTypeStyleCircle;
+  _$AvataaarTypeStyleCircle get _value =>
+      super._value as _$AvataaarTypeStyleCircle;
 
   @override
   $Res call({
     Object? color = freezed,
   }) {
-    return _then(AvataaarTypeStyleCircle(
+    return _then(_$AvataaarTypeStyleCircle(
       color == freezed
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -32743,15 +32197,16 @@ class _$AvataaarTypeStyleCircleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AvataaarTypeStyleCircle extends AvataaarTypeStyleCircle {
   const _$AvataaarTypeStyleCircle(
-      [@ColorSerialiser() this.color = const Color(0x0065C9FF), String? $type])
+      [@ColorSerialiser() this.color = const Color(0x0065C9FF),
+      final String? $type])
       : $type = $type ?? 'circle',
         super._();
 
   factory _$AvataaarTypeStyleCircle.fromJson(Map<String, dynamic> json) =>
       _$$AvataaarTypeStyleCircleFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   @ColorSerialiser()
   final Color color;
 
@@ -32767,18 +32222,19 @@ class _$AvataaarTypeStyleCircle extends AvataaarTypeStyleCircle {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AvataaarTypeStyleCircle &&
+            other is _$AvataaarTypeStyleCircle &&
             const DeepCollectionEquality().equals(other.color, color));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override
-  $AvataaarTypeStyleCircleCopyWith<AvataaarTypeStyleCircle> get copyWith =>
-      _$AvataaarTypeStyleCircleCopyWithImpl<AvataaarTypeStyleCircle>(
+  _$$AvataaarTypeStyleCircleCopyWith<_$AvataaarTypeStyleCircle> get copyWith =>
+      __$$AvataaarTypeStyleCircleCopyWithImpl<_$AvataaarTypeStyleCircle>(
           this, _$identity);
 
   @override
@@ -32850,8 +32306,8 @@ class _$AvataaarTypeStyleCircle extends AvataaarTypeStyleCircle {
 }
 
 abstract class AvataaarTypeStyleCircle extends AvataaarStyle {
-  const factory AvataaarTypeStyleCircle([@ColorSerialiser() Color color]) =
-      _$AvataaarTypeStyleCircle;
+  const factory AvataaarTypeStyleCircle(
+      [@ColorSerialiser() final Color color]) = _$AvataaarTypeStyleCircle;
   const AvataaarTypeStyleCircle._() : super._();
 
   factory AvataaarTypeStyleCircle.fromJson(Map<String, dynamic> json) =
@@ -32859,9 +32315,9 @@ abstract class AvataaarTypeStyleCircle extends AvataaarStyle {
 
   @override
   @ColorSerialiser()
-  Color get color;
+  Color get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AvataaarTypeStyleCircleCopyWith<AvataaarTypeStyleCircle> get copyWith =>
+  _$$AvataaarTypeStyleCircleCopyWith<_$AvataaarTypeStyleCircle> get copyWith =>
       throw _privateConstructorUsedError;
 }

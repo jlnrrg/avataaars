@@ -1,3 +1,6 @@
+## 0.6.0
+* Update Freezed Dependency
+
 ## 0.5.1
 * Update Readme gifs
 ## 0.5.0
