@@ -46,15 +46,15 @@ _$_Avataaar _$$_AvataaarFromJson(Map<String, dynamic> json) => _$_Avataaar(
 
 Map<String, dynamic> _$$_AvataaarToJson(_$_Avataaar instance) =>
     <String, dynamic>{
-      'hair': instance.hair,
-      'accessory': instance.accessory,
-      'facialHair': instance.facialHair,
-      'clothes': instance.clothes,
-      'graphics': instance.graphics,
-      'eyes': instance.eyes,
-      'eyebrow': instance.eyebrow,
-      'mouth': instance.mouth,
-      'skin': instance.skin,
-      'nose': instance.nose,
-      'style': instance.style,
+      'hair': instance.hair.toJson(),
+      'accessory': instance.accessory.toJson(),
+      'facialHair': instance.facialHair.toJson(),
+      'clothes': instance.clothes.toJson(),
+      'graphics': instance.graphics.toJson(),
+      'eyes': instance.eyes.toJson(),
+      'eyebrow': instance.eyebrow.toJson(),
+      'mouth': instance.mouth.toJson(),
+      'skin': instance.skin.toJson(),
+      'nose': instance.nose.toJson(),
+      'style': instance.style.toJson(),
     };
