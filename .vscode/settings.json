@@ -1,10 +1,9 @@
 {
-    "dart.flutterSdkPath": "/opt/flutter_beta",
-    "dart.previewLsp": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true,
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true,
-    "svg.preview.background": "transparent"
+    "svg.preview.background": "transparent",
+    "nixEnvSelector.nixFile": "${workspaceFolder}/devenv.nix"
 }

@@ -19,3 +19,13 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
