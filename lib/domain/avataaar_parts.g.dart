@@ -241,7 +241,7 @@ _$AvataaarTypeClothesBlazerShirt _$$AvataaarTypeClothesBlazerShirtFromJson(
     _$AvataaarTypeClothesBlazerShirt(
       json['color'] == null
           ? Colors.black
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -257,7 +257,7 @@ _$AvataaarTypeClothesBlazerSweater _$$AvataaarTypeClothesBlazerSweaterFromJson(
     _$AvataaarTypeClothesBlazerSweater(
       json['color'] == null
           ? Colors.black
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -273,7 +273,7 @@ _$AvataaarTypeClothesColarSweater _$$AvataaarTypeClothesColarSweaterFromJson(
     _$AvataaarTypeClothesColarSweater(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -289,7 +289,7 @@ _$AvataaarTypeClothesGraphicShirt _$$AvataaarTypeClothesGraphicShirtFromJson(
     _$AvataaarTypeClothesGraphicShirt(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -305,7 +305,7 @@ _$AvataaarTypeClothesHoodie _$$AvataaarTypeClothesHoodieFromJson(
     _$AvataaarTypeClothesHoodie(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -321,7 +321,7 @@ _$AvataaarTypeClothesOverall _$$AvataaarTypeClothesOverallFromJson(
     _$AvataaarTypeClothesOverall(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -337,7 +337,7 @@ _$AvataaarTypeClothesShirtCrewNeck _$$AvataaarTypeClothesShirtCrewNeckFromJson(
     _$AvataaarTypeClothesShirtCrewNeck(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -353,7 +353,8 @@ _$AvataaarTypeClothesShirtScoopNeck
         _$AvataaarTypeClothesShirtScoopNeck(
           json['color'] == null
               ? AvataaarClothes._defaultColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -369,7 +370,7 @@ _$AvataaarTypeClothesShirtVNeck _$$AvataaarTypeClothesShirtVNeckFromJson(
     _$AvataaarTypeClothesShirtVNeck(
       json['color'] == null
           ? AvataaarClothes._defaultColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -675,7 +676,7 @@ _$AvataaarTypeFacialHairBlank _$$AvataaarTypeFacialHairBlankFromJson(
     _$AvataaarTypeFacialHairBlank(
       json['color'] == null
           ? AvataaarFacialHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -691,7 +692,8 @@ _$AvataaarTypeFacialHairBeardMedium
         _$AvataaarTypeFacialHairBeardMedium(
           json['color'] == null
               ? AvataaarFacialHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -707,7 +709,7 @@ _$AvataaarTypeFacialHairBeardLight _$$AvataaarTypeFacialHairBeardLightFromJson(
     _$AvataaarTypeFacialHairBeardLight(
       json['color'] == null
           ? AvataaarFacialHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -723,7 +725,8 @@ _$AvataaarTypeFacialHairBeardMajestic
         _$AvataaarTypeFacialHairBeardMajestic(
           json['color'] == null
               ? AvataaarFacialHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -740,7 +743,8 @@ _$AvataaarTypeFacialHairMoustacheFancy
         _$AvataaarTypeFacialHairMoustacheFancy(
           json['color'] == null
               ? AvataaarFacialHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -757,7 +761,8 @@ _$AvataaarTypeFacialHairMoustacheMagnum
         _$AvataaarTypeFacialHairMoustacheMagnum(
           json['color'] == null
               ? AvataaarFacialHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -773,7 +778,7 @@ _$AvataaarTypeHairNoHair _$$AvataaarTypeHairNoHairFromJson(
     _$AvataaarTypeHairNoHair(
       json['color'] == null
           ? Colors.transparent
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -789,7 +794,7 @@ _$AvataaarTypeHairEyepatch _$$AvataaarTypeHairEyepatchFromJson(
     _$AvataaarTypeHairEyepatch(
       json['color'] == null
           ? AvataaarHair.defaultHatColorEyePatch
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -805,7 +810,7 @@ _$AvataaarTypeHairHat _$$AvataaarTypeHairHatFromJson(
     _$AvataaarTypeHairHat(
       json['color'] == null
           ? AvataaarHair.defaultHatColorHat
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -821,7 +826,7 @@ _$AvataaarTypeHairHijab _$$AvataaarTypeHairHijabFromJson(
     _$AvataaarTypeHairHijab(
       json['color'] == null
           ? AvataaarHair.defaultHatColorBlue03
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -837,7 +842,7 @@ _$AvataaarTypeHairTurban _$$AvataaarTypeHairTurbanFromJson(
     _$AvataaarTypeHairTurban(
       json['color'] == null
           ? AvataaarHair.defaultHatColorBlue03
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -853,7 +858,7 @@ _$AvataaarTypeHairWinterHat1 _$$AvataaarTypeHairWinterHat1FromJson(
     _$AvataaarTypeHairWinterHat1(
       json['color'] == null
           ? AvataaarHair.defaultHatColorRed
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -869,7 +874,7 @@ _$AvataaarTypeHairWinterHat2 _$$AvataaarTypeHairWinterHat2FromJson(
     _$AvataaarTypeHairWinterHat2(
       json['color'] == null
           ? AvataaarHair.defaultHatColorBlue01
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -885,7 +890,7 @@ _$AvataaarTypeHairWinterHat3 _$$AvataaarTypeHairWinterHat3FromJson(
     _$AvataaarTypeHairWinterHat3(
       json['color'] == null
           ? AvataaarHair.defaultHatColorRed
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -901,7 +906,7 @@ _$AvataaarTypeHairWinterHat4 _$$AvataaarTypeHairWinterHat4FromJson(
     _$AvataaarTypeHairWinterHat4(
       json['color'] == null
           ? AvataaarHair.defaultHatColorRed
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -917,7 +922,7 @@ _$AvataaarTypeHairLongHairBigHair _$$AvataaarTypeHairLongHairBigHairFromJson(
     _$AvataaarTypeHairLongHairBigHair(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -933,7 +938,7 @@ _$AvataaarTypeHairLongHarBob _$$AvataaarTypeHairLongHarBobFromJson(
     _$AvataaarTypeHairLongHarBob(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -949,7 +954,7 @@ _$AvataaarTypeHairLongHairBun _$$AvataaarTypeHairLongHairBunFromJson(
     _$AvataaarTypeHairLongHairBun(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -965,7 +970,7 @@ _$AvataaarTypeHairLongHairCurly _$$AvataaarTypeHairLongHairCurlyFromJson(
     _$AvataaarTypeHairLongHairCurly(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -981,7 +986,7 @@ _$AvataaarTypeHairLongHairCurvy _$$AvataaarTypeHairLongHairCurvyFromJson(
     _$AvataaarTypeHairLongHairCurvy(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -997,7 +1002,7 @@ _$AvataaarTypeHairLongHairDreads _$$AvataaarTypeHairLongHairDreadsFromJson(
     _$AvataaarTypeHairLongHairDreads(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1013,7 +1018,7 @@ _$AvataaarTypeHairLongHairFrida _$$AvataaarTypeHairLongHairFridaFromJson(
     _$AvataaarTypeHairLongHairFrida(
       json['color'] == null
           ? AvataaarHair.defaultHatColorHat
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1029,7 +1034,7 @@ _$AvataaarTypeHairLongHairFro _$$AvataaarTypeHairLongHairFroFromJson(
     _$AvataaarTypeHairLongHairFro(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1045,7 +1050,7 @@ _$AvataaarTypeHairLongHairFroBand _$$AvataaarTypeHairLongHairFroBandFromJson(
     _$AvataaarTypeHairLongHairFroBand(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1061,7 +1066,8 @@ _$AvataaarTypeHairLongHairNotTooLong
         _$AvataaarTypeHairLongHairNotTooLong(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1077,7 +1083,8 @@ _$AvataaarTypeHairLongHairShavedSides
         _$AvataaarTypeHairLongHairShavedSides(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1093,7 +1100,8 @@ _$AvataaarTypeHairLongHairMiaWallace
         _$AvataaarTypeHairLongHairMiaWallace(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1109,7 +1117,7 @@ _$AvataaarTypeHairLongHairStraight _$$AvataaarTypeHairLongHairStraightFromJson(
     _$AvataaarTypeHairLongHairStraight(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1125,7 +1133,8 @@ _$AvataaarTypeHairLongHairStraight2
         _$AvataaarTypeHairLongHairStraight2(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1142,7 +1151,8 @@ _$AvataaarTypeHairLongHairStraightStrand
         _$AvataaarTypeHairLongHairStraightStrand(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1158,7 +1168,8 @@ _$AvataaarTypeHairShortHairDreads01
         _$AvataaarTypeHairShortHairDreads01(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1174,7 +1185,8 @@ _$AvataaarTypeHairShortHairDreads02
         _$AvataaarTypeHairShortHairDreads02(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1190,7 +1202,7 @@ _$AvataaarTypeHairShortHairFrizzle _$$AvataaarTypeHairShortHairFrizzleFromJson(
     _$AvataaarTypeHairShortHairFrizzle(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1207,7 +1219,8 @@ _$AvataaarTypeHairShortHairShaggyMullet
         _$AvataaarTypeHairShortHairShaggyMullet(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1223,7 +1236,8 @@ _$AvataaarTypeHairShortHairShortCurly
         _$AvataaarTypeHairShortHairShortCurly(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1239,7 +1253,8 @@ _$AvataaarTypeHairShortHairShortFlat
         _$AvataaarTypeHairShortHairShortFlat(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1255,7 +1270,8 @@ _$AvataaarTypeHairShortHairShortRound
         _$AvataaarTypeHairShortHairShortRound(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1271,7 +1287,8 @@ _$AvataaarTypeHairShortHairShortWaved
         _$AvataaarTypeHairShortHairShortWaved(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1287,7 +1304,7 @@ _$AvataaarTypeHairShortHairSides _$$AvataaarTypeHairShortHairSidesFromJson(
     _$AvataaarTypeHairShortHairSides(
       json['color'] == null
           ? AvataaarHair.defaultHairColor
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1303,7 +1320,8 @@ _$AvataaarTypeHairShortHairTheCaesar
         _$AvataaarTypeHairShortHairTheCaesar(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1320,7 +1338,8 @@ _$AvataaarTypeHairShortHairTheCaesarSidePart
         _$AvataaarTypeHairShortHairTheCaesarSidePart(
           json['color'] == null
               ? AvataaarHair.defaultHairColor
-              : const ColorSerialiser().fromJson(json['color'] as int),
+              : const ColorSerialiser()
+                  .fromJson((json['color'] as num).toInt()),
           json['runtimeType'] as String?,
         );
 
@@ -1488,7 +1507,7 @@ _$AvataaarTypeSkinTanned _$$AvataaarTypeSkinTannedFromJson(
     _$AvataaarTypeSkinTanned(
       json['color'] == null
           ? const Color(0x00FD9841)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1504,7 +1523,7 @@ _$AvataaarTypeSkinYellow _$$AvataaarTypeSkinYellowFromJson(
     _$AvataaarTypeSkinYellow(
       json['color'] == null
           ? const Color(0x00F8D25C)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1520,7 +1539,7 @@ _$AvataaarTypeSkinPale _$$AvataaarTypeSkinPaleFromJson(
     _$AvataaarTypeSkinPale(
       json['color'] == null
           ? const Color(0x00FFDBB4)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1536,7 +1555,7 @@ _$AvataaarTypeSkinWhite _$$AvataaarTypeSkinWhiteFromJson(
     _$AvataaarTypeSkinWhite(
       json['color'] == null
           ? const Color(0x00EDB98A)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1552,7 +1571,7 @@ _$AvataaarTypeSkinBrown _$$AvataaarTypeSkinBrownFromJson(
     _$AvataaarTypeSkinBrown(
       json['color'] == null
           ? const Color(0x00D08B5B)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1568,7 +1587,7 @@ _$AvataaarTypeSkinDarkBrown _$$AvataaarTypeSkinDarkBrownFromJson(
     _$AvataaarTypeSkinDarkBrown(
       json['color'] == null
           ? const Color(0x00AE5D29)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1584,7 +1603,7 @@ _$AvataaarTypeSkinBlack _$$AvataaarTypeSkinBlackFromJson(
     _$AvataaarTypeSkinBlack(
       json['color'] == null
           ? const Color(0x00614335)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1600,7 +1619,7 @@ _$AvataaarTypeSkinCustom _$$AvataaarTypeSkinCustomFromJson(
     _$AvataaarTypeSkinCustom(
       json['color'] == null
           ? Colors.grey
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1616,7 +1635,7 @@ _$AvataaarTypeStyleTransparent _$$AvataaarTypeStyleTransparentFromJson(
     _$AvataaarTypeStyleTransparent(
       json['color'] == null
           ? Colors.transparent
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
@@ -1632,7 +1651,7 @@ _$AvataaarTypeStyleCircle _$$AvataaarTypeStyleCircleFromJson(
     _$AvataaarTypeStyleCircle(
       json['color'] == null
           ? const Color(0x0065C9FF)
-          : const ColorSerialiser().fromJson(json['color'] as int),
+          : const ColorSerialiser().fromJson((json['color'] as num).toInt()),
       json['runtimeType'] as String?,
     );
 
