@@ -1,6 +1,6 @@
 name: avataaars
 description: An avatar generator for anyone to make their beautiful personal avatar easily!
-version: 0.6.0
+version: 0.7.0
 repository: https://github.com/jlnrrg/avataaars
 
 environment:
