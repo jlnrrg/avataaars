@@ -1,26 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'avataaar_parts.dart';
 
-part 'avataaar.freezed.dart';
-part 'avataaar.g.dart';
+class Avataaar {
+  const Avataaar({
+    this.hair = const AvataaarHairLongHairStraight(),
+    this.accessory = const AvataaarAccessoriesBlank(),
+    this.facialHair = const AvataaarFacialHairBlank(),
+    this.clothes = const AvataaarClothesBlazerShirt(),
+    this.graphics = const AvataaarGraphicsSkull(),
+    this.eyes = const AvataaarEyesDefault0(),
+    this.eyebrow = const AvataaarEyebrowDefault0(),
+    this.mouth = const AvataaarMouthDefault0(),
+    this.skin = const AvataaarSkinLight(),
+    this.nose = const AvataaarNoseDefault0(),
+    this.style = const AvataaarStyleCircle(),
+  });
 
-@freezed
-class Avataaar with _$Avataaar {
-  const factory Avataaar({
-    @Default(AvataaarHair.longHairStraight()) AvataaarHair hair,
-    @Default(AvataaarAccessories.blank()) AvataaarAccessories accessory,
-    @Default(AvataaarFacialHair.blank()) AvataaarFacialHair facialHair,
-    @Default(AvataaarClothes.blazerShirt()) AvataaarClothes clothes,
-    @Default(AvataaarGraphics.skull()) AvataaarGraphics graphics,
-    @Default(AvataaarEyes.default0()) AvataaarEyes eyes,
-    @Default(AvataaarEyebrow.default0()) AvataaarEyebrow eyebrow,
-    @Default(AvataaarMouth.default0()) AvataaarMouth mouth,
-    @Default(AvataaarSkin.light()) AvataaarSkin skin,
-    @Default(AvataaarNose.default0()) AvataaarNose nose,
-    @Default(AvataaarStyle.circle()) AvataaarStyle style,
-  }) = _Avataaar;
+  final AvataaarHair hair;
+  final AvataaarAccessories accessory;
+  final AvataaarFacialHair facialHair;
+  final AvataaarClothes clothes;
+  final AvataaarGraphics graphics;
+  final AvataaarEyes eyes;
+  final AvataaarEyebrow eyebrow;
+  final AvataaarMouth mouth;
+  final AvataaarSkin skin;
+  final AvataaarNose nose;
+  final AvataaarStyle style;
+
+  Avataaar copyWith({
+    AvataaarHair? hair,
+    AvataaarAccessories? accessory,
+    AvataaarFacialHair? facialHair,
+    AvataaarClothes? clothes,
+    AvataaarGraphics? graphics,
+    AvataaarEyes? eyes,
+    AvataaarEyebrow? eyebrow,
+    AvataaarMouth? mouth,
+    AvataaarSkin? skin,
+    AvataaarNose? nose,
+    AvataaarStyle? style,
+  }) {
+    return Avataaar(
+      hair: hair ?? this.hair,
+      accessory: accessory ?? this.accessory,
+      facialHair: facialHair ?? this.facialHair,
+      clothes: clothes ?? this.clothes,
+      graphics: graphics ?? this.graphics,
+      eyes: eyes ?? this.eyes,
+      eyebrow: eyebrow ?? this.eyebrow,
+      mouth: mouth ?? this.mouth,
+      skin: skin ?? this.skin,
+      nose: nose ?? this.nose,
+      style: style ?? this.style,
+    );
+  }
 
   /// Creates a random Avataaar
   factory Avataaar.random() => Avataaar(
@@ -34,11 +69,6 @@ class Avataaar with _$Avataaar {
         mouth: AvataaarMouth.random(),
         skin: AvataaarSkin.random(),
       );
-
-  const Avataaar._();
-
-  factory Avataaar.fromJson(Map<String, dynamic> json) =>
-      _$AvataaarFromJson(json);
 
   String _buildFace() => '''
   <g id="Face" transform="translate(76.000000, 82.000000)" fill="#000000">
@@ -63,7 +93,7 @@ class Avataaar with _$Avataaar {
     final _mask2 = UniqueKey().hashCode.toString();
     final _mask3 = UniqueKey().hashCode.toString();
 
-    final bool circle = style != const AvataaarStyle.transparent();
+    final bool circle = style != const AvataaarStyleTransparent();
 
     final svg = '''
 <svg

@@ -6,8 +6,9 @@ import 'color_picker_indicator.dart';
 
 const _crossAxisCountLimit = 350;
 
-const _customShape =
-    RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4)));
+const _customShape = RoundedRectangleBorder(
+  borderRadius: BorderRadius.all(Radius.circular(4)),
+);
 
 class AvatarCustomizer extends StatefulWidget {
   const AvatarCustomizer({
@@ -65,146 +66,160 @@ class _AvatarCustomizerState extends State<AvatarCustomizer>
     final v = avataaar.value.toSvg();
 
     return NotificationListener<OverscrollNotification>(
-        // On reaching end, the scroll command is passed to the parentScrollController, https://stackoverflow.com/a/60611242
-        onNotification: (OverscrollNotification value) {
-          if (value.overscroll < 0 &&
-              (widget.parentScrollController?.offset ?? 0) + value.overscroll <=
-                  0) {
-            if ((widget.parentScrollController?.offset ?? 0) != 0) {
-              widget.parentScrollController?.jumpTo(0);
-            }
-            return true;
+      // On reaching end, the scroll command is passed to the parentScrollController, https://stackoverflow.com/a/60611242
+      onNotification: (OverscrollNotification value) {
+        if (value.overscroll < 0 &&
+            (widget.parentScrollController?.offset ?? 0) + value.overscroll <=
+                0) {
+          if ((widget.parentScrollController?.offset ?? 0) != 0) {
+            widget.parentScrollController?.jumpTo(0);
           }
-          if ((widget.parentScrollController?.offset ?? 0) + value.overscroll >=
-              (widget.parentScrollController?.position.maxScrollExtent ?? 0)) {
-            if (widget.parentScrollController?.offset !=
-                widget.parentScrollController?.position.maxScrollExtent) {
-              widget.parentScrollController?.jumpTo(
-                  widget.parentScrollController!.position.maxScrollExtent);
-            }
-            return true;
-          }
-          widget.parentScrollController?.jumpTo(
-              widget.parentScrollController!.offset + value.overscroll);
           return true;
-        },
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxHeight: 500),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    border: Border(
-                        right: BorderSide(
-                            width: 1.5,
-                            color: Theme.of(context).dividerColor))),
-                child: SingleChildScrollView(
-                  primary: false,
-                  child: Column(
-                    children: [
-                      ConstrainedBox(
-                        constraints:
-                            const BoxConstraints(maxWidth: 150, maxHeight: 150),
-                        child: SvgPicture.string(
-                          v,
-                          alignment: Alignment.topCenter,
-                          placeholderBuilder: (context) => const Center(
-                            child: CircularProgressIndicator(),
-                          ),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () => setState(() {
-                          avataaar.value = Avataaar.random();
-                        }),
-                        constraints: const BoxConstraints(),
-                        icon: const Icon(Icons.shuffle),
-                        splashRadius: Material.defaultSplashRadius / 2,
-                      ),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarEyebrow;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarEyebrow),
-                          child: Text(
-                              AvataaarEyebrow.toHeader(locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarEyes;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarEyes),
-                          child:
-                              Text(AvataaarEyes.toHeader(locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarMouth;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarMouth),
-                          child: Text(
-                              AvataaarMouth.toHeader(locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarHair;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarHair),
-                          child:
-                              Text(AvataaarHair.toHeader(locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarFacialHair;
-                              }),
-                          style:
-                              buildTextButtonStyle(context, AvataaarFacialHair),
-                          child: Text(AvataaarFacialHair.toHeader(
-                              locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarSkin;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarSkin),
-                          child:
-                              Text(AvataaarSkin.toHeader(locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarClothes;
-                              }),
-                          style: buildTextButtonStyle(context, AvataaarClothes),
-                          child: Text(
-                              AvataaarClothes.toHeader(locale.languageCode))),
-                      if (avataaar.value.clothes
-                          is AvataaarTypeClothesGraphicShirt)
-                        TextButton(
-                            onPressed: () => setState(() {
-                                  partFocused = AvataaarGraphics;
-                                }),
-                            style:
-                                buildTextButtonStyle(context, AvataaarGraphics),
-                            child: Text(AvataaarGraphics.toHeader(
-                                locale.languageCode))),
-                      TextButton(
-                          onPressed: () => setState(() {
-                                partFocused = AvataaarAccessories;
-                              }),
-                          style: buildTextButtonStyle(
-                              context, AvataaarAccessories),
-                          child: Text(AvataaarAccessories.toHeader(
-                              locale.languageCode))),
-                    ],
+        }
+        if ((widget.parentScrollController?.offset ?? 0) + value.overscroll >=
+            (widget.parentScrollController?.position.maxScrollExtent ?? 0)) {
+          if (widget.parentScrollController?.offset !=
+              widget.parentScrollController?.position.maxScrollExtent) {
+            widget.parentScrollController?.jumpTo(
+              widget.parentScrollController!.position.maxScrollExtent,
+            );
+          }
+          return true;
+        }
+        widget.parentScrollController?.jumpTo(
+          widget.parentScrollController!.offset + value.overscroll,
+        );
+        return true;
+      },
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxHeight: 500),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  right: BorderSide(
+                    width: 1.5,
+                    color: Theme.of(context).dividerColor,
                   ),
                 ),
               ),
-              Expanded(child: buildSelector())
-            ],
-          ),
-        ));
+              child: SingleChildScrollView(
+                primary: false,
+                child: Column(
+                  children: [
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        maxWidth: 150,
+                        maxHeight: 150,
+                      ),
+                      child: SvgPicture.string(
+                        v,
+                        alignment: Alignment.topCenter,
+                        placeholderBuilder: (context) =>
+                            const Center(child: CircularProgressIndicator()),
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () => setState(() {
+                        avataaar.value = Avataaar.random();
+                      }),
+                      constraints: const BoxConstraints(),
+                      icon: const Icon(Icons.shuffle),
+                      splashRadius: Material.defaultSplashRadius / 2,
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarEyebrow;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarEyebrow),
+                      child: Text(
+                        AvataaarEyebrow.toHeader(locale.languageCode),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarEyes;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarEyes),
+                      child: Text(AvataaarEyes.toHeader(locale.languageCode)),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarMouth;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarMouth),
+                      child: Text(AvataaarMouth.toHeader(locale.languageCode)),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarHair;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarHair),
+                      child: Text(AvataaarHair.toHeader(locale.languageCode)),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarFacialHair;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarFacialHair),
+                      child: Text(
+                        AvataaarFacialHair.toHeader(locale.languageCode),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarSkin;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarSkin),
+                      child: Text(AvataaarSkin.toHeader(locale.languageCode)),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarClothes;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarClothes),
+                      child: Text(
+                        AvataaarClothes.toHeader(locale.languageCode),
+                      ),
+                    ),
+                    if (avataaar.value.clothes is AvataaarClothesGraphicShirt)
+                      TextButton(
+                        onPressed: () => setState(() {
+                          partFocused = AvataaarGraphics;
+                        }),
+                        style: buildTextButtonStyle(context, AvataaarGraphics),
+                        child: Text(
+                          AvataaarGraphics.toHeader(locale.languageCode),
+                        ),
+                      ),
+                    TextButton(
+                      onPressed: () => setState(() {
+                        partFocused = AvataaarAccessories;
+                      }),
+                      style: buildTextButtonStyle(context, AvataaarAccessories),
+                      child: Text(
+                        AvataaarAccessories.toHeader(locale.languageCode),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(child: buildSelector()),
+          ],
+        ),
+      ),
+    );
   }
 
   ButtonStyle? buildTextButtonStyle(BuildContext context, Type type) {
     return partFocused == type
         ? TextButton.styleFrom(
             backgroundColor: Theme.of(context).dividerColor,
-            tapTargetSize: MaterialTapTargetSize.shrinkWrap)
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          )
         : TextButton.styleFrom(tapTargetSize: MaterialTapTargetSize.shrinkWrap);
   }
 
@@ -233,10 +248,11 @@ class _AvatarCustomizerState extends State<AvatarCustomizer>
         );
       case AvataaarHair:
         return _HairSelector(
-            value: avataaar.value.hair,
-            onChanged: (v) => setState(() {
-                  avataaar.value = avataaar.value.copyWith(hair: v);
-                }));
+          value: avataaar.value.hair,
+          onChanged: (v) => setState(() {
+            avataaar.value = avataaar.value.copyWith(hair: v);
+          }),
+        );
       case AvataaarFacialHair:
         return _FacialHairSelector(
           value: avataaar.value.facialHair,
@@ -281,7 +297,7 @@ class _AvatarCustomizerState extends State<AvatarCustomizer>
 
 class _HairSelector extends StatelessWidget {
   const _HairSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarHair value;
   final void Function(AvataaarHair)? onChanged;
@@ -293,19 +309,23 @@ class _HairSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              color: value.color,
-              onNext: () => onChanged?.call(value.next(value.color)),
-              onPrevious: () => onChanged?.call(value.previous(value.color)),
-              onShuffle: () =>
-                  onChanged?.call(AvataaarHair.random(value.color)),
-              onColorChanged: (color) =>
-                  onChanged?.call(value.copyWith(color: color)),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            color: value.color,
+            onNext: () => onChanged?.call(value.next(value.color)),
+            onPrevious: () => onChanged?.call(value.previous(value.color)),
+            onShuffle: () => onChanged?.call(AvataaarHair.random(value.color)),
+            onColorChanged: (color) =>
+                onChanged?.call(value.copyWith(color: color)),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -315,8 +335,8 @@ class _HairSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -334,20 +354,20 @@ class _HairSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -355,7 +375,7 @@ class _HairSelector extends StatelessWidget {
 
 class _AccessorySelector extends StatelessWidget {
   const _AccessorySelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarAccessories value;
   final void Function(AvataaarAccessories)? onChanged;
@@ -367,15 +387,20 @@ class _AccessorySelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarAccessories.random()),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarAccessories.random()),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -384,8 +409,8 @@ class _AccessorySelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -401,20 +426,20 @@ class _AccessorySelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -422,7 +447,7 @@ class _AccessorySelector extends StatelessWidget {
 
 class _FacialHairSelector extends StatelessWidget {
   const _FacialHairSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarFacialHair value;
   final void Function(AvataaarFacialHair)? onChanged;
@@ -434,19 +459,24 @@ class _FacialHairSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              color: value.color,
-              onNext: () => onChanged?.call(value.next(value.color)),
-              onPrevious: () => onChanged?.call(value.previous(value.color)),
-              onShuffle: () =>
-                  onChanged?.call(AvataaarFacialHair.random(value.color)),
-              onColorChanged: (color) =>
-                  onChanged?.call(value.copyWith(color: color)),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            color: value.color,
+            onNext: () => onChanged?.call(value.next(value.color)),
+            onPrevious: () => onChanged?.call(value.previous(value.color)),
+            onShuffle: () =>
+                onChanged?.call(AvataaarFacialHair.random(value.color)),
+            onColorChanged: (color) =>
+                onChanged?.call(value.copyWith(color: color)),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -455,8 +485,8 @@ class _FacialHairSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -474,29 +504,32 @@ class _FacialHairSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
 }
 
 class _ClothesSelector extends StatelessWidget {
-  const _ClothesSelector(
-      {Key? key, required this.value, this.onChanged, this.graphics})
-      : super(key: key);
+  const _ClothesSelector({
+    Key? key,
+    required this.value,
+    this.onChanged,
+    this.graphics,
+  }) : super(key: key);
 
   final AvataaarClothes value;
   final void Function(AvataaarClothes)? onChanged;
@@ -509,19 +542,24 @@ class _ClothesSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              color: value.color,
-              onNext: () => onChanged?.call(value.next(value.color)),
-              onPrevious: () => onChanged?.call(value.previous(value.color)),
-              onShuffle: () =>
-                  onChanged?.call(AvataaarClothes.random(value.color)),
-              onColorChanged: (color) =>
-                  onChanged?.call(value.copyWith(color: color)),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            color: value.color,
+            onNext: () => onChanged?.call(value.next(value.color)),
+            onPrevious: () => onChanged?.call(value.previous(value.color)),
+            onShuffle: () =>
+                onChanged?.call(AvataaarClothes.random(value.color)),
+            onColorChanged: (color) =>
+                onChanged?.call(value.copyWith(color: color)),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -530,8 +568,8 @@ class _ClothesSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -549,20 +587,20 @@ class _ClothesSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart(graphics)),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart(graphics)),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -570,7 +608,7 @@ class _ClothesSelector extends StatelessWidget {
 
 class _GraphicsSelector extends StatelessWidget {
   const _GraphicsSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarGraphics value;
   final void Function(AvataaarGraphics)? onChanged;
@@ -582,15 +620,20 @@ class _GraphicsSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarGraphics.random()),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarGraphics.random()),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -599,8 +642,8 @@ class _GraphicsSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -616,20 +659,20 @@ class _GraphicsSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -637,7 +680,7 @@ class _GraphicsSelector extends StatelessWidget {
 
 class _EyesSelector extends StatelessWidget {
   const _EyesSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarEyes value;
   final void Function(AvataaarEyes)? onChanged;
@@ -649,54 +692,59 @@ class _EyesSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarEyes.random()),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarEyes.random()),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
-              shrinkWrap: true,
-              primary: false,
-              padding: const EdgeInsets.all(10),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount:
-                    MediaQuery.of(context).size.width > _crossAxisCountLimit
-                        ? 3
-                        : 2,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 5,
-              ),
-              itemCount: AvataaarEyes.all.length,
-              itemBuilder: (context, index) {
-                final element = AvataaarEyes.all.elementAt(index);
+            shrinkWrap: true,
+            primary: false,
+            padding: const EdgeInsets.all(10),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount:
+                  MediaQuery.of(context).size.width > _crossAxisCountLimit
+                  ? 3
+                  : 2,
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 5,
+            ),
+            itemCount: AvataaarEyes.all.length,
+            itemBuilder: (context, index) {
+              final element = AvataaarEyes.all.elementAt(index);
 
-                final isSelected = element.runtimeType == value.runtimeType;
+              final isSelected = element.runtimeType == value.runtimeType;
 
-                return Tooltip(
-                  message: element.toLabel(locale.languageCode),
-                  child: InkWell(
-                    customBorder: _customShape,
-                    onTap: () => onChanged?.call(element),
-                    child: Container(
-                        decoration: ShapeDecoration(
-                          shape: _customShape,
-                          color: isSelected
-                              ? Theme.of(context).dividerColor
-                              : null,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(2),
-                          child: SvgPicture.string(element.toSvgPart()),
-                        )),
+              return Tooltip(
+                message: element.toLabel(locale.languageCode),
+                child: InkWell(
+                  customBorder: _customShape,
+                  onTap: () => onChanged?.call(element),
+                  child: Container(
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
                   ),
-                );
-              }),
-        )
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }
@@ -704,7 +752,7 @@ class _EyesSelector extends StatelessWidget {
 
 class _EyebrowSelector extends StatelessWidget {
   const _EyebrowSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarEyebrow value;
   final void Function(AvataaarEyebrow)? onChanged;
@@ -716,15 +764,20 @@ class _EyebrowSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarEyebrow.random()),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarEyebrow.random()),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -733,8 +786,8 @@ class _EyebrowSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -750,20 +803,20 @@ class _EyebrowSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -771,7 +824,7 @@ class _EyebrowSelector extends StatelessWidget {
 
 class _MouthSelector extends StatelessWidget {
   const _MouthSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarMouth value;
   final void Function(AvataaarMouth)? onChanged;
@@ -783,15 +836,20 @@ class _MouthSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarMouth.random()),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarMouth.random()),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -800,8 +858,8 @@ class _MouthSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -817,20 +875,20 @@ class _MouthSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
@@ -838,7 +896,7 @@ class _MouthSelector extends StatelessWidget {
 
 class _SkinSelector extends StatelessWidget {
   const _SkinSelector({Key? key, required this.value, this.onChanged})
-      : super(key: key);
+    : super(key: key);
 
   final AvataaarSkin value;
   final void Function(AvataaarSkin)? onChanged;
@@ -850,18 +908,23 @@ class _SkinSelector extends StatelessWidget {
     return Column(
       children: [
         Container(
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        width: 1.5, color: Theme.of(context).dividerColor))),
-            child: _AvataaarPartSelector(
-              color: value is AvataaarTypeSkinCustom ? value.color : null,
-              onNext: () => onChanged?.call(value.next()),
-              onPrevious: () => onChanged?.call(value.previous()),
-              onShuffle: () => onChanged?.call(AvataaarSkin.random()),
-              onColorChanged: (color) =>
-                  onChanged?.call(value.copyWith(color: color)),
-            )),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 1.5,
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
+          ),
+          child: _AvataaarPartSelector(
+            color: value is AvataaarSkinCustom ? value.color : null,
+            onNext: () => onChanged?.call(value.next()),
+            onPrevious: () => onChanged?.call(value.previous()),
+            onShuffle: () => onChanged?.call(AvataaarSkin.random()),
+            onColorChanged: (color) =>
+                onChanged?.call(value.copyWith(color: color)),
+          ),
+        ),
         Expanded(
           child: GridView.builder(
             shrinkWrap: true,
@@ -870,8 +933,8 @@ class _SkinSelector extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:
                   MediaQuery.of(context).size.width > _crossAxisCountLimit
-                      ? 3
-                      : 2,
+                  ? 3
+                  : 2,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
             ),
@@ -881,9 +944,9 @@ class _SkinSelector extends StatelessWidget {
 
               // if both are custom, then copy color to new skin
               final element =
-                  e is AvataaarTypeSkinCustom && value is AvataaarTypeSkinCustom
-                      ? e.copyWith(color: value.color)
-                      : e;
+                  e is AvataaarSkinCustom && value is AvataaarSkinCustom
+                  ? e.copyWith(color: value.color)
+                  : e;
 
               final isSelected = element.runtimeType == value.runtimeType;
 
@@ -893,20 +956,20 @@ class _SkinSelector extends StatelessWidget {
                   customBorder: _customShape,
                   onTap: () => onChanged?.call(element),
                   child: Container(
-                      decoration: ShapeDecoration(
-                        shape: _customShape,
-                        color:
-                            isSelected ? Theme.of(context).dividerColor : null,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: SvgPicture.string(element.toSvgPart()),
-                      )),
+                    decoration: ShapeDecoration(
+                      shape: _customShape,
+                      color: isSelected ? Theme.of(context).dividerColor : null,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: SvgPicture.string(element.toSvgPart()),
+                    ),
+                  ),
                 ),
               );
             },
           ),
-        )
+        ),
       ],
     );
   }

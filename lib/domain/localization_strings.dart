@@ -1,410 +1,269 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'localization_strings.freezed.dart';
-
-@freezed
-class LocalizationStrings with _$LocalizationStrings {
-  const factory LocalizationStrings.noHair() = _NoHair;
-  const factory LocalizationStrings.eyepatch() = _Eyepatch;
-  const factory LocalizationStrings.hat() = _Hat;
-  const factory LocalizationStrings.hijab() = _Hijab;
-  const factory LocalizationStrings.turban() = _Turban;
-  const factory LocalizationStrings.winterHat1() = _Winterhat1;
-  const factory LocalizationStrings.winterHat2() = _Winterhat2;
-  const factory LocalizationStrings.winterHat3() = _Winterhat3;
-  const factory LocalizationStrings.winterHat4() = _Winterhat4;
-  const factory LocalizationStrings.longHairBigHair() = _LongHairBigHair;
-  const factory LocalizationStrings.longHairBob() = _LongHairBob;
-  const factory LocalizationStrings.longHairBun() = _LongHairBun;
-  const factory LocalizationStrings.longHairCurly() = _LongHairCurly;
-  const factory LocalizationStrings.longHairCurvy() = _LongHairCurvy;
-  const factory LocalizationStrings.longHairDreads() = _LongHairDreads;
-  const factory LocalizationStrings.longHairFrida() = _LongHairFrida;
-  const factory LocalizationStrings.longHairFro() = _LongHairFro;
-  const factory LocalizationStrings.longHairFroBand() = _LongHairFroBand;
-  const factory LocalizationStrings.longHairNotTooLong() = _LongHairNotTooLong;
-  const factory LocalizationStrings.longHairShavedSides() =
-      _LongHairShavedSides;
-  const factory LocalizationStrings.longHairMiaWallace() = _LongHairMiaWallace;
-  const factory LocalizationStrings.longHairStraight() = _LongHairStraight;
-  const factory LocalizationStrings.longHairStraight2() = _LongHairStraight2;
-  const factory LocalizationStrings.longHairStraightStrand() =
-      _LongHairStraightStrand;
-  const factory LocalizationStrings.shortHairDreads01() = _ShortHairDreads01;
-  const factory LocalizationStrings.shortHairDreads02() = _ShortHairDreads02;
-  const factory LocalizationStrings.shortHairFrizzle() = _ShortHairFrizzle;
-  const factory LocalizationStrings.shortHairShaggyMullet() =
-      _ShortHairShaggyMullet;
-  const factory LocalizationStrings.shortHairShortCurly() =
-      _ShortHairShortCurly;
-  const factory LocalizationStrings.shortHairShortFlat() = _ShortHairShortFlat;
-  const factory LocalizationStrings.shortHairShortRound() =
-      _ShortHairShortRound;
-  const factory LocalizationStrings.shortHairShortWaved() =
-      _ShortHairShortWaved;
-  const factory LocalizationStrings.shortHairSides() = _ShortHairSides;
-  const factory LocalizationStrings.shortHairTheCaesar() = _ShortHairTheCaesar;
-  const factory LocalizationStrings.shortHairTheCaesarSidePart() =
-      _ShortHairTheCaesarSidePart;
-
-  const factory LocalizationStrings.eyesClosed() = _EyesClosed;
-  const factory LocalizationStrings.eyesCry() = _EyesCry;
-  const factory LocalizationStrings.eyesDefault() = _EyesDefault;
-  const factory LocalizationStrings.eyesDizzy() = _EyesDizzy;
-  const factory LocalizationStrings.eyesEyeRoll() = _EyesEyeRoll;
-  const factory LocalizationStrings.eyesHappy() = _EyesHappy;
-  const factory LocalizationStrings.eyesHearts() = _EyesHearts;
-  const factory LocalizationStrings.eyesSide() = _EyesSide;
-  const factory LocalizationStrings.eyesSurprised() = _EyesSurprised;
-  const factory LocalizationStrings.eyesWink() = _EyesWink;
-  const factory LocalizationStrings.eyesWinkWacky() = _EyesWinkWacky;
-  const factory LocalizationStrings.eyesSquint() = _EyesSquint;
-
-  const factory LocalizationStrings.blank() = _Blank;
-  const factory LocalizationStrings.kurt() = _Kurt;
-  const factory LocalizationStrings.prescription01() = _Prescription01;
-  const factory LocalizationStrings.prescription02() = _Prescription02;
-  const factory LocalizationStrings.roundGlasses() = _RoundGlasses;
-  const factory LocalizationStrings.sunglasses() = _Sunglasses;
-  const factory LocalizationStrings.wayfarers() = _Wayfarers;
-
-  const factory LocalizationStrings.blazerShirt() = _BlazerShirt;
-  const factory LocalizationStrings.blazerSweater() = _BlazerSweater;
-  const factory LocalizationStrings.collarSweater() = _CollarSweater;
-  const factory LocalizationStrings.graphicShirt() = _GraphicShirt;
-  const factory LocalizationStrings.hoodie() = _Hoodie;
-  const factory LocalizationStrings.overall() = _Overall;
-  const factory LocalizationStrings.shirtCrewNeck() = _ShirtCrewNeck;
-  const factory LocalizationStrings.shirtScoopNeck() = _ShirtScoopNeck;
-  const factory LocalizationStrings.shirtVNeck() = _ShirtVNeck;
-
-  const factory LocalizationStrings.bat() = _Bat;
-  const factory LocalizationStrings.bear() = _Bear;
-  const factory LocalizationStrings.cumbia() = _Cumbia;
-  const factory LocalizationStrings.deer() = _Deer;
-  const factory LocalizationStrings.diamond() = _Diamond;
-  const factory LocalizationStrings.hola() = _Hola;
-  const factory LocalizationStrings.pizza() = _Pizza;
-  const factory LocalizationStrings.resist() = _Resist;
-  const factory LocalizationStrings.selena() = _Selena;
-  const factory LocalizationStrings.skull() = _Skull;
-  const factory LocalizationStrings.skullOutline() = _SkullOutline;
-
-  const factory LocalizationStrings.angry() = _Angry;
-  const factory LocalizationStrings.angryNatural() = _AngryNatural;
-  const factory LocalizationStrings.default0() = _Default0;
-  const factory LocalizationStrings.defaultNatural() = _DefaultNatural;
-  const factory LocalizationStrings.flatNatural() = _FlatNatural;
-  const factory LocalizationStrings.frownNatural() = _FrownNatural;
-  const factory LocalizationStrings.raisedExcited() = _RaisedExcited;
-  const factory LocalizationStrings.raisedExcitedNatural() =
-      _RaisedExcitedNatural;
-  const factory LocalizationStrings.sadConcerned() = _SadConcerned;
-  const factory LocalizationStrings.sadConcernedNatural() =
-      _SadConcernedNatural;
-  const factory LocalizationStrings.unibrowNatural() = _UnibrowNatural;
-  const factory LocalizationStrings.upDown() = _UpDown;
-  const factory LocalizationStrings.upDownNatural() = _UpDownNatural;
-
-  const factory LocalizationStrings.beardMedium() = _BeardMedium;
-  const factory LocalizationStrings.beardLight() = _BeardLight;
-  const factory LocalizationStrings.beardMajestic() = _BeardMajestic;
-  const factory LocalizationStrings.moustacheFancy() = _MoustacheFancy;
-  const factory LocalizationStrings.moustacheMagnum() = _MoustacheMagnum;
-
-  const factory LocalizationStrings.concerned() = _Concerned;
-  const factory LocalizationStrings.disbelief() = _Disbelief;
-  const factory LocalizationStrings.eating() = _Eating;
-  const factory LocalizationStrings.grimace() = _Grimace;
-  const factory LocalizationStrings.sad() = _Sad;
-  const factory LocalizationStrings.screamOpen() = _ScreamOpen;
-  const factory LocalizationStrings.serious() = _Serious;
-  const factory LocalizationStrings.smile() = _Smile;
-  const factory LocalizationStrings.tongue() = _Tongue;
-  const factory LocalizationStrings.twinkle() = _Twinkle;
-  const factory LocalizationStrings.vomit() = _Vomit;
-
-  const factory LocalizationStrings.tanned() = _Tanned;
-  const factory LocalizationStrings.yellow() = _Yellow;
-  const factory LocalizationStrings.pale() = _Pale;
-  const factory LocalizationStrings.light() = _Light;
-  const factory LocalizationStrings.brown() = _Brown;
-  const factory LocalizationStrings.darkBrown() = _DarkBrown;
-  const factory LocalizationStrings.black() = _Black;
-  const factory LocalizationStrings.custom() = _Custom;
-
-  const factory LocalizationStrings.circle() = _Circle;
-  const factory LocalizationStrings.transparent() = _Transparent;
-
-  const factory LocalizationStrings.hair() = _Hair;
-  const factory LocalizationStrings.accessory() = _Accessory;
-  const factory LocalizationStrings.facialHair() = _FacialHair;
-  const factory LocalizationStrings.clothes() = _Clothes;
-  const factory LocalizationStrings.graphics() = _Graphics;
-  const factory LocalizationStrings.eyes() = _Eyes;
-  const factory LocalizationStrings.eyebrow() = _Eyebrow;
-  const factory LocalizationStrings.mouth() = _Mouth;
-  const factory LocalizationStrings.skin() = _Skin;
-  const factory LocalizationStrings.nose() = _Nose;
-  const factory LocalizationStrings.style() = _Style;
-
-  const LocalizationStrings._();
+sealed class LocalizationStrings {
+  const LocalizationStrings();
 
   /// returns the unions label in english
-  String toEnglish() => when(
-        noHair: () => 'No Hair',
-        eyepatch: () => 'Eyepatch',
-        hat: () => 'Hat',
-        hijab: () => 'Hijab',
-        turban: () => 'Turban',
-        winterHat1: () => 'Winterhat 1',
-        winterHat2: () => 'Winterhat 2',
-        winterHat3: () => 'Winterhat 3',
-        winterHat4: () => 'Winterhat 4',
-        longHairBigHair: () => 'Long Hair, Big',
-        longHairBob: () => 'Long Hair, Bob',
-        longHairBun: () => 'Long Hair, Bun',
-        longHairCurly: () => 'Long Hair, Curly',
-        longHairCurvy: () => 'Long Hair, Curvy',
-        longHairDreads: () => 'Long Hair, Dreads',
-        longHairFrida: () => 'Long Hair, Frida',
-        longHairFro: () => 'Long Hair, Fro',
-        longHairFroBand: () => 'Long Hair, Fro Band',
-        longHairNotTooLong: () => 'Long Hair, Not Too Long',
-        longHairShavedSides: () => 'Long Hair, Shaved Sides',
-        longHairMiaWallace: () => 'Long Hair, Mia Wallace',
-        longHairStraight: () => 'Long Hair, Straight',
-        longHairStraight2: () => 'Long Hair, Straight 2',
-        longHairStraightStrand: () => 'Long Hair, Straight Strand',
-        shortHairDreads01: () => 'Short Hair, Dreads 1',
-        shortHairDreads02: () => 'Short Hair, Dreads 2',
-        shortHairFrizzle: () => 'Short Hair, Frizzle',
-        shortHairShaggyMullet: () => 'Short Hair, Shaggy Mullet',
-        shortHairShortCurly: () => 'Short Hair, Curly',
-        shortHairShortFlat: () => 'Short Hair, Flat',
-        shortHairShortRound: () => 'Short Hair, Round',
-        shortHairShortWaved: () => 'Short Hair, Waved',
-        shortHairSides: () => 'Short Hair, Sides',
-        shortHairTheCaesar: () => 'Short Hair, Caesar',
-        shortHairTheCaesarSidePart: () => 'Short Hair, Caesar Side Part',
-        eyesClosed: () => 'Closed',
-        eyesCry: () => 'Cry',
-        eyesDefault: () => 'Default',
-        eyesDizzy: () => 'Dizzy',
-        eyesEyeRoll: () => 'Eye rolling',
-        eyesHappy: () => 'Happy',
-        eyesHearts: () => 'Hearts',
-        eyesSide: () => 'Side',
-        eyesSurprised: () => 'Surprised',
-        eyesWink: () => 'Wink',
-        eyesWinkWacky: () => 'Wacky Wink',
-        eyesSquint: () => 'Squint',
-        blank: () => 'Blank',
-        kurt: () => 'Kurt',
-        prescription01: () => 'Prescription 1',
-        prescription02: () => 'Prescription 2',
-        roundGlasses: () => 'Round Glasses',
-        sunglasses: () => 'Sunglasses',
-        wayfarers: () => 'Wayfarers',
-        angry: () => 'Angry',
-        angryNatural: () => 'Angry Natural',
-        default0: () => 'Default',
-        defaultNatural: () => 'Default Natural',
-        flatNatural: () => 'Flat Natural',
-        frownNatural: () => 'Frown Natural',
-        raisedExcited: () => 'Raised Excited',
-        raisedExcitedNatural: () => 'Raised Exited Natural',
-        sadConcerned: () => 'Sad Concerned',
-        sadConcernedNatural: () => 'Sad Concerned Natural',
-        unibrowNatural: () => 'Unibrow Natural',
-        upDown: () => 'Up Down',
-        upDownNatural: () => 'Up Down Natural',
-        beardMedium: () => 'Medium Beard',
-        beardLight: () => 'Light Beard',
-        beardMajestic: () => 'Majestic Beard',
-        moustacheFancy: () => 'Fancy Moustache',
-        moustacheMagnum: () => 'Magnum Moustache',
-        concerned: () => 'Concerned',
-        disbelief: () => 'Disbelief',
-        eating: () => 'Eating',
-        grimace: () => 'Grimace',
-        sad: () => 'Sad',
-        screamOpen: () => 'Scream',
-        serious: () => 'Serious',
-        smile: () => 'Smile',
-        tongue: () => 'Tongue',
-        twinkle: () => 'Twinkle',
-        vomit: () => 'Vomit',
-        tanned: () => 'Tanned',
-        yellow: () => 'Yellow',
-        pale: () => 'Pale',
-        light: () => 'Light',
-        brown: () => 'Brown',
-        darkBrown: () => 'Dark Brown',
-        black: () => 'Black',
-        custom: () => 'Custom',
-        circle: () => 'Circle',
-        transparent: () => 'Transparent',
-        bat: () => 'Bat',
-        bear: () => 'Bear',
-        cumbia: () => 'Cumbia',
-        deer: () => 'Deer',
-        diamond: () => 'Diamond',
-        hola: () => 'Hola',
-        pizza: () => 'Pizza',
-        resist: () => 'Resist',
-        selena: () => 'Selena',
-        skull: () => 'Skull',
-        skullOutline: () => 'Skull Outline',
-        blazerShirt: () => 'Blazer Shirt',
-        blazerSweater: () => 'Blazer Sweater',
-        collarSweater: () => 'Collar Sweater',
-        graphicShirt: () => 'Graphic Shirt',
-        hoodie: () => 'Hoodie',
-        overall: () => 'Overall',
-        shirtCrewNeck: () => 'Crewneck Shirt',
-        shirtScoopNeck: () => 'Scoopneck Shirt',
-        shirtVNeck: () => 'Vneck Shirt',
-        facialHair: () => 'Facial Hair',
-        accessory: () => 'Accessory',
-        hair: () => 'Hair',
-        clothes: () => 'Clothes',
-        graphics: () => 'Graphics',
-        eyes: () => 'Eyes',
-        eyebrow: () => 'Eyebrow',
-        mouth: () => 'Mouth',
-        skin: () => 'Skin',
-        nose: () => 'Nose',
-        style: () => 'Style',
-      );
+  String toEnglish() => switch (this) {
+        LocalizationStringsNoHair() => 'No Hair',
+        LocalizationStringsEyepatch() => 'Eyepatch',
+        LocalizationStringsHat() => 'Hat',
+        LocalizationStringsHijab() => 'Hijab',
+        LocalizationStringsTurban() => 'Turban',
+        LocalizationStringsWinterHat1() => 'Winterhat 1',
+        LocalizationStringsWinterHat2() => 'Winterhat 2',
+        LocalizationStringsWinterHat3() => 'Winterhat 3',
+        LocalizationStringsWinterHat4() => 'Winterhat 4',
+        LocalizationStringsLongHairBigHair() => 'Long Hair, Big',
+        LocalizationStringsLongHairBob() => 'Long Hair, Bob',
+        LocalizationStringsLongHairBun() => 'Long Hair, Bun',
+        LocalizationStringsLongHairCurly() => 'Long Hair, Curly',
+        LocalizationStringsLongHairCurvy() => 'Long Hair, Curvy',
+        LocalizationStringsLongHairDreads() => 'Long Hair, Dreads',
+        LocalizationStringsLongHairFrida() => 'Long Hair, Frida',
+        LocalizationStringsLongHairFro() => 'Long Hair, Fro',
+        LocalizationStringsLongHairFroBand() => 'Long Hair, Fro Band',
+        LocalizationStringsLongHairNotTooLong() => 'Long Hair, Not Too Long',
+        LocalizationStringsLongHairShavedSides() => 'Long Hair, Shaved Sides',
+        LocalizationStringsLongHairMiaWallace() => 'Long Hair, Mia Wallace',
+        LocalizationStringsLongHairStraight() => 'Long Hair, Straight',
+        LocalizationStringsLongHairStraight2() => 'Long Hair, Straight 2',
+        LocalizationStringsLongHairStraightStrand() =>
+          'Long Hair, Straight Strand',
+        LocalizationStringsShortHairDreads01() => 'Short Hair, Dreads 1',
+        LocalizationStringsShortHairDreads02() => 'Short Hair, Dreads 2',
+        LocalizationStringsShortHairFrizzle() => 'Short Hair, Frizzle',
+        LocalizationStringsShortHairShaggyMullet() =>
+          'Short Hair, Shaggy Mullet',
+        LocalizationStringsShortHairShortCurly() => 'Short Hair, Curly',
+        LocalizationStringsShortHairShortFlat() => 'Short Hair, Flat',
+        LocalizationStringsShortHairShortRound() => 'Short Hair, Round',
+        LocalizationStringsShortHairShortWaved() => 'Short Hair, Waved',
+        LocalizationStringsShortHairSides() => 'Short Hair, Sides',
+        LocalizationStringsShortHairTheCaesar() => 'Short Hair, Caesar',
+        LocalizationStringsShortHairTheCaesarSidePart() =>
+          'Short Hair, Caesar Side Part',
+        LocalizationStringsEyesClosed() => 'Closed',
+        LocalizationStringsEyesCry() => 'Cry',
+        LocalizationStringsEyesDefault() => 'Default',
+        LocalizationStringsEyesDizzy() => 'Dizzy',
+        LocalizationStringsEyesEyeRoll() => 'Eye rolling',
+        LocalizationStringsEyesHappy() => 'Happy',
+        LocalizationStringsEyesHearts() => 'Hearts',
+        LocalizationStringsEyesSide() => 'Side',
+        LocalizationStringsEyesSurprised() => 'Surprised',
+        LocalizationStringsEyesWink() => 'Wink',
+        LocalizationStringsEyesWinkWacky() => 'Wacky Wink',
+        LocalizationStringsEyesSquint() => 'Squint',
+        LocalizationStringsBlank() => 'Blank',
+        LocalizationStringsKurt() => 'Kurt',
+        LocalizationStringsPrescription01() => 'Prescription 1',
+        LocalizationStringsPrescription02() => 'Prescription 2',
+        LocalizationStringsRoundGlasses() => 'Round Glasses',
+        LocalizationStringsSunglasses() => 'Sunglasses',
+        LocalizationStringsWayfarers() => 'Wayfarers',
+        LocalizationStringsAngry() => 'Angry',
+        LocalizationStringsAngryNatural() => 'Angry Natural',
+        LocalizationStringsDefault0() => 'Default',
+        LocalizationStringsDefaultNatural() => 'Default Natural',
+        LocalizationStringsFlatNatural() => 'Flat Natural',
+        LocalizationStringsFrownNatural() => 'Frown Natural',
+        LocalizationStringsRaisedExcited() => 'Raised Excited',
+        LocalizationStringsRaisedExcitedNatural() => 'Raised Exited Natural',
+        LocalizationStringsSadConcerned() => 'Sad Concerned',
+        LocalizationStringsSadConcernedNatural() => 'Sad Concerned Natural',
+        LocalizationStringsUnibrowNatural() => 'Unibrow Natural',
+        LocalizationStringsUpDown() => 'Up Down',
+        LocalizationStringsUpDownNatural() => 'Up Down Natural',
+        LocalizationStringsBeardMedium() => 'Medium Beard',
+        LocalizationStringsBeardLight() => 'Light Beard',
+        LocalizationStringsBeardMajestic() => 'Majestic Beard',
+        LocalizationStringsMoustacheFancy() => 'Fancy Moustache',
+        LocalizationStringsMoustacheMagnum() => 'Magnum Moustache',
+        LocalizationStringsConcerned() => 'Concerned',
+        LocalizationStringsDisbelief() => 'Disbelief',
+        LocalizationStringsEating() => 'Eating',
+        LocalizationStringsGrimace() => 'Grimace',
+        LocalizationStringsSad() => 'Sad',
+        LocalizationStringsScreamOpen() => 'Scream',
+        LocalizationStringsSerious() => 'Serious',
+        LocalizationStringsSmile() => 'Smile',
+        LocalizationStringsTongue() => 'Tongue',
+        LocalizationStringsTwinkle() => 'Twinkle',
+        LocalizationStringsVomit() => 'Vomit',
+        LocalizationStringsTanned() => 'Tanned',
+        LocalizationStringsYellow() => 'Yellow',
+        LocalizationStringsPale() => 'Pale',
+        LocalizationStringsLight() => 'Light',
+        LocalizationStringsBrown() => 'Brown',
+        LocalizationStringsDarkBrown() => 'Dark Brown',
+        LocalizationStringsBlack() => 'Black',
+        LocalizationStringsCustom() => 'Custom',
+        LocalizationStringsCircle() => 'Circle',
+        LocalizationStringsTransparent() => 'Transparent',
+        LocalizationStringsBat() => 'Bat',
+        LocalizationStringsBear() => 'Bear',
+        LocalizationStringsCumbia() => 'Cumbia',
+        LocalizationStringsDeer() => 'Deer',
+        LocalizationStringsDiamond() => 'Diamond',
+        LocalizationStringsHola() => 'Hola',
+        LocalizationStringsPizza() => 'Pizza',
+        LocalizationStringsResist() => 'Resist',
+        LocalizationStringsSelena() => 'Selena',
+        LocalizationStringsSkull() => 'Skull',
+        LocalizationStringsSkullOutline() => 'Skull Outline',
+        LocalizationStringsBlazerShirt() => 'Blazer Shirt',
+        LocalizationStringsBlazerSweater() => 'Blazer Sweater',
+        LocalizationStringsCollarSweater() => 'Collar Sweater',
+        LocalizationStringsGraphicShirt() => 'Graphic Shirt',
+        LocalizationStringsHoodie() => 'Hoodie',
+        LocalizationStringsOverall() => 'Overall',
+        LocalizationStringsShirtCrewNeck() => 'Crewneck Shirt',
+        LocalizationStringsShirtScoopNeck() => 'Scoopneck Shirt',
+        LocalizationStringsShirtVNeck() => 'Vneck Shirt',
+        LocalizationStringsFacialHair() => 'Facial Hair',
+        LocalizationStringsAccessory() => 'Accessory',
+        LocalizationStringsHair() => 'Hair',
+        LocalizationStringsClothes() => 'Clothes',
+        LocalizationStringsGraphics() => 'Graphics',
+        LocalizationStringsEyes() => 'Eyes',
+        LocalizationStringsEyebrow() => 'Eyebrow',
+        LocalizationStringsMouth() => 'Mouth',
+        LocalizationStringsSkin() => 'Skin',
+        LocalizationStringsNose() => 'Nose',
+        LocalizationStringsStyle() => 'Style',
+      };
 
   /// returns the unions label in german
-  String toGerman() => when(
-        noHair: () => 'Keine Haare',
-        eyepatch: () => 'Augenklappe',
-        hat: () => 'Hut',
-        hijab: () => 'Hijab',
-        turban: () => 'Turban',
-        winterHat1: () => 'Winterhut 1',
-        winterHat2: () => 'Winterhut 2',
-        winterHat3: () => 'Winterhut 3',
-        winterHat4: () => 'Winterhut 4',
-        longHairBigHair: () => 'Langes Haar, Groß',
-        longHairBob: () => 'Langes Haar, Bob',
-        longHairBun: () => 'Langes Haar, Dutt',
-        longHairCurly: () => 'Langes Haar, Gelockt',
-        longHairCurvy: () => 'Langes Haar, Wellig',
-        longHairDreads: () => 'Langes Haar, Dreads',
-        longHairFrida: () => 'Langes Haar, Frida',
-        longHairFro: () => 'Langes Haar, Fro',
-        longHairFroBand: () => 'Langes Haar, Fro Band',
-        longHairNotTooLong: () => 'Langes Haar, Nicht Zu Lang',
-        longHairShavedSides: () => 'Langes Haar, Rasierte Seiten',
-        longHairMiaWallace: () => 'Langes Haar, Mia Wallace',
-        longHairStraight: () => 'Langes Haar, Grade',
-        longHairStraight2: () => 'Langes Haar, Grade 2',
-        longHairStraightStrand: () => 'Langes Haar, Grader Strang',
-        shortHairDreads01: () => 'Kurzes Haar, Dreads 1',
-        shortHairDreads02: () => 'Kurzes Haar, Dreads 2',
-        shortHairFrizzle: () => 'Kurzes Haar, Kräuselig',
-        shortHairShaggyMullet: () => 'Kurzes Haar, Zotteliger Vokuhila',
-        shortHairShortCurly: () => 'Kurzes Haar, Gelockt',
-        shortHairShortFlat: () => 'Kurzes Haar, Flach',
-        shortHairShortRound: () => 'Kurzes Haar, Rund',
-        shortHairShortWaved: () => 'Kurzes Haar, Gewellt',
-        shortHairSides: () => 'Kurzes Haar, Seiten',
-        shortHairTheCaesar: () => 'Kurzes Haar, Caesar',
-        shortHairTheCaesarSidePart: () => 'Kurzes Haar, Caesar Seitenabschnitt',
-        eyesClosed: () => 'Geschlossen',
-        eyesCry: () => 'Weinen',
-        eyesDefault: () => 'Standard',
-        eyesDizzy: () => 'Schwindelig',
-        eyesEyeRoll: () => 'Augenrollen',
-        eyesHappy: () => 'Glücklich',
-        eyesHearts: () => 'Herzen',
-        eyesSide: () => 'Seite',
-        eyesSurprised: () => 'Überrascht',
-        eyesWink: () => 'Zwinkern',
-        eyesWinkWacky: () => 'Abgedrehtes Zwinkern',
-        eyesSquint: () => 'Zusammengekniffen',
-        blank: () => 'Leer',
-        kurt: () => 'Kurt',
-        prescription01: () => 'Verschrieben 1',
-        prescription02: () => 'Verschrieben 2',
-        roundGlasses: () => 'Runde Gläser',
-        sunglasses: () => 'Sonnenbrille',
-        wayfarers: () => 'Wayfarers',
-        angry: () => 'Wütend',
-        angryNatural: () => 'Wütend Natürlich',
-        default0: () => 'Standard',
-        defaultNatural: () => 'Standard Natürlich',
-        flatNatural: () => 'Flach Natürlich',
-        frownNatural: () => 'Runzeln Natürlich',
-        raisedExcited: () => 'Angehoben Aufgeregt',
-        raisedExcitedNatural: () => 'Angehoben Aufgeregt Natürlich',
-        sadConcerned: () => 'Traurig Besorgt',
-        sadConcernedNatural: () => 'Traurig Besorgt Natürlich',
-        unibrowNatural: () => 'Unibraue Natürlich',
-        upDown: () => 'Hoch Runter',
-        upDownNatural: () => 'Hoch Runter Natürlich',
-        beardMedium: () => 'Mittelgroßer Bart',
-        beardLight: () => 'Leichter Bart',
-        beardMajestic: () => 'Majestätischer Bart',
-        moustacheFancy: () => 'Ausgefallener Schnauzbart',
-        moustacheMagnum: () => 'Großer Schnauzbart',
-        concerned: () => 'Besorgt',
-        disbelief: () => 'Unglaube',
-        eating: () => 'Essen',
-        grimace: () => 'Grimasse',
-        sad: () => 'Traurig',
-        screamOpen: () => 'Schreien',
-        serious: () => 'Ernst',
-        smile: () => 'Lächeln',
-        tongue: () => 'Zunge',
-        twinkle: () => 'Hochgezogen',
-        vomit: () => 'Erbrechen',
-        tanned: () => 'Gebräunt',
-        yellow: () => 'Gelb',
-        pale: () => 'Blass',
-        light: () => 'Licht',
-        brown: () => 'Braun',
-        darkBrown: () => 'Dunkelbraun',
-        black: () => 'Schwarz',
-        custom: () => 'Benutzerdefiniert',
-        circle: () => 'Kreis',
-        transparent: () => 'Durchsichtig',
-        bat: () => 'Fledermaus',
-        bear: () => 'Bär',
-        cumbia: () => 'Cumbia',
-        deer: () => 'Hirsch',
-        diamond: () => 'Diamant',
-        hola: () => 'Hola',
-        pizza: () => 'Pizza',
-        resist: () => 'Resist',
-        selena: () => 'Selena',
-        skull: () => 'Schädel',
-        skullOutline: () => 'Schädel Umriss',
-        blazerShirt: () => 'Blazer Hemd',
-        blazerSweater: () => 'Blazer Pullover',
-        collarSweater: () => 'Kragen Pullover',
-        graphicShirt: () => 'Grafik Hemd',
-        hoodie: () => 'Kapuzenpulli',
-        overall: () => 'Overall',
-        shirtCrewNeck: () => 'Crewneck Hemd',
-        shirtScoopNeck: () => 'Hemd mit rundem Ausschnitt',
-        shirtVNeck: () => 'Hemd mit V Ausschnitt',
-        facialHair: () => 'Gesichtsbehaarung',
-        accessory: () => 'Zubehör',
-        hair: () => 'Haare',
-        clothes: () => 'Kleidung',
-        graphics: () => 'Grafiken',
-        eyes: () => 'Augen',
-        eyebrow: () => 'Augenbrauen',
-        mouth: () => 'Mund',
-        skin: () => 'Hautfarbe',
-        nose: () => 'Nase',
-        style: () => 'Stil',
-      );
+  String toGerman() => switch (this) {
+        LocalizationStringsNoHair() => 'Keine Haare',
+        LocalizationStringsEyepatch() => 'Augenklappe',
+        LocalizationStringsHat() => 'Hut',
+        LocalizationStringsHijab() => 'Hijab',
+        LocalizationStringsTurban() => 'Turban',
+        LocalizationStringsWinterHat1() => 'Winterhut 1',
+        LocalizationStringsWinterHat2() => 'Winterhut 2',
+        LocalizationStringsWinterHat3() => 'Winterhut 3',
+        LocalizationStringsWinterHat4() => 'Winterhut 4',
+        LocalizationStringsLongHairBigHair() => 'Langes Haar, Groß',
+        LocalizationStringsLongHairBob() => 'Langes Haar, Bob',
+        LocalizationStringsLongHairBun() => 'Langes Haar, Dutt',
+        LocalizationStringsLongHairCurly() => 'Langes Haar, Gelockt',
+        LocalizationStringsLongHairCurvy() => 'Langes Haar, Wellig',
+        LocalizationStringsLongHairDreads() => 'Langes Haar, Dreads',
+        LocalizationStringsLongHairFrida() => 'Langes Haar, Frida',
+        LocalizationStringsLongHairFro() => 'Langes Haar, Fro',
+        LocalizationStringsLongHairFroBand() => 'Langes Haar, Fro Band',
+        LocalizationStringsLongHairNotTooLong() => 'Langes Haar, Nicht Zu Lang',
+        LocalizationStringsLongHairShavedSides() =>
+          'Langes Haar, Rasierte Seiten',
+        LocalizationStringsLongHairMiaWallace() => 'Langes Haar, Mia Wallace',
+        LocalizationStringsLongHairStraight() => 'Langes Haar, Grade',
+        LocalizationStringsLongHairStraight2() => 'Langes Haar, Grade 2',
+        LocalizationStringsLongHairStraightStrand() =>
+          'Langes Haar, Grader Strang',
+        LocalizationStringsShortHairDreads01() => 'Kurzes Haar, Dreads 1',
+        LocalizationStringsShortHairDreads02() => 'Kurzes Haar, Dreads 2',
+        LocalizationStringsShortHairFrizzle() => 'Kurzes Haar, Kräuselig',
+        LocalizationStringsShortHairShaggyMullet() =>
+          'Kurzes Haar, Zotteliger Vokuhila',
+        LocalizationStringsShortHairShortCurly() => 'Kurzes Haar, Gelockt',
+        LocalizationStringsShortHairShortFlat() => 'Kurzes Haar, Flach',
+        LocalizationStringsShortHairShortRound() => 'Kurzes Haar, Rund',
+        LocalizationStringsShortHairShortWaved() => 'Kurzes Haar, Gewellt',
+        LocalizationStringsShortHairSides() => 'Kurzes Haar, Seiten',
+        LocalizationStringsShortHairTheCaesar() => 'Kurzes Haar, Caesar',
+        LocalizationStringsShortHairTheCaesarSidePart() =>
+          'Kurzes Haar, Caesar Seitenabschnitt',
+        LocalizationStringsEyesClosed() => 'Geschlossen',
+        LocalizationStringsEyesCry() => 'Weinen',
+        LocalizationStringsEyesDefault() => 'Standard',
+        LocalizationStringsEyesDizzy() => 'Schwindelig',
+        LocalizationStringsEyesEyeRoll() => 'Augenrollen',
+        LocalizationStringsEyesHappy() => 'Glücklich',
+        LocalizationStringsEyesHearts() => 'Herzen',
+        LocalizationStringsEyesSide() => 'Seite',
+        LocalizationStringsEyesSurprised() => 'Überrascht',
+        LocalizationStringsEyesWink() => 'Zwinkern',
+        LocalizationStringsEyesWinkWacky() => 'Abgedrehtes Zwinkern',
+        LocalizationStringsEyesSquint() => 'Zusammengekniffen',
+        LocalizationStringsBlank() => 'Leer',
+        LocalizationStringsKurt() => 'Kurt',
+        LocalizationStringsPrescription01() => 'Verschrieben 1',
+        LocalizationStringsPrescription02() => 'Verschrieben 2',
+        LocalizationStringsRoundGlasses() => 'Runde Gläser',
+        LocalizationStringsSunglasses() => 'Sonnenbrille',
+        LocalizationStringsWayfarers() => 'Wayfarers',
+        LocalizationStringsAngry() => 'Wütend',
+        LocalizationStringsAngryNatural() => 'Wütend Natürlich',
+        LocalizationStringsDefault0() => 'Standard',
+        LocalizationStringsDefaultNatural() => 'Standard Natürlich',
+        LocalizationStringsFlatNatural() => 'Flach Natürlich',
+        LocalizationStringsFrownNatural() => 'Runzeln Natürlich',
+        LocalizationStringsRaisedExcited() => 'Angehoben Aufgeregt',
+        LocalizationStringsRaisedExcitedNatural() =>
+          'Angehoben Aufgeregt Natürlich',
+        LocalizationStringsSadConcerned() => 'Traurig Besorgt',
+        LocalizationStringsSadConcernedNatural() => 'Traurig Besorgt Natürlich',
+        LocalizationStringsUnibrowNatural() => 'Unibraue Natürlich',
+        LocalizationStringsUpDown() => 'Hoch Runter',
+        LocalizationStringsUpDownNatural() => 'Hoch Runter Natürlich',
+        LocalizationStringsBeardMedium() => 'Mittelgroßer Bart',
+        LocalizationStringsBeardLight() => 'Leichter Bart',
+        LocalizationStringsBeardMajestic() => 'Majestätischer Bart',
+        LocalizationStringsMoustacheFancy() => 'Ausgefallener Schnauzbart',
+        LocalizationStringsMoustacheMagnum() => 'Großer Schnauzbart',
+        LocalizationStringsConcerned() => 'Besorgt',
+        LocalizationStringsDisbelief() => 'Unglaube',
+        LocalizationStringsEating() => 'Essen',
+        LocalizationStringsGrimace() => 'Grimasse',
+        LocalizationStringsSad() => 'Traurig',
+        LocalizationStringsScreamOpen() => 'Schreien',
+        LocalizationStringsSerious() => 'Ernst',
+        LocalizationStringsSmile() => 'Lächeln',
+        LocalizationStringsTongue() => 'Zunge',
+        LocalizationStringsTwinkle() => 'Hochgezogen',
+        LocalizationStringsVomit() => 'Erbrechen',
+        LocalizationStringsTanned() => 'Gebräunt',
+        LocalizationStringsYellow() => 'Gelb',
+        LocalizationStringsPale() => 'Blass',
+        LocalizationStringsLight() => 'Licht',
+        LocalizationStringsBrown() => 'Braun',
+        LocalizationStringsDarkBrown() => 'Dunkelbraun',
+        LocalizationStringsBlack() => 'Schwarz',
+        LocalizationStringsCustom() => 'Benutzerdefiniert',
+        LocalizationStringsCircle() => 'Kreis',
+        LocalizationStringsTransparent() => 'Durchsichtig',
+        LocalizationStringsBat() => 'Fledermaus',
+        LocalizationStringsBear() => 'Bär',
+        LocalizationStringsCumbia() => 'Cumbia',
+        LocalizationStringsDeer() => 'Hirsch',
+        LocalizationStringsDiamond() => 'Diamant',
+        LocalizationStringsHola() => 'Hola',
+        LocalizationStringsPizza() => 'Pizza',
+        LocalizationStringsResist() => 'Resist',
+        LocalizationStringsSelena() => 'Selena',
+        LocalizationStringsSkull() => 'Schädel',
+        LocalizationStringsSkullOutline() => 'Schädel Umriss',
+        LocalizationStringsBlazerShirt() => 'Blazer Hemd',
+        LocalizationStringsBlazerSweater() => 'Blazer Pullover',
+        LocalizationStringsCollarSweater() => 'Kragen Pullover',
+        LocalizationStringsGraphicShirt() => 'Grafik Hemd',
+        LocalizationStringsHoodie() => 'Kapuzenpulli',
+        LocalizationStringsOverall() => 'Overall',
+        LocalizationStringsShirtCrewNeck() => 'Crewneck Hemd',
+        LocalizationStringsShirtScoopNeck() => 'Hemd mit rundem Ausschnitt',
+        LocalizationStringsShirtVNeck() => 'Hemd mit V Ausschnitt',
+        LocalizationStringsFacialHair() => 'Gesichtsbehaarung',
+        LocalizationStringsAccessory() => 'Zubehör',
+        LocalizationStringsHair() => 'Haare',
+        LocalizationStringsClothes() => 'Kleidung',
+        LocalizationStringsGraphics() => 'Grafiken',
+        LocalizationStringsEyes() => 'Augen',
+        LocalizationStringsEyebrow() => 'Augenbrauen',
+        LocalizationStringsMouth() => 'Mund',
+        LocalizationStringsSkin() => 'Hautfarbe',
+        LocalizationStringsNose() => 'Nase',
+        LocalizationStringsStyle() => 'Stil',
+      };
 
   /// based on the [languageCode] the [localization] is returned in the corresponding language
   static String applyLanguageCode(
@@ -416,4 +275,504 @@ class LocalizationStrings with _$LocalizationStrings {
         return localization.toEnglish();
     }
   }
+}
+
+final class LocalizationStringsNoHair extends LocalizationStrings {
+  const LocalizationStringsNoHair();
+}
+
+final class LocalizationStringsEyepatch extends LocalizationStrings {
+  const LocalizationStringsEyepatch();
+}
+
+final class LocalizationStringsHat extends LocalizationStrings {
+  const LocalizationStringsHat();
+}
+
+final class LocalizationStringsHijab extends LocalizationStrings {
+  const LocalizationStringsHijab();
+}
+
+final class LocalizationStringsTurban extends LocalizationStrings {
+  const LocalizationStringsTurban();
+}
+
+final class LocalizationStringsWinterHat1 extends LocalizationStrings {
+  const LocalizationStringsWinterHat1();
+}
+
+final class LocalizationStringsWinterHat2 extends LocalizationStrings {
+  const LocalizationStringsWinterHat2();
+}
+
+final class LocalizationStringsWinterHat3 extends LocalizationStrings {
+  const LocalizationStringsWinterHat3();
+}
+
+final class LocalizationStringsWinterHat4 extends LocalizationStrings {
+  const LocalizationStringsWinterHat4();
+}
+
+final class LocalizationStringsLongHairBigHair extends LocalizationStrings {
+  const LocalizationStringsLongHairBigHair();
+}
+
+final class LocalizationStringsLongHairBob extends LocalizationStrings {
+  const LocalizationStringsLongHairBob();
+}
+
+final class LocalizationStringsLongHairBun extends LocalizationStrings {
+  const LocalizationStringsLongHairBun();
+}
+
+final class LocalizationStringsLongHairCurly extends LocalizationStrings {
+  const LocalizationStringsLongHairCurly();
+}
+
+final class LocalizationStringsLongHairCurvy extends LocalizationStrings {
+  const LocalizationStringsLongHairCurvy();
+}
+
+final class LocalizationStringsLongHairDreads extends LocalizationStrings {
+  const LocalizationStringsLongHairDreads();
+}
+
+final class LocalizationStringsLongHairFrida extends LocalizationStrings {
+  const LocalizationStringsLongHairFrida();
+}
+
+final class LocalizationStringsLongHairFro extends LocalizationStrings {
+  const LocalizationStringsLongHairFro();
+}
+
+final class LocalizationStringsLongHairFroBand extends LocalizationStrings {
+  const LocalizationStringsLongHairFroBand();
+}
+
+final class LocalizationStringsLongHairNotTooLong extends LocalizationStrings {
+  const LocalizationStringsLongHairNotTooLong();
+}
+
+final class LocalizationStringsLongHairShavedSides extends LocalizationStrings {
+  const LocalizationStringsLongHairShavedSides();
+}
+
+final class LocalizationStringsLongHairMiaWallace extends LocalizationStrings {
+  const LocalizationStringsLongHairMiaWallace();
+}
+
+final class LocalizationStringsLongHairStraight extends LocalizationStrings {
+  const LocalizationStringsLongHairStraight();
+}
+
+final class LocalizationStringsLongHairStraight2 extends LocalizationStrings {
+  const LocalizationStringsLongHairStraight2();
+}
+
+final class LocalizationStringsLongHairStraightStrand
+    extends LocalizationStrings {
+  const LocalizationStringsLongHairStraightStrand();
+}
+
+final class LocalizationStringsShortHairDreads01 extends LocalizationStrings {
+  const LocalizationStringsShortHairDreads01();
+}
+
+final class LocalizationStringsShortHairDreads02 extends LocalizationStrings {
+  const LocalizationStringsShortHairDreads02();
+}
+
+final class LocalizationStringsShortHairFrizzle extends LocalizationStrings {
+  const LocalizationStringsShortHairFrizzle();
+}
+
+final class LocalizationStringsShortHairShaggyMullet
+    extends LocalizationStrings {
+  const LocalizationStringsShortHairShaggyMullet();
+}
+
+final class LocalizationStringsShortHairShortCurly extends LocalizationStrings {
+  const LocalizationStringsShortHairShortCurly();
+}
+
+final class LocalizationStringsShortHairShortFlat extends LocalizationStrings {
+  const LocalizationStringsShortHairShortFlat();
+}
+
+final class LocalizationStringsShortHairShortRound extends LocalizationStrings {
+  const LocalizationStringsShortHairShortRound();
+}
+
+final class LocalizationStringsShortHairShortWaved extends LocalizationStrings {
+  const LocalizationStringsShortHairShortWaved();
+}
+
+final class LocalizationStringsShortHairSides extends LocalizationStrings {
+  const LocalizationStringsShortHairSides();
+}
+
+final class LocalizationStringsShortHairTheCaesar extends LocalizationStrings {
+  const LocalizationStringsShortHairTheCaesar();
+}
+
+final class LocalizationStringsShortHairTheCaesarSidePart
+    extends LocalizationStrings {
+  const LocalizationStringsShortHairTheCaesarSidePart();
+}
+
+final class LocalizationStringsEyesClosed extends LocalizationStrings {
+  const LocalizationStringsEyesClosed();
+}
+
+final class LocalizationStringsEyesCry extends LocalizationStrings {
+  const LocalizationStringsEyesCry();
+}
+
+final class LocalizationStringsEyesDefault extends LocalizationStrings {
+  const LocalizationStringsEyesDefault();
+}
+
+final class LocalizationStringsEyesDizzy extends LocalizationStrings {
+  const LocalizationStringsEyesDizzy();
+}
+
+final class LocalizationStringsEyesEyeRoll extends LocalizationStrings {
+  const LocalizationStringsEyesEyeRoll();
+}
+
+final class LocalizationStringsEyesHappy extends LocalizationStrings {
+  const LocalizationStringsEyesHappy();
+}
+
+final class LocalizationStringsEyesHearts extends LocalizationStrings {
+  const LocalizationStringsEyesHearts();
+}
+
+final class LocalizationStringsEyesSide extends LocalizationStrings {
+  const LocalizationStringsEyesSide();
+}
+
+final class LocalizationStringsEyesSurprised extends LocalizationStrings {
+  const LocalizationStringsEyesSurprised();
+}
+
+final class LocalizationStringsEyesWink extends LocalizationStrings {
+  const LocalizationStringsEyesWink();
+}
+
+final class LocalizationStringsEyesWinkWacky extends LocalizationStrings {
+  const LocalizationStringsEyesWinkWacky();
+}
+
+final class LocalizationStringsEyesSquint extends LocalizationStrings {
+  const LocalizationStringsEyesSquint();
+}
+
+final class LocalizationStringsBlank extends LocalizationStrings {
+  const LocalizationStringsBlank();
+}
+
+final class LocalizationStringsKurt extends LocalizationStrings {
+  const LocalizationStringsKurt();
+}
+
+final class LocalizationStringsPrescription01 extends LocalizationStrings {
+  const LocalizationStringsPrescription01();
+}
+
+final class LocalizationStringsPrescription02 extends LocalizationStrings {
+  const LocalizationStringsPrescription02();
+}
+
+final class LocalizationStringsRoundGlasses extends LocalizationStrings {
+  const LocalizationStringsRoundGlasses();
+}
+
+final class LocalizationStringsSunglasses extends LocalizationStrings {
+  const LocalizationStringsSunglasses();
+}
+
+final class LocalizationStringsWayfarers extends LocalizationStrings {
+  const LocalizationStringsWayfarers();
+}
+
+final class LocalizationStringsBlazerShirt extends LocalizationStrings {
+  const LocalizationStringsBlazerShirt();
+}
+
+final class LocalizationStringsBlazerSweater extends LocalizationStrings {
+  const LocalizationStringsBlazerSweater();
+}
+
+final class LocalizationStringsCollarSweater extends LocalizationStrings {
+  const LocalizationStringsCollarSweater();
+}
+
+final class LocalizationStringsGraphicShirt extends LocalizationStrings {
+  const LocalizationStringsGraphicShirt();
+}
+
+final class LocalizationStringsHoodie extends LocalizationStrings {
+  const LocalizationStringsHoodie();
+}
+
+final class LocalizationStringsOverall extends LocalizationStrings {
+  const LocalizationStringsOverall();
+}
+
+final class LocalizationStringsShirtCrewNeck extends LocalizationStrings {
+  const LocalizationStringsShirtCrewNeck();
+}
+
+final class LocalizationStringsShirtScoopNeck extends LocalizationStrings {
+  const LocalizationStringsShirtScoopNeck();
+}
+
+final class LocalizationStringsShirtVNeck extends LocalizationStrings {
+  const LocalizationStringsShirtVNeck();
+}
+
+final class LocalizationStringsBat extends LocalizationStrings {
+  const LocalizationStringsBat();
+}
+
+final class LocalizationStringsBear extends LocalizationStrings {
+  const LocalizationStringsBear();
+}
+
+final class LocalizationStringsCumbia extends LocalizationStrings {
+  const LocalizationStringsCumbia();
+}
+
+final class LocalizationStringsDeer extends LocalizationStrings {
+  const LocalizationStringsDeer();
+}
+
+final class LocalizationStringsDiamond extends LocalizationStrings {
+  const LocalizationStringsDiamond();
+}
+
+final class LocalizationStringsHola extends LocalizationStrings {
+  const LocalizationStringsHola();
+}
+
+final class LocalizationStringsPizza extends LocalizationStrings {
+  const LocalizationStringsPizza();
+}
+
+final class LocalizationStringsResist extends LocalizationStrings {
+  const LocalizationStringsResist();
+}
+
+final class LocalizationStringsSelena extends LocalizationStrings {
+  const LocalizationStringsSelena();
+}
+
+final class LocalizationStringsSkull extends LocalizationStrings {
+  const LocalizationStringsSkull();
+}
+
+final class LocalizationStringsSkullOutline extends LocalizationStrings {
+  const LocalizationStringsSkullOutline();
+}
+
+final class LocalizationStringsAngry extends LocalizationStrings {
+  const LocalizationStringsAngry();
+}
+
+final class LocalizationStringsAngryNatural extends LocalizationStrings {
+  const LocalizationStringsAngryNatural();
+}
+
+final class LocalizationStringsDefault0 extends LocalizationStrings {
+  const LocalizationStringsDefault0();
+}
+
+final class LocalizationStringsDefaultNatural extends LocalizationStrings {
+  const LocalizationStringsDefaultNatural();
+}
+
+final class LocalizationStringsFlatNatural extends LocalizationStrings {
+  const LocalizationStringsFlatNatural();
+}
+
+final class LocalizationStringsFrownNatural extends LocalizationStrings {
+  const LocalizationStringsFrownNatural();
+}
+
+final class LocalizationStringsRaisedExcited extends LocalizationStrings {
+  const LocalizationStringsRaisedExcited();
+}
+
+final class LocalizationStringsRaisedExcitedNatural
+    extends LocalizationStrings {
+  const LocalizationStringsRaisedExcitedNatural();
+}
+
+final class LocalizationStringsSadConcerned extends LocalizationStrings {
+  const LocalizationStringsSadConcerned();
+}
+
+final class LocalizationStringsSadConcernedNatural extends LocalizationStrings {
+  const LocalizationStringsSadConcernedNatural();
+}
+
+final class LocalizationStringsUnibrowNatural extends LocalizationStrings {
+  const LocalizationStringsUnibrowNatural();
+}
+
+final class LocalizationStringsUpDown extends LocalizationStrings {
+  const LocalizationStringsUpDown();
+}
+
+final class LocalizationStringsUpDownNatural extends LocalizationStrings {
+  const LocalizationStringsUpDownNatural();
+}
+
+final class LocalizationStringsBeardMedium extends LocalizationStrings {
+  const LocalizationStringsBeardMedium();
+}
+
+final class LocalizationStringsBeardLight extends LocalizationStrings {
+  const LocalizationStringsBeardLight();
+}
+
+final class LocalizationStringsBeardMajestic extends LocalizationStrings {
+  const LocalizationStringsBeardMajestic();
+}
+
+final class LocalizationStringsMoustacheFancy extends LocalizationStrings {
+  const LocalizationStringsMoustacheFancy();
+}
+
+final class LocalizationStringsMoustacheMagnum extends LocalizationStrings {
+  const LocalizationStringsMoustacheMagnum();
+}
+
+final class LocalizationStringsConcerned extends LocalizationStrings {
+  const LocalizationStringsConcerned();
+}
+
+final class LocalizationStringsDisbelief extends LocalizationStrings {
+  const LocalizationStringsDisbelief();
+}
+
+final class LocalizationStringsEating extends LocalizationStrings {
+  const LocalizationStringsEating();
+}
+
+final class LocalizationStringsGrimace extends LocalizationStrings {
+  const LocalizationStringsGrimace();
+}
+
+final class LocalizationStringsSad extends LocalizationStrings {
+  const LocalizationStringsSad();
+}
+
+final class LocalizationStringsScreamOpen extends LocalizationStrings {
+  const LocalizationStringsScreamOpen();
+}
+
+final class LocalizationStringsSerious extends LocalizationStrings {
+  const LocalizationStringsSerious();
+}
+
+final class LocalizationStringsSmile extends LocalizationStrings {
+  const LocalizationStringsSmile();
+}
+
+final class LocalizationStringsTongue extends LocalizationStrings {
+  const LocalizationStringsTongue();
+}
+
+final class LocalizationStringsTwinkle extends LocalizationStrings {
+  const LocalizationStringsTwinkle();
+}
+
+final class LocalizationStringsVomit extends LocalizationStrings {
+  const LocalizationStringsVomit();
+}
+
+final class LocalizationStringsTanned extends LocalizationStrings {
+  const LocalizationStringsTanned();
+}
+
+final class LocalizationStringsYellow extends LocalizationStrings {
+  const LocalizationStringsYellow();
+}
+
+final class LocalizationStringsPale extends LocalizationStrings {
+  const LocalizationStringsPale();
+}
+
+final class LocalizationStringsLight extends LocalizationStrings {
+  const LocalizationStringsLight();
+}
+
+final class LocalizationStringsBrown extends LocalizationStrings {
+  const LocalizationStringsBrown();
+}
+
+final class LocalizationStringsDarkBrown extends LocalizationStrings {
+  const LocalizationStringsDarkBrown();
+}
+
+final class LocalizationStringsBlack extends LocalizationStrings {
+  const LocalizationStringsBlack();
+}
+
+final class LocalizationStringsCustom extends LocalizationStrings {
+  const LocalizationStringsCustom();
+}
+
+final class LocalizationStringsCircle extends LocalizationStrings {
+  const LocalizationStringsCircle();
+}
+
+final class LocalizationStringsTransparent extends LocalizationStrings {
+  const LocalizationStringsTransparent();
+}
+
+final class LocalizationStringsHair extends LocalizationStrings {
+  const LocalizationStringsHair();
+}
+
+final class LocalizationStringsAccessory extends LocalizationStrings {
+  const LocalizationStringsAccessory();
+}
+
+final class LocalizationStringsFacialHair extends LocalizationStrings {
+  const LocalizationStringsFacialHair();
+}
+
+final class LocalizationStringsClothes extends LocalizationStrings {
+  const LocalizationStringsClothes();
+}
+
+final class LocalizationStringsGraphics extends LocalizationStrings {
+  const LocalizationStringsGraphics();
+}
+
+final class LocalizationStringsEyes extends LocalizationStrings {
+  const LocalizationStringsEyes();
+}
+
+final class LocalizationStringsEyebrow extends LocalizationStrings {
+  const LocalizationStringsEyebrow();
+}
+
+final class LocalizationStringsMouth extends LocalizationStrings {
+  const LocalizationStringsMouth();
+}
+
+final class LocalizationStringsSkin extends LocalizationStrings {
+  const LocalizationStringsSkin();
+}
+
+final class LocalizationStringsNose extends LocalizationStrings {
+  const LocalizationStringsNose();
+}
+
+final class LocalizationStringsStyle extends LocalizationStrings {
+  const LocalizationStringsStyle();
 }
