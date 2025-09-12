@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
 
 import '../avatar/clothes/clothes.dart';
@@ -15,6 +16,8 @@ import '../avatar/top/facialHair/facialHair.dart';
 import '../avatar/top/hair/hair.dart';
 import 'localization_strings.dart';
 
+part 'avataaar_parts.mapper.dart';
+
 final _random = Random(DateTime.now().millisecondsSinceEpoch);
 
 abstract class AvataaarParts {
@@ -23,13 +26,17 @@ abstract class AvataaarParts {
   int toIndex();
 }
 
-sealed class AvataaarEyes implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarEyes with AvataaarEyesMappable implements AvataaarParts {
   const AvataaarEyes();
+
+  static final fromMap = AvataaarEyesMapper.fromMap;
+  static final fromJson = AvataaarEyesMapper.fromJson;
 
   static List<AvataaarEyes> all = [
     AvataaarEyesClosed(),
     AvataaarEyesCry(),
-    AvataaarEyesDefault0(),
+    AvataaarEyesDefault(),
     AvataaarEyesDizzy(),
     AvataaarEyesEyeRoll(),
     AvataaarEyesHappy(),
@@ -78,7 +85,7 @@ sealed class AvataaarEyes implements AvataaarParts {
     final localization = switch (this) {
       AvataaarEyesClosed() => const LocalizationStringsEyesClosed(),
       AvataaarEyesCry() => const LocalizationStringsEyesCry(),
-      AvataaarEyesDefault0() => const LocalizationStringsEyesDefault(),
+      AvataaarEyesDefault() => const LocalizationStringsEyesDefault(),
       AvataaarEyesDizzy() => const LocalizationStringsEyesDizzy(),
       AvataaarEyesEyeRoll() => const LocalizationStringsEyesEyeRoll(),
       AvataaarEyesHappy() => const LocalizationStringsEyesHappy(),
@@ -101,7 +108,7 @@ sealed class AvataaarEyes implements AvataaarParts {
   String toSvgString() => switch (this) {
         AvataaarEyesClosed() => Eyes.close,
         AvataaarEyesCry() => Eyes.cry,
-        AvataaarEyesDefault0() => Eyes.default0,
+        AvataaarEyesDefault() => Eyes.default0,
         AvataaarEyesDizzy() => Eyes.dizzy,
         AvataaarEyesEyeRoll() => Eyes.eyeRoll,
         AvataaarEyesHappy() => Eyes.happy,
@@ -114,55 +121,80 @@ sealed class AvataaarEyes implements AvataaarParts {
       };
 }
 
-final class AvataaarEyesClosed extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesClosed extends AvataaarEyes
+    with AvataaarEyesClosedMappable {
   const AvataaarEyesClosed();
 }
 
-final class AvataaarEyesCry extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesCry extends AvataaarEyes with AvataaarEyesCryMappable {
   const AvataaarEyesCry();
 }
 
-final class AvataaarEyesDefault0 extends AvataaarEyes {
-  const AvataaarEyesDefault0();
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+@MappableClass()
+final class AvataaarEyesDefault extends AvataaarEyes
+    with AvataaarEyesDefaultMappable {
+  const AvataaarEyesDefault();
 }
 
-final class AvataaarEyesDizzy extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesDizzy extends AvataaarEyes
+    with AvataaarEyesDizzyMappable {
   const AvataaarEyesDizzy();
 }
 
-final class AvataaarEyesEyeRoll extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesEyeRoll extends AvataaarEyes
+    with AvataaarEyesEyeRollMappable {
   const AvataaarEyesEyeRoll();
 }
 
-final class AvataaarEyesHappy extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesHappy extends AvataaarEyes
+    with AvataaarEyesHappyMappable {
   const AvataaarEyesHappy();
 }
 
-final class AvataaarEyesHearts extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesHearts extends AvataaarEyes
+    with AvataaarEyesHeartsMappable {
   const AvataaarEyesHearts();
 }
 
-final class AvataaarEyesSide extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesSide extends AvataaarEyes
+    with AvataaarEyesSideMappable {
   const AvataaarEyesSide();
 }
 
-final class AvataaarEyesSquint extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesSquint extends AvataaarEyes
+    with AvataaarEyesSquintMappable {
   const AvataaarEyesSquint();
 }
 
-final class AvataaarEyesSurprised extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesSurprised extends AvataaarEyes
+    with AvataaarEyesSurprisedMappable {
   const AvataaarEyesSurprised();
 }
 
-final class AvataaarEyesWink extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesWink extends AvataaarEyes
+    with AvataaarEyesWinkMappable {
   const AvataaarEyesWink();
 }
 
-final class AvataaarEyesWinkWacky extends AvataaarEyes {
+@MappableClass()
+final class AvataaarEyesWinkWacky extends AvataaarEyes
+    with AvataaarEyesWinkWackyMappable {
   const AvataaarEyesWinkWacky();
 }
 
-sealed class AvataaarAccessories implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarAccessories with AvataaarAccessoriesMappable implements AvataaarParts {
   const AvataaarAccessories();
 
   static final List<AvataaarAccessories> all = [
@@ -240,35 +272,43 @@ sealed class AvataaarAccessories implements AvataaarParts {
   }
 }
 
-final class AvataaarAccessoriesBlank extends AvataaarAccessories {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarAccessoriesBlank extends AvataaarAccessories with AvataaarAccessoriesBlankMappable {
   const AvataaarAccessoriesBlank();
 }
 
-final class AvataaarAccessoriesKurt extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesKurt extends AvataaarAccessories with AvataaarAccessoriesKurtMappable {
   const AvataaarAccessoriesKurt();
 }
 
-final class AvataaarAccessoriesPrescription01 extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesPrescription01 extends AvataaarAccessories with AvataaarAccessoriesPrescription01Mappable{
   const AvataaarAccessoriesPrescription01();
 }
 
-final class AvataaarAccessoriesPrescription02 extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesPrescription02 extends AvataaarAccessories with AvataaarAccessoriesPrescription02Mappable{
   const AvataaarAccessoriesPrescription02();
 }
 
-final class AvataaarAccessoriesRound extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesRound extends AvataaarAccessories with AvataaarAccessoriesRoundMappable{
   const AvataaarAccessoriesRound();
 }
 
-final class AvataaarAccessoriesSunglasses extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesSunglasses extends AvataaarAccessories with AvataaarAccessoriesSunglassesMappable{
   const AvataaarAccessoriesSunglasses();
 }
 
-final class AvataaarAccessoriesWayfarers extends AvataaarAccessories {
+@MappableClass()
+final class AvataaarAccessoriesWayfarers extends AvataaarAccessories with AvataaarAccessoriesWayfarersMappable{
   const AvataaarAccessoriesWayfarers();
 }
 
-sealed class AvataaarClothes implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarClothes with AvataaarClothesMappable implements AvataaarParts {
   const AvataaarClothes(this.color);
 
   final Color color;
@@ -297,7 +337,7 @@ sealed class AvataaarClothes implements AvataaarParts {
         AvataaarClothesShirtScoopNeck() => AvataaarClothesShirtScoopNeck(color),
         AvataaarClothesShirtVNeck() => AvataaarClothesShirtVNeck(color),
       };
-
+copyWith
   /// creates random [AvataaarClothes]
   factory AvataaarClothes.random([Color? color]) {
     final e =
@@ -400,48 +440,58 @@ sealed class AvataaarClothes implements AvataaarParts {
   }
 }
 
-final class AvataaarClothesBlazerShirt extends AvataaarClothes {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarClothesBlazerShirt extends AvataaarClothes with AvataaarClothesBlazerShirtMappable{
   const AvataaarClothesBlazerShirt([super.color = Colors.black]);
 }
 
-final class AvataaarClothesBlazerSweater extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesBlazerSweater extends AvataaarClothes with AvataaarClothesBlazerSweaterMappable{
   const AvataaarClothesBlazerSweater([super.color = Colors.black]);
 }
 
-final class AvataaarClothesCollarSweater extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesCollarSweater extends AvataaarClothes with AvataaarClothesCollarSweaterMappable{
   const AvataaarClothesCollarSweater(
       [super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesGraphicShirt extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesGraphicShirt extends AvataaarClothes with AvataaarClothesGraphicShirtMappable{
   const AvataaarClothesGraphicShirt(
       [super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesHoodie extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesHoodie extends AvataaarClothes with AvataaarClothesHoodieMappable{
   const AvataaarClothesHoodie([super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesOverall extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesOverall extends AvataaarClothes with AvataaarClothesOverallMappable{
   const AvataaarClothesOverall([super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesShirtCrewNeck extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesShirtCrewNeck extends AvataaarClothes with AvataaarClothesShirtCrewNeckMappable {
   const AvataaarClothesShirtCrewNeck(
       [super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesShirtScoopNeck extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesShirtScoopNeck extends AvataaarClothes with AvataaarClothesShirtScoopNeckMappable{
   const AvataaarClothesShirtScoopNeck(
       [super.color = AvataaarClothes._defaultColor]);
 }
 
-final class AvataaarClothesShirtVNeck extends AvataaarClothes {
+@MappableClass()
+final class AvataaarClothesShirtVNeck extends AvataaarClothes with AvataaarClothesShirtVNeckMappable{
   const AvataaarClothesShirtVNeck(
       [super.color = AvataaarClothes._defaultColor]);
 }
 
-sealed class AvataaarGraphics implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarGraphics with AvataaarGraphicsMappable implements AvataaarParts {
   const AvataaarGraphics();
 
   static final all = [
@@ -528,51 +578,63 @@ sealed class AvataaarGraphics implements AvataaarParts {
   }
 }
 
-final class AvataaarGraphicsBat extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsBat extends AvataaarGraphics with AvataaarGraphicsBatMappable {
   const AvataaarGraphicsBat();
 }
 
-final class AvataaarGraphicsBear extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsBear extends AvataaarGraphics with AvataaarGraphicsBearMappable {
   const AvataaarGraphicsBear();
 }
 
-final class AvataaarGraphicsCumbia extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsCumbia extends AvataaarGraphics with AvataaarGraphicsCumbiaMappable{
   const AvataaarGraphicsCumbia();
 }
 
-final class AvataaarGraphicsDeer extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsDeer extends AvataaarGraphics with AvataaarGraphicsDeerMappable{
   const AvataaarGraphicsDeer();
 }
 
-final class AvataaarGraphicsDiamond extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsDiamond extends AvataaarGraphics with AvataaarGraphicsDiamondMappable{
   const AvataaarGraphicsDiamond();
 }
 
-final class AvataaarGraphicsHola extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsHola extends AvataaarGraphics with AvataaarGraphicsHolaMappable{
   const AvataaarGraphicsHola();
 }
 
-final class AvataaarGraphicsPizza extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsPizza extends AvataaarGraphics with AvataaarGraphicsPizzaMappable{
   const AvataaarGraphicsPizza();
 }
 
-final class AvataaarGraphicsResist extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsResist extends AvataaarGraphics with AvataaarGraphicsResistMappable{
   const AvataaarGraphicsResist();
 }
 
-final class AvataaarGraphicsSelena extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsSelena extends AvataaarGraphics with AvataaarGraphicsSelenaMappable{
   const AvataaarGraphicsSelena();
 }
 
-final class AvataaarGraphicsSkull extends AvataaarGraphics {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarGraphicsSkull extends AvataaarGraphics with AvataaarGraphicsSkullMappable{
   const AvataaarGraphicsSkull();
 }
 
-final class AvataaarGraphicsSkullOutline extends AvataaarGraphics {
+@MappableClass()
+final class AvataaarGraphicsSkullOutline extends AvataaarGraphics with AvataaarGraphicsSkullOutlineMappable{
   const AvataaarGraphicsSkullOutline();
 }
 
-sealed class AvataaarEyebrow implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarEyebrow with AvataaarEyebrowMappable implements AvataaarParts {
   const AvataaarEyebrow();
 
   static final all = [
@@ -672,59 +734,73 @@ sealed class AvataaarEyebrow implements AvataaarParts {
   }
 }
 
-final class AvataaarEyebrowAngry extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowAngry extends AvataaarEyebrow with AvataaarEyebrowAngryMappable {
   const AvataaarEyebrowAngry();
 }
 
-final class AvataaarEyebrowAngryNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowAngryNatural extends AvataaarEyebrow with AvataaarEyebrowAngryNaturalMappable {
   const AvataaarEyebrowAngryNatural();
 }
 
-final class AvataaarEyebrowDefault0 extends AvataaarEyebrow {
-  const AvataaarEyebrowDefault0();
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarEyebrowDefault extends AvataaarEyebrow with AvataaarEyebrowDefault{
+  const AvataaarEyebrowDefault();
 }
 
-final class AvataaarEyebrowDefaultNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowDefaultNatural extends AvataaarEyebrow with AvataaarEyebrowDefaultNatural{
   const AvataaarEyebrowDefaultNatural();
 }
 
-final class AvataaarEyebrowFlatNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowFlatNatural extends AvataaarEyebrow with AvataaarEyebrowFlatNaturalMappable {
   const AvataaarEyebrowFlatNatural();
 }
 
-final class AvataaarEyebrowFrownNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowFrownNatural extends AvataaarEyebrow with AvataaarEyebrowFrownNaturalMappable {
   const AvataaarEyebrowFrownNatural();
 }
 
-final class AvataaarEyebrowRaisedExcited extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowRaisedExcited extends AvataaarEyebrow with AvataaarEyebrowRaisedExcitedMappable {
   const AvataaarEyebrowRaisedExcited();
 }
 
-final class AvataaarEyebrowRaisedExcitedNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowRaisedExcitedNatural extends AvataaarEyebrow with AvataaarEyebrowRaisedExcitedNaturalMappable{
   const AvataaarEyebrowRaisedExcitedNatural();
 }
 
-final class AvataaarEyebrowSadConcerned extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowSadConcerned extends AvataaarEyebrow AvataaarEyebrowSadConcernedMappable{
   const AvataaarEyebrowSadConcerned();
 }
 
-final class AvataaarEyebrowSadConcernedNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowSadConcernedNatural extends AvataaarEyebrow AvataaarEyebrowSadConcernedNaturalMappable{
   const AvataaarEyebrowSadConcernedNatural();
 }
 
-final class AvataaarEyebrowUnibrowNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowUnibrowNatural extends AvataaarEyebrow with AvataaarEyebrowUnibrowNaturalMappable {
   const AvataaarEyebrowUnibrowNatural();
 }
 
-final class AvataaarEyebrowUpDown extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowUpDown extends AvataaarEyebrow with AvataaarEyebrowUpDownMappable {
   const AvataaarEyebrowUpDown();
 }
 
-final class AvataaarEyebrowUpDownNatural extends AvataaarEyebrow {
+@MappableClass()
+final class AvataaarEyebrowUpDownNatural extends AvataaarEyebrow with AvataaarEyebrowUpDownNaturalMappable {
   const AvataaarEyebrowUpDownNatural();
 }
 
-sealed class AvataaarFacialHair implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarFacialHair with AvataaarFacialHairMappable implements AvataaarParts {
   const AvataaarFacialHair([this.color = AvataaarFacialHair.defaultHairColor]);
 
   final Color color;
@@ -840,37 +916,44 @@ sealed class AvataaarFacialHair implements AvataaarParts {
   }
 }
 
-final class AvataaarFacialHairBlank extends AvataaarFacialHair {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarFacialHairBlank extends AvataaarFacialHair with AvataaarFacialHairBlankMappable {
   const AvataaarFacialHairBlank(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-final class AvataaarFacialHairBeardMedium extends AvataaarFacialHair {
+@MappableClass()
+final class AvataaarFacialHairBeardMedium extends AvataaarFacialHair with AvataaarFacialHairBeardMediumMappable {
   const AvataaarFacialHairBeardMedium(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-final class AvataaarFacialHairBeardLight extends AvataaarFacialHair {
+@MappableClass()
+final class AvataaarFacialHairBeardLight extends AvataaarFacialHair with AvataaarFacialHairBeardLightMappable {
   const AvataaarFacialHairBeardLight(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-final class AvataaarFacialHairBeardMajestic extends AvataaarFacialHair {
+@MappableClass()
+final class AvataaarFacialHairBeardMajestic extends AvataaarFacialHair with AvataaarFacialHairBeardMajesticMappable {
   const AvataaarFacialHairBeardMajestic(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-final class AvataaarFacialHairMoustacheFancy extends AvataaarFacialHair {
+@MappableClass()
+final class AvataaarFacialHairMoustacheFancy extends AvataaarFacialHair with AvataaarFacialHairMoustacheFancyMappable{
   const AvataaarFacialHairMoustacheFancy(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-final class AvataaarFacialHairMoustacheMagnum extends AvataaarFacialHair {
+@MappableClass()
+final class AvataaarFacialHairMoustacheMagnum extends AvataaarFacialHair with AvataaarFacialHairMoustacheMagnumMappable{
   const AvataaarFacialHairMoustacheMagnum(
       [super.color = AvataaarFacialHair.defaultHairColor]);
 }
 
-sealed class AvataaarHair implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarHair with AvataaarHairMappable implements AvataaarParts {
   const AvataaarHair(this.color);
   final Color color;
 
@@ -1145,172 +1228,208 @@ sealed class AvataaarHair implements AvataaarParts {
       };
 }
 
-final class AvataaarHairNoHair extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairNoHair extends AvataaarHair with AvataaarHairNoHairMappable {
   const AvataaarHairNoHair([super.color = Colors.transparent]);
 }
 
-final class AvataaarHairEyepatch extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairEyepatch extends AvataaarHair with AvataaarHairEyepatchMappable {
   const AvataaarHairEyepatch(
       [super.color = AvataaarHair.defaultHatColorEyePatch]);
 }
 
-final class AvataaarHairHat extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairHat extends AvataaarHair with AvataaarHairHatMappable {
   const AvataaarHairHat([super.color = AvataaarHair.defaultHatColorHat]);
 }
 
-final class AvataaarHairHijab extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairHijab extends AvataaarHair with AvataaarHairHijabMappable {
   const AvataaarHairHijab([super.color = AvataaarHair.defaultHatColorBlue03]);
 }
 
+@MappableClass()
 final class AvataaarHairTurban extends AvataaarHair {
   const AvataaarHairTurban([super.color = AvataaarHair.defaultHatColorBlue03]);
 }
 
-final class AvataaarHairWinterHat1 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairWinterHat1 extends AvataaarHair with AvataaarHairWinterHat1Mappable {
   const AvataaarHairWinterHat1([super.color = AvataaarHair.defaultHatColorRed]);
 }
 
-final class AvataaarHairWinterHat2 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairWinterHat2 extends AvataaarHair with AvataaarHairWinterHat2Mappable{
   const AvataaarHairWinterHat2(
       [super.color = AvataaarHair.defaultHatColorBlue01]);
 }
 
-final class AvataaarHairWinterHat3 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairWinterHat3 extends AvataaarHair with AvataaarHairWinterHat3Mappable {
   const AvataaarHairWinterHat3([super.color = AvataaarHair.defaultHatColorRed]);
 }
 
-final class AvataaarHairWinterHat4 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairWinterHat4 extends AvataaarHair with AvataaarHairWinterHat4Mappable {
   const AvataaarHairWinterHat4([super.color = AvataaarHair.defaultHatColorRed]);
 }
 
-final class AvataaarHairLongHairBigHair extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairBigHair extends AvataaarHair with AvataaarHairLongHairBigHairMappable {
   const AvataaarHairLongHairBigHair(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairBob extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairBob extends AvataaarHair with AvataaarHairLongHairBobMappable {
   const AvataaarHairLongHairBob([super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairBun extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairBun extends AvataaarHair with AvataaarHairLongHairBunMappable{
   const AvataaarHairLongHairBun([super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairCurly extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairCurly extends AvataaarHair with AvataaarHairLongHairCurlyMappable {
   const AvataaarHairLongHairCurly(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairCurvy extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairCurvy extends AvataaarHair with AvataaarHairLongHairCurvyMappable {
   const AvataaarHairLongHairCurvy(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairDreads extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairDreads extends AvataaarHair with AvataaarHairLongHairDreadsMappabel {
   const AvataaarHairLongHairDreads(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairFrida extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairFrida extends AvataaarHair with AvataaarHairLongHairFridaMappable {
   const AvataaarHairLongHairFrida(
       [super.color = AvataaarHair.defaultHatColorHat]);
 }
 
-final class AvataaarHairLongHairFro extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairFro extends AvataaarHair with AvataaarHairLongHairFroMappable {
   const AvataaarHairLongHairFro([super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairFroBand extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairFroBand extends AvataaarHair with AvataaarHairLongHairFroBandMappable {
   const AvataaarHairLongHairFroBand(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairNotTooLong extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairNotTooLong extends AvataaarHair with AvataaarHairLongHairNotTooLongMappable {
   const AvataaarHairLongHairNotTooLong(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairShavedSides extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairShavedSides extends AvataaarHair with AvataaarHairLongHairShavedSidesMappable {
   const AvataaarHairLongHairShavedSides(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairMiaWallace extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairMiaWallace extends AvataaarHair with AvataaarHairLongHairMiaWallaceMappable {
   const AvataaarHairLongHairMiaWallace(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairStraight extends AvataaarHair {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarHairLongHairStraight extends AvataaarHair with AvataaarHairLongHairStraightMappable {
   const AvataaarHairLongHairStraight(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairStraight2 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairStraight2 extends AvataaarHair with AvataaarHairLongHairStraight2Mappable {
   const AvataaarHairLongHairStraight2(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairLongHairStraightStrand extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairLongHairStraightStrand extends AvataaarHair with AvataaarHairLongHairStraightStrandMappable {
   const AvataaarHairLongHairStraightStrand(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairDreads01 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairDreads01 extends AvataaarHair with AvataaarHairShortHairDreads01Mappable {
   const AvataaarHairShortHairDreads01(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairDreads02 extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairDreads02 extends AvataaarHair with AvataaarHairShortHairDreads02Mappable {
   const AvataaarHairShortHairDreads02(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairFrizzle extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairFrizzle extends AvataaarHair with AvataaarHairShortHairFrizzleMappable  {
   const AvataaarHairShortHairFrizzle(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairShaggyMullet extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairShaggyMullet extends AvataaarHair with AvataaarHairShortHairShaggyMulletMappable {
   const AvataaarHairShortHairShaggyMullet(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairShortCurly extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairShortCurly extends AvataaarHair with AvataaarHairShortHairShortCurlyMappable {
   const AvataaarHairShortHairShortCurly(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairShortFlat extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairShortFlat extends AvataaarHair with AvataaarHairShortHairShortFlatMappable {
   const AvataaarHairShortHairShortFlat(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairShortRound extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairShortRound extends AvataaarHair with AvataaarHairShortHairShortRoundMappable {
   const AvataaarHairShortHairShortRound(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairShortWaved extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairShortWaved extends AvataaarHair with AvataaarHairShortHairShortWavedMappable {
   const AvataaarHairShortHairShortWaved(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairSides extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairSides extends AvataaarHair with AvataaarHairShortHairSidesMappable {
   const AvataaarHairShortHairSides(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairTheCaesar extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairTheCaesar extends AvataaarHair with AvataaarHairShortHairTheCaesarMappable {
   const AvataaarHairShortHairTheCaesar(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-final class AvataaarHairShortHairTheCaesarSidePart extends AvataaarHair {
+@MappableClass()
+final class AvataaarHairShortHairTheCaesarSidePart extends AvataaarHair with AvataaarHairShortHairTheCaesarSidePartMappable {
   const AvataaarHairShortHairTheCaesarSidePart(
       [super.color = AvataaarHair.defaultHairColor]);
 }
 
-sealed class AvataaarMouth implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarMouth with AvataaarMouthMappable implements AvataaarParts {
   const AvataaarMouth();
 
   static final all = [
@@ -1400,55 +1519,68 @@ sealed class AvataaarMouth implements AvataaarParts {
   }
 }
 
-final class AvataaarMouthConcerned extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthConcerned extends AvataaarMouth with AvataaarMouthConcernedMappable {
   const AvataaarMouthConcerned();
 }
 
-final class AvataaarMouthDefault0 extends AvataaarMouth {
-  const AvataaarMouthDefault0();
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarMouthDefault extends AvataaarMouth with AvataaarMouthDefaultMappable {
+  const AvataaarMouthDefault();
 }
 
-final class AvataaarMouthDisbelief extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthDisbelief extends AvataaarMouth with AvataaarMouthDisbeliefMappable {
   const AvataaarMouthDisbelief();
 }
 
-final class AvataaarMouthEating extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthEating extends AvataaarMouth with AvataaarMouthEatingMappable {
   const AvataaarMouthEating();
 }
 
-final class AvataaarMouthGrimace extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthGrimace extends AvataaarMouth with AvataaarMouthGrimaceMappable {
   const AvataaarMouthGrimace();
 }
 
-final class AvataaarMouthSad extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthSad extends AvataaarMouth with AvataaarMouthSadMappable {
   const AvataaarMouthSad();
 }
 
-final class AvataaarMouthScreamOpen extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthScreamOpen extends AvataaarMouth with AvataaarMouthScreamOpenMappable {
   const AvataaarMouthScreamOpen();
 }
 
-final class AvataaarMouthSerious extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthSerious extends AvataaarMouth with AvataaarMouthSeriousMappable {
   const AvataaarMouthSerious();
 }
 
-final class AvataaarMouthSmile extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthSmile extends AvataaarMouth with AvataaarMouthSmileMappable {
   const AvataaarMouthSmile();
 }
 
-final class AvataaarMouthTongue extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthTongue extends AvataaarMouth with AvataaarMouthTongueMappable {
   const AvataaarMouthTongue();
 }
 
-final class AvataaarMouthTwinkle extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthTwinkle extends AvataaarMouth with AvataaarMouthTwinkleMappable {
   const AvataaarMouthTwinkle();
 }
 
-final class AvataaarMouthVomit extends AvataaarMouth {
+@MappableClass()
+final class AvataaarMouthVomit extends AvataaarMouth with AvataaarMouthVomitMappable {
   const AvataaarMouthVomit();
 }
 
-sealed class AvataaarNose implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarNose with AvataaarNoseMappable implements AvataaarParts {
   const AvataaarNose();
 
   /// creates [AvataaarNose] based on the index found in [AvataaarNose.all]
@@ -1498,11 +1630,13 @@ sealed class AvataaarNose implements AvataaarParts {
   }
 }
 
-final class AvataaarNoseDefault0 extends AvataaarNose {
-  const AvataaarNoseDefault0();
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarNoseDefault extends AvataaarNose with AvataaarNoseDefaultMappable {
+  const AvataaarNoseDefault();
 }
 
-sealed class AvataaarSkin implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarSkin with AvataaarSkinMappable implements AvataaarParts {
   const AvataaarSkin(this.color);
   final Color color;
 
@@ -1621,39 +1755,48 @@ sealed class AvataaarSkin implements AvataaarParts {
   }
 }
 
-final class AvataaarSkinTanned extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinTanned extends AvataaarSkin with AvataaarSkinTannedMappable {
   const AvataaarSkinTanned([super.color = const Color(0x00FD9841)]);
 }
 
-final class AvataaarSkinYellow extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinYellow extends AvataaarSkin with AvataaarSkinYellowMappable {
   const AvataaarSkinYellow([super.color = const Color(0x00F8D25C)]);
 }
 
-final class AvataaarSkinPale extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinPale extends AvataaarSkin with AvataaarSkinPaleMappable {
   const AvataaarSkinPale([super.color = const Color(0x00FFDBB4)]);
 }
 
-final class AvataaarSkinLight extends AvataaarSkin {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarSkinLight extends AvataaarSkin with AvataaarSkinLightMappable {
   const AvataaarSkinLight([super.color = const Color(0x00EDB98A)]);
 }
 
-final class AvataaarSkinBrown extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinBrown extends AvataaarSkin with AvataaarSkinBrownMappable {
   const AvataaarSkinBrown([super.color = const Color(0x00D08B5B)]);
 }
 
-final class AvataaarSkinDarkBrown extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinDarkBrown extends AvataaarSkin with AvataaarSkinDarkBrownMappable {
   const AvataaarSkinDarkBrown([super.color = const Color(0x00AE5D29)]);
 }
 
-final class AvataaarSkinBlack extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinBlack extends AvataaarSkin with AvataaarSkinBlackMappable {
   const AvataaarSkinBlack([super.color = const Color(0x00614335)]);
 }
 
-final class AvataaarSkinCustom extends AvataaarSkin {
+@MappableClass()
+final class AvataaarSkinCustom extends AvataaarSkin with AvataaarSkinCustomMappable {
   const AvataaarSkinCustom([super.color = Colors.grey]);
 }
 
-sealed class AvataaarStyle implements AvataaarParts {
+@MappableClass()
+sealed class AvataaarStyle with AvataaarStyleMappable implements AvataaarParts {
   const AvataaarStyle(this.color);
 
   final Color color;
@@ -1744,10 +1887,12 @@ sealed class AvataaarStyle implements AvataaarParts {
   }
 }
 
-final class AvataaarStyleTransparent extends AvataaarStyle {
+@MappableClass()
+final class AvataaarStyleTransparent extends AvataaarStyle with AvataaarStyleTransparentMappable {
   const AvataaarStyleTransparent([super.color = Colors.transparent]);
 }
 
-final class AvataaarStyleCircle extends AvataaarStyle {
+@MappableClass(discriminatorValue: MappableClass.useAsDefault)
+final class AvataaarStyleCircle extends AvataaarStyle with AvataaarStyleCircleMappable {
   const AvataaarStyleCircle([super.color = const Color(0x0065C9FF)]);
 }
