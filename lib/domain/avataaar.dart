@@ -1,19 +1,32 @@
+import 'package:avataaars/domain/parts/accessories.dart';
+import 'package:avataaars/domain/parts/clothes.dart';
+import 'package:avataaars/domain/parts/eyebrow.dart';
+import 'package:avataaars/domain/parts/eyes.dart';
+import 'package:avataaars/domain/parts/facial_hair.dart';
+import 'package:avataaars/domain/parts/graphics.dart';
+import 'package:avataaars/domain/parts/hair.dart';
+import 'package:avataaars/domain/parts/mouth.dart';
+import 'package:avataaars/domain/parts/nose.dart';
+import 'package:avataaars/domain/parts/skin.dart';
+import 'package:avataaars/domain/parts/style.dart';
+import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
 
-import 'avataaar_parts.dart';
+part 'avataaar.mapper.dart';
 
-class Avataaar {
+@MappableClass()
+class Avataaar with AvataaarMappable {
   const Avataaar({
     this.hair = const AvataaarHairLongHairStraight(),
     this.accessory = const AvataaarAccessoriesBlank(),
     this.facialHair = const AvataaarFacialHairBlank(),
     this.clothes = const AvataaarClothesBlazerShirt(),
     this.graphics = const AvataaarGraphicsSkull(),
-    this.eyes = const AvataaarEyesDefault0(),
-    this.eyebrow = const AvataaarEyebrowDefault0(),
-    this.mouth = const AvataaarMouthDefault0(),
+    this.eyes = const AvataaarEyesDefault(),
+    this.eyebrow = const AvataaarEyebrowDefault(),
+    this.mouth = const AvataaarMouthDefault(),
     this.skin = const AvataaarSkinLight(),
-    this.nose = const AvataaarNoseDefault0(),
+    this.nose = const AvataaarNoseDefault(),
     this.style = const AvataaarStyleCircle(),
   });
 
@@ -29,33 +42,8 @@ class Avataaar {
   final AvataaarNose nose;
   final AvataaarStyle style;
 
-  Avataaar copyWith({
-    AvataaarHair? hair,
-    AvataaarAccessories? accessory,
-    AvataaarFacialHair? facialHair,
-    AvataaarClothes? clothes,
-    AvataaarGraphics? graphics,
-    AvataaarEyes? eyes,
-    AvataaarEyebrow? eyebrow,
-    AvataaarMouth? mouth,
-    AvataaarSkin? skin,
-    AvataaarNose? nose,
-    AvataaarStyle? style,
-  }) {
-    return Avataaar(
-      hair: hair ?? this.hair,
-      accessory: accessory ?? this.accessory,
-      facialHair: facialHair ?? this.facialHair,
-      clothes: clothes ?? this.clothes,
-      graphics: graphics ?? this.graphics,
-      eyes: eyes ?? this.eyes,
-      eyebrow: eyebrow ?? this.eyebrow,
-      mouth: mouth ?? this.mouth,
-      skin: skin ?? this.skin,
-      nose: nose ?? this.nose,
-      style: style ?? this.style,
-    );
-  }
+  static final fromMap = AvataaarMapper.fromMap;
+  static final fromJson = AvataaarMapper.fromJson;
 
   /// Creates a random Avataaar
   factory Avataaar.random() => Avataaar(

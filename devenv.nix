@@ -18,7 +18,7 @@ in
     platforms.version = [ "35" ];
     platformTools.version = "35.0.2";
     flutter.enable = true;
-    flutter.package = pkgs.flutter;
+    flutter.package = pkgs-unstable.flutter;
   };
 
   # https://devenv.sh/packages/

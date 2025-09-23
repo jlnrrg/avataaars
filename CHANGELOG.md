@@ -1,3 +1,7 @@
+## 1.1.0
+* Add dart_mappable dependency
+* Support json import/ export anew
+
 ## 1.0.0
 * **Breaking Change**
 * Remove Freezed Dependency
